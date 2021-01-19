@@ -1,0 +1,217 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://standards.influenzanet.info/schemas/survey/1.0",
+    "type": "object",
+    "title": "Survey description schema",
+    "description": "This schema describes json format to describe influenzanet survey",
+    "default": {},
+    "required": [
+        "name",
+        "questions"
+    ],
+    "properties": {
+        "name": {
+            "$id": "#/properties/name",
+            "type": "string",
+            "title": "Common Name of the survey",
+            "description": "Common Name is used as a unique identifier to refer to this survey kind. It must be lowercase ascii and without any space and start with a letter. Separator can be underscore (no dash)",
+            "pattern": "[a-z]+[a-z0-9_]*",
+            "examples": [
+                "intake"
+            ]
+        },
+        "question": {
+            "$id": "#/properties/question",
+            "type": "object",
+            "title": "Question item description",
+            "description": "A question is a unit .",
+            "required": [
+                "short_title",
+                "title",
+                "data_name",
+                "mandatory",
+                "type"
+            ],
+            "allOf": [
+                {
+                    "$comment": "Common fields for all questions",
+                    "properties": {
+                        "short_title": {
+                            "$id": "#/properties/question/properties/short_title",
+                            "type": "string",
+                            "title": "Short title of the question"
+                        },
+                        "title": {
+                            "$id": "#/properties/question/properties/title",
+                            "type": "string",
+                            "title": "Label of the question",
+                            "description": ""
+                        },
+                        "data_name": {
+                            "$id": "#/properties/question/properties/data_name",
+                            "$ref": "#/properties/data_name",
+                            "title": "Data name of element of the question",
+                            "description": "Data name is used to create data element in output. The use of this data name depends on the question type, it can be used as the name itself or as a prefix for each data element"
+                        },
+                        "mandatory": {
+                            "$id": "#/properties/question/properties/mandatory",
+                            "type": "boolean",
+                            "title": "Flag to set the response expected as mandatory",
+                            "default": false
+                        },
+                        "active": {
+                            "$id": "#/properties/question/properties/active",
+                            "type": "boolean",
+                            "title": "Flag to set the ctive status of the question. Inactive question are not in the survey any more but can be provided in the past data",
+                            "default": false
+                        },
+                        "added_at": {
+                            "$id": "#/properties/question/properties/added_at",
+                            "type": "string",
+                            "title": "Date when question has been introduced",
+                            "format": "date"
+                        },
+                        "removed_at": {
+                            "$id": "#/properties/question/properties/removed_at",
+                            "type": "string",
+                            "title": "Date when question has been removed from survey",
+                            "format": "date"
+                        }
+                    }
+                },
+                {
+                    "anyOf": [
+                        {
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": ["single_choice", "multiple_choice"]
+                                },
+                                "possible_responses": {
+                                    "type": "object",
+                                    "title": "Possible responses of a data element of a question",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "additionalProperties": {
+                                        "$ref": "#/properties/response"
+                                    }                
+                                }
+                            },
+                            "required": ["type","possible_responses"]
+                        },
+                        {
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": ["text"]
+                                }
+                            }
+                        },
+                        {
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": ["date"]
+                                },
+                                "format": {
+                                    "type": "string",
+                                    "enum": ["date","month-year"]
+                                }
+                            }
+                        },
+                        {
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": ["matrix"]
+                                },
+                                "data_type": {
+                                    "type": "string",
+                                    "enum": ["text"]
+                                },
+                                "possible_responses": {
+                                    "type": "object",
+                                    "title": "Possible responses of a data element celle of the question",
+                                    "description": "Each cell can have a given response from this response list.",
+                                    "additionalProperties": {
+                                        "$ref": "#/properties/response"
+                                    }                
+                                },
+                                "rows": {
+                                    "type" : "object",
+                                    "title": "Rows description",
+                                    "additionalProperties": {
+                                        "$ref": "#/properties/matrix-dim"
+                                    }
+                                },
+                                "columns": {
+                                    "type" : "object",
+                                    "title": "Columns description",
+                                    "additionalProperties": {
+                                        "$ref": "#/properties/matrix-dim"
+                                    }
+                                }
+                            },
+                            "required": ["type","data_type", "rows","columns"]
+                        }
+
+                    ]
+                }
+            ]
+        },
+        "questions": {
+            "$id": "#/properties/questions",
+            "type": "array",
+            "title": "The questions schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+                "$id": "#/properties/questions/items",
+                "$ref": "#/properties/question"
+            }
+        },
+        "reponse": {
+            "$id": "#/properties/response",
+            "type": "object",
+            "title": "Response for a data element",
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Textual description of the response"
+                },
+                "data_name": {
+                    "$ref": "#/properties/data_name",
+                    "description": "Data element name. This used when response can output several data elements (multiple response)"
+                },
+                "value": {
+                    "type": "string",
+                    "description": "Value to be stored when this response is selected by the user. This is used when only one response is expected (single_choice, matrix) for each data element"
+                }
+            }
+        },
+        "matrix-dim": {
+            "$id": "#/properties/matrix-dim",
+            "type": "object",
+            "title":"Question item matrix Dimension",
+            "properties": {
+                "text": {
+                    "$id": "#/properties/matrix-dim/properties/text",
+                    "type": "string",
+                    "description": "Label of the row/column"
+                },
+                "value": {
+                    "$id": "#/properties/matrix-dim/properties/value",
+                    "type": "string",
+                    "title": "Value of the dimension level to be used to construct the data name",
+                    "description": "The data element name of each cell will be constructed from data_name of the question, row value and column value"
+                }
+            }
+        },
+        "data_name": {
+            "type": "string",
+            "pattern": "[A-Za-z]+[A-Za-z0-9_]*"
+        }
+    }
+}
