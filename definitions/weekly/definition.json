@@ -226,23 +226,30 @@
             "mandatory": false,
             "description": "",
             "active": false,
-            "type": "matrix-select choice",
+            "type": "matrix",
             "data_type": "text",
-            "possible_responses": {
-                "option_1": {
+            "rows": {
+                "row_1": {
                     "text": "Latest at-risk country visited",
                     "description": "",
-                    "value": ""
+                    "value": "row1"
                 },
-                "option_2": {
+                "row_2": {
                     "text": "Second-last at-risk country visited",
                     "description": "",
-                    "value": ""
+                    "value": "row2"
                 },
-                "option_2": {
+                "row_3": {
                     "text": "Third-last at-risk country visited",
                     "description": "",
-                    "value": ""
+                    "value": "row3"
+                }
+            },
+            "columns": {
+                "col_1": {
+                    "text": "Third-last at-risk country visited",
+                    "description": "",
+                    "value": "col1"
                 }
             }
         },
@@ -282,25 +289,29 @@
             "mandatory": false,
             "description": "",
             "active": false,
-            "type": "matrix-select choice",
-            "possible_responses": {
-                "option_1": {
+            "type": "matrix",
+            "rows": {
+                "row_1": {
                     "text": "Latest at-risk country visited",
                     "description": "",
-                    "data_name": "",
-                    "value": ""
+                    "value": "row1"
                 },
-                "option_2": {
+                "row_2": {
                     "text": "Second-last at-risk country visited",
                     "description": "",
-                    "data_name": "",
-                    "value": ""
+                    "value": "row2"
                 },
-                "option_3": {
+                "row_3": {
                     "text": "Third-last at-risk country visited",
                     "description": "",
-                    "data_name": "",
-                    "value": ""
+                    "value": "row3"
+                }
+            },
+            "columns": {
+                "col_1": {
+                    "text": "Third-last at-risk country visited",
+                    "description": "",
+                    "value": "col1"
                 }
             }
         },
