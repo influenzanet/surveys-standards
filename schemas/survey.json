@@ -20,8 +20,21 @@
                 "intake"
             ]
         },
+        "questions": {
+            "$id": "#/properties/questions",
+            "type": "array",
+            "title": "The questions schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+                "$id": "#/properties/questions/items",
+                "$ref": "#/definitions/question"
+            }
+        }
+    },
+    "definitions": {
         "question": {
-            "$id": "#/properties/question",
+            "$id": "#/definitions/question",
             "type": "object",
             "title": "Question item description",
             "description": "A question is a unit .",
@@ -37,50 +50,91 @@
                     "$comment": "Common fields for all questions",
                     "properties": {
                         "short_title": {
-                            "$id": "#/properties/question/properties/short_title",
+                            "$id": "#/definitions/question/properties/short_title",
                             "type": "string",
                             "title": "Short title of the question"
                         },
                         "title": {
-                            "$id": "#/properties/question/properties/title",
+                            "$id": "#/definitions/question/properties/title",
                             "type": "string",
                             "title": "Label of the question",
                             "description": ""
                         },
                         "data_name": {
-                            "$id": "#/properties/question/properties/data_name",
-                            "$ref": "#/properties/data_name",
+                            "$id": "#/definitions/question/properties/data_name",
+                            "$ref": "#/definitions/data_name",
                             "title": "Data name of element of the question",
                             "description": "Data name is used to create data element in output. The use of this data name depends on the question type, it can be used as the name itself or as a prefix for each data element"
                         },
                         "mandatory": {
-                            "$id": "#/properties/question/properties/mandatory",
+                            "$id": "#/definitions/question/properties/mandatory",
                             "type": "boolean",
                             "title": "Flag to set the response expected as mandatory",
                             "default": false
                         },
                         "active": {
-                            "$id": "#/properties/question/properties/active",
+                            "$id": "#/definitions/question/properties/active",
                             "type": "boolean",
-                            "title": "Flag to set the ctive status of the question. Inactive question are not in the survey any more but can be provided in the past data",
+                            "title": "Flag to set the active status of the question. Inactive question are not in the survey any more but can be provided in the past data",
                             "default": false
                         },
                         "added_at": {
-                            "$id": "#/properties/question/properties/added_at",
+                            "$id": "#/definitions/question/properties/added_at",
                             "type": "string",
                             "title": "Date when question has been introduced",
                             "format": "date"
                         },
                         "removed_at": {
-                            "$id": "#/properties/question/properties/removed_at",
+                            "$id": "#/definitions/question/properties/removed_at",
                             "type": "string",
                             "title": "Date when question has been removed from survey",
                             "format": "date"
+                        },
+                        "comment": {
+                            "$ref": "#/definitions/comment"
+                        },
+                        "rules": {
+                            "$ref": "#/definitions/rules"
                         }
                     }
                 },
                 {
                     "anyOf": [
+                        {
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": ["matrix"]
+                                },
+                                "data_type": {
+                                    "type": "string",
+                                    "enum": ["text"]
+                                },
+                                "possible_responses": {
+                                    "type": "object",
+                                    "title": "Possible responses of a data element celle of the question",
+                                    "description": "Each cell can have a given response from this response list.",
+                                    "additionalProperties": {
+                                        "$ref": "#/definitions/response"
+                                    }                
+                                },
+                                "rows": {
+                                    "type" : "object",
+                                    "title": "Rows description",
+                                    "additionalProperties": {
+                                        "$ref": "#/definitions/matrix-dim"
+                                    }
+                                },
+                                "columns": {
+                                    "type" : "object",
+                                    "title": "Columns description",
+                                    "additionalProperties": {
+                                        "$ref": "#/definitions/matrix-dim"
+                                    }
+                                }
+                            },
+                            "required": ["type","data_type", "rows","columns"]
+                        },
                         {
                             "properties": {
                                 "type": {
@@ -92,7 +146,7 @@
                                     "title": "Possible responses of a data element of a question",
                                     "description": "An explanation about the purpose of this instance.",
                                     "additionalProperties": {
-                                        "$ref": "#/properties/response"
+                                        "$ref": "#/definitions/response"
                                     }                
                                 }
                             },
@@ -117,60 +171,15 @@
                                     "enum": ["date","month-year"]
                                 }
                             }
-                        },
-                        {
-                            "properties": {
-                                "type": {
-                                    "type": "string",
-                                    "enum": ["matrix"]
-                                },
-                                "data_type": {
-                                    "type": "string",
-                                    "enum": ["text"]
-                                },
-                                "possible_responses": {
-                                    "type": "object",
-                                    "title": "Possible responses of a data element celle of the question",
-                                    "description": "Each cell can have a given response from this response list.",
-                                    "additionalProperties": {
-                                        "$ref": "#/properties/response"
-                                    }                
-                                },
-                                "rows": {
-                                    "type" : "object",
-                                    "title": "Rows description",
-                                    "additionalProperties": {
-                                        "$ref": "#/properties/matrix-dim"
-                                    }
-                                },
-                                "columns": {
-                                    "type" : "object",
-                                    "title": "Columns description",
-                                    "additionalProperties": {
-                                        "$ref": "#/properties/matrix-dim"
-                                    }
-                                }
-                            },
-                            "required": ["type","data_type", "rows","columns"]
                         }
+                        
 
                     ]
                 }
             ]
         },
-        "questions": {
-            "$id": "#/properties/questions",
-            "type": "array",
-            "title": "The questions schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "items": {
-                "$id": "#/properties/questions/items",
-                "$ref": "#/properties/question"
-            }
-        },
-        "reponse": {
-            "$id": "#/properties/response",
+        "response": {
+            "$id": "#/definitions/response",
             "type": "object",
             "title": "Response for a data element",
             "properties": {
@@ -181,37 +190,50 @@
                     "type": "string",
                     "description": "Textual description of the response"
                 },
-                "data_name": {
-                    "$ref": "#/properties/data_name",
-                    "description": "Data element name. This used when response can output several data elements (multiple response)"
-                },
                 "value": {
                     "type": "string",
                     "description": "Value to be stored when this response is selected by the user. This is used when only one response is expected (single_choice, matrix) for each data element"
+                },
+                "active": {
+                    "type": "boolean",
+                    "description": "Value to be stored when this response is selected by the user. This is used when only one response is expected (single_choice, matrix) for each data element"
+                },
+                "comment": {
+                    "$ref": "#/definitions/comment"
                 }
             }
         },
         "matrix-dim": {
-            "$id": "#/properties/matrix-dim",
             "type": "object",
             "title":"Question item matrix Dimension",
             "properties": {
                 "text": {
-                    "$id": "#/properties/matrix-dim/properties/text",
                     "type": "string",
                     "description": "Label of the row/column"
                 },
                 "value": {
-                    "$id": "#/properties/matrix-dim/properties/value",
                     "type": "string",
                     "title": "Value of the dimension level to be used to construct the data name",
                     "description": "The data element name of each cell will be constructed from data_name of the question, row value and column value"
+                },
+                "comment": {
+                    "$ref": "#/definitions/comment"
                 }
             }
         },
         "data_name": {
             "type": "string",
             "pattern": "[A-Za-z]+[A-Za-z0-9_]*"
+        },
+        "comment": {
+            "anyOf": [
+                {"type": "string"},
+                {"type": "array", "items": { "type":"string"}}
+            ]
+        },
+        "rules": {
+            "type": "array", 
+            "items": { "type":"string"}
         }
     }
 }

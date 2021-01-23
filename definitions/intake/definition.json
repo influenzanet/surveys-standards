@@ -10,20 +10,14 @@
             "possible_responses": {
                 "option_1": {
                     "text": "A member of my household",
-                    "description": "",
-                    "data_name": "Q0",
                     "value": "1"
                 },
                 "option_2": {
                     "text": "Myself",
-                    "description": "",
-                    "data_name": "Q0",
                     "value": "0"
                 },
                 "option_3": {
                     "text": "Someone else",
-                    "description": "",
-                    "data_name": "Q0",
                     "value": "2"
                 }
             }
@@ -37,14 +31,10 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Male",
-                    "description": "",
-                    "data_name": "Q1",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "Female",
-                    "description": "",
-                    "data_name": "Q1",
                     "value": "1"
                 }
             }
@@ -60,10 +50,10 @@
         {
             "short_title": "Intake Q3",
             "title": "What is the first part of your home postcode (the part before the space)?",
-            "description": "Code representing the location of the participant, at the level the platform want to register it",
             "data_name": "Q3",
             "mandatory": true,
-            "type": "text"
+            "type": "text",
+            "comment": "Code representing the location of the participant, at the level the platform want to register it"
         },
         {
             "short_title": "Intake Q4",
@@ -74,56 +64,38 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Paid employment",
-                    "description": "",
-                    "data_name": "Q4",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "Paid employment, part time",
-                    "description": "",
-                    "data_name": "Q4",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Self-employed (businessman, farmer, tradesman, etc.)",
-                    "description": "",
-                    "data_name": "Q4",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "Attending daycare/school/college/university",
-                    "description": "",
-                    "data_name": "Q4",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "Home-maker (e.g. housewife)",
-                    "description": "",
-                    "data_name": "Q4",
                     "value": "4"
                 },
                 "option_6": {
                     "text": "Unemployed",
-                    "description": "",
-                    "data_name": "Q4",
                     "value": "5"
                 },
                 "option_7": {
                     "text": "Long-term sick-leave or parental leave",
-                    "description": "",
-                    "data_name": "Q4",
                     "value": "6"
                 },
                 "option_8": {
                     "text": "Retired",
-                    "description": "",
-                    "data_name": "Q4",
                     "value": "7"
                 },
                 "option_9": {
                     "text": "Other",
-                    "description": "",
-                    "data_name": "Q4",
                     "value": "8"
                 }
             }
@@ -137,17 +109,24 @@
             "possible_responses": {
                 "option_1": {
                     "text": "",
-                    "description": "OPEN FIELD",
-                    "data_name": "Q4b",
-                    "value": "0"
+                    "value": "0",
+                    "comment": "OPEN FIELD",
+                    "extra": "Q4b_0_open"
                 },
                 "option_2": {
-                    "text": "I don’t know",
-                    "description": "",
-                    "data_name": "Q4b",
+                    "text": "I don\u2019t know",
                     "value": "1"
                 }
             }
+        },
+        {
+            "short_title": "Intake Q4b open question",
+            "title": "",
+            "data_name": "Q4b_0_open",
+            "mandatory": false,
+            "type": "text",
+            "comment": "extra field not shown",
+            "rules": ["Shown when Q4b.0 is selected"]
         },
         {
             "short_title": "Intake Q4c",
@@ -158,38 +137,26 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Professional (e.g. manager, doctor, teacher, nurse, engineer)",
-                    "description": "",
-                    "data_name": "Q4c",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "Office work (e.g. admin, finance assistant, receptionist etc)",
-                    "description": "",
-                    "data_name": "Q4c",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Retail, sales, catering and hospitality and leisure (e.g. shop assistant, waiter, bar-staff, gym instructor etc)",
-                    "description": "",
-                    "data_name": "Q4c",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "Skilled manual worker (e.g. mechanic, electrician, technician)",
-                    "description": "",
-                    "data_name": "Q4c",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "Other manual work",
-                    "description": "",
-                    "data_name": "Q4c",
                     "value": "4"
                 },
                 "option_6": {
                     "text": "Other",
-                    "description": "",
-                    "data_name": "Q4c",
                     "value": "5"
                 }
             }
@@ -203,39 +170,29 @@
             "possible_responses": {
                 "option_1": {
                     "text": "I have no formal qualification",
-                    "description": "",
-                    "data_name": "Q4d_0",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "GCSEs, levels, CSEs or equivalent",
-                    "description": "",
-                    "data_name": "Q4d_1",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "A-levels or equivalent (e.g. Higher, NVQ Level3, BTEC)",
-                    "description": "",
-                    "data_name": "Q4d_2",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "Bachelor Degree (BA, BSc) or equivalent",
-                    "description": "",
-                    "data_name": "Q4d_3",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "",
-                    "description": "Higher Degree or equivalent (e.g. Masters Degree, PGCE, PhD, Medical Doctorate, Advanced Professional Award)",
-                    "data_name": "Q4d_4",
-                    "value": "4"
+                    "value": "4",
+                    "comment": "Higher Degree or equivalent (e.g. Masters Degree, PGCE, PhD, Medical Doctorate, Advanced Professional Award)"
                 },
                 "option_6": {
                     "text": "",
-                    "description": "I am still in education",
-                    "data_name": "Q4d_5",
-                    "value": "5"
+                    "value": "5",
+                    "comment": "I am still in education"
                 }
             }
         },
@@ -248,32 +205,22 @@
             "possible_responses": {
                 "option_1": {
                     "text": "More than 10 children or teenagers over the course of the day",
-                    "description": "",
-                    "data_name": "Q5_0",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "More than 10 people aged over 65 over the course of day",
-                    "description": "",
-                    "data_name": "Q5_1",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Patients",
-                    "description": "",
-                    "data_name": "Q5_2",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "Groups of people (more than 10 individuals at any one time)",
-                    "description": "",
-                    "data_name": "Q5_3",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "None of the above",
-                    "description": "",
-                    "data_name": "Q5_4",
                     "value": "4"
                 }
             }
@@ -287,33 +234,28 @@
             "possible_responses": {
                 "option_1": {
                     "text": "0-4 years",
-                    "description": "matrix-like option, with drop down menu",
-                    "data_name": "Q6_0",
-                    "value": "0"
+                    "value": "0",
+                    "comment": "matrix-like option, with drop down menu"
                 },
                 "option_2": {
                     "text": "5-18 years",
-                    "description": "matrix-like option, with drop down menu",
-                    "data_name": "Q6_1",
-                    "value": "1"
+                    "value": "1",
+                    "comment": "matrix-like option, with drop down menu"
                 },
                 "option_3": {
                     "text": "19-44 years",
-                    "description": "matrix-like option, with drop down menu",
-                    "data_name": "Q6_2",
-                    "value": "2"
+                    "value": "2",
+                    "comment": "matrix-like option, with drop down menu"
                 },
                 "option_4": {
                     "text": "45-64 years",
-                    "description": "matrix-like option, with drop down menu",
-                    "data_name": "Q6_3",
-                    "value": "3"
+                    "value": "3",
+                    "comment": "matrix-like option, with drop down menu"
                 },
                 "option_5": {
                     "text": "65+",
-                    "description": "matrix-like option, with drop down menu",
-                    "data_name": "Q6_4",
-                    "value": "4"
+                    "value": "4",
+                    "comment": "matrix-like option, with drop down menu"
                 }
             }
         },
@@ -326,44 +268,30 @@
             "possible_responses": {
                 "option_1": {
                     "text": "None",
-                    "description": "",
-                    "data_name": "Q6b",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "1",
-                    "description": "",
-                    "data_name": "Q6b",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "2",
-                    "description": "",
-                    "data_name": "Q6b",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "3",
-                    "description": "",
-                    "data_name": "Q6b",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "4",
-                    "description": "",
-                    "data_name": "Q6b",
                     "value": "4"
                 },
                 "option_6": {
                     "text": "5",
-                    "description": "",
-                    "data_name": "Q6b",
                     "value": "5"
                 },
                 "option_7": {
                     "text": "More than 5",
-                    "description": "",
-                    "data_name": "Q6b",
                     "value": "99"
                 }
             }
@@ -377,38 +305,26 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Walking",
-                    "description": "",
-                    "data_name": "Q7",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "Bike",
-                    "description": "",
-                    "data_name": "Q7",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Motorbike/scooter",
-                    "description": "",
-                    "data_name": "Q7",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "Car",
-                    "description": "",
-                    "data_name": "Q7",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "Public transportation (bus, train, tube, etc)",
-                    "description": "",
-                    "data_name": "Q7",
                     "value": "4"
                 },
                 "option_6": {
                     "text": "Other",
-                    "description": "",
-                    "data_name": "Q7",
                     "value": "5"
                 }
             }
@@ -422,32 +338,22 @@
             "possible_responses": {
                 "option_1": {
                     "text": "No time at all",
-                    "description": "",
-                    "data_name": "Q7b",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "0-30 minutes",
-                    "description": "",
-                    "data_name": "Q7b",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "30 minutes - 1.5 hours",
-                    "description": "",
-                    "data_name": "Q7b",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "1.5 hours - 4 hours",
-                    "description": "",
-                    "data_name": "Q7b",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "Over 4 hours",
-                    "description": "",
-                    "data_name": "Q7b",
                     "value": "4"
                 }
             }
@@ -461,38 +367,26 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Never",
-                    "description": "",
-                    "data_name": "Q8",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "Once or twice a year",
-                    "description": "",
-                    "data_name": "Q8",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Between 3 and 5 times a year",
-                    "description": "",
-                    "data_name": "Q8",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "Between 6 and 10 times a year",
-                    "description": "",
-                    "data_name": "Q8",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "More than 10 times a year",
-                    "description": "",
-                    "data_name": "Q8",
                     "value": "4"
                 },
                 "option_6": {
-                    "text": "I don’t know",
-                    "description": "",
-                    "data_name": "Q8",
+                    "text": "I don\u2019t know",
                     "value": "5"
                 }
             }
@@ -506,20 +400,14 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Yes",
-                    "description": "",
-                    "data_name": "Q9",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "No",
-                    "description": "",
-                    "data_name": "Q9",
                     "value": "1"
                 },
                 "option_3": {
-                    "text": "I don’t know",
-                    "description": "",
-                    "data_name": "Q9",
+                    "text": "I don\u2019t know",
                     "value": "2"
                 }
             }
@@ -533,20 +421,14 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Yes",
-                    "description": "",
-                    "data_name": "Q10",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "No",
-                    "description": "",
-                    "data_name": "Q10",
                     "value": "1"
                 },
                 "option_3": {
-                    "text": "I don’t know",
-                    "description": "",
-                    "data_name": "Q10",
+                    "text": "I don\u2019t know",
                     "value": "2"
                 }
             }
@@ -560,14 +442,11 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Choose date",
-                    "description": "DATE FIELD",
-                    "data_name": "Q10b",
-                    "value": "1"
+                    "value": "1",
+                    "comment": "DATE FIELD"
                 },
                 "option_2": {
-                    "text": "I don’t know",
-                    "description": "",
-                    "data_name": "Q10b",
+                    "text": "I don\u2019t know",
                     "value": "0"
                 }
             }
@@ -581,62 +460,42 @@
             "possible_responses": {
                 "option_1": {
                     "text": "I belong to a risk group (e.g, pregnant, over 65, underlying health condition, etc)",
-                    "description": "",
-                    "data_name": "Q10c_0",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "Vaccination decreases my risk of getting the flu",
-                    "description": "",
-                    "data_name": "Q10c_1",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Vaccination decreases the risk of spreading the flu to others",
-                    "description": "",
-                    "data_name": "Q10c_2",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "My doctor recommended it",
-                    "description": "",
-                    "data_name": "Q10c_3",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "It was recommended in my workplace/school",
-                    "description": "",
-                    "data_name": "Q10c_4",
                     "value": "4"
                 },
                 "option_6": {
                     "text": "The vaccine was readily available and vaccine administration was convenient",
-                    "description": "",
-                    "data_name": "Q10c_5",
                     "value": "5"
                 },
                 "option_7": {
                     "text": "The vaccine was free",
-                    "description": "",
-                    "data_name": "Q10c_6",
                     "value": "6"
                 },
                 "option_8": {
-                    "text": "I don’t want to miss work/school",
-                    "description": "",
-                    "data_name": "Q10c_7",
+                    "text": "I don\u2019t want to miss work/school",
                     "value": "7"
                 },
                 "option_9": {
                     "text": "I always get the vaccine",
-                    "description": "",
-                    "data_name": "Q10c_8",
                     "value": "8"
                 },
                 "option_10": {
                     "text": "Other reasons",
-                    "description": "",
-                    "data_name": "Q10c_9",
                     "value": "9"
                 }
             }
@@ -649,93 +508,63 @@
             "type": "multiple_choice",
             "possible_responses": {
                 "option_1": {
-                    "text": "I am planning to be vaccinated but haven’t been yet",
-                    "description": "",
-                    "data_name": "Q10d_0",
+                    "text": "I am planning to be vaccinated but haven\u2019t been yet",
                     "value": "0"
                 },
                 "option_2": {
-                    "text": "I haven’t been offered the vaccine",
-                    "description": "",
-                    "data_name": "Q10d_1",
+                    "text": "I haven\u2019t been offered the vaccine",
                     "value": "1"
                 },
                 "option_3": {
-                    "text": "I don’t belong to a risk group",
-                    "description": "",
-                    "data_name": "Q10d_2",
+                    "text": "I don\u2019t belong to a risk group",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "It is better to build your own natural immunity against influenza",
-                    "description": "",
-                    "data_name": "Q10d_3",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "I doubt that the influenza vaccine is effective",
-                    "description": "",
-                    "data_name": "Q10d_4",
                     "value": "4"
                 },
                 "option_6": {
                     "text": "Influenza is a minor illness",
-                    "description": "",
-                    "data_name": "Q10d_5",
                     "value": "5"
                 },
                 "option_7": {
-                    "text": "I don’t think I am likely to get the flu",
-                    "description": "",
-                    "data_name": "Q10d_6",
+                    "text": "I don\u2019t think I am likely to get the flu",
                     "value": "6"
                 },
                 "option_8": {
                     "text": "I believe that influenza vaccine can cause influenza",
-                    "description": "",
-                    "data_name": "Q10d_7",
                     "value": "7"
                 },
                 "option_9": {
                     "text": "I am worried that the vaccine is not safe or will cause illness or other adverse events",
-                    "description": "",
-                    "data_name": "Q10d_8",
                     "value": "8"
                 },
                 "option_10": {
-                    "text": "I don’t like having vaccinations",
-                    "description": "",
-                    "data_name": "Q10d_9",
+                    "text": "I don\u2019t like having vaccinations",
                     "value": "9"
                 },
                 "option_11": {
                     "text": "The vaccine is not readily available for me",
-                    "description": "",
-                    "data_name": "Q10d_10",
                     "value": "10"
                 },
                 "option_12": {
                     "text": "The vaccine is not free of charge",
-                    "description": "",
-                    "data_name": "Q10d_11",
                     "value": "11"
                 },
                 "option_13": {
                     "text": "No particular reason",
-                    "description": "",
-                    "data_name": "Q10d_12",
                     "value": "12"
                 },
                 "option_14": {
                     "text": "Although my doctor recommended a vaccine, I did not get one",
-                    "description": "",
-                    "data_name": "Q10d_13",
                     "value": "13"
                 },
                 "option_15": {
                     "text": "Other reason(s)",
-                    "description": "",
-                    "data_name": "Q10d_14",
                     "value": "14"
                 }
             }
@@ -749,44 +578,30 @@
             "possible_responses": {
                 "option_1": {
                     "text": "No",
-                    "description": "",
-                    "data_name": "Q11_0",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "Asthma",
-                    "description": "",
-                    "data_name": "Q11_1",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Diabetes",
-                    "description": "",
-                    "data_name": "Q11_2",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "Chronic lung disorder besides asthma e.g. COPD, emphysema, or other disorders that affect your breathing",
-                    "description": "",
-                    "data_name": "Q11_3",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "Heart disorder",
-                    "description": "",
-                    "data_name": "Q11_4",
                     "value": "4"
                 },
                 "option_6": {
                     "text": "Kidney disorder",
-                    "description": "",
-                    "data_name": "Q11_5",
                     "value": "5"
                 },
                 "option_7": {
                     "text": "An immunocompromising condition (e.g. splenectomy, organ transplant, acquired immune deficiency, cancer treatment)",
-                    "description": "",
-                    "data_name": "Q11_6",
                     "value": "6"
                 }
             }
@@ -800,20 +615,14 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Yes",
-                    "description": "",
-                    "data_name": "Q12",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "No",
-                    "description": "",
-                    "data_name": "Q12",
                     "value": "1"
                 },
                 "option_3": {
-                    "text": "I don’t know/I would rather not answer",
-                    "description": "",
-                    "data_name": "Q12",
+                    "text": "I don\u2019t know/I would rather not answer",
                     "value": "2"
                 }
             }
@@ -827,26 +636,18 @@
             "possible_responses": {
                 "option_1": {
                     "text": "First trimester (week 1-12)",
-                    "description": "",
-                    "data_name": "Q12b",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "Second trimester (week 13-28)",
-                    "description": "",
-                    "data_name": "Q12b",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Third trimester (week 29-delivery)",
-                    "description": "",
-                    "data_name": "Q12b",
                     "value": "2"
                 },
                 "option_4": {
-                    "text": "Don’t know/would rather not answer",
-                    "description": "",
-                    "data_name": "Q12b",
+                    "text": "Don\u2019t know/would rather not answer",
                     "value": "3"
                 }
             }
@@ -860,32 +661,22 @@
             "possible_responses": {
                 "option_1": {
                     "text": "No",
-                    "description": "",
-                    "data_name": "Q13",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "Yes, occasionally",
-                    "description": "",
-                    "data_name": "Q13",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Yes, daily, fewer than 10 times a day",
-                    "description": "",
-                    "data_name": "Q13",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "Yes, daily, 10 or more times a day",
-                    "description": "",
-                    "data_name": "Q13",
                     "value": "3"
                 },
                 "option_5": {
-                    "text": "Don’t know/would rather not answer",
-                    "description": "",
-                    "data_name": "Q13",
+                    "text": "Don\u2019t know/would rather not answer",
                     "value": "4"
                 }
             }
@@ -899,32 +690,22 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Hay fever",
-                    "description": "",
-                    "data_name": "Q14_1",
                     "value": "1"
                 },
                 "option_2": {
                     "text": "Allergy against house dust mite",
-                    "description": "",
-                    "data_name": "Q14_2",
                     "value": "2"
                 },
                 "option_3": {
                     "text": "Allergy against domestic animals or pets",
-                    "description": "",
-                    "data_name": "Q14_3",
                     "value": "3"
                 },
                 "option_4": {
                     "text": "Other allergies that cause respiratory symptoms (e.g. sneezing, runny eyes)",
-                    "description": "",
-                    "data_name": "Q14_4",
                     "value": "4"
                 },
                 "option_5": {
                     "text": "I do not have an allergy that causes respiratory symptoms",
-                    "description": "",
-                    "data_name": "Q14_5",
                     "value": "5"
                 }
             }
@@ -938,32 +719,22 @@
             "possible_responses": {
                 "option_1": {
                     "text": "No special diet",
-                    "description": "",
-                    "data_name": "Q15_0",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "Vegetarian",
-                    "description": "",
-                    "data_name": "Q15_1",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Vegan",
-                    "description": "",
-                    "data_name": "Q15_2",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "Low calorie",
-                    "description": "",
-                    "data_name": "Q15_3",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "Other",
-                    "description": "",
-                    "data_name": "Q15_4",
                     "value": "4"
                 }
             }
@@ -977,32 +748,22 @@
             "possible_responses": {
                 "option_1": {
                     "text": "No",
-                    "description": "",
-                    "data_name": "Q16_0",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "Yes, one or more dogs",
-                    "description": "",
-                    "data_name": "Q16_1",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Yes, one or more cats",
-                    "description": "",
-                    "data_name": "Q16_2",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "Yes, one or more birds",
-                    "description": "",
-                    "data_name": "Q16_3",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "Yes, one or more other animals",
-                    "description": "",
-                    "data_name": "Q16_4",
                     "value": "4"
                 }
             }
@@ -1016,38 +777,26 @@
             "possible_responses": {
                 "option_1": {
                     "text": "On radio or television",
-                    "description": "",
-                    "data_name": "Q17_0",
                     "value": "0"
                 },
                 "option_2": {
                     "text": "In the newspaper or in a magazine",
-                    "description": "",
-                    "data_name": "Q17_1",
                     "value": "1"
                 },
                 "option_3": {
                     "text": "Via an internet site (search engine or link)",
-                    "description": "",
-                    "data_name": "Q17_2",
                     "value": "2"
                 },
                 "option_4": {
                     "text": "By poster",
-                    "description": "",
-                    "data_name": "Q17_3",
                     "value": "3"
                 },
                 "option_5": {
                     "text": "Via family or friends",
-                    "description": "",
-                    "data_name": "Q17_4",
                     "value": "4"
                 },
                 "option_6": {
                     "text": "Via school or work",
-                    "description": "",
-                    "data_name": "Q17_5",
                     "value": "5"
                 }
             }
