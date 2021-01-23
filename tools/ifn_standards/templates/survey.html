@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+
+{% macro render_item_columns(q1, q2, name) %}
+<div class="row m-1">
+      <div class="col m-1 prop prop-legacy rounded">{% if q1 %}{{ attr(q1, name) }}{% endif %}</div>
+       <div class="col m-1 prop prop-survey rounded">{% if q2 %}{{ attr(q2, name) }}{% endif %}</div>
+</div>
+{% endmacro %}
+
+{% macro render_block(q1, q2, name, title='') %}
+<h4 class="ml-2">{% if title != '' %}{{ title }}{% else %}{{ name  }}{% endif %}</h4>
+{{ render_item_columns(q1, q2, name) }}
+{% endmacro %}
+
+{% macro badge(v, type) %}
+<span class="badge badge-{{type}}">{{ v }}</span>
+{% endmacro %}
+
+{% macro icon(name, extra='') %}
+<i class="fas fa-{{name}} {{extra}}"></i>
+{% endmacro %}
+
+{% macro order_badge(order) %}
+    {{ badge( icon('sort') ~ ' ' ~ order, 'default') }} 
+{% endmacro %}
+
+{% macro render_list(list) %}
+
+{% endmacrod %}
+
+{% macro render_responses(responses) %}
+    <div class="card m-2">
+    <h5 class="ml-3">Responses</h5>
+     <table>
+      {% for value in responses.values() %}
+       <tr>
+        <td>{{ badge(value, 'danger') }}</td>
+        <td>{{ order_badge(r.order) }}</td>
+        <td>{{ r.text }}</td>
+        <td class="comment">{{ r.comment }}</td>
+       </tr>  
+       
+      {% endfor %}
+    </table>
+{% endmacro %}
+
+        {{ render_response(v1, 'legacy') }}
+        {{ render_response(v2, 'survey') }}
+       </div>
+    {% endfor %}
+    </div>
+    {% endif %}
+{% endmacro %}
+
+{% macro render_matrix_dim(q1, q2, dimension, attr_name) %}
+    {% set r1 = attr(q1, dimension) %}
+    {% set r2 = attr(q2, dimension) %}
+    {% set rr = all_attributes(r1, r2, attr_name) %}
+    {% if r1|length or r2|length %}
+        <div class="card m-2">
+        <h5>{{ dimension }}</h5>
+        {% for value in rr %}
+            {% set v1 = r1.find_by(attr_name, value) %}
+            {% set v2 = r2.find_by(attr_name, value) %}
+        <div class="row m-1">
+            <div class="col-1">
+            {{ badge(value, 'danger') }}
+            </div>
+            {{ render_response(v1, 'legacy') }}
+            {{ render_response(v2, 'survey') }}
+        </div>
+        {% endfor %}
+        </div>
+        {% endif %}
+{% endmacro %}
+
+
+{% block survey %}
+<H1>Survey {{survey_name}} </h1>
+{# Explain layout #}
+
+{# questions #}
+{% for quid in survey.questions %}
+<div class="question card">
+    {% set question = survey.questions[quid] %}
+    <div class="card-header bg-info">
+        <h4>{{ quid }}</h4> 
+        {{ badge(question.type, 'warning') }}
+        {{ icon('sort')}} {{ question.order }}
+        {% if question.mandatory %}{{ icon('mandatory', 'danger') }} {% endif %}
+    </div>
+    <div class="card-body p-1">
+    {{ question.title }}
+    <div class="description">
+    {{ question.description }}
+    </div>
+    {{ render_responses(q1, q2) }}
+    {{ render_matrix_dim(q1, q2, 'rows','value') }}
+    {{ render_matrix_dim(q1, q2, 'columns', 'value') }}
+   </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}

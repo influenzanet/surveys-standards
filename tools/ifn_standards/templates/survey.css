@@ -1,0 +1,18 @@
+.prop-legacy {
+    background-color: papayawhip;
+}
+
+.prop-survey {
+    background-color: lavender;
+}
+
+.question {
+    margin-top: .3em;
+}
+
+@media(print) {
+    .question {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
