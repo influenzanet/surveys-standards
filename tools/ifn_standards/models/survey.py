@@ -49,9 +49,10 @@ class ResponseList(OrderedDict):
 
 class Response:
       """
-        key: key in the spec
+        key: local key in the spec
         text: label of the response
         order: order in the spec
+        value: 
       """
       
       def __init__(self, key, text, order):
@@ -61,6 +62,7 @@ class Response:
           self.value = None
           self.comment = None
           self.active = True
+          self.extra = None
 
 
 class MatrixDimension:
@@ -103,7 +105,7 @@ def json_parser_survey(survey):
 
 def json_parser_comment(json):
     if isinstance(json, str):
-        return [str]
+        return [json]
     return json
 
 def import_attr(obj, data, keys):

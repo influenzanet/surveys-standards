@@ -85,7 +85,7 @@ def compare_legacy_to_html(survey, legacy, survey_name, legacy_name):
     }
     return template.render(ctx)
 
-def survey_to_html(survey, survey_name):
+def survey_to_html(survey):
     """
     Create survey documentt
     """
@@ -106,7 +106,6 @@ def survey_to_html(survey, survey_name):
         theme = f.read()
 
     ctx = {
-        'survey_name': survey_name, 
         'survey': survey,
         'theme_css': theme
     }

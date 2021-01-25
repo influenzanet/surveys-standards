@@ -1,10 +1,64 @@
 {% extends "base.html" %}
 
+{% block css %}
+{# Color to show text to be show to the end user #}
+{% set color_user_label = "lemonchiffon" %}
+
+{# Color to show text to be show internaly #}
+{% set color_internal_label = "lavender" %}
+
+<style>
+
+.bg-gray {
+    background-color: #DDD;
+}
+
+.question-head > h4 {
+    display: inline !important;
+}
+
+.user-label {
+    padding: .3em;
+    border-radius: .3em;
+    display: inline-block;
+    background-color: {{color_user_label}};
+}
+
+.comment, .comment .list-group-item {
+    background-color: {{ color_internal_label }};
+    padding: .1rem;
+}
+
+
+
+.question-block {
+    margin-top: .3rem;
+
+}
+
+.badge-local-key {
+    color: #999;
+}
+
+.question-block > h6 {
+  margin: 0;
+  margin-left: 1em;
+  padding: .4em;
+  font-size: .8rem;
+  color: darkgrey;
+  font-weight: bold;
+}
+
+.table-compact {
+    width: fit-content;
+}
+</style>
+{% endblock %}
 
 {% macro render_item_columns(q1, q2, name) %}
 <div class="row m-1">
       <div class="col m-1 prop prop-legacy rounded">{% if q1 %}{{ attr(q1, name) }}{% endif %}</div>
-       <div class="col m-1 prop prop-survey rounded">{% if q2 %}{{ attr(q2, name) }}{% endif %}</div>
+     <div class="col m-1 prop prop-survey rounded">{% if q2 %}{{ attr(q2, name) }}{% endif %}</div>
 </div>
 {% endmacro %}
 
@@ -13,94 +67,165 @@
 {{ render_item_columns(q1, q2, name) }}
 {% endmacro %}
 
-{% macro badge(v, type) %}
-<span class="badge badge-{{type}}">{{ v }}</span>
+{% macro badge(v, type, title="") %}
+ <span class="badge badge-{{type}}" {% if title != ""%} title="{{ title }}"{%endif%}>{{ v }}</span>
 {% endmacro %}
 
 {% macro icon(name, extra='') %}
-<i class="fas fa-{{name}} {{extra}}"></i>
+ <i class="fas fa-{{name}} {{extra}}"></i>
 {% endmacro %}
 
 {% macro order_badge(order) %}
-    {{ badge( icon('sort') ~ ' ' ~ order, 'default') }} 
+ {{ badge( icon('sort') ~ ' ' ~ order, 'default') }} 
 {% endmacro %}
 
-{% macro render_list(list) %}
+{% macro local_key_badge(key) %}
+ {{  badge('#' ~ key, 'local-key', title="Local key, this is a local identifier not to be used in the target survey implementation") }} 
+{% endmacro %}
 
-{% endmacrod %}
+{% macro user_label(label) %}
+ <span class="user-label">{{ label }}</span>
+{% endmacro %}
+
+{% macro common_key_badge(key) %}
+ {{  badge( icon('key') ~ ' ' ~ key, 'danger') }} 
+{% endmacro %}
+
+{% macro render_list(list, klass) %}
+<ul class="list-group list-group-flush {{ klass }}">
+{% for item in list %}
+    <li class="list-group-item">{{ item }}</li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro render_comment(comment) %}
+{% if comment %}
+ {{ render_list(comment, 'comment') }}
+{% endif %}
+{% endmacro %}
 
 {% macro render_responses(responses) %}
-    <div class="card m-2">
-    <h5 class="ml-3">Responses</h5>
-     <table>
-      {% for value in responses.values() %}
+     <table class="table table-compact table-sm">
+      {% for r in responses.values() %}
        <tr>
-        <td>{{ badge(value, 'danger') }}</td>
+        <td>{{ common_key_badge(r.value) }}</td>
         <td>{{ order_badge(r.order) }}</td>
-        <td>{{ r.text }}</td>
-        <td class="comment">{{ r.comment }}</td>
+        <td>{{ user_label(r.text) }}</td>
+        <td>
+            {{ render_comment(r.comment) }} 
+        </td>
+        <td>{{ local_key_badge(r.key)}}</td>
        </tr>  
-       
       {% endfor %}
     </table>
 {% endmacro %}
 
-        {{ render_response(v1, 'legacy') }}
-        {{ render_response(v2, 'survey') }}
-       </div>
+{% macro render_matrix_dim(dims) %}
+    <table class="table table-compact table-sm">
+    {% for d in dims.values() %}
+    <tr>
+        <td>{{ common_key_badge(d.value) }}</td>
+        <td>{{ user_label(d.text) }}</td>
+        <td>{{ order_badge(d.order) }}</td>
+        <td>{{ local_key_badge(d.key) }}</td>
+        <td>
+            {{ render_comment(d.comment) }} 
+        </td>
+    </tr>
     {% endfor %}
-    </div>
-    {% endif %}
-{% endmacro %}
-
-{% macro render_matrix_dim(q1, q2, dimension, attr_name) %}
-    {% set r1 = attr(q1, dimension) %}
-    {% set r2 = attr(q2, dimension) %}
-    {% set rr = all_attributes(r1, r2, attr_name) %}
-    {% if r1|length or r2|length %}
-        <div class="card m-2">
-        <h5>{{ dimension }}</h5>
-        {% for value in rr %}
-            {% set v1 = r1.find_by(attr_name, value) %}
-            {% set v2 = r2.find_by(attr_name, value) %}
-        <div class="row m-1">
-            <div class="col-1">
-            {{ badge(value, 'danger') }}
-            </div>
-            {{ render_response(v1, 'legacy') }}
-            {{ render_response(v2, 'survey') }}
-        </div>
-        {% endfor %}
-        </div>
-        {% endif %}
+    </table>
 {% endmacro %}
 
 
 {% block survey %}
-<H1>Survey {{survey_name}} </h1>
+<H1>Survey {{survey.name}} </h1>
 {# Explain layout #}
 
 {# questions #}
 {% for quid in survey.questions %}
 <div class="question card">
     {% set question = survey.questions[quid] %}
-    <div class="card-header bg-info">
+    <div class="card-header {%if question.active %}bg-info{% else %}bg-gray{%endif%} question-head text-white"> 
         <h4>{{ quid }}</h4> 
-        {{ badge(question.type, 'warning') }}
+        {{ badge(icon('cubes') ~ ' ' ~ question.type, 'warning') }}
         {{ icon('sort')}} {{ question.order }}
         {% if question.mandatory %}{{ icon('mandatory', 'danger') }} {% endif %}
+        {% if not question.active %}{{ badge(icon('eye-slash') ~ " Inactive", 'danger') }}{% endif %}
+        {% if question.added_at%} Added at {{ question.added_at }}{% endif %}
+        {% if question.removed_at%} Added at {{ question.removed_at }}{% endif %}
     </div>
-    <div class="card-body p-1">
-    {{ question.title }}
-    <div class="description">
-    {{ question.description }}
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">{{ user_label(question.title) }}</div>
+    
+    {% if question.description %}
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    {{ user_label(question.description) }}
     </div>
-    {{ render_responses(q1, q2) }}
-    {{ render_matrix_dim(q1, q2, 'rows','value') }}
-    {{ render_matrix_dim(q1, q2, 'columns', 'value') }}
-   </div>
-</div>
+    {% endif %}
+    {% if question.format %} 
+        <div class="card format question-block w-75">
+        <h6>Format</h6>
+            {{ question.format }}
+        </div>
+    {% endif %}
+    {% if question.data_type %} 
+        <div class="card format question-block w-75">
+        <h6>Data type</h6>
+            {{ question.data_type }}
+        </div>
+    {% endif %}
+    {%if question.comment %}
+        <div class="card description question-block w-75">
+        <h6>Comment</h6>
+            {{ render_comment(question.comment) }}
+        </div>
+    {% endif %}
+    {% if question.responses %}
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        {{ render_responses(question.responses) }}
+        </div>
+    {% endif %}
+    
+    
+    {% if question.rows or question.matrix %}
+    <div class="row">
+        <div class="col">
+        {% if question.rows %}
+            <div class="card matrix-dim question-block">
+            <h6>Rows</h6>
+            {{ render_matrix_dim(question.rows) }}
+            </div>
+        {% endif %}
+        </div>
+        <div class="col">
+        {% if question.columns %}
+            <div class="card matrix-dim question-block">
+            <h6>Columns</h6>
+            {{ render_matrix_dim(question.columns) }}
+            </div>
+        {% endif %}
+        </div>
+    <div>
+    {% endif %}
+    {% if question.rules %}
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        {{ render_list(question.rules) }}
+        </div>
+    {% endif %}
+   </div> {# card-body #}
+</div> {# question #}
 {% endfor %}
 
-
+<h3>Legend</h3>
+<ul class="list-group">
+    <li class="list-group-item">{{ order_badge('x') }} : Indicate order of an element in the list</li>
+    <li class="list-group-item">{{ local_key_badge('x')}} : Indicate a local identifier to be used only to refer to this element in this document. Don't use this to identify this element in a platform, use the {{ common_key_badge('key') }}</li>
+    <li class="list-group-item">{{ common_key_badge('x') }} : Value or key identifier, to be used in the survey definition. This value will be used to identify this element across platforms.</li>
+    <li class="list-group-item">{{ user_label('label') }} : Text to be shown to the enduser (after translation)</li>
+    <li class="list-group-item"><span class="comment">Comment</span> Text targeting internal use only (comments about implementation)
+</ul>
 {% endblock %}
