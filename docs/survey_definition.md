@@ -52,6 +52,12 @@ Fields:
 - **text** : response label
 - **comment** : Comment about interpretation or presentation of item
 - **value** : value use to identify this value in the output data model (key, value, or to infer field name)
+- **extra** : data name of the question to be used as extra field (see below).
+
+**Extra Field**: Extra field (aka "open field") was a way to implement sub question attached to an input element (like checkbox) to enable data enter of 
+an extra information. Common usage was the "Other" field. It was not presented as a sub question but as a extra input alongside the checkbox. It was implemented directly in the question as an optional extra input in the old model. The description refers to the extra element as a question itself to avoid this exception in the description model. The "extra" field allow to link both questions with the data_name of this sub question.
+This description doesnt fix how this kind of field should be presented in a survey implementation.
+
 
 ## Matrix rows/columns
 
