@@ -713,7 +713,7 @@
             "data_name": "Qcov18_10_open",
             "mandatory": false,
             "type": "text",
-            "comment": "open field"
+            "comment": "open field for Qcov18b.10"
         },
         {
             "short_title": "Weekly Qcov18b",
