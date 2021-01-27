@@ -1,3 +1,4 @@
 *.pyc
 venv
 xml
+/local
