@@ -18,7 +18,7 @@ class Validate(Command):
 
     def get_parser(self, prog_name):
         parser = super(Validate, self).get_parser(prog_name)
-        parser.add_argument("file", help="Survey file", action="store")
+        parser.add_argument("file", help="Survey description file", action="store")
         return parser
 
     def take_action(self, args):
@@ -28,7 +28,7 @@ class Validate(Command):
         
         print(p)
 
-        schema = read_json(p + '/survey.json')
+        schema = read_json(p + '/survey-description.json')
        
         jsonschema.validate(json, schema)
         print("Json schema is valid")
