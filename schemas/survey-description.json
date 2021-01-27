@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://standards.influenzanet.info/schemas/survey/1.0",
+    "$id": "http://standards.influenzanet.info/schemas/survey-description/1.0",
     "type": "object",
     "title": "Survey description schema",
     "description": "This schema describes json format to describe influenzanet survey",
