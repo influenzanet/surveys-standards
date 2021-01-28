@@ -4,18 +4,25 @@ DEF_DIR=surveys
 
 WEEKLY_DIR=$(DEF_DIR)/weekly
 INTAKE_DIR=$(DEF_DIR)/intake
+WEEKLY_DEF=$(WEEKLY_DIR)/survey.json
+INTAKE_DEF=$(INTAKE_DIR)/survey.json
+
+help:
+	@echo "Managing survey standards"
+	@echo "   install: install tools (needs python3)"
+	@echo "   html:    build html files from survey description json"
+	@echo "   check:   check json validity against json schema"
 
 install:
 	python3 -m venv venv
 
 weekly-html:
-	./cli survey:show $(WEEKLY_DIR)/survey.json --output=$(WEEKLY_DIR)/survey.html
+	tools/build-html.sh $(WEEKLY_DEF) $(WEEKLY_DIR)/survey.html
 	
 intake-html:
-	./cli survey:show $(INTAKE_DIR)/survey.json --output=$(INTAKE_DIR)/survey.html
+	tools/build-html.sh $(INTAKE_DEF) $(INTAKE_DIR)/survey.html
 
 html: weekly-html intake-html
-    
 	
 check:
 	./cli survey:validate $(WEEKLY_DIR)/survey.json
