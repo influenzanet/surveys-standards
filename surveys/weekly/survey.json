@@ -517,7 +517,7 @@
                 }
             },
             "rules": [
-                "Shown ($Q1[fever])"
+                "Shown if $Q1[fever]"
             ],
             "description": [
                 "Why are we asking this?",
@@ -1616,9 +1616,8 @@
                     "value": "10"
                 },
                 "option_12": {
-                    "text": "",
                     "value": "13",
-                    "comment": "Have your food/shopping delivered by a store or a friend/family member"
+                    "text": "Have your food/shopping delivered by a store or a friend/family member"
                 },
                 "option_13": {
                     "text": "Avoid seeing friends and family",
@@ -1634,11 +1633,13 @@
                 },
                 "option_16": {
                     "text": "None of these measures",
-                    "value": "12",
-                    "comment": "(exclusive, if this answer is selected, no other answer can be selected)"
+                    "value": "12"
                 }
             },
-            "added_at":"2020-03-12"
+            "added_at":"2020-03-12",
+            "rules": [
+                "Option [None of these measures] is exclusive with other responses "
+            ]
         },
         {
             "short_title": "Weekly Q11",
