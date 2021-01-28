@@ -39,12 +39,16 @@
     background-color: #DDD;
 }
 
+.question-label {
+    font-weight: bold;
+}
+
 .question-head > h4 {
     display: inline !important;
 }
 
 .user-label {
-    padding: .3em;
+    padding: .1em .3em;
     border-radius: .3em;
     display: inline-block;
     background-color: lemonchiffon;
@@ -52,14 +56,31 @@
 
 .comment, .comment .list-group-item {
     background-color: lavender;
-    padding: .1rem;
+    border: 0;
 }
 
+.comment .list-group-item { 
+    padding: .1em .8rem;
+    font-size: .8rem;
+    color: #999;
+}
 
+.description, .description .list-group-item {
+    background-color: lemonchiffon;
+    font-size : .9rem;
+}
+
+.description .list-group-item {
+    padding: .1em .8rem;
+    border: 0;
+}
+
+.rules .list-group-item {
+    padding: .1em .8rem;
+}
 
 .question-block {
     margin-top: .3rem;
-
 }
 
 .badge-local-key {
@@ -78,15 +99,21 @@
 .table-compact {
     width: fit-content;
 }
+
+.responses td {
+ padding: .1rem;
+ padding-top: .2rem;
+}
 </style>
 
 </head>
 <body>
    <div class="survey container-fluid">
    
-<H1>Survey intake </h1>
+<H1>Survey intake</h1>
+<div>JSON Version 0e0c4328e0b138e33a322b75839966cea1677ef1, built on 2021-01-28 14:57:52.314422</div>
 
-
+<p class="comment">This file describes the survey design at a high level defining elements to enable data sharing and common elements. Legend of element is presented at the bottom of this file.</p>
 
 
 <div class="question card">
@@ -105,6 +132,11 @@
  <i class="fas fa-mandatory danger"></i>
  
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -113,6 +145,27 @@
  <span class="user-label">For whom are you filling in this survey?</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">COVID-19 and flu are thought to spread very effectively at home, so it&#39;s important to know which Flusurvey (or Influweb or Influensakoll or…) participants live in the same household.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">A household member is defined as a someone (not necessarily related) who lives at the same address as you and who shares cooking facilities and a living room, sitting room or dining area</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -151,6 +204,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -181,6 +238,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -211,6 +272,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -219,6 +284,17 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Question to be asked when adding another participant. For each additional person that a person registered this question should be asked. If a person just registers and enters data for himself, then this question should not be asked.</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -240,6 +316,11 @@
  <i class="fas fa-mandatory danger"></i>
  
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -248,6 +329,23 @@
  <span class="user-label">What is your gender?</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To find out  whether the chance of getting COVID-19 or flu are different between men and women.</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -286,6 +384,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -316,6 +418,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -345,6 +451,11 @@
  <i class="fas fa-mandatory danger"></i>
  
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -353,6 +464,23 @@
  <span class="user-label">What is your date of birth (month and year)?</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">The chance of getting COVID-19 and flu and the risk of more serious complications vary by age. </li>
+
+</ul>
+
+
+
+    </div>
     
      
         <div class="card format question-block w-75">
@@ -386,6 +514,11 @@
  <i class="fas fa-mandatory danger"></i>
  
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -398,7 +531,7 @@
     
     
     
-        <div class="card description question-block w-75">
+        <div class="card comment question-block w-75">
         <h6>Comment</h6>
             
 
@@ -437,6 +570,11 @@
  <i class="fas fa-mandatory danger"></i>
  
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -445,6 +583,27 @@
  <span class="user-label">What is your main activity?</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To check how representative our sample is compared to the population as a whole, and to find out whether the chance of getting COVID-19 or flu are different for people in different types of occupation.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Please tick the box that most closely resembles your main occupation. For pre-school children who don’t go to daycare tick the “other” box.</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -483,6 +642,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -513,6 +676,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -543,6 +710,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -573,6 +744,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -603,6 +778,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -633,6 +812,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_6</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -663,6 +846,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_7</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -693,6 +880,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_8</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -723,6 +914,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_9</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -750,6 +945,11 @@
  6
         
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -758,6 +958,27 @@
  <span class="user-label">What is the first part of your school/college/workplace postcode?</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To find out roughly how far you travel on a regular basis.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Please choose the first part of the post-code (the part before the space).</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -804,6 +1025,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -834,6 +1059,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -842,6 +1071,19 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If  [Yes, Paid employment full time], or [Yes, paid employment part time] to $Q4</li>
+
+    <li class="list-group-item">If &#39;0&#39;, then ask for $Q4b_0_open, as a extra field</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -863,6 +1105,7 @@
         
         
         
+        
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -873,7 +1116,7 @@
     
     
     
-        <div class="card description question-block w-75">
+        <div class="card comment question-block w-75">
         <h6>Comment</h6>
             
 
@@ -892,17 +1135,17 @@
     
     
     
-    
         <div class="card rules question-block">
         <h6>Rules</h6>
         
 <ul class="list-group list-group-flush ">
 
-    <li class="list-group-item">Shown when Q4b.0 is selected</li>
+    <li class="list-group-item">Shown when $Q4b.0 is selected</li>
 
 </ul>
 
         </div>
+    
     
    </div> 
 </div> 
@@ -921,6 +1164,11 @@
  8
         
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -929,6 +1177,27 @@
  <span class="user-label">Which of the following descriptions most closely matches with your main occupation?</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To check how representative our sample is compared to the population as a whole and to find out whether the chance of getting COVID-19 or flu are different for people in different types of occupation.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Please tick the box that most closely resembles your main occupation.</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -967,6 +1236,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -997,6 +1270,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1027,6 +1304,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1057,6 +1338,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1087,6 +1372,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1117,6 +1406,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_6</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -1125,6 +1418,19 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">If [Yes, Paid employment full time], or [Yes, paid employment part time] to $Q4</li>
+
+    <li class="list-group-item">Trigger free text if [other] checked, allow the users to write in their occupation</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -1144,6 +1450,11 @@
  9
         
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -1153,8 +1464,56 @@
 </div>
     
     
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To check how representative our sample is compared to the population of the UK (Italy, Belgium, etc…. ) as a whole. </li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">- Please choose the box that represents your HIGHEST level of educational achievement. The different options roughly equate to: No qualifications </li>
+
+    <li class="list-group-item">- school-leaving exams at around 16 years of age</li>
+
+    <li class="list-group-item">- school-leaving exams at around 18 years of age</li>
+
+    <li class="list-group-item">- University degree, or equivalent professional qualification</li>
+
+    <li class="list-group-item">- Higher degree or advanced professional qualification</li>
+
+    <li class="list-group-item">If you are an adult who is currently undergoing part-time training (e.g. night-school)  then tick the box that represents your current highest level of education.</li>
+
+</ul>
+
+
+
+    </div>
     
     
+    
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">This is the UK version. #option_2 is exams taken at the time of early school leaving (16  in the UK), #option_3 for late school leaving (18 in the UK). The others are for degrees, or higher qualifications, which should be fairly comparable across Europe.</li>
+
+    <li class="list-group-item">The questions that you should ask at the options #option_2 and #option_3, are related to exams taken at early and late school leaving ages.</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -1190,6 +1549,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1220,6 +1583,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1250,6 +1617,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1280,6 +1651,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1298,18 +1673,10 @@
  
 </td>
         <td>
- <span class="user-label"></span>
+ <span class="user-label">Higher Degree or equivalent (e.g. Masters Degree, PGCE, PhD, Medical Doctorate, Advanced Professional Award)</span>
 </td>
         <td>
             
-
- 
-<ul class="list-group list-group-flush comment">
-
-    <li class="list-group-item">Higher Degree or equivalent (e.g. Masters Degree, PGCE, PhD, Medical Doctorate, Advanced Professional Award)</li>
-
-</ul>
-
 
  
         </td>
@@ -1318,6 +1685,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1336,18 +1707,10 @@
  
 </td>
         <td>
- <span class="user-label"></span>
+ <span class="user-label">I am still in education</span>
 </td>
         <td>
             
-
- 
-<ul class="list-group list-group-flush comment">
-
-    <li class="list-group-item">I am still in education</li>
-
-</ul>
-
 
  
         </td>
@@ -1356,6 +1719,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_6</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -1364,6 +1731,17 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">shown if age 16 and over</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -1383,6 +1761,11 @@
  10
         
  <i class="fas fa-mandatory danger"></i>
+ 
+        
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
  
         
         
@@ -1431,6 +1814,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1461,6 +1848,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1491,6 +1882,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1521,6 +1916,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1551,6 +1950,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -1559,6 +1962,17 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">#option_5 is exclusive with others</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -1578,6 +1992,11 @@
  11
         
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -1587,8 +2006,46 @@
 </div>
     
     
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">Members of larger households, or those with children, may be more likely to catch COVID-19 or flu than others.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">A household is defined as a group of people (not necessarily related) living at the same address who share cooking facilities and share a living room, sitting room or dining area.</li>
+
+</ul>
+
+
+
+    </div>
     
     
+    
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">This should be a table with the 1st column being the age groups (as above), and the 2nd column being numbers, 0,1,2,3,4,5+. It should be PRE-FILLED with zeros. </li>
+
+    <li class="list-group-item">Preferably to be pre-filled for multiple users of a single account, if they’re in the same household?</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -1632,6 +2089,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1670,6 +2131,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1708,6 +2173,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1746,6 +2215,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1784,6 +2257,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -1811,6 +2288,11 @@
  12
         
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -1820,8 +2302,46 @@
 </div>
     
     
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">Attending school or day-care may be a risk for acquiring COVID-19 or flu and similar illnesses. We would like to check this.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">If your child attends regular school or day-care (even if this is just one day a week) then please answer yes to this. Attendance of clubs and activities does not count – even if regular. </li>
+
+</ul>
+
+
+
+    </div>
     
     
+    
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Ideally, this question would only be asked if they have children aged 0-4 – or if they’re aged 0-4 themselves, and the answer would be a drop-down menu with the right number of options.</li>
+
+    <li class="list-group-item">Preferably, this be pre-filled for multiple users of a single account, if they’re in the same household</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -1857,6 +2377,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1887,6 +2411,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1917,6 +2445,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1947,6 +2479,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -1977,6 +2513,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2007,6 +2547,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_6</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2037,6 +2581,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_7</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -2066,6 +2614,11 @@
  <i class="fas fa-mandatory danger"></i>
  
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -2074,6 +2627,27 @@
  <span class="user-label">What is your main mean of transport?</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">It has been suggested that using public transport may be a risk for COVID-19 or flu. We would like to check this.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Tick the option that best represents your most normal mode of transport.</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -2112,6 +2686,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2142,6 +2720,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2172,6 +2754,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2202,6 +2788,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2232,6 +2822,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2262,6 +2856,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_6</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -2291,6 +2889,11 @@
  <i class="fas fa-mandatory danger"></i>
  
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -2299,6 +2902,27 @@
  <span class="user-label">On a normal day, how much time do you spend on public transport? (Bus, train, tube etc.)</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">It has been suggested that using public transport may be a risk for getting COVID-19 or flu. We would like to check this.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Think of a typical day. If you use several different forms of public transport each day, remember to include all journeys. Don’t include taxis or other forms of private transport.</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -2337,6 +2961,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2367,6 +2995,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2397,6 +3029,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2427,6 +3063,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2457,6 +3097,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -2484,6 +3128,11 @@
  15
         
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+optional</span>
+ 
+        
         
         
     </div>
@@ -2495,6 +3144,21 @@
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Not a core question.</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -2530,6 +3194,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2560,6 +3228,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2590,6 +3262,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2620,6 +3296,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2650,6 +3330,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2680,6 +3364,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_6</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -2709,6 +3397,11 @@
  <i class="fas fa-mandatory danger"></i>
  
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -2718,8 +3411,44 @@
 </div>
     
     
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">We would like to be able to work out how much protection the vaccine gives.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Report yes, if you received the vaccine this season, usually in the autumn. If you get vaccinated after filling in this questionnaire, please return to this and update your answer.</li>
+
+</ul>
+
+
+
+    </div>
     
     
+    
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Note that the years will need to be changed each year.</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -2755,6 +3484,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2785,6 +3518,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2815,6 +3552,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -2844,6 +3585,11 @@
  <i class="fas fa-mandatory danger"></i>
  
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -2853,8 +3599,44 @@
 </div>
     
     
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">We would like to be able to work out how much protection the vaccine gives. We would also like to find out  if there is some protection from vaccines received in previous years.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Answer yes if you received the vaccine last year (during the autumn/winter of 2010-2011).</li>
+
+</ul>
+
+
+
+    </div>
     
     
+    
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Note that the years will need to be changed each year.</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -2890,6 +3672,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2920,6 +3706,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -2950,6 +3740,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -2958,6 +3752,19 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">If [Yes] show Q10b and Q10c</li>
+
+    <li class="list-group-item">If [No] show Q10d</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -2976,6 +3783,11 @@
  <i class="fas fa-sort "></i>
  18
         
+        
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
         
         
         
@@ -3031,6 +3843,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3061,6 +3877,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -3069,6 +3889,17 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if $Q10 is [Yes]</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -3087,6 +3918,11 @@
  <i class="fas fa-sort "></i>
  19
         
+        
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
         
         
         
@@ -3134,6 +3970,52 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 12</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">The COVID-19 context encouraged me to get influenza vaccination this year 12</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_12</span>
+ 
+</td>
+        <td> 
+<ul class="list-unstyled d-inline">
+
+    <li> 
+ <span class="badge badge-primary" >FR</span>
+</li>
+
+</ul>
+</td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3148,7 +4030,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 2</span>
+ 3</span>
  
 </td>
         <td>
@@ -3164,6 +4046,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3178,7 +4064,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 3</span>
+ 4</span>
  
 </td>
         <td>
@@ -3194,6 +4080,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3208,7 +4098,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 4</span>
+ 5</span>
  
 </td>
         <td>
@@ -3224,6 +4114,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3238,7 +4132,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 5</span>
+ 6</span>
  
 </td>
         <td>
@@ -3254,6 +4148,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3268,7 +4166,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 6</span>
+ 7</span>
  
 </td>
         <td>
@@ -3284,6 +4182,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_6</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3298,7 +4200,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 7</span>
+ 8</span>
  
 </td>
         <td>
@@ -3314,6 +4216,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_7</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3328,7 +4234,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 8</span>
+ 9</span>
  
 </td>
         <td>
@@ -3344,6 +4250,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_8</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3358,7 +4268,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 9</span>
+ 10</span>
  
 </td>
         <td>
@@ -3374,6 +4284,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_9</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3388,7 +4302,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 10</span>
+ 11</span>
  
 </td>
         <td>
@@ -3404,6 +4318,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_10</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -3412,6 +4330,17 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if Q10 is [Yes]</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -3430,6 +4359,11 @@
  <i class="fas fa-sort "></i>
  20
         
+        
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
         
         
         
@@ -3477,6 +4411,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3507,6 +4445,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3537,6 +4479,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3567,6 +4513,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3597,6 +4547,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3627,6 +4581,144 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_6</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 17</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 7</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Because of COVID-19 pandemic, I avoid seing doctors or going to the pharmacy</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_16</span>
+ 
+</td>
+        <td> 
+<ul class="list-unstyled d-inline">
+
+    <li> 
+ <span class="badge badge-primary" >FR</span>
+</li>
+
+</ul>
+</td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 18</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 8</span>
+ 
+</td>
+        <td>
+ <span class="user-label">I am afraid that influenza vaccine would increase my risk of getting COVID-19</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_17</span>
+ 
+</td>
+        <td> 
+<ul class="list-unstyled d-inline">
+
+    <li> 
+ <span class="badge badge-primary" >FR</span>
+</li>
+
+</ul>
+</td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 19</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 9</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Other reason linked with COVID-19 (open field)</span>
+</td>
+        <td>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Open field with textual response</li>
+
+</ul>
+
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_18</span>
+ 
+</td>
+        <td> 
+<ul class="list-unstyled d-inline">
+
+    <li> 
+ <span class="badge badge-primary" >FR</span>
+</li>
+
+</ul>
+</td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3641,7 +4733,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 7</span>
+ 10</span>
  
 </td>
         <td>
@@ -3657,6 +4749,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_7</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3671,7 +4767,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 8</span>
+ 11</span>
  
 </td>
         <td>
@@ -3687,6 +4783,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_8</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3701,7 +4801,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 9</span>
+ 12</span>
  
 </td>
         <td>
@@ -3717,6 +4817,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_9</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3731,7 +4835,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 10</span>
+ 13</span>
  
 </td>
         <td>
@@ -3747,6 +4851,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_10</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3761,7 +4869,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 11</span>
+ 14</span>
  
 </td>
         <td>
@@ -3777,6 +4885,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_11</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3791,7 +4903,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 12</span>
+ 15</span>
  
 </td>
         <td>
@@ -3807,6 +4919,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_12</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3821,7 +4937,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 13</span>
+ 16</span>
  
 </td>
         <td>
@@ -3837,6 +4953,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_13</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3851,7 +4971,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 14</span>
+ 17</span>
  
 </td>
         <td>
@@ -3867,6 +4987,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_14</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -3881,7 +5005,7 @@
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 15</span>
+ 18</span>
  
 </td>
         <td>
@@ -3897,6 +5021,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_15</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -3926,6 +5054,11 @@
  <i class="fas fa-mandatory danger"></i>
  
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -3934,6 +5067,27 @@
  <span class="user-label">Do you take regular medication for any of the following medical conditions?</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">This question allows us to find out whether you have other medical conditions that may increase your risk of having more severe illness if you are infected with COVID-19 or flu.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Only answer “yes” if you take regular medication for your medical problem. If, for instance, you only occasionally take an asthma inhaler, then do not answer “yes” for asthma.</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -3972,6 +5126,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4002,6 +5160,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4032,6 +5194,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4062,6 +5228,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4092,6 +5262,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4122,6 +5296,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_6</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4152,6 +5330,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_7</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -4179,6 +5361,11 @@
  22
         
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -4187,6 +5374,27 @@
  <span class="user-label">Are you currently pregnant?</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">Pregnancy can result in more severe illness if you are infected with COVID-19 or flu.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Answer yes if you are pregnant today.</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -4225,6 +5433,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4255,6 +5467,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4285,6 +5501,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -4293,6 +5513,19 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Only asked of women between ages 15 and 50)</li>
+
+    <li class="list-group-item">if [Yes] show Q13b</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -4314,12 +5547,34 @@
         
         
         
+        
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
  <span class="user-label">Which trimester of the pregnancy are you in?</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">The stage of pregnancy might alter your risk of severe COVID-19 or flu if you are infected, although this is not very clear.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Which trimester are you in today?</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -4358,6 +5613,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4388,6 +5647,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4418,6 +5681,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4448,6 +5715,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -4456,6 +5727,17 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if [Yes] in Q12</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -4479,12 +5761,34 @@
         
         
         
+        
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
  <span class="user-label">Do you smoke tobacco?</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">Smoking might make you more likely to get a more severe dose of COVID-19 or flu. We would like to test this.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Please answer as accurately as possible. If you smoke other products (e.g. a pipe or cigars), then indicate roughly how many times a day.</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -4523,6 +5827,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4553,6 +5861,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4583,6 +5895,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4613,6 +5929,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4643,6 +5963,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -4672,6 +5996,11 @@
  <i class="fas fa-mandatory danger"></i>
  
         
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
         
         
     </div>
@@ -4680,6 +6009,27 @@
  <span class="user-label">Do you have any of the following allergies that can cause respiratory symptoms? (select all options that apply)</span>
 </div>
     
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">Some allergic reactions can have similar symptoms to respiratory infection.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Tick all the options that apply. We are only interested in those allergies that cause respiratory symptoms (i.e. sneezing, runny nose, runny eyes).</li>
+
+</ul>
+
+
+
+    </div>
     
     
     
@@ -4718,6 +6068,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4748,6 +6102,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4778,6 +6136,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4808,6 +6170,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4838,6 +6204,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -4846,6 +6216,17 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Item #option_5 is exclusive with others to ensure consistency</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -4864,6 +6245,11 @@
  <i class="fas fa-sort "></i>
  26
         
+        
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+optional</span>
+ 
         
         
         
@@ -4911,6 +6297,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4941,6 +6331,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -4971,6 +6365,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -5001,6 +6399,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -5031,6 +6433,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -5039,6 +6445,17 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Item #option_1 is exclusive with others to ensure consistency</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -5057,6 +6474,11 @@
  <i class="fas fa-sort "></i>
  27
         
+        
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+optional</span>
+ 
         
         
         
@@ -5104,6 +6526,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -5134,6 +6560,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -5164,6 +6594,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -5194,6 +6628,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -5224,6 +6662,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -5232,6 +6674,17 @@
     
     
     
+    
+        <div class="card rules question-block">
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">#option_1 is exclusive with other responses</li>
+
+</ul>
+
+        </div>
     
     
    </div> 
@@ -5250,6 +6703,11 @@
  <i class="fas fa-sort "></i>
  28
         
+        
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+optional</span>
+ 
         
         
         
@@ -5297,6 +6755,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -5327,6 +6789,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -5357,6 +6823,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -5387,6 +6857,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -5417,6 +6891,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_5</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
        <tr>
@@ -5447,6 +6925,10 @@
  <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_6</span>
  
 </td>
+        <td></td>
+         
+         
+        </td>
        </tr>  
       
     </table>
@@ -5460,9 +6942,209 @@
    </div> 
 </div> 
 
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
+        <h4>Q26</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 29
+        
+        
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+optional</span>
+ 
+        
+        
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Are you taking or do you plan to take this winter homeopathic medicine in order to prevent COVID-19?</span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 0</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">I don’t know</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">I don’t want to answer</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_4</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+    
+        <div class="card platforms question-block w-75">
+        <h6>Platforms implementing this question</h6>
+            
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">FR</li>
+
+</ul>
+
+        </div>
+    
+   </div> 
+</div> 
+
 
 <h3>Legend</h3>
 <ul class="list-group">
+    <li class="list-group-item">
+ <span class="badge badge-" >
+ <i class="fas fa-bullseye info"></i>
+</span>
+ : Target of the question (all platforms or optional)</li>
     <li class="list-group-item">
  
  <span class="badge badge-default" >
