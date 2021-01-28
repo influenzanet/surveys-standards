@@ -143,8 +143,8 @@
                 }
             },
             "rules": [
-                "Shown If  “Yes, Paid employment full time”, or “Yes, paid employment part time” to Q4",
-                "If 0, then ask for Q4b_0_open, as a extra field"
+                "Shown If  [Yes, Paid employment full time], or [Yes, paid employment part time] to $Q4",
+                "If '0', then ask for $Q4b_0_open, as a extra field"
             ],
             "description": [
                 "Why are we asking this?",
@@ -160,7 +160,7 @@
             "mandatory": false,
             "type": "text",
             "comment": "extra field not shown",
-            "rules": ["Shown when Q4b.0 is selected"]
+            "rules": ["Shown when $Q4b.0 is selected"]
         },
         {
             "short_title": "Intake Q4c",
@@ -195,8 +195,8 @@
                 }
             },
             "rules": [
-                "If [Yes, Paid employment full time], or [Yes, paid employment part time] to Q4",
-                "Trigger free text if “other” checked, allow the users to write in their occupation"
+                "If [Yes, Paid employment full time], or [Yes, paid employment part time] to $Q4",
+                "Trigger free text if [other] checked, allow the users to write in their occupation"
             ],
             "description":[
                 "Why are we asking this?",
@@ -289,7 +289,10 @@
                     "text": "None of the above",
                     "value": "4"
                 }
-            }
+            },
+            "rules": [
+                "#option_5 is exclusive with others"
+            ]
         },
         {
             "short_title": "Intake Q6",
@@ -572,7 +575,7 @@
                 }
             },
             "rules": [
-                "Shown if Q10 is [Yes]"
+                "Shown if $Q10 is [Yes]"
             ]
         },
         {
