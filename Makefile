@@ -24,6 +24,10 @@ intake-html:
 
 html: weekly-html intake-html
 	
+docx:
+	./cli survey:show --template="survey_clean.html" $(WEEKLY_DEF) --output="weekly_clean.html"
+	pandoc --from="html" --to="docx" -o "weekly.docx" weekly_clean.html
+
 check:
 	./cli survey:validate $(WEEKLY_DIR)/survey.json
 	./cli survey:validate $(INTAKE_DIR)/survey.json

@@ -86,7 +86,7 @@ def compare_legacy_to_html(survey, legacy, survey_name, legacy_name):
     }
     return template.render(ctx)
 
-def survey_to_html(survey, version):
+def survey_to_html(survey, version, opts={}):
     """
     Create survey document
     """
@@ -101,7 +101,12 @@ def survey_to_html(survey, version):
     env.globals['attr'] = attr
     env.globals['all_attributes'] = all_attributes
 
-    template = env.get_template('survey.html')
+    if "template" in opts:
+        tpl_file = opts['template']
+    else:
+        tpl_file = 'survey.html'
+
+    template = env.get_template(tpl_file)
     
     with open(path + 'survey.css') as f:
         theme = f.read()

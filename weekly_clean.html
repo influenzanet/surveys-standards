@@ -1,0 +1,7469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Survey </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style>.prop-legacy {
+    background-color: papayawhip;
+}
+
+.prop-survey {
+    background-color: lavender;
+}
+
+.question {
+    margin-top: .3em;
+}
+
+@media(print) {
+    .question {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.question-title {
+    background-color: lemonchiffon;
+}</style>
+    
+</head>
+<body>
+   <div class="survey container-fluid">
+   
+<H1>Survey weekly</h1>
+<div> <a href="https://influenzanet.github.io/surveys-standards/surveys/weekly/survey.json">JSON</a> Version None, built on 2021-01-28 19:49:41.102757</div>
+
+<p class="comment">This file describes the survey design at a high level defining elements to enable data sharing and common elements. Legends are presented at the bottom of this file. <a href="https://influenzanet.github.io/surveys-standards/docs/survey_description">Documentation is also available</a> </p>
+
+ 
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Weekly survey</li>
+
+    <li class="list-group-item">Common rules : If symptoms = $Q1 hay any response except [No symptom]</li>
+
+</ul>
+
+
+
+
+
+
+<div class="question">
+    
+    <h3>Q1</h3> 
+    <h4>
+ <span class="user-label">Have you had any of the following symptoms since your last visit (or in the past week, if this is your first visit)?</span>
+</H4>
+    <ul>
+        
+        <li>Type : multiple_choice</li>
+        <li>Order in survey: 1</li>
+        <li>Mandatory question</li>
+        <li>Target platforms: all </li>
+        
+        
+        
+         Data type of data input(s) : numeric
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">The key part of this survey is tracking people’s symptoms.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">For people with chronic (long-term)  illnesses, only tick changes in symptoms. So, if you have chronic shortness of breath (for instance)  then only tick this box if this has got worse recently.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No symptoms</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Fever</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Chills</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Runny or blocked nose</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">Sneezing</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">Sore throat</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">Cough</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">Shortness of breath</span>
+ 
+
+
+        
+ <#8> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[8]</strong> 
+ 
+ <span class="user-label">Headache</span>
+ 
+
+
+        
+ <#9> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[9]</strong> 
+ 
+ <span class="user-label">Muscle/joint pain</span>
+ 
+
+
+        
+ <#10> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[10]</strong> 
+ 
+ <span class="user-label">Chest pain</span>
+ 
+
+
+        
+ <#11> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[11]</strong> 
+ 
+ <span class="user-label">Feeling tired or exhausted (malaise)</span>
+ 
+
+
+        
+ <#12> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[12]</strong> 
+ 
+ <span class="user-label">Loss of appetite</span>
+ 
+
+
+        
+ <#13> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[13]</strong> 
+ 
+ <span class="user-label">Coloured sputum/phlegm</span>
+ 
+
+
+        
+ <#14> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[14]</strong> 
+ 
+ <span class="user-label">Watery, bloodshot eyes</span>
+ 
+
+
+        
+ <#15> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[15]</strong> 
+ 
+ <span class="user-label">Nausea</span>
+ 
+
+
+        
+ <#16> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[16]</strong> 
+ 
+ <span class="user-label">Vomiting</span>
+ 
+
+
+        
+ <#17> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[17]</strong> 
+ 
+ <span class="user-label">Diarrhoea</span>
+ 
+
+
+        
+ <#18> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[18]</strong> 
+ 
+ <span class="user-label">Stomachache</span>
+ 
+
+
+        
+ <#19> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[23]</strong> 
+ 
+ <span class="user-label">Loss of smell</span>
+ 
+<small><i>[added on March 26th 2020 ]</i></small>
+
+        
+ <#20> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[21]</strong> 
+ 
+ <span class="user-label">Loss of taste</span>
+ 
+<small><i>[added on March 26th 2020 ]</i></small>
+
+        
+ <#21> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[22]</strong> 
+ 
+ <span class="user-label">Nose bleed</span>
+ 
+<small><i>[added on March 26th 2020 ]</i></small>
+
+        
+ <#22> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[20]</strong> 
+ 
+ <span class="user-label">Rash</span>
+ 
+<small><i>[used only by Italy ]</i></small>
+
+        
+ <#23> 
+
+         [Only in 
+IT
+]
+      </li>
+      
+       <li>
+        
+ <strong>[19]</strong> 
+ 
+ <span class="user-label">Other</span>
+ 
+
+
+        
+ <#24> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">item [No symptoms] is exclusive with others</li>
+
+    <li class="list-group-item">- If report any symptoms, check database: was the participant STILL ILL when they last completed the Weekly survey (i.e. they said “I am still ill” in response to Weekly Q4 below last time?) AND have fewer than 15 days elapsed since they last completed the Weekly Survey AND fewer than 15 days have elapsed since their previous date of symptom onset</li>
+
+    <li class="list-group-item">- If Yes: continue with Weekly Q2</li>
+
+    <li class="list-group-item">- If No or Don’t know: then treat this as a “new” bout of illness, continue with Weekly Q3</li>
+
+    <li class="list-group-item">- Of course, this only applies to people who have previously participated</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q2</h3> 
+    <h4>
+ <span class="user-label">On DATE OF LAST VISIT you reported that you were still ill with symptoms that began on DATE OF FIRST SYMPTOMS REPORTED PREVIOUSLY. Are the symptoms you reported today part of the same bout of illness?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 2</li>
+        <li>Mandatory question</li>
+        
+        
+        
+        
+         Data type of data input(s) : numeric
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To make filling out the rest of the survey quicker for you.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">If you believe that the symptoms you have reported today are caused by the same bout of illness as your previous symptoms, please tick “yes”.</li>
+
+    <li class="list-group-item">To save you time, we have filled in the information you gave us previously about your illness. Please check that it is still correct, and make any changes – for instance, if you have visited a doctor or taken additional time off work since you last completed the survey.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">Yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I don’t know/can’t remember</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[9]</strong> 
+ 
+ <span class="user-label">Not applicable</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if If the participant was STILL ILL on their last visit and has reported symptoms this time</li>
+
+    <li class="list-group-item">The “don’t know” option here might not apply to people filling it in for themselves but is relevant for people managing accounts for other people.</li>
+
+    <li class="list-group-item">If [No] or [DON’T KNOW] #option_3:</li>
+
+    <li class="list-group-item">This means that the current symptoms are the start of a “new” illness: continue with Weekly $Q3</li>
+
+    <li class="list-group-item">If [Yes]: </li>
+
+    <li class="list-group-item">This means that the current symptoms are the continuation of the same bout of illness as the previous visit. The remainder of the symptoms questionnaire (onset date, further details about symptoms, details about seeking medical attention, treatment, time off work/school) can be pre-filled with their previous answers.</li>
+
+    <li class="list-group-item">The point of the pre-filling is to make the survey quicker and easier for participants who have longer-duration symptoms.</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov1</h3> 
+    <h4>
+ <span class="user-label">In the 14 days before your symptoms started, did you travel to an area at risk for new coronavirus infection?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 3</li>
+        
+        
+        <li>Inactive question</li>
+        <li> Added at 2020-03-12</li>
+        <li>Removed at 2020-06-20</li>
+         Data type of data input(s) : numeric
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov1b</h3> 
+    <h4>
+ <span class="user-label">In which area(s) at risk of infection did you go within 14 days before the onset of your symptoms?</span>
+</H4>
+    <ul>
+        
+        <li>Type : matrix</li>
+        <li>Order in survey: 4</li>
+        
+        
+        <li>Inactive question</li>
+        <li> Added at 2020-03-12</li>
+        <li>Removed at 2020-06-20</li>
+         Data type of data input(s) : text
+    </ul>
+
+    
+    
+    
+
+    
+    
+    
+    <div class="row">
+        <div class="col">
+        
+            <div class="card matrix-dim question-block">
+            <h6>Rows</h6>
+            
+    <table class="table table-compact table-sm">
+    
+    <tr>
+        <td>
+ <strong>[row1]</strong> 
+</td>
+        <td>
+ <span class="user-label">Latest at-risk country visited</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+ <strong>[row2]</strong> 
+</td>
+        <td>
+ <span class="user-label">Second-last at-risk country visited</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+ <strong>[row3]</strong> 
+</td>
+        <td>
+ <span class="user-label">Third-last at-risk country visited</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    </table>
+
+            </div>
+        
+        </div>
+        <div class="col">
+        
+            <div class="card matrix-dim question-block">
+            <h6>Columns</h6>
+            
+    <table class="table table-compact table-sm">
+    
+    <tr>
+        <td>
+ <strong>[col1]</strong> 
+</td>
+        <td>
+ <span class="user-label"></span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    </table>
+
+            </div>
+        
+        </div>
+    </div>
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov2</h3> 
+    <h4>
+ <span class="user-label">In the 14 days before the onset of your symptoms, have you been in contact with one or more people who have stayed in an area at risk of infection with the new coronavirus?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 5</li>
+        
+        
+        <li>Inactive question</li>
+        <li> Added at 2020-03-12</li>
+        <li>Removed at 2020-06-20</li>
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov2b</h3> 
+    <h4>
+ <span class="user-label">In which area(s) at risk of infection with the new coronavirus these people have been?</span>
+</H4>
+    <ul>
+        
+        <li>Type : matrix</li>
+        <li>Order in survey: 6</li>
+        
+        
+        <li>Inactive question</li>
+        <li> Added at 2020-03-12</li>
+        <li>Removed at 2020-06-20</li>
+         Data type of data input(s) : text
+    </ul>
+
+    
+    
+    
+
+    
+    
+    
+    <div class="row">
+        <div class="col">
+        
+            <div class="card matrix-dim question-block">
+            <h6>Rows</h6>
+            
+    <table class="table table-compact table-sm">
+    
+    <tr>
+        <td>
+ <strong>[row1]</strong> 
+</td>
+        <td>
+ <span class="user-label">Latest at-risk country visited</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+ <strong>[row2]</strong> 
+</td>
+        <td>
+ <span class="user-label">Second-last at-risk country visited</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+ <strong>[row3]</strong> 
+</td>
+        <td>
+ <span class="user-label">Third-last at-risk country visited</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    </table>
+
+            </div>
+        
+        </div>
+        <div class="col">
+        
+            <div class="card matrix-dim question-block">
+            <h6>Columns</h6>
+            
+    <table class="table table-compact table-sm">
+    
+    <tr>
+        <td>
+ <strong>[col1]</strong> 
+</td>
+        <td>
+ <span class="user-label">Third-last at-risk country visited</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    </table>
+
+            </div>
+        
+        </div>
+    </div>
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov3</h3> 
+    <h4>
+ <span class="user-label">In the 14 days before your symptoms started, have you been in close contact with someone for whom a PCR test (nasal swab) has confirmed that they have Covid-19?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 7</li>
+        
+        
+        
+        <li> Added at 2020-03-12</li>
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown (if symptoms ($Q1 != {0&#39;) AND (if answers to Q2 weekly other than « Yes »)</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov3b</h3> 
+    <h4>
+ <span class="user-label">Do you live in the same household as that person?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 8</li>
+        
+        
+        
+        <li> Added at 2020-03-12</li>
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if $Qcov3 is [Yes]</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov8</h3> 
+    <h4>
+ <span class="user-label">In the 14 days before your symptoms started, have you been in close contact with someone presenting symptoms of COVID-19?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 9</li>
+        
+        
+        
+        <li> Added at 2020-03-26</li>
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Symptoms of COVID-19 include: fever or chills, cough, sore throat, shortness of breath, sore muscles and headache.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if any symptoms</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov8b</h3> 
+    <h4>
+ <span class="user-label">Do you live in the same household as that person?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 10</li>
+        
+        
+        
+        <li> Added at 2020-03-26</li>
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if $Qcov8[Yes]</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q3</h3> 
+    <h4>
+ <span class="user-label">When did the first symptoms appear?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 11</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To help us work out the number of cases of COVID-19 and flu that arise each day.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Please give as accurate an estimate as possible.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">Choose date</span>
+ 
+<small><i>[If checked show date field (Q3_0_open) ]</i></small>
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q3_0_open</h3> 
+    <h4>
+ <span class="user-label"></span>
+</H4>
+    <ul>
+        
+        <li>Type : date</li>
+        <li>Order in survey: 12</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">open field for Q3</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q4</h3> 
+    <h4>
+ <span class="user-label">When did your symptoms end?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 13</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">Using the beginning and end dates of symptoms we can work out how long respiratory infections last.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Please give as accurate an estimate as possible.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">Choose date</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q4_0_open</h3> 
+    <h4>
+ <span class="user-label"></span>
+</H4>
+    <ul>
+        
+        <li>Type : date</li>
+        <li>Order in survey: 14</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">open field for Q4</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q5</h3> 
+    <h4>
+ <span class="user-label">Did your symptoms develop suddenly over a few hours?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 15</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">Sudden onset of symptoms is believed to be common for COVID-19 and flu.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Tick yes if your symptoms appeared over a few hours rather than gradually developing over a few days.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q6</h3> 
+    <h4>
+ <span class="user-label">When did your fever begin?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 16</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">Fever is very important for diagnosing COVID-19 and flu, so we want to know when this started.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Please give as accurate an estimate as possible.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">Choose date</span>
+ 
+<small><i>[open field date if checked ]</i></small>
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if $Q1[fever]</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q6_0_open</h3> 
+    <h4>
+ <span class="user-label"></span>
+</H4>
+    <ul>
+        
+        <li>Type : date</li>
+        <li>Order in survey: 17</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">extra field for $Q6#option_1</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q6b</h3> 
+    <h4>
+ <span class="user-label">Did your fever develop suddenly over a few hours?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 18</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">COVID-19 and flu are often associated with a sudden onset of fever</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Tick yes if your fever appeared over a few hours rather than gradually developing over a few days.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if $Q1[fever]</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q6c</h3> 
+    <h4>
+ <span class="user-label">Did you take your temperature?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 19</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">COVID-19 and flu often cause a high temperature. However, not everyone takes their temperature when they are ill.</li>
+
+    <li class="list-group-item">How should I answer it? </li>
+
+    <li class="list-group-item">Answer yes, if you took your temperature using a thermometer.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q6d</h3> 
+    <h4>
+ <span class="user-label">What was your highest temperature measured?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 20</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">COVID-19 and flu often cause a high temperature.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Give the highest temperature you recorded during this episode of illness.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">Below 37° C</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">37° - 37.4°C</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">37.5° - 37.9°C</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">38° – 38.9°C</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">39° - 39.9°C</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">40°C or more</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">I don’t know/can’t remember</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">(if symptoms) and (if took temperature $Q6c[Yes])</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q7</h3> 
+    <h4>
+ <span class="user-label">Because of your symptoms, did you VISIT (see face to face) any of medical services?</span>
+</H4>
+    <ul>
+        
+        <li>Type : multiple_choice</li>
+        <li>Order in survey: 21</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To find out whether people contact the health services because of their symptoms.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Tick all of those that apply. If you are due to see attend, then tick the final option.</li>
+
+</ul>
+
+
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Will need to be adjusted to suit different countries.</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">GP or GP’s practice nurse</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Hospital admission</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Hospital accident &amp; emergency department/out of hours service</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">Other medical services</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">No, but I have an appointment scheduled</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+    <li class="list-group-item">#option_6 is exclusive with others</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q7b</h3> 
+    <h4>
+ <span class="user-label">How soon after your symptoms appeared did you first visit this medical service?</span>
+</H4>
+    <ul>
+        
+        <li>Type : matrix</li>
+        <li>Order in survey: 22</li>
+        
+        
+        
+        
+        
+         Data type of data input(s) : numeric
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To find out how quickly people with symptoms are seen by the health services. </li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Only record the time until your FIRST contact with the health services.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">Same day</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">1 day</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">2 days</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">3 days</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">4 days</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">5-7 days</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">More than 7 days</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#8> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    <div class="row">
+        <div class="col">
+        
+            <div class="card matrix-dim question-block">
+            <h6>Rows</h6>
+            
+    <table class="table table-compact table-sm">
+    
+    <tr>
+        <td>
+ <strong>[row1]</strong> 
+</td>
+        <td>
+ <span class="user-label">GP</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+ <strong>[row2]</strong> 
+</td>
+        <td>
+ <span class="user-label">Hospital admission</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+ <strong>[row3]</strong> 
+</td>
+        <td>
+ <span class="user-label">Hospital accident &amp; emergency department/out of hours service</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+ <strong>[row4]</strong> 
+</td>
+        <td>
+ <span class="user-label">Other medical services</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    </table>
+
+            </div>
+        
+        </div>
+        <div class="col">
+        
+            <div class="card matrix-dim question-block">
+            <h6>Columns</h6>
+            
+    <table class="table table-compact table-sm">
+    
+    <tr>
+        <td>
+ <strong>[col1]</strong> 
+</td>
+        <td>
+ <span class="user-label">Medical Service</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+    </tr>
+    
+    </table>
+
+            </div>
+        
+        </div>
+    </div>
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+    <li class="list-group-item">This should be asked for each option ticked in the previous question $Q7 (exept “No” or “Not yet”)</li>
+
+    <li class="list-group-item">Table for each entry in the previous question. And then drop-down within each cell for the delays. Last year we had it as a table of radio boxes, but it displayed the same table no matter which options were chosen in Weekly Q7 – it would be nice if it only displayed the options selected in Weekly Q7</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q8</h3> 
+    <h4>
+ <span class="user-label">Because of your symptoms, did you contact via TELEPHONE or INTERNET any of medical services?</span>
+</H4>
+    <ul>
+        
+        <li>Type : multiple_choice</li>
+        <li>Order in survey: 23</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To find out whether people contact the health services because of their symptoms.</li>
+
+    <li class="list-group-item">How should I answer it? </li>
+
+    <li class="list-group-item">Tick all options that apply </li>
+
+</ul>
+
+
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">This is the UK version. Will need to be adjusted to suit different countries.</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">GP - spoke to receptionist only</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">GP - spoke to the doctor or nurse</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">NHS Direct or similar</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">NPFS</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">Other</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+    <li class="list-group-item">[No] is exclusive with other responses</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q8b</h3> 
+    <h4>
+ <span class="user-label">How soon after your symptoms appeared did you first contact via telephone or internet this medical service?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 24</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">Same day</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">1 day</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">2 days</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">3 days</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">4 days</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">5-7 days</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">More than 7 days</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#8> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+    <li class="list-group-item">This should be asked for each option ticked in the previous question (except [No]) Preferably, it only displays the options selected in Weekly Q8.</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov18</h3> 
+    <h4>
+ <span class="user-label">What is the main reason for which you did not contact any health professional for the symptoms you declared today?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 25</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">My symptoms appeared very recently</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">My symptoms are mild</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">I have often these symptoms</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">I think I know what I have and I use self-medication</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">I think there is no effective treatment for the disease I have</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">It is too hard to get an appointment quickly</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">I do not have time</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[8]</strong> 
+ 
+ <span class="user-label">For financial reasons</span>
+ 
+
+
+        
+ <#8> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[9]</strong> 
+ 
+ <span class="user-label">For fear of consequences if the doctor thinks I have COVID-19</span>
+ 
+
+
+        
+ <#9> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[10]</strong> 
+ 
+ <span class="user-label">My symptoms appeared very recently</span>
+ 
+<small><i>[open field ]</i></small>
+
+        
+ <#10> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[99]</strong> 
+ 
+ <span class="user-label">I don’t know/don’t want to answer</span>
+ 
+
+
+        
+ <#11> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if $Q7[no] and $Q8[no]</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov18_10_open</h3> 
+    <h4>
+ <span class="user-label"></span>
+</H4>
+    <ul>
+        
+        <li>Type : text</li>
+        <li>Order in survey: 26</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">open field for Qcov18b.10</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov18b</h3> 
+    <h4>
+ <span class="user-label">Can you specify which consequences you mainly fear?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 27</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Have to do a diagnostic test</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Have to be isolated</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Have to stop working</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">to be judged by others</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">to be excluded by others</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">another consequence</span>
+ 
+<small><i>[open textual field ]</i></small>
+
+        
+ <#6> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if to $Qcov18{9}</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov18b_6_open</h3> 
+    <h4>
+ <span class="user-label"></span>
+</H4>
+    <ul>
+        
+        <li>Type : text</li>
+        <li>Order in survey: 28</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">open field</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov4</h3> 
+    <h4>
+ <span class="user-label">Because of your symptoms, did you call [write the COVID-19 emergency line of your country]?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 29</li>
+        
+        
+        <li>Inactive question</li>
+        <li> Added at 2020-03-13</li>
+        <li>Removed at 2020-06-20</li>
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">no</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov5</h3> 
+    <h4>
+ <span class="user-label">Because of your symptoms, did you call [EMERGENCY NUMBER FOR YOUR COUNTRY]?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 30</li>
+        
+        
+        
+        <li> Added at 2020-03-13</li>
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">no</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov6</h3> 
+    <h4>
+ <span class="user-label">Because of your symptoms, did you wear a mask (surgical mask sold in pharmacies)?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 31</li>
+        
+        
+        <li>Inactive question</li>
+        <li> Added at 2020-03-13</li>
+        <li>Removed at 2020-06-20</li>
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">No, I would have liked but could not find any</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov16</h3> 
+    <h4>
+ <span class="user-label">Because of your symptoms, did you undergo analyses to know if you have COVID-19 (infection due to SRAS-CoV-2)? </span>
+</H4>
+    <ul>
+        
+        <li>Type : multiple_choice</li>
+        <li>Order in survey: 32</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">(the participant can select the first and second option together if he wants)</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes, a PCR test (virus search, on a swab in nose or mouth, or a sputum or saliva sample)</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Yes, a serological analysis (screening for antibodies against this virus, from a drop of blood at fingertip or a blood sample) </span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">Yes, a rapid antigen detection test (on a swab in nose or mouth, with a result available in less than an hour)</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Not yet, I plan to shortly undergo a test</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">No, I have a prescription but will not undergo a test</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+    <li class="list-group-item">Options {1} and {2} are exclusive to the others</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov16b</h3> 
+    <h4>
+ <span class="user-label">Do you already get the result of this PCR test?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 33</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Yes, the result is non interpretable</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">No, I do not have the result yet</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If $Qcov16{1}</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov16c</h3> 
+    <h4>
+ <span class="user-label">Do you already get the result of this serological analysis?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 34</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Yes, the result is non interpretable</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">No, I do not have the result yet</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If $Qcov16{2}</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov16d</h3> 
+    <h4>
+ <span class="user-label">How much time passed between the beginning of your symptoms and your search of a laboratory which could undergo this analysis? </span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 35</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Symptoms appeared the day or the day before the search of a laboratory</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Symptoms appeared 2, 3 or 4 days before the search of a laboratory</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Symptoms appeared 5, 6 or 7 days before the search of a laboratory</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">Symptoms appeared between 8 and 14 days before the search of a laboratory</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">Symptoms appeared between 15 and 28 days before the search of a laboratory</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">Symptoms appeared more than four weeks before the search of a laboratory</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[99]</strong> 
+ 
+ <span class="user-label">I don’t know/don’t want to answer</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If Qcov16{1}</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov16e</h3> 
+    <h4>
+ <span class="user-label">How much time passed between the beginning of your symptoms and the sampling? </span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 36</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">0 to 1 day</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">2 to 4 days</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">5 to 7 days</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">8 to 15 days</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">Over 15 days</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If $Qcov16{1}</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov16f</h3> 
+    <h4>
+ <span class="user-label">Do you know the result of this rapid antigen detection test?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 37</li>
+        
+        
+        
+        <li> Added at 2020-11-23</li>
+        
+        
+    </ul>
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">In proposal from 2020,November</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes, Positive for the SARS-CoV-2 (COVID-19)</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Yes, Negative for the SARS-CoV-2 (COVID-19)</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Yes, the result is non interpretable</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[99]</strong> 
+ 
+ <span class="user-label">No, I don’t know or don’t remember</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If $Qcov16{5}</li>
+
+</ul>
+
+    
+    
+        <h6>Platforms implementing this question</h6>
+        
+FR
+
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov16g</h3> 
+    <h4>
+ <span class="user-label">Do you know the result of this rapid antigen detection test?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 38</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">In proposal</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">A general practitioner</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">A specialized physician, a dental surgeon or a mid-wife</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">A pharmacist or a pharmacy technician</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">Another health professional  (specify)</span>
+ 
+<small><i>[(give the list of all health professional authorized to realize this test in your country) ]</i></small>
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">Another professional (specify)</span>
+ 
+<small><i>[(give the list of all other professionals authorized to realize this test) ]</i></small>
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[99]</strong> 
+ 
+ <span class="user-label">I don’t know or don’t remember</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If $Qcov16{5}</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov19</h3> 
+    <h4>
+ <span class="user-label">Because of your symptoms, did you undergo analyses to know if you have flu? </span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 39</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes, a PCR test (virus search, on a nasal swab)</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Not yet, I have a prescription and plan to shortly undergo a test</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">No, I have a prescription but will not undergo the test</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov19b</h3> 
+    <h4>
+ <span class="user-label">Do you already get the result of this PCR test?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 40</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes, Positive for influenza</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Yes, Negative for influenza</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Yes, the result is non interpretable</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">No, I do not have the result yet</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if to $Qcov19{1}</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q9</h3> 
+    <h4>
+ <span class="user-label">Did you take medication for these symptoms? </span>
+</H4>
+    <ul>
+        
+        <li>Type : multiple_choice</li>
+        <li>Order in survey: 41</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">This is adapted to the UK situation. Other countries will need to adapt the brand names of the commonly used pain killers or antipyretics</li>
+
+    <li class="list-group-item">Needs to have a check so that participants can’t give inconsistent answers.</li>
+
+    <li class="list-group-item">Extra country specific options – mapped to “other” in standardised database</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No medication</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Pain killers (e.g. paracetamol, lemsip, ibuprofen, aspirin, calpol, etc)</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Cough medication (e.g. expectorants)</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Antivirals (Tamiflu, Relenza)</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">Antibiotics</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">Homeopathy</span>
+ 
+<small><i>[French specific item, optional ]</i></small>
+
+        
+ <#6> 
+
+         [Only in 
+FR
+]
+      </li>
+      
+       <li>
+        
+ <strong>[8]</strong> 
+ 
+ <span class="user-label">Alternative medicine (essential oil, phytotherapy, etc.)</span>
+ 
+<small><i>[French specific item, optional ]</i></small>
+
+        
+ <#7> 
+
+         [Only in 
+FR
+]
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">Other</span>
+ 
+
+
+        
+ <#8> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">Don&#39;t know/Can&#39;t remember</span>
+ 
+
+
+        
+ <#9> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+    <li class="list-group-item">[No medication] and [Don’t know] are exclusives to others</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q9b</h3> 
+    <h4>
+ <span class="user-label">How much time passed between the beginning of your symptoms did you start taking this medication? </span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 42</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">Antivirals are thought to be most effective if taken quickly after disease onset.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Report the time until  you first started taking antivirals (which may not be the same day as you got your prescription).</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">Same day</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">1 day</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">2 days</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">3 days</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">4 days</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">5-7 days</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">More than 7 days</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">I don’t know/Can’t remember</span>
+ 
+
+
+        
+ <#8> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if $Q9[Antivirals]</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q14</h3> 
+    <h4>
+ <span class="user-label">Because of your symptoms, were you hospitalized? </span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 43</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+    <h6>Comment</h6>
+    <em>
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">In proposal</li>
+
+</ul>
+
+
+</em>
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+</ul>
+
+    
+    
+        <h6>Platforms implementing this question</h6>
+        
+FR
+
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q10</h3> 
+    <h4>
+ <span class="user-label">Did you change your daily routine because of your illness? </span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 44</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To measure how people’s daily lives are affected by their symptoms.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">We want to know if you were absent from work or school as a result of your illness, or if you changed your routine in other ways (e.g. stopped attending clubs).</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes, but I did not take time off school or work</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Yes, I took time off school or work</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q10b</h3> 
+    <h4>
+ <span class="user-label">Are you still off work/school?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 45</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">Yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Other (e.g. I wouldn’t usually be at work/school today anyway</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms and $Q10[Yes, I took time off school or work]</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q10c</h3> 
+    <h4>
+ <span class="user-label">How long have you been off work/school? </span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 46</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To measure the effect of symptoms on people’s daily lives.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Only count the days that you normally would have been in school or work (e.g. don’t count weekends).</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">1 day</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">2 days</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">3 days</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">4 days</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">5 days</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">6 to 10 days</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">11 to 15 days</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">More than 15 days</span>
+ 
+
+
+        
+ <#8> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms and $Q10[Yes, I took time off school or work]</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov7</h3> 
+    <h4>
+ <span class="user-label">Because of your symptoms, have you taken or strengthened one or more of the following measures? </span>
+</H4>
+    <ul>
+        
+        <li>Type : multiple_choice</li>
+        <li>Order in survey: 47</li>
+        
+        
+        
+        <li> Added at 2020-03-12</li>
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Regularly wash or disinfect hands</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Cough or sneeze into your elbow</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Use a disposable tissue</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">Wear a disposable mask</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">Avoid shaking hands</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[11]</strong> 
+ 
+ <span class="user-label">Stop greeting by hugging and/or kissing on both cheeks</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">Limit your use of public transport</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">Avoid gatherings (going to the theater, cinema, stadium, supermarket, etc.)</span>
+ 
+
+
+        
+ <#8> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[8]</strong> 
+ 
+ <span class="user-label">Stay at home</span>
+ 
+
+
+        
+ <#9> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[9]</strong> 
+ 
+ <span class="user-label">Telework or increase your number of telework days</span>
+ 
+
+
+        
+ <#10> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[10]</strong> 
+ 
+ <span class="user-label">Avoid travel outside your own country or region</span>
+ 
+
+
+        
+ <#11> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[13]</strong> 
+ 
+ <span class="user-label">Have your food/shopping delivered by a store or a friend/family member</span>
+ 
+
+
+        
+ <#12> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[14]</strong> 
+ 
+ <span class="user-label">Avoid seeing friends and family</span>
+ 
+
+
+        
+ <#13> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[15]</strong> 
+ 
+ <span class="user-label">Avoid being in contact with people over 65 years old or with a chronic disease</span>
+ 
+
+
+        
+ <#14> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[16]</strong> 
+ 
+ <span class="user-label">Avoid being in contact with children</span>
+ 
+
+
+        
+ <#15> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[12]</strong> 
+ 
+ <span class="user-label">None of these measures</span>
+ 
+
+
+        
+ <#16> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Option [None of these measures] is exclusive with other responses </li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Q11</h3> 
+    <h4>
+ <span class="user-label">What do you think is causing your symptoms? </span>
+</H4>
+    <ul>
+        
+        <li>Type : multiple_choice</li>
+        <li>Order in survey: 48</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To help find out if our assessment of your illness based on your symptoms matches what you believe to be the cause. You might have a better idea of what is causing your illness than our computer algorithms.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">If you are reasonably sure about what is causing your symptoms, please tick the appropriate box. Otherwise, please tick “I don’t know”.</li>
+
+</ul>
+
+
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">Flu or flu-like illness</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Common cold</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Allergy</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">Ashtma</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Gastroenteritis/gastric flu</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[9]</strong> 
+ 
+ <span class="user-label">New coronavirus (COVID-19)</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">Other</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#8> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov9</h3> 
+    <h4>
+ <span class="user-label">For which reason(s) do you think you have this disease? (select all the relevant answers) </span>
+</H4>
+    <ul>
+        
+        <li>Type : multiple_choice</li>
+        <li>Order in survey: 49</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">My doctor told me I have this disease</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I had a laboratory confirmation that I have this disease</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">I had direct contact with a laboratory confirmed case</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">I had close contact with someone for whom a doctor diagnosed this disease</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">I was in close contact with someone presenting symptoms of this disease</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">I was at an event/location with a confirmed case</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">I think I have this disease</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">If $Q11[New coronavirus (COVID-19)] </li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov9b</h3> 
+    <h4>
+ <span class="user-label">Have you informed people who have been in close contact with you about your suspicion of COVID-19 infection?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 50</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Some of them</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+        <h6>Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">If $Q11[New coronavirus (COVID-19)] </li>
+
+</ul>
+
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov10</h3> 
+    <h4>
+ <span class="user-label">Since the beginning of COVID-19 lockdown measures, do you carry out a professional activity? (Select all the relevant answers)?</span>
+</H4>
+    <ul>
+        
+        <li>Type : multiple_choice</li>
+        <li>Order in survey: 51</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">yes, I work from home</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">yes, I work outside home</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">no, I have a leave of absence to take care of my kid(s)</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">no, I have a sick leave (because of COVID-19)</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">No, I have another situation (retired, job-seeker, student, house-wife/husband, other sick-leave, partial unemployment, forced leave…)</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+        <h6>Platforms implementing this question</h6>
+        
+IT
+
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov10b</h3> 
+    <h4>
+ <span class="user-label">How many days a week do you work outside from home?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 52</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">1</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">2</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">3</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">4</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">5</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">6</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">7</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+        <h6>Platforms implementing this question</h6>
+        
+IT
+
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov11</h3> 
+    <h4>
+ <span class="user-label">Over recent days, at which frequency did you go out of home to buy products, on average?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 53</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">I do not go out of home anymore</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Less than once a week</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Once a week</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">2 to 6 times a week</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">Once a day</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">Several times a day</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+        <h6>Platforms implementing this question</h6>
+        
+IT
+
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov12</h3> 
+    <h4>
+ <span class="user-label">Over recent days, at which frequency did you go out of home to get fresh air or exercise (outside your home, balcony, garden, private courtyard), on average?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 54</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">I do not go out of home anymore</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Less than once a week</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Once a week</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">2 to 6 times a week</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">Once a day</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">Several times a day</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+        <h6>Platforms implementing this question</h6>
+        
+IT
+
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov13</h3> 
+    <h4>
+ <span class="user-label">Over the course of yesterday, how many people (outside your household) did you approach at a distance lower than 1 meter?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 55</li>
+        
+        
+        
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">0</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">1</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">2 to 5</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">6 to 10</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">More than 10</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+        <h6>Platforms implementing this question</h6>
+        
+IT
+
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov14</h3> 
+    <h4>
+ <span class="user-label">If lockdown measures were lifted up, but collective childcare/schools/university were closed, what would be your situation? (Select all the relevant answers)</span>
+</H4>
+    <ul>
+        
+        <li>Type : multiple_choice</li>
+        <li>Order in survey: 56</li>
+        
+        
+        <li>Inactive question</li>
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">I would work from home</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">I would work from outside home</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">I would have a leave of absence to take care of my kid(s)</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">I would have a sick leave (because of COVID-19)</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">I would be in another situation (retired, job-seeker, student, house-wife/husband, other sick-leave, partial unemployment, forced leave…)</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+        <h6>Platforms implementing this question</h6>
+        
+IT
+
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov14b</h3> 
+    <h4>
+ <span class="user-label">How many days a week would you work outside from home?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 57</li>
+        
+        
+        <li>Inactive question</li>
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">1</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">2</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">3</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">4</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">5</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">6</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">7</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+        <h6>Platforms implementing this question</h6>
+        
+IT
+
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov15</h3> 
+    <h4>
+ <span class="user-label">If lockdown measures were extended (that is to say, continued beyond the date announced by the government), do you think you would follow the recommendations with as much rigour as you do now?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 58</li>
+        
+        
+        <li>Inactive question</li>
+        
+        
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">Yes, absolutely</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Yes, moderately</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">No, not really</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">No, not at all</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[99]</strong> 
+ 
+ <span class="user-label">I don’t know</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov17</h3> 
+    <h4>
+ <span class="user-label">Since January 2020, did you undergo a laboratory test to know if you have been in contact with this new coronavirus (SARS-CoV-2, COVID-19)?</span>
+</H4>
+    <ul>
+        
+        <li>Type : single_choice</li>
+        <li>Order in survey: 59</li>
+        <li>Mandatory question</li>
+        
+        <li>Inactive question</li>
+        <li> Added at 2020-04-28</li>
+        <li>Removed at 2020-09-21</li>
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Yes</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[0]</strong> 
+ 
+ <span class="user-label">No</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question">
+    
+    <h3>Qcov17b</h3> 
+    <h4>
+ <span class="user-label">What was the result of this (these) analysis? (if you realized several analyses, please give the results of all these analyses)</span>
+</H4>
+    <ul>
+        
+        <li>Type : multiple_choice</li>
+        <li>Order in survey: 60</li>
+        
+        
+        <li>Inactive question</li>
+        
+        <li>Removed at 2020-09-21</li>
+        
+    </ul>
+
+    
+    
+    
+
+    
+    <h6>Responses</h6>
+    
+     <ul>
+      
+       <li>
+        
+ <strong>[1]</strong> 
+ 
+ <span class="user-label">Positive for this coronavirus, on a swab in nose or mouth, or a sputum or saliva sample (PCR)</span>
+ 
+
+
+        
+ <#1> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[2]</strong> 
+ 
+ <span class="user-label">Negative for this coronavirus, on a swab in nose or mouth, or a sputum or saliva sample (PCR)</span>
+ 
+
+
+        
+ <#2> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[3]</strong> 
+ 
+ <span class="user-label">Positive for this coronavirus on a blood sample (serology)</span>
+ 
+
+
+        
+ <#3> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[4]</strong> 
+ 
+ <span class="user-label">Negative for this coronavirus on a blood sample (serology)</span>
+ 
+
+
+        
+ <#4> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[5]</strong> 
+ 
+ <span class="user-label">Positive, but I don’t know which test was done (it showed that I was infected by the coronavirus)</span>
+ 
+
+
+        
+ <#5> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[6]</strong> 
+ 
+ <span class="user-label">Negative, but I don’t know which test was done (it showed that I was not infected by the coronavirus)</span>
+ 
+
+
+        
+ <#6> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[7]</strong> 
+ 
+ <span class="user-label">The result was not interpretable</span>
+ 
+
+
+        
+ <#7> 
+
+        
+      </li>
+      
+       <li>
+        
+ <strong>[8]</strong> 
+ 
+ <span class="user-label">I don’t know the result</span>
+ 
+
+
+        
+ <#8> 
+
+        
+      </li>
+      
+    </ul>
+
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+
+<h3>Legend</h3>
+<ul class="list-group">
+    <li class="list-group-item">
+ <strong>[x]</strong> 
+ : Value or key identifier, to be used in the survey definition. This value will be used to identify this element across platforms.</li>
+    <li class="list-group-item">
+ <#x> 
+ : Indicate order of an element in the list</li>
+    <li class="list-group-item"><i>Comment</i> Text targeting internal use only (comments about implementation)
+</ul>
+
+   </div>
+</body>
+</html>
