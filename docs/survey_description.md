@@ -44,6 +44,26 @@ For 'matrix' questions
 - multiple_choice: several responses possible among a list of possibles
 - matrix : rectangular
 
+#### Rules
+
+Rules are textual descriptions of conditions to apply to this questions (the runtime logic).
+
+To facilitate reading and enable some check some syntax can be applied :
+
+- '$name' refer to question with data_name "name"
+- '[xxx]' refer to the label of a response 'xxx'
+-  '#option_1' refer to the id of the item (response, row), aka the key of the json element (not the "value")
+-  {xx} refer to the value xx of the question, 
+-  Alternatively .xx can be used for value with a question name : e.g. $Q1.1 
+
+Question name and response can be used together to refer to another question : 
+
+To sum up :  
+- $Q1{1}       : Q1 response with value '1'
+- $Q1.1        : Q1 with response '1'
+- '[Yes]'      : Response labelled "Yes"
+- $Q2[No]      : Question Q2 with response "No"
+- $Q1#option_1 : Question Q1, with response in with json key 'option_1' (no necessarily the 'value' to store for this response).s
 ### Responses
 
 Keys in options list are only to be used as local identifier (like database id)
