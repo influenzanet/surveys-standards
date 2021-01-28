@@ -7,6 +7,7 @@
             "data_name": "Q0",
             "mandatory": true,
             "type": "single_choice",
+            "target": "all",
             "possible_responses": {
                 "option_1": {
                     "text": "A member of my household",
@@ -37,6 +38,7 @@
             "data_name": "Q1",
             "mandatory": true,
             "type": "single_choice",
+            "target": "all",
             "possible_responses": {
                 "option_1": {
                     "text": "Male",
@@ -56,6 +58,7 @@
             "short_title": "Intake Q2",
             "title": "What is your date of birth (month and year)?",
             "data_name": "Q2",
+            "target": "all",
             "mandatory": true,
             "type": "date",
             "format": "month-year",
@@ -67,6 +70,7 @@
         {
             "short_title": "Intake Q3",
             "title": "What is the first part of your home postcode (the part before the space)?",
+            "target": "all",
             "data_name": "Q3",
             "mandatory": true,
             "type": "text",
@@ -76,6 +80,7 @@
             "short_title": "Intake Q4",
             "title": "What is your main activity?",
             "data_name": "Q4",
+            "target": "all",
             "mandatory": true,
             "type": "single_choice",
             "possible_responses": {
@@ -128,6 +133,7 @@
             "short_title": "Intake Q4b",
             "title": "What is the first part of your school/college/workplace postcode?",
             "data_name": "Q4b",
+            "target": "all",
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
@@ -167,6 +173,7 @@
             "title": "Which of the following descriptions most closely matches with your main occupation?",
             "data_name": "Q4c",
             "mandatory": false,
+            "target": "all",
             "type": "single_choice",
             "possible_responses": {
                 "option_1": {
@@ -212,6 +219,7 @@
             "title": "What is the highest level of formal education/qualification that you have?",
             "data_name": "Q4d",
             "mandatory": false,
+            "target": "all",
             "type": "multiple_choice",
             "possible_responses": {
                 "option_1": {
@@ -267,6 +275,7 @@
             "title": "Except people you meet on public transports, do you have contact with any of the following during the course of a typical day? (Select all options that apply, if any)",
             "data_name": "Q5",
             "mandatory": true,
+            "target": "all",
             "type": "multiple_choice",
             "possible_responses": {
                 "option_1": {
@@ -300,6 +309,7 @@
             "data_name": "Q6",
             "mandatory": false,
             "type": "multiple_choice",
+            "target": "all",
             "possible_responses": {
                 "option_1": {
                     "text": "0-4 years",
@@ -344,6 +354,7 @@
             "data_name": "Q6b",
             "mandatory": false,
             "type": "single_choice",
+            "target": "all",
             "possible_responses": {
                 "option_1": {
                     "text": "None",
@@ -390,6 +401,7 @@
             "title": "What is your main mean of transport?",
             "data_name": "Q7",
             "mandatory": true,
+            "target": "all",
             "type": "single_choice",
             "possible_responses": {
                 "option_1": {
@@ -429,6 +441,7 @@
             "title": "On a normal day, how much time do you spend on public transport? (Bus, train, tube etc.)",
             "data_name": "Q7b",
             "mandatory": true,
+            "target": "all",
             "type": "single_choice",
             "possible_responses": {
                 "option_1": {
@@ -499,6 +512,7 @@
             "short_title": "Intake Q9",
             "title": "Did you receive a flu vaccine during the last autumn/winter season?",
             "data_name": "Q9",
+            "target": "all",
             "mandatory": true,
             "type": "single_choice",
             "possible_responses": {
@@ -527,6 +541,7 @@
             "short_title": "Intake Q10",
             "title": "Did you receive a flu vaccine this winter season?",
             "data_name": "Q10",
+            "target": "all",
             "mandatory": true,
             "type": "single_choice",
             "possible_responses": {
@@ -561,6 +576,7 @@
             "short_title": "Intake Q10b",
             "title": "When were you vaccinated against this flu season?",
             "data_name": "Q10b",
+            "target": "all",
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
@@ -582,6 +598,7 @@
             "short_title": "Intake Q10c",
             "title": "What were your reasons for getting a seasonal influenza vaccination this year?",
             "data_name": "Q10c",
+            "target": "all",
             "mandatory": false,
             "type": "multiple_choice",
             "possible_responses": {
@@ -639,6 +656,7 @@
             "short_title": "Intake Q10d",
             "title": "What were your reasons for NOT getting a seasonal influenza vaccination this year?",
             "data_name": "Q10d",
+            "target": "all",
             "mandatory": false,
             "type": "multiple_choice",
             "possible_responses": {
@@ -728,6 +746,7 @@
             "data_name": "Q11",
             "mandatory": true,
             "type": "multiple_choice",
+            "target": "all",
             "possible_responses": {
                 "option_1": {
                     "text": "No",
@@ -770,6 +789,7 @@
             "title": "Are you currently pregnant?",
             "data_name": "Q12",
             "mandatory": false,
+            "target": "all",
             "type": "single_choice",
             "possible_responses": {
                 "option_1": {
@@ -869,6 +889,7 @@
             "short_title": "Intake Q14",
             "title": "Do you have any of the following allergies that can cause respiratory symptoms? (select all options that apply)",
             "data_name": "Q14",
+            "target": "all",
             "mandatory": true,
             "type": "multiple_choice",
             "possible_responses": {
@@ -975,6 +996,7 @@
             "data_name": "Q17",
             "mandatory": false,
             "type": "multiple_choice",
+            "target": "optional",
             "possible_responses": {
                 "option_1": {
                     "text": "On radio or television",
