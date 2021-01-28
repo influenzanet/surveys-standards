@@ -20,7 +20,16 @@
                     "text": "Someone else",
                     "value": "2"
                 }
-            }
+            },
+            "description": [
+                "Why are we asking this?",
+                "COVID-19 and flu are thought to spread very effectively at home, so it's important to know which Flusurvey (or Influweb or Influensakoll or…) participants live in the same household.",
+                "How should I answer it?",
+                "A household member is defined as a someone (not necessarily related) who lives at the same address as you and who shares cooking facilities and a living room, sitting room or dining area"
+            ],
+            "rules": [
+                "Question to be asked when adding another participant. For each additional person that a person registered this question should be asked. If a person just registers and enters data for himself, then this question should not be asked."
+            ]
         },
         {
             "short_title": "Intake Q1",
@@ -37,7 +46,11 @@
                     "text": "Female",
                     "value": "1"
                 }
-            }
+            },
+            "description": [
+                "Why are we asking this?",
+                "To find out  whether the chance of getting COVID-19 or flu are different between men and women."
+            ]
         },
         {
             "short_title": "Intake Q2",
@@ -45,7 +58,11 @@
             "data_name": "Q2",
             "mandatory": true,
             "type": "date",
-            "format": "month-year"
+            "format": "month-year",
+            "description": [
+                "Why are we asking this?",
+                "The chance of getting COVID-19 and flu and the risk of more serious complications vary by age. "
+            ]
         },
         {
             "short_title": "Intake Q3",
@@ -98,7 +115,14 @@
                     "text": "Other",
                     "value": "8"
                 }
-            }
+            },
+            "description":[
+            "Why are we asking this?",
+            "To check how representative our sample is compared to the population as a whole, and to find out whether the chance of getting COVID-19 or flu are different for people in different types of occupation.",
+            
+            "How should I answer it?",
+            "Please tick the box that most closely resembles your main occupation. For pre-school children who don’t go to daycare tick the “other” box."
+            ] 
         },
         {
             "short_title": "Intake Q4b",
@@ -117,7 +141,17 @@
                     "text": "I don\u2019t know",
                     "value": "1"
                 }
-            }
+            },
+            "rules": [
+                "Shown If  “Yes, Paid employment full time”, or “Yes, paid employment part time” to Q4",
+                "If 0, then ask for Q4b_0_open, as a extra field"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "To find out roughly how far you travel on a regular basis.",
+                "How should I answer it?",
+                "Please choose the first part of the post-code (the part before the space)."
+            ]
         },
         {
             "short_title": "Intake Q4b open question",
@@ -159,7 +193,19 @@
                     "text": "Other",
                     "value": "5"
                 }
-            }
+            },
+            "rules": [
+                "If [Yes, Paid employment full time], or [Yes, paid employment part time] to Q4",
+                "Trigger free text if “other” checked, allow the users to write in their occupation"
+            ],
+            "description":[
+                "Why are we asking this?",
+"To check how representative our sample is compared to the population as a whole and to find out whether the chance of getting COVID-19 or flu are different for people in different types of occupation.",
+
+"How should I answer it?", 
+"Please tick the box that most closely resembles your main occupation."
+
+            ]
         },
         {
             "short_title": "Intake Q4d",
@@ -194,7 +240,27 @@
                     "value": "5",
                     "comment": "I am still in education"
                 }
-            }
+            },
+            "comment": [
+                "This is the UK version. #option_2 is exams taken at the time of early school leaving (16  in the UK), #option_3 for late school leaving (18 in the UK). The others are for degrees, or higher qualifications, which should be fairly comparable across Europe.",
+                "The questions that you should ask at the options #option_2 and #option_3, are related to exams taken at early and late school leaving ages."
+            ],
+            "rules": [
+                "shown if age 16 and over"
+            ],
+            "description": [
+               "Why are we asking this?",
+"To check how representative our sample is compared to the population of the UK (Italy, Belgium, etc…. ) as a whole. ",
+
+"How should I answer it?",  
+"- Please choose the box that represents your HIGHEST level of educational achievement. The different options roughly equate to: No qualifications ",
+"- school-leaving exams at around 16 years of age",
+"- school-leaving exams at around 18 years of age",
+"- University degree, or equivalent professional qualification",
+"- Higher degree or advanced professional qualification",
+"If you are an adult who is currently undergoing part-time training (e.g. night-school)  then tick the box that represents your current highest level of education."
+
+            ]
         },
         {
             "short_title": "Intake Q5",
@@ -257,7 +323,17 @@
                     "value": "4",
                     "comment": "matrix-like option, with drop down menu"
                 }
-            }
+            },
+            "comment": [
+                "This should be a table with the 1st column being the age groups (as above), and the 2nd column being numbers, 0,1,2,3,4,5+. It should be PRE-FILLED with zeros. ",
+"Preferably to be pre-filled for multiple users of a single account, if they’re in the same household?"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "Members of larger households, or those with children, may be more likely to catch COVID-19 or flu than others.",
+                "How should I answer it?",
+                "A household is defined as a group of people (not necessarily related) living at the same address who share cooking facilities and share a living room, sitting room or dining area."
+            ]
         },
         {
             "short_title": "Intake Q6b",
@@ -294,7 +370,17 @@
                     "text": "More than 5",
                     "value": "99"
                 }
-            }
+            },
+            "comment": [
+                "Ideally, this question would only be asked if they have children aged 0-4 – or if they’re aged 0-4 themselves, and the answer would be a drop-down menu with the right number of options.",
+                "Preferably, this be pre-filled for multiple users of a single account, if they’re in the same household"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "Attending school or day-care may be a risk for acquiring COVID-19 or flu and similar illnesses. We would like to check this.",
+                "How should I answer it?",
+                "If your child attends regular school or day-care (even if this is just one day a week) then please answer yes to this. Attendance of clubs and activities does not count – even if regular. "
+            ]
         },
         {
             "short_title": "Intake Q7",
@@ -327,7 +413,13 @@
                     "text": "Other",
                     "value": "5"
                 }
-            }
+            },
+            "description":[
+                "Why are we asking this?",
+                "It has been suggested that using public transport may be a risk for COVID-19 or flu. We would like to check this.",
+                "How should I answer it?",   
+                "Tick the option that best represents your most normal mode of transport."
+            ]
         },
         {
             "short_title": "Intake Q7b",
@@ -356,7 +448,14 @@
                     "text": "Over 4 hours",
                     "value": "4"
                 }
-            }
+            },
+            "description": [
+            "Why are we asking this?",
+"It has been suggested that using public transport may be a risk for getting COVID-19 or flu. We would like to check this.",
+"How should I answer it?",   
+"Think of a typical day. If you use several different forms of public transport each day, remember to include all journeys. Don’t include taxis or other forms of private transport."
+
+            ]
         },
         {
             "short_title": "Intake Q8",
@@ -389,7 +488,9 @@
                     "text": "I don\u2019t know",
                     "value": "5"
                 }
-            }
+            },
+            "target": "optional",
+            "comment": "Not a core question."
         },
         {
             "short_title": "Intake Q9",
@@ -410,7 +511,14 @@
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
-            }
+            },
+            "comment": "Note that the years will need to be changed each year.",
+            "description": [
+                "Why are we asking this?",
+                "We would like to be able to work out how much protection the vaccine gives.",
+                "How should I answer it?",   
+                "Report yes, if you received the vaccine this season, usually in the autumn. If you get vaccinated after filling in this questionnaire, please return to this and update your answer."
+            ]
         },
         {
             "short_title": "Intake Q10",
@@ -431,7 +539,20 @@
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
-            }
+            },
+            "comment": [
+                "Note that the years will need to be changed each year."
+            ],
+            "description": [
+                "Why are we asking this?",
+                "We would like to be able to work out how much protection the vaccine gives. We would also like to find out  if there is some protection from vaccines received in previous years.", 
+                "How should I answer it?",
+                "Answer yes if you received the vaccine last year (during the autumn/winter of 2010-2011)."
+            ],
+            "rules": [
+                "If [Yes] show Q10b and Q10c",
+                "If [No] show Q10d"
+            ]
         },
         {
             "short_title": "Intake Q10b",
@@ -449,7 +570,10 @@
                     "text": "I don\u2019t know",
                     "value": "0"
                 }
-            }
+            },
+            "rules": [
+                "Shown if Q10 is [Yes]"
+            ]
         },
         {
             "short_title": "Intake Q10c",
@@ -461,6 +585,11 @@
                 "option_1": {
                     "text": "I belong to a risk group (e.g, pregnant, over 65, underlying health condition, etc)",
                     "value": "0"
+                },
+                "option_12": {
+                    "text": "The COVID-19 context encouraged me to get influenza vaccination this year 12",
+                    "value": "12",
+                    "platforms": ["FR"]
                 },
                 "option_2": {
                     "text": "Vaccination decreases my risk of getting the flu",
@@ -498,7 +627,10 @@
                     "text": "Other reasons",
                     "value": "9"
                 }
-            }
+            },
+            "rules": [
+                "Shown if Q10 is [Yes]"
+            ]
         },
         {
             "short_title": "Intake Q10d",
@@ -530,6 +662,23 @@
                 "option_6": {
                     "text": "Influenza is a minor illness",
                     "value": "5"
+                },
+                "option_16": {
+                    "text": "Because of COVID-19 pandemic, I avoid seing doctors or going to the pharmacy",
+                    "value": "17",
+                    "platforms": ["FR"]
+                },
+                "option_17": {
+                    "text": "I am afraid that influenza vaccine would increase my risk of getting COVID-19",
+                    "value": "18",
+                    "platforms": ["FR"]
+                },
+                "option_18": {
+                    "text": "Other reason linked with COVID-19 (open field)",
+                    "value": "19",
+                    "platforms": ["FR"],
+                    "comment": "Open field with textual response",
+                    "extra": "Q10d_19_open"
                 },
                 "option_7": {
                     "text": "I don\u2019t think I am likely to get the flu",
@@ -569,6 +718,7 @@
                 }
             }
         },
+
         {
             "short_title": "Intake Q11",
             "title": "Do you take regular medication for any of the following medical conditions?",
@@ -604,7 +754,13 @@
                     "text": "An immunocompromising condition (e.g. splenectomy, organ transplant, acquired immune deficiency, cancer treatment)",
                     "value": "6"
                 }
-            }
+            },
+            "description": [
+                "Why are we asking this?",
+                "This question allows us to find out whether you have other medical conditions that may increase your risk of having more severe illness if you are infected with COVID-19 or flu.",
+                "How should I answer it?",
+                "Only answer “yes” if you take regular medication for your medical problem. If, for instance, you only occasionally take an asthma inhaler, then do not answer “yes” for asthma."
+            ]
         },
         {
             "short_title": "Intake Q12",
@@ -625,7 +781,17 @@
                     "text": "I don\u2019t know/I would rather not answer",
                     "value": "2"
                 }
-            }
+            },
+            "rules": [
+                "Only asked of women between ages 15 and 50)",
+                "if [Yes] show Q13b"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "Pregnancy can result in more severe illness if you are infected with COVID-19 or flu.",
+                "How should I answer it?",   
+                "Answer yes if you are pregnant today."
+            ]
         },
         {
             "short_title": "Intake Q12b",
@@ -650,7 +816,16 @@
                     "text": "Don\u2019t know/would rather not answer",
                     "value": "3"
                 }
-            }
+            },
+            "rules": [
+                "Shown if [Yes] in Q12"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "The stage of pregnancy might alter your risk of severe COVID-19 or flu if you are infected, although this is not very clear.",
+                "How should I answer it?",   
+                "Which trimester are you in today?"
+            ]
         },
         {
             "short_title": "Intake Q13",
@@ -679,7 +854,13 @@
                     "text": "Don\u2019t know/would rather not answer",
                     "value": "4"
                 }
-            }
+            },
+            "description": [
+                "Why are we asking this?",
+                "Smoking might make you more likely to get a more severe dose of COVID-19 or flu. We would like to test this.",
+                "How should I answer it?",   
+                "Please answer as accurately as possible. If you smoke other products (e.g. a pipe or cigars), then indicate roughly how many times a day."
+            ]
         },
         {
             "short_title": "Intake Q14",
@@ -708,7 +889,16 @@
                     "text": "I do not have an allergy that causes respiratory symptoms",
                     "value": "5"
                 }
-            }
+            },
+            "description": [
+                "Why are we asking this?",
+                "Some allergic reactions can have similar symptoms to respiratory infection.",
+                "How should I answer it?",
+                "Tick all the options that apply. We are only interested in those allergies that cause respiratory symptoms (i.e. sneezing, runny nose, runny eyes)."
+            ],
+            "rules": [
+                "Item #option_5 is exclusive with others to ensure consistency"
+            ]
         },
         {
             "short_title": "Intake Q15",
@@ -716,6 +906,7 @@
             "data_name": "Q15",
             "mandatory": false,
             "type": "multiple_choice",
+            "target": "optional",
             "possible_responses": {
                 "option_1": {
                     "text": "No special diet",
@@ -737,7 +928,10 @@
                     "text": "Other",
                     "value": "4"
                 }
-            }
+            },
+            "rules": [
+                "Item #option_1 is exclusive with others to ensure consistency"
+            ]
         },
         {
             "short_title": "Intake Q16",
@@ -745,6 +939,7 @@
             "data_name": "Q16",
             "mandatory": false,
             "type": "multiple_choice",
+            "target":"optional",
             "possible_responses": {
                 "option_1": {
                     "text": "No",
@@ -766,7 +961,10 @@
                     "text": "Yes, one or more other animals",
                     "value": "4"
                 }
-            }
+            },
+            "rules": [
+                "#option_1 is exclusive with other responses"
+            ]
         },
         {
             "short_title": "Intake Q17",
@@ -798,6 +996,33 @@
                 "option_6": {
                     "text": "Via school or work",
                     "value": "5"
+                }
+            }
+        },
+        {
+            "short_title": "Intake Q26",
+            "title": "Are you taking or do you plan to take this winter homeopathic medicine in order to prevent COVID-19?",
+            "data_name": "Q26",
+            "mandatory": false,
+            "type": "single_choice",
+            "target":"optional",
+            "platforms": ["FR"],
+            "possible_responses": {
+                "option_1": {
+                    "text": "Yes",
+                    "value": "1"
+                },
+                "option_2": {
+                    "text": "No",
+                    "value": "0"
+                },
+                "option_3": {
+                    "text": "I don’t know",
+                    "value": "2"
+                },
+                "option_4": {
+                    "text": "I don’t want to answer",
+                    "value": "3"
                 }
             }
         }
