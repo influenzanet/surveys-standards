@@ -239,14 +239,12 @@
                     "value": "3"
                 },
                 "option_5": {
-                    "text": "",
-                    "value": "4",
-                    "comment": "Higher Degree or equivalent (e.g. Masters Degree, PGCE, PhD, Medical Doctorate, Advanced Professional Award)"
+                    "text": "Higher Degree or equivalent (e.g. Masters Degree, PGCE, PhD, Medical Doctorate, Advanced Professional Award)",
+                    "value": "4"
                 },
                 "option_6": {
-                    "text": "",
-                    "value": "5",
-                    "comment": "I am still in education"
+                    "text": "I am still in education",
+                    "value": "5"
                 }
             },
             "comment": [
