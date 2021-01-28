@@ -13,12 +13,16 @@
     background-color: #DDD;
 }
 
+.question-label {
+    font-weight: bold;
+}
+
 .question-head > h4 {
     display: inline !important;
 }
 
 .user-label {
-    padding: .3em;
+    padding: .1em .3em;
     border-radius: .3em;
     display: inline-block;
     background-color: {{color_user_label}};
@@ -26,14 +30,31 @@
 
 .comment, .comment .list-group-item {
     background-color: {{ color_internal_label }};
-    padding: .1rem;
+    border: 0;
 }
 
+.comment .list-group-item { 
+    padding: .1em .8rem;
+    font-size: .8rem;
+    color: #999;
+}
 
+.description, .description .list-group-item {
+    background-color: {{color_user_label}};
+    font-size : .9rem;
+}
+
+.description .list-group-item {
+    padding: .1em .8rem;
+    border: 0;
+}
+
+.rules .list-group-item {
+    padding: .1em .8rem;
+}
 
 .question-block {
     margin-top: .3rem;
-
 }
 
 .badge-local-key {
@@ -51,6 +72,11 @@
 
 .table-compact {
     width: fit-content;
+}
+
+.responses td {
+ padding: .1rem;
+ padding-top: .2rem;
 }
 </style>
 {% endblock %}
@@ -111,6 +137,14 @@
 {% endif %}
 {% endmacro %}
 
+{% macro render_platforms(list) %}
+<ul class="list-unstyled d-inline">
+{% for item in list %}
+    <li> {{ badge(item, 'primary') }}</li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
 
 {% macro render_responses(responses) %}
      <table class="table table-compact table-sm">
@@ -123,7 +157,7 @@
             {{ render_comment(r.comment) }} 
         </td>
         <td>{{ local_key_badge(r.key)}}</td>
-        <td>
+        <td>{% if r.platforms%} {{ render_platforms(r.platforms) }}{%endif%}</td>
          {% if r.added_at%} Added at {{ r.added_at }}{% endif %}
          {% if r.removed_at%} Removed at {{ r.removed_at }}{% endif %}
         </td>
@@ -163,7 +197,7 @@
         {{ badge(icon('cubes') ~ ' ' ~ question.type, 'warning') }}
         {{ icon('sort')}} {{ question.order }}
         {% if question.mandatory %}{{ icon('mandatory', 'danger') }} {% endif %}
-        {% if question.target %}{{ badge(icon('bullseye') ~ question.target, 'info') }} {% endif %}
+        {% if question.target %}{{ badge(icon('bullseye') ~ question.target, 'primary') }} {% endif %}
         {% if not question.active %}{{ badge(icon('eye-slash') ~ " Inactive", 'danger') }}{% endif %}
         {% if question.added_at%} Added at {{ question.added_at }}{% endif %}
         {% if question.removed_at%} Removed at {{ question.removed_at }}{% endif %}
@@ -190,7 +224,7 @@
         </div>
     {% endif %}
     {%if question.comment %}
-        <div class="card description question-block w-75">
+        <div class="card comment question-block w-75">
         <h6>Comment</h6>
             {{ render_comment(question.comment) }}
         </div>

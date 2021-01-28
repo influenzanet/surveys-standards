@@ -43,6 +43,7 @@ class Show(Command):
     def get_parser(self, prog_name):
         parser = super(Show, self).get_parser(prog_name)
         parser.add_argument("file", help="Survey file", action="store")
+        parser.add_argument("--tag", help="Version to show about the survey", required=False, action="store")
         parser.add_argument("--output", help="path of file to output results", required=False)
         return parser
 
@@ -59,7 +60,7 @@ class Show(Command):
 
         survey = json_parser_survey(json)
 
-        output = survey_to_html(survey)
+        output = survey_to_html(survey, version=args.tag)
         out.write(output)
 
         if need_close:

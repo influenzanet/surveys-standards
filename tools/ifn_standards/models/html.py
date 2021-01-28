@@ -1,6 +1,7 @@
 from jinja2 import Template, FileSystemLoader, Environment
 from .survey import Question, MatrixDimensionList
 import os
+import datetime
 
 def all_keys(d1, d2):
     d = list(d1.keys())
@@ -85,9 +86,9 @@ def compare_legacy_to_html(survey, legacy, survey_name, legacy_name):
     }
     return template.render(ctx)
 
-def survey_to_html(survey):
+def survey_to_html(survey, version):
     """
-    Create survey documentt
+    Create survey document
     """
     path = os.path.dirname(os.path.abspath(__file__)) +  '/../templates/'
 
@@ -106,6 +107,8 @@ def survey_to_html(survey):
         theme = f.read()
 
     ctx = {
+        'build_date': datetime.datetime.now(),
+        'version': version,
         'survey': survey,
         'theme_css': theme
     }

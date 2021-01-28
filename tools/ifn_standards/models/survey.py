@@ -28,6 +28,8 @@ class Question:
         self.columns = MatrixDimensionList()
         self.order = 0
         self.active = True
+        self.plateforms = []
+        self.target = None
     
     def add_response(self, response):
         self.responses[response.key] = response
@@ -63,6 +65,9 @@ class Response:
           self.comment = None
           self.active = True
           self.extra = None
+          self.added_at = None
+          self.removed_at = None
+          self.plateforms = []
 
 
 class MatrixDimension:
@@ -77,6 +82,8 @@ class MatrixDimension:
         self.key = key
         self.value = value
         self.order = order
+        self.added_at = None
+        self.removed_at = None
 
     def __repr__(self):
         return "[%s](%s)#%d" % (self.value, self.text, self.order)
@@ -108,12 +115,16 @@ def json_parser_comment(json):
         return [json]
     return json
 
+def json_parser_description(json):
+    if isinstance(json, str):
+        return [json]
+    return json
+
+
 def import_attr(obj, data, keys):
     for key in keys:
         if key in data:
             setattr(obj, key, data[key])
-
-
 
 def json_parser_question(json):
     """
@@ -124,7 +135,7 @@ def json_parser_question(json):
     q = Question(data_name, json['type'], json['title'])
     
     if 'description' in json:
-        q.description = json['description']
+        q.description = json_parser_description(json['description'])
     
     if 'mandatory' in json:
         q.mandatory = json['mandatory']
@@ -132,7 +143,7 @@ def json_parser_question(json):
     if 'comment' in json:
         q.comment = json_parser_comment(json['comment'])
 
-    import_attr(q, json, ['active','data_type', 'format','rules', 'added_at', 'removed_at'])
+    import_attr(q, json, ['active','data_type', 'format','rules', 'added_at', 'removed_at', 'platforms', 'target'])
 
     if 'possible_responses' in json:
         index = 1
@@ -159,14 +170,17 @@ def json_parser_response(key, json, index):
     
     r = Response(key, json['text'], index)
     
+    import_attr(r, json, ['added_at', 'removed_at', 'platforms'])
+
     if 'value' in json:
         r.value = json['value']
     
     if 'description' in json:
-        r.description = json['description']
+        r.description = json_parser_description(json['description'])
     
     if 'comment' in json:
         r.comment = json_parser_comment(json['comment'])
+
     return r
 
 def json_parser_matrix_dim(json):
