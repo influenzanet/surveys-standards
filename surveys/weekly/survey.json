@@ -1,11 +1,16 @@
 {
     "name": "weekly",
+    "comment": [
+        "Weekly survey",
+        "Common rules : If symptoms = $Q1 hay any response except [No symptom]"
+    ],
     "questions": [
         {
             "short_title": "Weekly Q1",
             "title": "Have you had any of the following symptoms since your last visit (or in the past week, if this is your first visit)?",
             "data_name": "Q1",
             "mandatory": true,
+            "target": "all",
             "type": "multiple_choice",
             "data_type": "numeric",
             "possible_responses": {
@@ -103,13 +108,27 @@
                 "option_23": {
                     "text": "Rash",
                     "value": "20",
+                    "platforms": ["IT"],
                     "comment": "used only by Italy"
                 },
                 "option_24": {
                     "text": "Other",
                     "value": "19"
                 }
-            }
+            },
+            "rules": [
+                "item [No symptoms] is exclusive with others",
+                "- If report any symptoms, check database: was the participant STILL ILL when they last completed the Weekly survey (i.e. they said “I am still ill” in response to Weekly Q4 below last time?) AND have fewer than 15 days elapsed since they last completed the Weekly Survey AND fewer than 15 days have elapsed since their previous date of symptom onset",
+                "- If Yes: continue with Weekly Q2",
+                "- If No or Don’t know: then treat this as a “new” bout of illness, continue with Weekly Q3",
+                "- Of course, this only applies to people who have previously participated"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "The key part of this survey is tracking people’s symptoms.",
+                "How should I answer it?",  
+                "For people with chronic (long-term)  illnesses, only tick changes in symptoms. So, if you have chronic shortness of breath (for instance)  then only tick this box if this has got worse recently."
+            ]
         },
         {
             "short_title": "Weekly Q2",
@@ -135,7 +154,26 @@
                     "text": "Not applicable",
                     "value": "9"
                 }
-            }
+            },
+            "rules": [
+                "Shown if If the participant was STILL ILL on their last visit and has reported symptoms this time",
+                "The “don’t know” option here might not apply to people filling it in for themselves but is relevant for people managing accounts for other people.",
+
+                "If [No] or [DON’T KNOW] #option_3:",
+                "This means that the current symptoms are the start of a “new” illness: continue with Weekly $Q3",
+                
+                "If [Yes]: ",
+                "This means that the current symptoms are the continuation of the same bout of illness as the previous visit. The remainder of the symptoms questionnaire (onset date, further details about symptoms, details about seeking medical attention, treatment, time off work/school) can be pre-filled with their previous answers.",
+                
+                "The point of the pre-filling is to make the survey quicker and easier for participants who have longer-duration symptoms."
+            ],
+            "description": [
+                "Why are we asking this?",
+                "To make filling out the rest of the survey quicker for you.",
+                "How should I answer it?",   
+                "If you believe that the symptoms you have reported today are caused by the same bout of illness as your previous symptoms, please tick “yes”.",
+               "To save you time, we have filled in the information you gave us previously about your illness. Please check that it is still correct, and make any changes – for instance, if you have visited a doctor or taken additional time off work since you last completed the survey."
+            ]
         },
         {
             "short_title": "Weekly Qcov1",
@@ -158,7 +196,9 @@
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
-            }
+            },
+            "added_at":"2020-03-12",
+            "removed_at":"2020-06-20"
         },
         {
             "short_title": "Weekly Qcov1b",
@@ -192,7 +232,9 @@
                     "comment": "One hidden column (not labelled)",
                     "value": "col1"
                 }
-            }
+            },
+            "added_at":"2020-03-12",
+            "removed_at":"2020-06-20"
         },
         {
             "short_title": "Weekly Qcov2",
@@ -214,7 +256,9 @@
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
-            }
+            },
+            "added_at":"2020-03-12",
+            "removed_at":"2020-06-20"
         },
         {
             "short_title": "Weekly Qcov2b",
@@ -247,7 +291,10 @@
                     "description": "",
                     "value": "col1"
                 }
-            }
+            },
+            "added_at":"2020-03-12",
+            "removed_at":"2020-06-20"
+        
         },
         {
             "short_title": "Weekly Qcov3",
@@ -269,7 +316,10 @@
                     "value": "2"
                 }
             },
-            "added_at": "2020-03-12"
+            "added_at": "2020-03-12",
+            "rules": [
+                "Shown (if symptoms ($Q1 != {0') AND (if answers to Q2 weekly other than « Yes »)"
+            ]
         },
         {
             "short_title": "Weekly Qcov3b",
@@ -291,7 +341,10 @@
                     "value": "2"
                 }
             },
-            "added_at": "2020-03-12"
+            "added_at": "2020-03-12",
+            "rules": [
+                "Shown if $Qcov3 is [Yes]"
+            ]
         },
         {
             "short_title": "Weekly Qcov8",
@@ -313,7 +366,13 @@
                     "value": "2"
                 }
             },
-            "added_at": "2020-03-26"
+            "added_at": "2020-03-26",
+            "rules": [
+                "Shown if any symptoms"
+            ],
+            "description": [
+                "Symptoms of COVID-19 include: fever or chills, cough, sore throat, shortness of breath, sore muscles and headache."
+            ]
         },
         {
             "short_title": "Weekly Qcov8b",
@@ -335,7 +394,10 @@
                     "value": "2"
                 }
             },
-            "added_at": "2020-03-26"
+            "added_at": "2020-03-26",
+            "rules": [
+                "Shown if $Qcov8[Yes]"
+            ]
         },
         {
             "short_title": "Weekly Q3",
@@ -346,13 +408,24 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Choose date",
-                    "value": "0"
+                    "value": "0",
+                    "extra": "Q3_0_open",
+                    "comment": "If checked show date field (Q3_0_open)"
                 },
                 "option_2": {
                     "text": "I don\u2019t know",
                     "value": "1"
                 }
-            }
+            },
+            "description": [
+                "Why are we asking this?",
+                "To help us work out the number of cases of COVID-19 and flu that arise each day.",
+                "How should I answer it?",   
+                "Please give as accurate an estimate as possible."
+            ],
+            "rules": [
+                "Shown if symptoms"
+            ]
         },
         {
             "short_title": "Weekly Q3 open question",
@@ -377,7 +450,16 @@
                     "text": "I don\u2019t know",
                     "value": "1"
                 }
-            }
+            },
+            "description": [
+                "Why are we asking this?",
+                "Using the beginning and end dates of symptoms we can work out how long respiratory infections last.",
+                "How should I answer it?",   
+                "Please give as accurate an estimate as possible."
+            ],
+            "rules":[
+                "Shown if symptoms"
+            ]
         },
         {
             "short_title": "Weekly Q4 open question",
@@ -406,7 +488,16 @@
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
-            }
+            },
+            "rules":[
+                "Shown if symptoms"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "Sudden onset of symptoms is believed to be common for COVID-19 and flu.",
+                "How should I answer it?",   
+                "Tick yes if your symptoms appeared over a few hours rather than gradually developing over a few days."
+            ]
         },
         {
             "short_title": "Weekly Q6",
@@ -417,13 +508,31 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Choose date",
-                    "value": "0"
+                    "value": "0",
+                    "comment": "open field date if checked"
                 },
                 "option_2": {
                     "text": "I don\u2019t know",
                     "value": "1"
                 }
-            }
+            },
+            "rules": [
+                "Shown ($Q1[fever])"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "Fever is very important for diagnosing COVID-19 and flu, so we want to know when this started.",
+                "How should I answer it?",  
+                "Please give as accurate an estimate as possible."
+            ]
+        },
+        {
+            "short_title": "Q6 open field",
+            "title": "",
+            "mandatory": false,
+            "type": "date",
+            "data_name":"Q6_0_open",
+            "comment": "extra field for $Q6#option_1"
         },
         {
             "short_title": "Weekly Q6b",
@@ -444,7 +553,16 @@
                     "text": "I don\u2019t know",
                     "value": "3"
                 }
-            }
+            },
+            "rules": [
+                "Shown if $Q1[fever]"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "COVID-19 and flu are often associated with a sudden onset of fever",
+                "How should I answer it?",   
+                "Tick yes if your fever appeared over a few hours rather than gradually developing over a few days."
+            ]
         },
         {
             "short_title": "Weekly Q6c",
@@ -465,7 +583,16 @@
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
-            }
+            }, 
+            "rules":[
+                "Shown if symptoms"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "COVID-19 and flu often cause a high temperature. However, not everyone takes their temperature when they are ill.",
+                "How should I answer it? ",  
+                "Answer yes, if you took your temperature using a thermometer."
+            ]
         },
         {
             "short_title": "Weekly Q6d",
@@ -502,7 +629,16 @@
                     "text": "I don\u2019t know/can\u2019t remember",
                     "value": "6"
                 }
-            }
+            },
+            "rules": [
+                "(if symptoms) and (if took temperature $Q6c[Yes])"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "COVID-19 and flu often cause a high temperature.",
+                "How should I answer it?",   
+                "Give the highest temperature you recorded during this episode of illness."
+            ]
         },
         {
             "short_title": "Weekly Q7",
@@ -535,14 +671,28 @@
                     "text": "No, but I have an appointment scheduled",
                     "value": "5"
                 }
-            }
+            },
+            "comment": [
+                "Will need to be adjusted to suit different countries."
+            ],
+            "rules": [
+                "Shown if symptoms",
+                "#option_6 is exclusive with others"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "To find out whether people contact the health services because of their symptoms.",
+                "How should I answer it?",   
+                "Tick all of those that apply. If you are due to see attend, then tick the final option."
+            ]
         },
         {
             "short_title": "Weekly Q7b",
             "title": "How soon after your symptoms appeared did you first visit this medical service?",
             "data_name": "Q7b",
             "mandatory": false,
-            "type": "multiple_choice",
+            "data_type": "numeric",
+            "type": "matrix",
             "possible_responses": {
                 "option_1": {
                     "text": "Same day",
@@ -570,11 +720,46 @@
                 },
                 "option_7": {
                     "text": "More than 7 days",
-                    "value": "7"
+                    "value": "6"
                 },
                 "option_8": {
                     "text": "I don\u2019t know",
                     "value": "7"
+                }
+            },
+            "rules": [
+                "Shown if symptoms",
+                "This should be asked for each option ticked in the previous question $Q7 (exept “No” or “Not yet”)",
+                "Table for each entry in the previous question. And then drop-down within each cell for the delays. Last year we had it as a table of radio boxes, but it displayed the same table no matter which options were chosen in Weekly Q7 – it would be nice if it only displayed the options selected in Weekly Q7"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "To find out how quickly people with symptoms are seen by the health services. ",
+                "How should I answer it?",
+                "Only record the time until your FIRST contact with the health services."
+            ],
+            "rows": {
+               "row_1": {
+                    "text":"GP",
+                    "value": "row1"
+               },
+               "row_2": {
+                   "text": "Hospital admission",
+                   "value": "row2"
+               },
+               "row_3": {
+                   "text": "Hospital accident & emergency department/out of hours service",
+                   "value": "row3"
+               },
+                "row_4": {
+                    "text": "Other medical services",
+                    "value": "row4"
+                }
+            },
+            "columns": {
+                "col_1":{
+                    "text":"Medical Service",
+                    "value": "col1"
                 }
             }
         },
@@ -609,7 +794,18 @@
                     "text": "Other",
                     "value": "5"
                 }
-            }
+            },
+            "comment": "This is the UK version. Will need to be adjusted to suit different countries.",
+            "description": [
+                "Why are we asking this?",
+                "To find out whether people contact the health services because of their symptoms.",
+                "How should I answer it? ",  
+                "Tick all options that apply "
+            ],
+            "rules": [
+                "Shown if symptoms",
+                "[No] is exclusive with other responses"
+            ]
         },
         {
             "short_title": "Weekly Q8b",
@@ -650,7 +846,11 @@
                     "text": "I don\u2019t know",
                     "value": "7"
                 }
-            }
+            },
+            "rules": [
+                "Shown if symptoms",
+                "This should be asked for each option ticked in the previous question (except [No]) Preferably, it only displays the options selected in Weekly Q8."
+            ]
         },
         {
             "short_title": "Weekly Qcov18",
@@ -698,14 +898,17 @@
                 "option_10": {
                     "text": "My symptoms appeared very recently",
                     "value": "10",
-                    "comment": "OPEN FIELD",
+                    "comment": "open field",
                     "extra": "Qcov18b_10_open"
                 },
                 "option_11": {
                     "text": "I don\u2019t know/don\u2019t want to answer",
                     "value": "99"
                 }
-            }
+            },
+            "rules": [
+                "Shown if $Q7[no] and $Q8[no]"
+            ]
         },
         {
             "short_title": "Weekly Qcov18b open question",
@@ -745,9 +948,13 @@
                 "option_6": {
                     "text": "another consequence",
                     "value": "6",
-                    "comment": "OPEN FIELD"
+                    "comment": "open textual field",
+                    "extra": "Qcov18b_6_open"
                 }
-            }
+            },
+            "rules": [
+                "Shown if to $Qcov18{9}"
+            ]
         },
         {
             "short_title": "Weekly Qcov18b open question",
@@ -778,6 +985,7 @@
                     "value": "2"
                 }
             },
+            "added_at": "2020-03-13",
             "removed_at": "2020-06-20"
         },
         {
@@ -799,7 +1007,9 @@
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
-            }
+            },
+            "added_at": "2020-03-13"
+           
         },
         {
             "short_title": "Weekly Qcov6",
@@ -821,7 +1031,9 @@
                     "text": "No",
                     "value": "0"
                 }
-            }
+            },
+            "added_at": "2020-03-13",
+            "removed_at":"2020-06-20"
         },
         {
             "short_title": "Weekly Qcov16",
@@ -838,6 +1050,10 @@
                     "text": "Yes, a serological analysis (screening for antibodies against this virus, from a drop of blood at fingertip or a blood sample) ",
                     "value": "2"
                 },
+                "option_5": {
+                    "text": "Yes, a rapid antigen detection test (on a swab in nose or mouth, with a result available in less than an hour)",
+                    "value": "5"
+                },
                 "option_3": {
                     "text": "Not yet, I plan to shortly undergo a test",
                     "value": "3"
@@ -846,16 +1062,16 @@
                     "text": "No, I have a prescription but will not undergo a test",
                     "value": "4"
                 },
-                "option_5": {
-                    "text": "Yes, a rapid antigen detection test (on a swab in nose or mouth, with a result available in less than an hour)",
-                    "value": "5"
-                },
                 "option_6": {
                     "text": "No",
                     "value": "0"
                 }
             },
-            "comment": "(the participant can select the first and second option together if he wants)"
+            "comment": "(the participant can select the first and second option together if he wants)",
+            "rules": [
+                "Shown if symptoms",
+                "Options {1} and {2} are exclusive to the others"
+            ]
         },
         {
             "short_title": "Weekly Qcov16b",
@@ -880,7 +1096,10 @@
                     "text": "No, I do not have the result yet",
                     "value": "4"
                 }
-            }
+            },
+            "rules": [
+                "Shown If $Qcov16{1}"
+            ]
         },
         {
             "short_title": "Weekly Qcov16c",
@@ -905,7 +1124,10 @@
                     "text": "No, I do not have the result yet",
                     "value": "4"
                 }
-            }
+            },
+            "rules": [
+                "Shown If $Qcov16{2}"
+            ]
         },
         {
             "short_title": "Weekly Qcov16d",
@@ -942,7 +1164,10 @@
                     "text": "I don\u2019t know/don\u2019t want to answer",
                     "value": "99"
                 }
-            }
+            },
+            "rules": [
+                "Shown If Qcov16{1}"
+            ]
         },
         {
             "short_title": "Weekly Qcov16e",
@@ -971,8 +1196,84 @@
                     "text": "Over 15 days",
                     "value": "4"
                 }
-            }
+            },
+            "rules": [
+                "Shown If $Qcov16{1}"
+            ]
         },
+        {
+            "short_title": "Weekly Qcov16f",
+            "title": "Do you know the result of this rapid antigen detection test?",
+            "data_name": "Qcov16f",
+            "mandatory": false,
+            "type": "single_choice",
+            "possible_responses": {
+              "option_1": {
+                    "text": "Yes, Positive for the SARS-CoV-2 (COVID-19)",
+                    "value": "1"
+                },
+                "option_2": {
+                    "text": "Yes, Negative for the SARS-CoV-2 (COVID-19)",
+                    "value": "2"
+                },
+                "option_3": {
+                    "text": "Yes, the result is non interpretable",
+                    "value": "3"
+                },
+                "option_4": {
+                    "text": "No, I don’t know or don’t remember",
+                    "value": "99"
+                }
+            },
+            "added_at": "2020-11-23",
+            "comment": "In proposal from 2020,November",
+            "platforms": ["FR"],
+            "rules": [
+                "Shown If $Qcov16{5}"
+            ]
+        },
+        {
+            "short_title": "Weekly Qcov16g",
+            "title": "Do you know the result of this rapid antigen detection test?",
+            "data_name": "Qcov16g",
+            "mandatory": false,
+            "type": "single_choice",
+            "possible_responses": {
+              "option_1": {
+                    "text": "A general practitioner",
+                    "value": "1"
+                },
+                "option_2": {
+                    "text": "A specialized physician, a dental surgeon or a mid-wife",
+                    "value": "2"
+                },
+                "option_3": {
+                    "text": "A pharmacist or a pharmacy technician",
+                    "value": "3"
+                },
+                "option_4": {
+                    "text": "Another health professional  (specify)",
+                    "comment": "(give the list of all health professional authorized to realize this test in your country)",
+                    "value": "4"
+                },
+                "option_5": {
+                    "text": "Another professional (specify)",
+                    "comment": "(give the list of all other professionals authorized to realize this test)",
+                    "value": "5"
+                },
+                "option_6": {
+                    "text": "I don’t know or don’t remember",
+                    "value": "99"
+                }
+            },
+            "comment": "In proposal",
+            "platform": ["FR"],
+            "rules": [
+                "Shown If $Qcov16{5}"
+            ]
+        },
+        
+
         {
             "short_title": "Weekly Qcov19",
             "title": "Because of your symptoms, did you undergo analyses to know if you have flu? ",
@@ -996,7 +1297,10 @@
                     "text": "No",
                     "value": "0"
                 }
-            }
+            },
+            "rules":[
+                "Shown if symptoms"
+            ]
         },
         {
             "short_title": "Weekly Qcov19b",
@@ -1021,7 +1325,10 @@
                     "text": "No, I do not have the result yet",
                     "value": "4"
                 }
-            }
+            },
+            "rules": [
+                "Shown if to $Qcov19{1}"
+            ]
         },
         {
             "short_title": "Weekly Q9",
@@ -1052,21 +1359,34 @@
                 },
                 "option_6": {
                     "text": "Homeopathy",
+                    "platforms": ["FR"],
+                    "comment": "French specific item, optional",
                     "value": "7"
                 },
                 "option_7": {
                     "text": "Alternative medicine (essential oil, phytotherapy, etc.)",
-                    "value": "8"
+                    "value": "8",
+                    "comment": "French specific item, optional",
+                    "platforms": ["FR"]
                 },
                 "option_8": {
-                    "text": "Alternative medicine (essential oil, phytotherapy, etc.)",
+                    "text": "Other",
                     "value": "5"
                 },
                 "option_9": {
-                    "text": "Don\u2019t know/Can\u2019t remember",
+                    "text": "Don't know/Can't remember",
                     "value": "6"
                 }
-            }
+            },
+            "comment": [
+                "This is adapted to the UK situation. Other countries will need to adapt the brand names of the commonly used pain killers or antipyretics",
+                "Needs to have a check so that participants can’t give inconsistent answers.",
+                "Extra country specific options – mapped to “other” in standardised database"
+            ],
+            "rules": [
+                "Shown if symptoms",
+                "[No medication] and [Don\u2019t know] are exclusives to others"
+            ]
         },
         {
             "short_title": "Weekly Q9b",
@@ -1107,7 +1427,16 @@
                     "text": "I don\u2019t know/Can\u2019t remember",
                     "value": "7"
                 }
-            }
+            },
+            "rules": [
+                "Shown if $Q9[Antivirals]" 
+            ],
+            "description": [
+                "Why are we asking this?",
+                "Antivirals are thought to be most effective if taken quickly after disease onset.",
+                "How should I answer it?",   
+                "Report the time until  you first started taking antivirals (which may not be the same day as you got your prescription)."
+            ]
         },
         {
             "short_title": "Weekly Q14",
@@ -1124,7 +1453,12 @@
                     "text": "No",
                     "value": "0"
                 }
-            }
+            },
+            "platforms": ["FR"],
+            "comment":"In proposal",
+            "rules": [
+                "Shown if symptoms"
+            ]  
         },
         {
             "short_title": "Weekly Q10",
@@ -1145,7 +1479,16 @@
                     "text": "Yes, I took time off school or work",
                     "value": "2"
                 }
-            }
+            },
+            "description": [
+                "Why are we asking this?",
+                "To measure how people’s daily lives are affected by their symptoms.",
+                "How should I answer it?",  
+                "We want to know if you were absent from work or school as a result of your illness, or if you changed your routine in other ways (e.g. stopped attending clubs)."
+            ],
+            "rules": [
+                "Shown if symptoms"
+            ]
         },
         {
             "short_title": "Weekly Q10b",
@@ -1166,7 +1509,10 @@
                     "text": "Other (e.g. I wouldn\u2019t usually be at work/school today anyway",
                     "value": "3"
                 }
-            }
+            },
+            "rules": [
+                "Shown if symptoms and $Q10[Yes, I took time off school or work]"
+            ]  
         },
         {
             "short_title": "Weekly Q10c",
@@ -1207,7 +1553,16 @@
                     "text": "More than 15 days",
                     "value": "7"
                 }
-            }
+            },
+            "rules": [
+                "Shown if symptoms and $Q10[Yes, I took time off school or work]"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "To measure the effect of symptoms on people’s daily lives.",
+                "How should I answer it?",    
+                "Only count the days that you normally would have been in school or work (e.g. don’t count weekends)." 
+            ]
         },
         {
             "short_title": "Weekly Qcov7",
@@ -1282,7 +1637,8 @@
                     "value": "12",
                     "comment": "(exclusive, if this answer is selected, no other answer can be selected)"
                 }
-            }
+            },
+            "added_at":"2020-03-12"
         },
         {
             "short_title": "Weekly Q11",
@@ -1313,7 +1669,8 @@
                 },
                 "option_6": {
                     "text": "New coronavirus (COVID-19)",
-                    "value": "9"
+                    "value": "9",
+                    "added_at": "2020-03-12"
                 },
                 "option_7": {
                     "text": "Other",
@@ -1323,7 +1680,16 @@
                     "text": "I don\u2019t know",
                     "value": "5"
                 }
-            }
+            },
+            "description": [
+                "Why are we asking this?",
+                "To help find out if our assessment of your illness based on your symptoms matches what you believe to be the cause. You might have a better idea of what is causing your illness than our computer algorithms.",
+                "How should I answer it?",
+                "If you are reasonably sure about what is causing your symptoms, please tick the appropriate box. Otherwise, please tick “I don’t know”."
+            ],
+            "rules": [
+                "Shown if symptoms"
+            ]
         },
         {
             "short_title": "Weekly Qcov9",
@@ -1360,7 +1726,10 @@
                     "text": "I think I have this disease",
                     "value": "7"
                 }
-            }
+            },
+            "rules": [
+                "If $Q11[New coronavirus (COVID-19)] "
+            ]
         },
         {
             "short_title": "Weekly Qcov9b",
@@ -1381,14 +1750,17 @@
                     "text": "No",
                     "value": "0"
                 }
-            }
+            },
+            "rules": [
+                    "If $Q11[New coronavirus (COVID-19)] "
+            ]
         },
         {
             "short_title": "Weekly Qcov10",
             "title": "Since the beginning of COVID-19 lockdown measures, do you carry out a professional activity? (Select all the relevant answers)?",
             "data_name": "Qcov10",
             "mandatory": false,
-            "Active": "in Italy, not in France",
+            "platforms": ["IT"],
             "type": "multiple_choice",
             "possible_responses": {
                 "option_1": {
@@ -1418,7 +1790,7 @@
             "title": "How many days a week do you work outside from home?",
             "data_name": "Qcov10b",
             "mandatory": false,
-            "Active": "in Italy, not in France",
+            "platforms": ["IT"],
             "type": "single_choice",
             "possible_responses": {
                 "option_1": {
@@ -1456,7 +1828,7 @@
             "title": "Over recent days, at which frequency did you go out of home to buy products, on average?",
             "data_name": "Qcov11",
             "mandatory": false,
-            "Active": "in Italy, not in France",
+            "platforms": ["IT"],
             "type": "single_choice",
             "possible_responses": {
                 "option_1": {
@@ -1490,7 +1862,7 @@
             "title": "Over recent days, at which frequency did you go out of home to get fresh air or exercise (outside your home, balcony, garden, private courtyard), on average?",
             "data_name": "Qcov12",
             "mandatory": false,
-            "Active": "in Italy, not in France",
+            "platforms": ["IT"],
             "type": "single_choice",
             "possible_responses": {
                 "option_1": {
@@ -1524,7 +1896,7 @@
             "title": "Over the course of yesterday, how many people (outside your household) did you approach at a distance lower than 1 meter?",
             "data_name": "Qcov13",
             "mandatory": false,
-            "Active": "in Italy, not in France",
+            "platforms": ["IT"],
             "type": "single_choice",
             "possible_responses": {
                 "option_1": {
@@ -1554,6 +1926,7 @@
             "title": "If lockdown measures were lifted up, but collective childcare/schools/university were closed, what would be your situation? (Select all the relevant answers)",
             "data_name": "Qcov14",
             "mandatory": false,
+            "platforms": ["IT"],
             "active": false,
             "type": "multiple_choice",
             "possible_responses": {
@@ -1589,6 +1962,7 @@
             "data_name": "Qcov14b",
             "mandatory": false,
             "active": false,
+            "platforms": ["IT"],
             "type": "single_choice",
             "possible_responses": {
                 "option_1": {
@@ -1656,7 +2030,7 @@
             "title": "Since January 2020, did you undergo a laboratory test to know if you have been in contact with this new coronavirus (SARS-CoV-2, COVID-19)?",
             "data_name": "Qcov17",
             "mandatory": true,
-            "active": true,
+            "active": false,
             "type": "single_choice",
             "possible_responses": {
                 "option_1": {
@@ -1667,14 +2041,16 @@
                     "text": "No",
                     "value": "0"
                 }
-            }
+            },
+            "added_at":"2020-04-28",
+            "removed_at": "2020-09-21"
         },
         {
             "short_title": "Weekly Qcov17b",
             "title": "What was the result of this (these) analysis? (if you realized several analyses, please give the results of all these analyses)",
             "data_name": "Qcov17b",
             "mandatory": false,
-            "active": true,
+            "active": false,
             "type": "multiple_choice",
             "possible_responses": {
                 "option_1": {
@@ -1709,69 +2085,9 @@
                     "text": "I don\u2019t know the result",
                     "value": "8"
                 }
-            }
-        },
-        {
-            "short_title": "Qcov16f",
-            "condition": "if 5 to Qcov16",
-            "title": "Do you know the result of this rapid antigen detection test?",
-            "data_name": "Qcov16f",
-            "mandatory": false,
-            "active": false,
-            "type": "single_choice",
-            "possible_responses": {
-                "option_1": {
-                    "text": "Yes, Positive for the SARS-CoV-2 (COVID-19)",
-                    "value": "1"
-                },
-                "option_2": {
-                    "text": "Yes, Negative for the SARS-CoV-2 (COVID-19)",
-                    "value": "2"
-                },
-                "option_3": {
-                    "text": "Yes, the result is non interpretable",
-                    "value": "3"
-                },
-                "option_4": {
-                    "text": "No, I don\u2019t know or don\u2019t remember",
-                    "value": "99"
-                }
-            }
-        },
-        {
-            "short_title": "Qcov16g",
-            "condition": "if 5 to Qcov16",
-            "title": "Who realized this rapid antigen detection test?",
-            "data_name": "Qcov16g",
-            "mandatory": false,
-            "active": false,
-            "type": "single_choice",
-            "possible_responses": {
-                "option_1": {
-                    "text": "A general practitioner",
-                    "value": "1"
-                },
-                "option_2": {
-                    "text": "A specialized physician, a dental surgeon or a mid-wife",
-                    "value": "2"
-                },
-                "option_3": {
-                    "text": "A pharmacist or a pharmacy technician",
-                    "value": "3"
-                },
-                "option_4": {
-                    "text": "Another health professional (give the list of all health professional authorized to realize this test in your country) (specify)",
-                    "value": "4"
-                },
-                "option_5": {
-                    "text": "Another professional (give the list of all other professionals authorized to realize this test)(specify)",
-                    "value": "5"
-                },
-                "option_6": {
-                    "text": "I don\u2019t know or don\u2019t remember",
-                    "value": "99"
-                }
-            }
+            },
+            "removed_at": "2020-09-21"
         }
+        
     ]
 }
