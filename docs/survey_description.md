@@ -15,16 +15,18 @@ A survey is defined as a set of *Questions*.
 Common fields:
 - **title**: Label of the question as to be presented to the user (after translation). 
 - **type** : Kind of Question. Define how the data collection is organized
-- **description** : Textual description of the question to the final user
+- **description** : Textual description of the question to the final user. Can be a string or an array of strings.
 - **data_name**: name to be used to identify the question in the data
 - **active** : can be used to indicate the question is inactive (value="false")            
-- **comment** : Textual comments about the question for survey designer/scientific aspects ()
+- **comment** : Textual comments about the question for survey designer/scientific aspects. Can be a string or an array of strings.
 - **mandatory**: is the field needs to be mandatory
 - **added_at**: date when the question has been added
 - **removed_at**: date when the question has been removed
 - **data_type**: Can be used to describe the expected type of data to be collected from the data elements (numeric, text, date)
-- **rules**: list of rules (textual description to be applied on this question)
-
+- **rules**: list of rules (textual description to be applied on this question). Array of strings.
+- **platforms**: list of platforms (country code in upper case, e.g. 'UK') where the question is implemented if this item is specific.
+- **target**: Target platforms, can be "all" (core question, expected every where) or "optional" (up to each platform to decide)
+  
 For type in 'text', 'date':
 - **format** : for textual format describe how data of each data element must be entered (date, numeric, )
 
@@ -50,9 +52,11 @@ Define possible response for a question input element (single, multiple, )
 
 Fields:
 - **text** : response label
-- **comment** : Comment about interpretation or presentation of item
+- **comment** : Comment about interpretation or presentation of item. Can be a string or an array of strings.
 - **value** : value use to identify this value in the output data model (key, value, or to infer field name)
 - **extra** : data name of the question to be used as extra field (see below).
+- **description**: Textual description to be shown to the user to give more explanation.
+- **platforms**: list of platforms (country code in upper case, e.g. 'UK') or 'all' if it's a core question (expected to be every where).
 
 **Extra Field**: Extra field (aka "open field") was a way to implement sub question attached to an input element (like a checkbox) to enable data enter of an extra information. 
 Common usage was the "Other" field. It was not presented as a sub question but as a extra input alongside the checkbox. It was implemented directly in the question as an optional extra input in the old model. The description refers to the extra element as a question itself to avoid this exception in the description model. The "extra" field allow to link both questions with the data_name of this sub question.
@@ -62,8 +66,9 @@ This description doesn't fix how this kind of field should be presented in a sur
 
 Fields:
 - **text** : response label
-- **comment** : Comments about interpretation or presentation of item
+- **comment** : Comments about interpretation or presentation of item. Can be a string or an array of strings.
 - **value** : value use to identify this value in the output data model (key, value, or to infer field name)
+- **platforms**: list of platforms (country code in upper case, e.g. 'UK') or 'all' if it's a core question (expected to be every where).
 
 ## Comment
 Each comment field can be a string or an array of string (each will be visible as separated block, in order)

@@ -105,6 +105,13 @@
 {% endif %}
 {% endmacro %}
 
+{% macro render_description(desc) %}
+{% if desc %}
+ {{ render_list(desc, 'description user-label') }}
+{% endif %}
+{% endmacro %}
+
+
 {% macro render_responses(responses) %}
      <table class="table table-compact table-sm">
       {% for r in responses.values() %}
@@ -116,6 +123,10 @@
             {{ render_comment(r.comment) }} 
         </td>
         <td>{{ local_key_badge(r.key)}}</td>
+        <td>
+         {% if r.added_at%} Added at {{ r.added_at }}{% endif %}
+         {% if r.removed_at%} Removed at {{ r.removed_at }}{% endif %}
+        </td>
        </tr>  
       {% endfor %}
     </table>
@@ -139,9 +150,10 @@
 
 
 {% block survey %}
-<H1>Survey {{survey.name}} </h1>
+<H1>Survey {{survey.name}}</h1>
+<div>JSON Version {{version}}, built on {{build_date}}</div>
 {# Explain layout #}
-
+<p class="comment">This file describes the survey design at a high level defining elements to enable data sharing and common elements. Legend of element is presented at the bottom of this file.</p>
 {# questions #}
 {% for quid in survey.questions %}
 <div class="question card">
@@ -151,9 +163,10 @@
         {{ badge(icon('cubes') ~ ' ' ~ question.type, 'warning') }}
         {{ icon('sort')}} {{ question.order }}
         {% if question.mandatory %}{{ icon('mandatory', 'danger') }} {% endif %}
+        {% if question.target %}{{ badge(icon('bullseye') ~ question.target, 'info') }} {% endif %}
         {% if not question.active %}{{ badge(icon('eye-slash') ~ " Inactive", 'danger') }}{% endif %}
         {% if question.added_at%} Added at {{ question.added_at }}{% endif %}
-        {% if question.removed_at%} Added at {{ question.removed_at }}{% endif %}
+        {% if question.removed_at%} Removed at {{ question.removed_at }}{% endif %}
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">{{ user_label(question.title) }}</div>
@@ -161,7 +174,7 @@
     {% if question.description %}
     <div class="card description question-block w-75">
     <h6>Description</h6>
-    {{ user_label(question.description) }}
+    {{  render_description(question.description) }}
     </div>
     {% endif %}
     {% if question.format %} 
@@ -172,7 +185,7 @@
     {% endif %}
     {% if question.data_type %} 
         <div class="card format question-block w-75">
-        <h6>Data type</h6>
+        <h6>Data type of data input(s)</h6>
             {{ question.data_type }}
         </div>
     {% endif %}
@@ -188,7 +201,6 @@
         {{ render_responses(question.responses) }}
         </div>
     {% endif %}
-    
     
     {% if question.rows or question.matrix %}
     <div class="row">
@@ -216,12 +228,19 @@
         {{ render_list(question.rules) }}
         </div>
     {% endif %}
+    {%if question.platforms %}
+        <div class="card platforms question-block w-75">
+        <h6>Platforms implementing this question</h6>
+            {{ render_list(question.platforms) }}
+        </div>
+    {% endif %}
    </div> {# card-body #}
 </div> {# question #}
 {% endfor %}
 
 <h3>Legend</h3>
 <ul class="list-group">
+    <li class="list-group-item">{{ badge(icon('bullseye', 'info')) }} : Target of the question (all platforms or optional)</li>
     <li class="list-group-item">{{ order_badge('x') }} : Indicate order of an element in the list</li>
     <li class="list-group-item">{{ local_key_badge('x')}} : Indicate a local identifier to be used only to refer to this element in this document. Don't use this to identify this element in a platform, use the {{ common_key_badge('key') }}</li>
     <li class="list-group-item">{{ common_key_badge('x') }} : Value or key identifier, to be used in the survey definition. This value will be used to identify this element across platforms.</li>

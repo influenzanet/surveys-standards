@@ -30,6 +30,9 @@
                 "$id": "#/properties/questions/items",
                 "$ref": "#/definitions/question"
             }
+        },
+        "comment": {
+                "$ref": "#/definitions/comment"
         }
     },
     "definitions": {
@@ -37,7 +40,7 @@
             "$id": "#/definitions/question",
             "type": "object",
             "title": "Question item description",
-            "description": "A question is a unit .",
+            "description": "A question is a unit element of the survey",
             "required": [
                 "short_title",
                 "title",
@@ -90,11 +93,22 @@
                             "title": "Date when question has been removed from survey",
                             "format": "date"
                         },
+                        "description": {
+                         "$ref": "#/definitions/description",
+                         "description": "Text to be presented to the user to explain more precisely what we expect and why we ask for this"
+                        },
                         "comment": {
                             "$ref": "#/definitions/comment"
                         },
                         "rules": {
                             "$ref": "#/definitions/rules"
+                        },
+                        "target": {
+                            "type": "string",
+                            "enum": ["all","optional"]
+                        },
+                        "platforms": {
+                            "$ref": "#/definitions/platforms"
                         }
                     }
                 },
@@ -187,7 +201,7 @@
                     "type": "string"
                 },
                 "description": {
-                    "type": "string",
+                    "$ref": "#/definitions/description",
                     "description": "Textual description of the response"
                 },
                 "value": {
@@ -200,6 +214,19 @@
                 },
                 "comment": {
                     "$ref": "#/definitions/comment"
+                },
+                "added_at": {
+                    "type": "string",
+                    "title": "Date when question has been introduced",
+                    "format": "date"
+                },
+                "removed_at": {
+                    "type": "string",
+                    "title": "Date when question has been removed from survey",
+                    "format": "date"
+                },
+                "platforms": {
+                    "$ref": "#/definitions/platforms"
                 }
             }
         },
@@ -218,6 +245,19 @@
                 },
                 "comment": {
                     "$ref": "#/definitions/comment"
+                },
+                "added_at": {
+                    "type": "string",
+                    "title": "Date when question has been introduced",
+                    "format": "date"
+                },
+                "removed_at": {
+                    "type": "string",
+                    "title": "Date when question has been removed from survey",
+                    "format": "date"
+                },
+                "platforms": {
+                    "$ref": "#/definitions/platforms"
                 }
             }
         },
@@ -231,9 +271,23 @@
                 {"type": "array", "items": { "type":"string"}}
             ]
         },
+        "description": {
+            "anyOf": [
+                {"type": "string"},
+                {"type": "array", "items": { "type":"string"}}
+            ]
+        },
         "rules": {
             "type": "array", 
             "items": { "type":"string"}
+        },
+        "platforms": {
+            "type": "array",
+            "description": "List platform where item is implemented, 'all' indicated this is core item and is expected everywhere",
+            "items": {
+                "type": "string",
+                "enum": ["all","IE", "UK", "ES", "DK", "BE", "IT", "FR", "PT", "NL", "SE", "CH"]
+            }
         }
     }
 }
