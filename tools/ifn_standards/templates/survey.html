@@ -151,11 +151,11 @@
       {% for r in responses.values() %}
        <tr>
         <td>{{ common_key_badge(r.value) }}</td>
-        <td>{{ order_badge(r.order) }}</td>
         <td>{{ user_label(r.text) }}</td>
         <td>
             {{ render_comment(r.comment) }} 
         </td>
+        <td>{{ order_badge(r.order) }}</td>
         <td>{{ local_key_badge(r.key)}}</td>
         <td>{% if r.platforms%} {{ render_platforms(r.platforms) }}{%endif%}</td>
          {% if r.added_at%} Added at {{ r.added_at }}{% endif %}
@@ -185,9 +185,12 @@
 
 {% block survey %}
 <H1>Survey {{survey.name}}</h1>
-<div>JSON Version {{version}}, built on {{build_date}}</div>
+<div> <a href="https://influenzanet.github.io/surveys-standards/surveys/{{survey.name}}/survey.json">JSON</a> Version {{version}}, built on {{build_date}}</div>
 {# Explain layout #}
-<p class="comment">This file describes the survey design at a high level defining elements to enable data sharing and common elements. Legend of element is presented at the bottom of this file. <a href="https://influenzanet.github.io/surveys-standards/docs/survey_description">Documentation is also available</a> </p>
+<p class="comment">This file describes the survey design at a high level defining elements to enable data sharing and common elements. Legends are presented at the bottom of this file. <a href="https://influenzanet.github.io/surveys-standards/docs/survey_description">Documentation is also available</a> </p>
+{%if survey.comment %}
+ {{ render_comment(survey.comment) }}
+{%endif%}
 {# questions #}
 {% for quid in survey.questions %}
 <div class="question card">
@@ -254,18 +257,18 @@
             </div>
         {% endif %}
         </div>
-    <div>
+    </div>
     {% endif %}
     {% if question.rules %}
         <div class="card rules question-block">
-        <h6>Rules</h6>
+        <h6>{{ icon('cogs') }} Rules</h6>
         {{ render_list(question.rules) }}
         </div>
     {% endif %}
     {%if question.platforms %}
         <div class="card platforms question-block w-75">
         <h6>Platforms implementing this question</h6>
-            {{ render_list(question.platforms) }}
+            {{ render_platforms(question.platforms) }}
         </div>
     {% endif %}
    </div> {# card-body #}

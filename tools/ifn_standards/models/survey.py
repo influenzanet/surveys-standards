@@ -6,6 +6,7 @@ class Survey:
     def __init__(self, name):
         self.name = name
         self.questions = OrderedDict()
+        self.comment = None
 
     def add_question(self, question):
         n = question.data_name
@@ -102,6 +103,8 @@ def json_parser_survey(survey):
         survey from json dictionnary
     """
     ss = Survey(survey['name'])
+    if 'comment' in survey:
+        ss.comment = json_parser_comment(survey['comment'])
     index = 1
     for qDef in survey['questions']:
         q = json_parser_question(qDef)
