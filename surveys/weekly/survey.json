@@ -1234,7 +1234,7 @@
         },
         {
             "short_title": "Weekly Qcov16g",
-            "title": "Do you know the result of this rapid antigen detection test?",
+            "title": "Who performed this rapid antigen test?",
             "data_name": "Qcov16g",
             "mandatory": false,
             "type": "single_choice",
@@ -1646,7 +1646,7 @@
             "title": "What do you think is causing your symptoms? ",
             "data_name": "Q11",
             "mandatory": false,
-            "type": "multiple_choice",
+            "type": "single_choice",
             "possible_responses": {
                 "option_1": {
                     "text": "Flu or flu-like illness",
