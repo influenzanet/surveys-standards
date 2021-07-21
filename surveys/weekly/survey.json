@@ -1176,27 +1176,37 @@
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
-                    "text": "0 to 1 day",
+                "1_day": {
+                    "text": "Symptoms appeared the day or the day before the sampling",
                     "value": "1"
                 },
-                "option_2": {
-                    "text": "2 to 4 days",
+                "2_4days": {
+                    "text": "Symptoms appeared 2, 3 or 4 days before the sampling",
                     "value": "2"
                 },
-                "option_3": {
-                    "text": "5 to 7 days",
+                "5_7days": {
+                    "text": "Symptoms appeared 5, 6 or 7 days before the sampling",
                     "value": "3"
                 },
-                "option_4": {
-                    "text": "8 to 15 days",
-                    "value": "3"
-                },
-                "option_5": {
-                    "text": "Over 15 days",
+                "8_14days": {
+                    "text": "Symptoms appeared between 8 and 14 days before the sampling",
                     "value": "4"
+                },
+                "15_28days": {
+                    "text": "Symptoms appeared between 15 and 28 days before the sampling",
+                    "value": "5"
+                },
+                "over4w": {
+                    "text": "Symptoms appeared more than four weeks before the sampling",
+                    "value": "6"
+                },
+                "dnk": {
+                    "text": "I don’t know / don’t want to answer",
+                    "value": "99"
                 }
-            },
+            }, 
+            "added_at": "2020-09-21",
+            "comment": "In proposal from 2020,September",
             "rules": [
                 "Shown If $Qcov16{1}"
             ]
