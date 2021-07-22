@@ -1652,6 +1652,99 @@
             ]
         },
         {
+            "short_title": "Weekly Qcov7bis",
+            "title": "Because of your symptoms, have you taken or strengthened one or more of the following measures? ",
+            "data_name": "Qcov7bis",
+            "mandatory": false,
+            "type": "matrix",
+            "data_type": "numeric",
+            "added_at":"2020-03-12",
+            "comment": [
+                "code row12 is reserved to keep compatibility with Qcov7 (none of this measure)"
+            ],
+            "possible_responses": {
+                "yes":{"value": "1", "text":"Yes"},
+                "already":{"value": "2", "text":"No, because I was already taking this measure"},
+                "no":{"value": "3", "text":"No"},
+                "NA":{"value": "4", "text":"Not applicable"}
+            },
+            "rows": {
+                "wash_hands": {
+                    "text":"Regularly wash or disinfect hands",
+                    "value": "row1"
+                },
+                "cough_elbow": {
+                    "text": "Cough or sneeze into your elbow",
+                    "value": "row2"
+                },
+                "disposable_tissue": {
+                    "text": "Use a disposable tissue",
+                    "value": "row3"
+                },
+                "wear_mask_outside": {
+                    "text": "Wear a mask (cloth mask or disposable mask) outside my home",
+                    "value": "row4a"
+                },
+                "wear_mask_inside": {
+                    "text": "Wear a mask (cloth mask or disposable mask) inside my home",
+                    "value": "row4b"
+                },
+                "avoid_shaking": {
+                    "text": "Avoid shaking hands",
+                    "value":"row5"
+                },
+                "stop_greeting": {
+                    "text":"Stop greeting by hugging and/or kissing on both cheeks",
+                    "value": "row11"
+                },
+                "public_transport": {
+                    "text":"Limit your use of public transport",
+                    "value": "row6"
+                },
+                "gatherings": {
+                    "text":"Avoid gatherings (going to the theater, cinema, stadium, supermarket, etc.)",
+                    "value": "row7"
+                },
+                "stay_home": {
+                    "text":"Stay at home",
+                    "value": "row8"
+                },
+                "telework": {
+                    "text":"Telework or increase your number of telework days",
+                    "value": "row9"
+                },
+                "travel": {
+                    "text":"Avoid travel outside your own country or region",
+                    "value": "row10"
+                },
+                "food-delivery": {
+                    "text":"Have your food-shopping delivered by a store or a friend/family member",
+                    "value": "row13"
+                },
+                "seeing_friends": {
+                    "text":"Avoid seeing friends and family",
+                    "value":"row14"
+                },
+                "contact_over65": {
+                    "text":"Avoid being in contact with people over 65 years or with a chronic disease",
+                    "value": "row15"
+                },
+                "contact_children": {
+                    "text": "Avoid being in contact with children",
+                    "value": "row16"
+                }
+            },
+            "columns": {
+                "col_1": {
+                    "text": "",
+                    "description": "",
+                    "comment": "One hidden column (not labelled)",
+                    "value": "col1"
+                }
+            }
+
+        },
+        {
             "short_title": "Weekly Q11",
             "title": "What do you think is causing your symptoms? ",
             "data_name": "Q11",
