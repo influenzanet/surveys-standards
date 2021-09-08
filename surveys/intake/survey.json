@@ -985,6 +985,12 @@
                 "option_7": {
                     "text": "An immunocompromising condition (e.g. splenectomy, organ transplant, acquired immune deficiency, cancer treatment)",
                     "value": "6"
+                },
+                "option_8": {
+                    "text":"I would rather not answer",
+                    "value": "7",
+                    "target": "optional",
+                    "platform": ["IT"]
                 }
             },
             "description": [
