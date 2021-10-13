@@ -1,0 +1,420 @@
+{
+    "name": "vaccination",
+    "questions": [
+        {
+            "short_title": "Intake Q10",
+            "title": "Did you receive a flu vaccine this winter season?",
+            "data_name": "Q10",
+            "target": "all",
+            "mandatory": true,
+            "type": "single_choice",
+            "possible_responses": {
+                "option_1": {
+                    "text": "Yes",
+                    "value": "0"
+                },
+                "option_2": {
+                    "text": "No",
+                    "value": "1"
+                },
+                "option_3": {
+                    "text": "I don\u2019t know",
+                    "value": "2"
+                }
+            },
+            "comment": [
+                "Note that the years will need to be changed each year."
+            ],
+            "description": [
+                "Why are we asking this?",
+                "We would like to be able to work out how much protection the vaccine gives. We would also like to find out  if there is some protection from vaccines received in previous years.", 
+                "How should I answer it?",
+                "Answer yes if you received the vaccine last year (during the autumn/winter of 2010-2011)."
+            ],
+            "rules": [
+                "If [Yes] show $Q10b and $Q10c",
+                "If [No] show $Q10d"
+            ]
+        },
+        {
+            "short_title": "Intake Q10b",
+            "title": "When were you vaccinated against this flu season?",
+            "data_name": "Q10b",
+            "target": "all",
+            "mandatory": false,
+            "type": "single_choice",
+            "possible_responses": {
+                "option_1": {
+                    "text": "Choose date",
+                    "value": "1",
+                    "comment": "DATE FIELD"
+                },
+                "option_2": {
+                    "text": "I don\u2019t know",
+                    "value": "0"
+                }
+            },
+            "rules": [
+                "Shown if $Q10 is [Yes]"
+            ]
+        },
+        {
+            "short_title": "Intake Q10c",
+            "title": "What were your reasons for getting a seasonal influenza vaccination this year?",
+            "data_name": "Q10c",
+            "target": "all",
+            "mandatory": false,
+            "type": "multiple_choice",
+            "possible_responses": {
+                "option_1": {
+                    "text": "I belong to a risk group (e.g, pregnant, over 65, underlying health condition, etc)",
+                    "value": "0"
+                },
+                "option_12": {
+                    "text": "The COVID-19 context encouraged me to get influenza vaccination this year 12",
+                    "value": "12",
+                    "platforms": ["FR"]
+                },
+                "option_2": {
+                    "text": "Vaccination decreases my risk of getting the flu",
+                    "value": "1"
+                },
+                "option_3": {
+                    "text": "Vaccination decreases the risk of spreading the flu to others",
+                    "value": "2"
+                },
+                "option_4": {
+                    "text": "My doctor recommended it",
+                    "value": "3"
+                },
+                "option_5": {
+                    "text": "It was recommended in my workplace/school",
+                    "value": "4"
+                },
+                "option_6": {
+                    "text": "The vaccine was readily available and vaccine administration was convenient",
+                    "value": "5"
+                },
+                "option_7": {
+                    "text": "The vaccine was free",
+                    "value": "6"
+                },
+                "option_8": {
+                    "text": "I don\u2019t want to miss work/school",
+                    "value": "7"
+                },
+                "option_9": {
+                    "text": "I always get the vaccine",
+                    "value": "8"
+                },
+                "option_10": {
+                    "text": "Other reasons",
+                    "value": "9"
+                }
+            },
+            "rules": [
+                "Shown if $Q10 is [Yes]"
+            ]
+        },
+        {
+            "short_title": "Intake Q10d",
+            "title": "What were your reasons for NOT getting a seasonal influenza vaccination this year?",
+            "data_name": "Q10d",
+            "target": "all",
+            "mandatory": false,
+            "type": "multiple_choice",
+            "possible_responses": {
+                "option_1": {
+                    "text": "I am planning to be vaccinated but haven\u2019t been yet",
+                    "value": "0"
+                },
+                "option_2": {
+                    "text": "I haven\u2019t been offered the vaccine",
+                    "value": "1"
+                },
+                "option_3": {
+                    "text": "I don\u2019t belong to a risk group",
+                    "value": "2"
+                },
+                "option_4": {
+                    "text": "It is better to build your own natural immunity against influenza",
+                    "value": "3"
+                },
+                "option_5": {
+                    "text": "I doubt that the influenza vaccine is effective",
+                    "value": "4"
+                },
+                "option_6": {
+                    "text": "Influenza is a minor illness",
+                    "value": "5"
+                },
+                "option_16": {
+                    "text": "Because of COVID-19 pandemic, I avoid seing doctors or going to the pharmacy",
+                    "value": "17",
+                    "platforms": ["FR"]
+                },
+                "option_17": {
+                    "text": "I am afraid that influenza vaccine would increase my risk of getting COVID-19",
+                    "value": "18",
+                    "platforms": ["FR"]
+                },
+                "option_18": {
+                    "text": "Other reason linked with COVID-19 (open field)",
+                    "value": "19",
+                    "platforms": ["FR"],
+                    "comment": "Open field with textual response",
+                    "extra": "Q10d_19_open"
+                },
+                "option_7": {
+                    "text": "I don\u2019t think I am likely to get the flu",
+                    "value": "6"
+                },
+                "option_8": {
+                    "text": "I believe that influenza vaccine can cause influenza",
+                    "value": "7"
+                },
+                "option_9": {
+                    "text": "I am worried that the vaccine is not safe or will cause illness or other adverse events",
+                    "value": "8"
+                },
+                "option_10": {
+                    "text": "I don\u2019t like having vaccinations",
+                    "value": "9"
+                },
+                "option_11": {
+                    "text": "The vaccine is not readily available for me",
+                    "value": "10"
+                },
+                "option_12": {
+                    "text": "The vaccine is not free of charge",
+                    "value": "11"
+                },
+                "option_13": {
+                    "text": "No particular reason",
+                    "value": "12"
+                },
+                "option_14": {
+                    "text": "Although my doctor recommended a vaccine, I did not get one",
+                    "value": "13"
+                },
+                "option_15": {
+                    "text": "Other reason(s)",
+                    "value": "14"
+                }
+            }
+        },
+        {
+            "short_title": "Covid vaccine",
+            "title": "Have you received a COVID-19 vaccine (since December 2020)?",
+            "data_name": "Q35",
+            "mandatory": false,
+            "type": "single_choice",
+            "target":"all",
+            "description":[
+                "Why are we asking this?",
+                "We would like to be able to work out how much protection the vaccine gives.",
+                "How should I answer it?",
+                "Report yes, if you received a COVID-19 vaccine this season (since December 2020). If you get vaccinated after filling in this questionnaire, please return to this and update your answer."
+            ],
+            "possible_responses": {
+               "yes": {
+                    "text": "Yes",
+                    "value": "1"
+                },
+                "no": {
+                    "text": "No",
+                    "value": "0"
+                },
+                "i_dont_know": {
+                    "text": "I don’t know",
+                    "value": "2"
+                }
+            },
+            "rules": [
+                "prefill with previous response"
+            ]
+        },
+        {
+            "data_name":"Q35b",
+            "short_title":"Covid vaccine type",
+            "title":"Which COVID-19 vaccine did you receive?",
+            "type":"single_choice",
+            "mandatory": false,
+            "possible_responses":{
+               "comirnaty": {"value":"1", "text":"Comirnaty™ vaccine, from Pfizer/BioNTech laboratories"},
+               "moderna": {"value":"2", "text":"COVID-19 Vaccine Moderna™, from Moderna laboratory"},
+               "vaxzevria": {"value":"3", "text":"AstraZeneca COVID-19 vaccine"},
+               "janssen": {"value":"4", "text":"Jonhson & Jonhson vaccine"},
+               "i_dont_know":{"value":"99", "text":"I don’t know/can’t remember "}
+            },
+            "rules": [
+                "Shown if $Q35 is #yes",
+                "prefill with previous response"
+            ]
+        },
+        {
+            "data_name":"Q35c",
+            "short_title":"Covid vaccine doses",
+            "title":"How many doses of this vaccine did you receive?",
+            "type":"single_choice",
+            "mandatory": false,
+            "description":[
+                "Why are we asking this?",
+                "We would like to be able to work out how much protection a complete vaccination scheme gives.",
+                "How should I answer it?",
+                "Report the number of doses you received (which corresponds to the number of time you were vaccinated against COVID-19 this season). If you get another dose after filling in this questionnaire, please return to this and update your answer."
+            ],
+            "possible_responses":{
+                "one":{"value":"1", "text":"One"},
+                "two":{"value":"2", "text":"Two"},
+                "three_more":{"value":"3", "text":"More than two"},
+                "i_dont_know":{"value":"99", "text":"I don’t know/can’t remember "}
+            },
+            "rules": [
+                "prefill with previous response",
+                "Shown if $Q35 is #yes"
+            ]
+        },
+        {
+            "data_name":"Q35d",
+            "short_title":"1st injection date",
+            "title":"When did you receive your first injection of a vaccine against COVID-19 (since December 2020)?",
+            "type":"single_choice",
+            "mandatory": false,
+            "description": [
+                "Why are we asking this?",
+                "Knowing when people are vaccinated tells us how well the vaccination program is being carried out.",
+                "How should I answer it?",
+                "Please try and answer as accurately as possible. If you do not know the precise date, please give your best estimate. For instance, you might remember the month, then try and remember if it was at the beginning or the end of the month. Were there any significant events (e.g. a holiday or a birthday) that might help jog your memory?"
+            ],
+            "possible_responses":{
+                "date": {"value":"1", "text":"Choose date:"},
+                "i_dont_know": {"value":"0", "text":"I don’t know/can’t remember"}
+            },
+            "rules": [
+                "prefill with previous response",
+                "shown if $Q35 is #yes"
+            ]
+        },
+        {
+            "data_name":"Q35d_1_open",
+            "title":"First injection date",
+            "short_title":"First injection date",
+            "type":"date",
+            "mandatory": false,
+            "comment": "extra field not shown",
+            "rules": [
+                "Show if $Q35d is {1}"
+            ]
+        },
+        {
+            "data_name":"Q35e",
+            "short_title":"First injection date",
+            "title":"When did you receive your second injection of a vaccine against COVID-19 (since December 2020)?",
+            "type":"single_choice",
+            "mandatory": false,
+            "description":[
+                "Why are we asking this?",
+                "Knowing when people are vaccinated tells us how well the vaccination program is being carried out.",
+                "How should I answer it?",
+                "Please try and answer as accurately as possible. If you do not know the precise date, please give your best estimate. For instance, you might remember the month, then try and remember if it was at the beginning or the end of the month. Were there any significant events (e.g. a holiday or a birthday) that might help jog your memory?"
+            ],
+            "possible_responses":{
+                "date":{"value":"1", "text":"Choose date:"},
+                "i_dont_know":{"value":"0", "text":"I don’t know/can’t remember "}
+            },
+            "rules": [
+                "prefill with previous response",
+                "Shown if $Q35c is #two or #three_more"
+            ]
+        },
+        {
+            "data_name":"Q35e_1_open",
+            "short_title":"Second injection date",
+            "title":"Second injection date",
+            "type":"date",
+            "mandatory": false,
+            "comment": "extra field not shown",
+            "rules": [
+                "Show if $Q35e is {1}"
+            ]
+        },
+        {
+            "data_name":"Q35f",
+            "short_title":"Covid vaccination reasons",
+            "title":"What were your reasons for getting a COVID-19 vaccination? (Select all options that apply)",
+            "type":"multiple_choice",
+            "mandatory": false,
+            "description": [
+                "Why are we asking this?",
+                "We would like to know why some people get the vaccine, and other don’t get it.",
+                "How should I answer it?","Please select all the answers who mattered to take your decision."
+            ],
+            "possible_responses": {
+                "recommended_by_pha": {
+                    "value": "21",
+                    "text": "The vaccination is recommended by public health authorities"
+                },
+                "belong_atrisk": {
+                    "value": "0",
+                    "text": "I belong to a group who is at risk of complications in case of COVID-19 (over 65, underlying health condition, obesity, etc.)"
+                },
+                "work_contact_atrisk": {
+                    "value": "20",
+                    "text": "I work in close contact with people at risk of complications in case of COVID-19 (working in a nursing home, health staff…)"
+                },
+                "decrease_my_risk": {
+                    "value": "1",
+                    "text": "Vaccination decreases my risk of getting COVID-19"
+                },
+                "decrease_spread": {
+                    "value": "2",
+                    "text": "Vaccination decreases the risk of spreading COVID-19 to others"
+                },
+                "recommended_doctor": {
+                    "value": "3",
+                    "text": "My doctor recommended it"
+                },
+                "recommended_work": {
+                    "value": "4",
+                    "text": "It was recommended in my workplace/school"
+                },
+                "availability": {
+                    "value": "5",
+                    "text": "The vaccine was readily available and vaccine administration was convenient"
+                },
+                "free": {
+                    "value": "6",
+                    "text": "The vaccine was free (no cost)"
+                },
+                "miss_work": {
+                    "value": "7",
+                    "text": "I don’t want to miss work/school"
+                },
+                "always": {
+                    "value": "8",
+                    "text": "I always get the vaccine"
+                },
+                "other": {
+                    "value": "9",
+                    "text": "Other reason(s)"
+                }
+            },
+            "rules": [
+                "prefill with previous response",
+                "Shown if $Q35 is #yes"
+            ]
+        },
+        {
+            "data_name":"Q35f_9_open",
+            "title":"Covid vaccination reasons other",
+            "short_title":"Covid vaccination reasons other",
+            "type":"text",
+            "mandatory": false,
+            "comment": "extra field not shown",
+            "rules": [
+                "Show if $Q35f is {9}"
+            ]
+        }
+    ]
+}
