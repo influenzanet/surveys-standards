@@ -508,12 +508,12 @@
             "possible_responses": {
                 "option_1": {
                     "text": "Choose date",
-                    "value": "0",
+                    "value": "1",
                     "comment": "open field date if checked"
                 },
                 "option_2": {
                     "text": "I don\u2019t know",
-                    "value": "1"
+                    "value": "2"
                 }
             },
             "rules": [
@@ -531,7 +531,7 @@
             "title": "",
             "mandatory": false,
             "type": "date",
-            "data_name":"Q6_0_open",
+            "data_name":"Q6_1_open",
             "comment": "extra field for $Q6#option_1"
         },
         {
