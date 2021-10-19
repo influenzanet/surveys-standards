@@ -896,7 +896,7 @@
                     "value": "9"
                 },
                 "option_10": {
-                    "text": "My symptoms appeared very recently",
+                    "text": "For another reason (specify)",
                     "value": "10",
                     "comment": "open field",
                     "extra": "Qcov18b_10_open"
