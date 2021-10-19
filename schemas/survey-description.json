@@ -42,7 +42,6 @@
             "title": "Question item description",
             "description": "A question is a unit element of the survey",
             "required": [
-                "short_title",
                 "title",
                 "data_name",
                 "mandatory",
@@ -196,6 +195,7 @@
             "$id": "#/definitions/response",
             "type": "object",
             "title": "Response for a data element",
+            "required": ["text","value"],
             "properties": {
                 "text": {
                     "type": "string"
@@ -233,6 +233,7 @@
         "matrix-dim": {
             "type": "object",
             "title":"Question item matrix Dimension",
+            "required": ["text", "value"],
             "properties": {
                 "text": {
                     "type": "string",
