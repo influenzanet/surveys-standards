@@ -225,8 +225,16 @@
                     "title": "Date when question has been removed from survey",
                     "format": "date"
                 },
+                "target": {
+                    "type": "string",
+                    "enum": ["all","optional"]
+                },
                 "platforms": {
                     "$ref": "#/definitions/platforms"
+                },
+                "var": {
+                    "type":"string",
+                    "description": "Name of the variable in the analysis package (R based)"
                 }
             }
         },
@@ -284,7 +292,7 @@
         },
         "platforms": {
             "type": "array",
-            "description": "List platform where item is implemented, 'all' indicated this is core item and is expected everywhere",
+            "description": "List platform where item is actually implemented, 'all' indicated this is core item and is expected everywhere",
             "items": {
                 "type": "string",
                 "enum": ["all","IE", "UK", "ES", "DK", "BE", "IT", "FR", "PT", "NL", "SE", "CH"]
