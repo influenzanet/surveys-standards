@@ -14,110 +14,134 @@
             "type": "multiple_choice",
             "data_type": "numeric",
             "possible_responses": {
-                "option_1": {
+                "no_sympt": {
                     "text": "No symptoms",
-                    "value": "0"
+                    "value": "0",
+                    "var":"no.sympt"
                 },
-                "option_2": {
+                "fever": {
                     "text": "Fever",
-                    "value": "1"
+                    "value": "1",
+                    "var":"fever"
                 },
-                "option_3": {
+                "chills": {
                     "text": "Chills",
-                    "value": "2"
+                    "value": "2",
+                    "var": "chills"
                 },
-                "option_4": {
+                "rhino": {
                     "text": "Runny or blocked nose",
-                    "value": "3"
+                    "value": "3",
+                    "var":"rhino"
                 },
-                "option_5": {
+                "sneeze": {
                     "text": "Sneezing",
-                    "value": "4"
+                    "value": "4",
+                    "var":"sneeze"
                 },
-                "option_6": {
+                "sorethroat": {
                     "text": "Sore throat",
-                    "value": "5"
+                    "value": "5",
+                    "var": "sorethroat"
                 },
-                "option_7": {
+                "cough": {
                     "text": "Cough",
-                    "value": "6"
+                    "value": "6",
+                     "var": "cough"
                 },
-                "option_8": {
+                "dyspnea": {
                     "text": "Shortness of breath",
-                    "value": "7"
+                    "value": "7",
+                    "var":"dyspnea"
                 },
-                "option_9": {
+                "headache": {
                     "text": "Headache",
-                    "value": "8"
+                    "value": "8",
+                    "var": "headache"
                 },
-                "option_10": {
+                "pain": {
                     "text": "Muscle/joint pain",
-                    "value": "9"
+                    "value": "9",
+                    "var":"pain"
                 },
-                "option_11": {
+                "chestpain": {
                     "text": "Chest pain",
-                    "value": "10"
+                    "value": "10",
+                    "var":"chestpain"
                 },
-                "option_12": {
+                "asthenia": {
                     "text": "Feeling tired or exhausted (malaise)",
-                    "value": "11"
+                    "value": "11",
+                    "var": "asthenia"
                 },
-                "option_13": {
+                "anorexia": {
                     "text": "Loss of appetite",
-                    "value": "12"
+                    "value": "12",
+                    "var":"anorexia"
                 },
-                "option_14": {
+                "sputum": {
                     "text": "Coloured sputum/phlegm",
-                    "value": "13"
+                    "value": "13",
+                    "var":"sputum"
                 },
-                "option_15": {
+                "wateryeye": {
                     "text": "Watery, bloodshot eyes",
-                    "value": "14"
+                    "value": "14",
+                    "var": "wateryeye"
                 },
-                "option_16": {
+                "nausea": {
                     "text": "Nausea",
-                    "value": "15"
+                    "value": "15",
+                    "var":"nausea"
                 },
-                "option_17": {
+                "vomiting": {
                     "text": "Vomiting",
-                    "value": "16"
+                    "value": "16",
+                    "var":"vomiting"
                 },
-                "option_18": {
+                "diarrhea": {
                     "text": "Diarrhoea",
-                    "value": "17"
+                    "value": "17",
+                    "var":"diarrhea"
                 },
-                "option_19": {
+                "abdopain": {
                     "text": "Stomachache",
-                    "value": "18"
+                    "value": "18",
+                    "var": "abdopain"
                 },
-                "option_20": {
+                "loss_smell": {
                     "text": "Loss of smell",
                     "value": "23",
-                    "comment": "added on March 26th 2020"
+                    "added_at":"2020-03-26",
+                    "var": "loss.smell"
                 },
-                "option_21": {
+                "loss_taste": {
                     "text": "Loss of taste",
                     "value": "21",
-                    "comment": "added on March 26th 2020"
+                    "var":"loss.taste",
+                    "added_at":"2020-03-26"
                 },
-                "option_22": {
+                "nose_bleed": {
                     "text": "Nose bleed",
                     "value": "22",
-                    "comment": "added on March 26th 2020"
+                    "var": "nose.bleed",
+                    "added_at":"2020-03-26"
                 },
-                "option_23": {
+                "rash": {
                     "text": "Rash",
                     "value": "20",
+                    "target": "optional",
                     "platforms": ["IT"],
                     "comment": "used only by Italy"
                 },
-                "option_24": {
+                "other": {
                     "text": "Other",
-                    "value": "19"
+                    "value": "19",
+                    "var": "sympt.other"
                 }
             },
             "rules": [
-                "item [No symptoms] is exclusive with others",
+                "item #no_sympt is exclusive with others",
                 "- If report any symptoms, check database: was the participant STILL ILL when they last completed the Weekly survey (i.e. they said “I am still ill” in response to Weekly Q4 below last time?) AND have fewer than 15 days elapsed since they last completed the Weekly Survey AND fewer than 15 days have elapsed since their previous date of symptom onset",
                 "- If Yes: continue with Weekly Q2",
                 "- If No or Don’t know: then treat this as a “new” bout of illness, continue with Weekly Q3",
@@ -137,32 +161,33 @@
             "mandatory": true,
             "type": "single_choice",
             "data_type": "numeric",
+            "var": "same.episode",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "Yes",
                     "value": "0"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "1"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know/can\u2019t remember",
                     "value": "2"
                 },
-                "option_4": {
+                "not_applicable": {
                     "text": "Not applicable",
                     "value": "9"
                 }
             },
             "rules": [
                 "Shown if If the participant was STILL ILL on their last visit and has reported symptoms this time",
-                "The “don’t know” option here might not apply to people filling it in for themselves but is relevant for people managing accounts for other people.",
+                "The #dontknow option here might not apply to people filling it in for themselves but is relevant for people managing accounts for other people.",
 
-                "If [No] or [DON’T KNOW] #option_3:",
+                "If #no[No] or #dontknow:",
                 "This means that the current symptoms are the start of a “new” illness: continue with Weekly $Q3",
                 
-                "If [Yes]: ",
+                "If #yes: ",
                 "This means that the current symptoms are the continuation of the same bout of illness as the previous visit. The remainder of the symptoms questionnaire (onset date, further details about symptoms, details about seeking medical attention, treatment, time off work/school) can be pre-filled with their previous answers.",
                 
                 "The point of the pre-filling is to make the survey quicker and easier for participants who have longer-duration symptoms."
@@ -350,18 +375,19 @@
             "short_title": "Weekly Qcov8",
             "title": "In the 14 days before your symptoms started, have you been in close contact with someone presenting symptoms of COVID-19?",
             "data_name": "Qcov8",
+            "var": "contactperson.covid.sympt",
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "Yes",
                     "value": "1"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "0"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
@@ -378,18 +404,19 @@
             "short_title": "Weekly Qcov8b",
             "title": "Do you live in the same household as that person?",
             "data_name": "Qcov8b",
+            "var":"contactperson.covid.sympt.house",
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "Yes",
                     "value": "1"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "0"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
@@ -405,14 +432,15 @@
             "data_name": "Q3",
             "mandatory": false,
             "type": "single_choice",
+            "var": "sympt.when",
             "possible_responses": {
-                "option_1": {
+                "choose_date": {
                     "text": "Choose date",
                     "value": "0",
                     "extra": "Q3_0_open",
                     "comment": "If checked show date field (Q3_0_open)"
                 },
-                "option_2": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "1"
                 }
@@ -430,6 +458,7 @@
         {
             "short_title": "Weekly Q3 open question",
             "title": "",
+            "var":"sympt.start",
             "data_name": "Q3_0_open",
             "mandatory": false,
             "type": "date",
@@ -440,13 +469,14 @@
             "title": "When did your symptoms end?",
             "data_name": "Q4",
             "mandatory": false,
+            "var":"sympt.when.end",
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "choose_date": {
                     "text": "Choose date",
                     "value": "0"
                 },
-                "option_2": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "1"
                 }
@@ -465,6 +495,7 @@
             "short_title": "Weekly Q4 open question",
             "title": "",
             "data_name": "Q4_0_open",
+            "var":"sympt.end",
             "mandatory": false,
             "type": "date",
             "comment": "open field for Q4"
@@ -475,16 +506,17 @@
             "data_name": "Q5",
             "mandatory": false,
             "type": "single_choice",
+            "var":"sympt.sudden",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "yes",
                     "value": "0"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "1"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
@@ -503,21 +535,22 @@
             "short_title": "Weekly Q6",
             "title": "When did your fever begin?",
             "data_name": "Q6",
+            "var":"fever.when",
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "choose_date": {
                     "text": "Choose date",
                     "value": "1",
                     "comment": "open field date if checked"
                 },
-                "option_2": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
             },
             "rules": [
-                "Shown if $Q1[fever]"
+                "Shown if $Q1.#fever"
             ],
             "description": [
                 "Why are we asking this?",
@@ -532,7 +565,8 @@
             "mandatory": false,
             "type": "date",
             "data_name":"Q6_1_open",
-            "comment": "extra field for $Q6#option_1"
+            "var":"fever.start",
+            "comment": "extra field for $Q6#choose_date"
         },
         {
             "short_title": "Weekly Q6b",
@@ -540,22 +574,23 @@
             "data_name": "Q6b",
             "mandatory": false,
             "type": "single_choice",
+            "var": "fever.sudden",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "yes",
                     "value": "0"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "1"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "3"
                 }
             },
             "rules": [
-                "Shown if $Q1[fever]"
+                "Shown if $Q1.#fever"
             ],
             "description": [
                 "Why are we asking this?",
@@ -570,16 +605,17 @@
             "data_name": "Q6c",
             "mandatory": false,
             "type": "single_choice",
+            "var":"take.temp",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "yes",
                     "value": "0"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "1"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
@@ -600,38 +636,39 @@
             "data_name": "Q6d",
             "mandatory": false,
             "type": "single_choice",
+            "var":"highest.temp",
             "possible_responses": {
-                "option_1": {
+                "below_37": {
                     "text": "Below 37\u00b0 C",
                     "value": "0"
                 },
-                "option_2": {
+                "v_370_374": {
                     "text": "37\u00b0 - 37.4\u00b0C",
                     "value": "1"
                 },
-                "option_3": {
+                "v_375_379": {
                     "text": "37.5\u00b0 - 37.9\u00b0C",
                     "value": "2"
                 },
-                "option_4": {
+                "v_380_389": {
                     "text": "38\u00b0 \u2013 38.9\u00b0C",
                     "value": "3"
                 },
-                "option_5": {
+                "v_390_399": {
                     "text": "39\u00b0 - 39.9\u00b0C",
                     "value": "4"
                 },
-                "option_6": {
+                "ge_40": {
                     "text": "40\u00b0C or more",
                     "value": "5"
                 },
-                "option_7": {
+                "dontknow": {
                     "text": "I don\u2019t know/can\u2019t remember",
                     "value": "6"
                 }
             },
             "rules": [
-                "(if symptoms) and (if took temperature $Q6c[Yes])"
+                "(if symptoms) and (if took temperature $Q6c.#yes)"
             ],
             "description": [
                 "Why are we asking this?",
@@ -647,29 +684,35 @@
             "mandatory": false,
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+                "no": {
                     "text": "No",
-                    "value": "0"
+                    "value": "0",
+                    "var":"visit.no"
                 },
-                "option_2": {
+                "gp": {
                     "text": "GP or GP\u2019s practice nurse",
-                    "value": "1"
+                    "value": "1",
+                    "var":"visit.GP"
                 },
-                "option_3": {
+                "hospital": {
                     "text": "Hospital admission",
-                    "value": "2"
+                    "value": "2",
+                    "var": "visit.hospital"
                 },
-                "option_4": {
+                "emergency": {
                     "text": "Hospital accident & emergency department/out of hours service",
-                    "value": "3"
+                    "value": "3",
+                    "var": "visit.emergency"
                 },
-                "option_5": {
+                "other": {
                     "text": "Other medical services",
-                    "value": "4"
+                    "value": "4",
+                    "var":"visit.other"
                 },
-                "option_6": {
+                "plan": {
                     "text": "No, but I have an appointment scheduled",
-                    "value": "5"
+                    "value": "5",
+                    "var":"visit.plan"
                 }
             },
             "comment": [
@@ -677,7 +720,7 @@
             ],
             "rules": [
                 "Shown if symptoms",
-                "#option_6 is exclusive with others"
+                "#plan is exclusive with others"
             ],
             "description": [
                 "Why are we asking this?",
@@ -694,42 +737,50 @@
             "data_type": "numeric",
             "type": "matrix",
             "possible_responses": {
-                "option_1": {
+               "same": {
                     "text": "Same day",
-                    "value": "0"
+                    "value": "0",
+                    "var": "0d"
                 },
-                "option_2": {
+                "days1": {
                     "text": "1 day",
-                    "value": "1"
+                    "value": "1",
+                    "var": "1d"
                 },
-                "option_3": {
+                "days2": {
                     "text": "2 days",
-                    "value": "2"
+                    "value": "2",
+                    "var": "2d"
                 },
-                "option_4": {
+                "days3": {
                     "text": "3 days",
-                    "value": "3"
+                    "value": "3",
+                    "var": "3d"
                 },
-                "option_5": {
+                "days4": {
                     "text": "4 days",
-                    "value": "4"
+                    "value": "4",
+                    "var":"4d"
                 },
-                "option_6": {
+                "days5_7": {
                     "text": "5-7 days",
-                    "value": "5"
+                    "value": "5",
+                    "var": "5_7d"
                 },
-                "option_7": {
+                "over7d": {
                     "text": "More than 7 days",
-                    "value": "6"
+                    "value": "6",
+                    "var": "over7d"
                 },
-                "option_8": {
+                "dontknow": {
                     "text": "I don\u2019t know",
-                    "value": "7"
+                    "value": "7",
+                    "var":"dnk"
                 }
             },
             "rules": [
                 "Shown if symptoms",
-                "This should be asked for each option ticked in the previous question $Q7 (exept “No” or “Not yet”)",
+                "This should be asked for each option ticked in the previous question $Q7 (except “No” or “Not yet”)",
                 "Table for each entry in the previous question. And then drop-down within each cell for the delays. Last year we had it as a table of radio boxes, but it displayed the same table no matter which options were chosen in Weekly Q7 – it would be nice if it only displayed the options selected in Weekly Q7"
             ],
             "description": [
@@ -770,29 +821,35 @@
             "mandatory": false,
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+                "no": {
                     "text": "No",
-                    "value": "0"
+                    "value": "0",
+                    "var": "contactmed.no"
                 },
-                "option_2": {
+                "reception": {
                     "text": "GP - spoke to receptionist only",
-                    "value": "1"
+                    "value": "1",
+                    "var": "contactmed.reception"
                 },
-                "option_3": {
+                "doctor": {
                     "text": "GP - spoke to the doctor or nurse",
-                    "value": "2"
+                    "value": "2",
+                    "var": "contactmed.doctor"
                 },
-                "option_4": {
+                "nhs": {
                     "text": "NHS Direct or similar",
-                    "value": "3"
+                    "value": "3",
+                    "var":  "contactmed.nhs"
                 },
-                "option_5": {
+                "npfs": {
                     "text": "NPFS",
-                    "value": "4"
+                    "value": "4",
+                    "var": "contactmed.npfs"
                 },
-                "option_6": {
+                "other": {
                     "text": "Other",
-                    "value": "5"
+                    "value": "5",
+                    "var": "contactmed.other"
                 }
             },
             "comment": "This is the UK version. Will need to be adjusted to suit different countries.",
@@ -814,35 +871,35 @@
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "same": {
                     "text": "Same day",
                     "value": "0"
                 },
-                "option_2": {
+                "days_1": {
                     "text": "1 day",
                     "value": "1"
                 },
-                "option_3": {
+                "days_2": {
                     "text": "2 days",
                     "value": "2"
                 },
-                "option_4": {
+                "days_3": {
                     "text": "3 days",
                     "value": "3"
                 },
-                "option_5": {
+                "days_4": {
                     "text": "4 days",
                     "value": "4"
                 },
-                "option_6": {
+                "days_5_7": {
                     "text": "5-7 days",
                     "value": "5"
                 },
-                "option_7": {
+                "over7d": {
                     "text": "More than 7 days",
                     "value": "6"
                 },
-                "option_8": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "7"
                 }
@@ -856,52 +913,53 @@
             "short_title": "Weekly Qcov18",
             "title": "What is the main reason for which you did not contact any health professional for the symptoms you declared today?",
             "data_name": "Qcov18",
+            "var": "visit.no.reason",
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "recently": {
                     "text": "My symptoms appeared very recently",
                     "value": "1"
                 },
-                "option_2": {
+                "mild": {
                     "text": "My symptoms are mild",
                     "value": "2"
                 },
-                "option_3": {
+                "often": {
                     "text": "I have often these symptoms",
                     "value": "3"
                 },
-                "option_4": {
+                "self_medic": {
                     "text": "I think I know what I have and I use self-medication",
                     "value": "4"
                 },
-                "option_5": {
+                "no_treatment": {
                     "text": "I think there is no effective treatment for the disease I have",
                     "value": "5"
                 },
-                "option_6": {
+                "too_hard": {
                     "text": "It is too hard to get an appointment quickly",
                     "value": "6"
                 },
-                "option_7": {
+                "have_no_time": {
                     "text": "I do not have time",
                     "value": "7"
                 },
-                "option_8": {
+                "financial": {
                     "text": "For financial reasons",
                     "value": "8"
                 },
-                "option_9": {
+                "fear_covid19": {
                     "text": "For fear of consequences if the doctor thinks I have COVID-19",
                     "value": "9"
                 },
-                "option_10": {
+                "other": {
                     "text": "For another reason (specify)",
                     "value": "10",
                     "comment": "open field",
                     "extra": "Qcov18b_10_open"
                 },
-                "option_11": {
+                "dontknow": {
                     "text": "I don\u2019t know/don\u2019t want to answer",
                     "value": "99"
                 }
@@ -914,6 +972,7 @@
             "short_title": "Weekly Qcov18b open question",
             "title": "",
             "data_name": "Qcov18_10_open",
+            "var": "visit.no.reason.other.txt",
             "mandatory": false,
             "type": "text",
             "comment": "open field for Qcov18b.10"
@@ -924,28 +983,29 @@
             "data_name": "Qcov18b",
             "mandatory": false,
             "type": "single_choice",
+            "var": "visit.no.reason.fear",
             "possible_responses": {
-                "option_1": {
+                "do_test": {
                     "text": "Have to do a diagnostic test",
                     "value": "1"
                 },
-                "option_2": {
+                "isolated": {
                     "text": "Have to be isolated",
                     "value": "2"
                 },
-                "option_3": {
+                "stop_working": {
                     "text": "Have to stop working",
                     "value": "3"
                 },
-                "option_4": {
+                "judged": {
                     "text": "to be judged by others",
                     "value": "4"
                 },
-                "option_5": {
+                "excluded": {
                     "text": "to be excluded by others",
                     "value": "5"
                 },
-                "option_6": {
+                "other": {
                     "text": "another consequence",
                     "value": "6",
                     "comment": "open textual field",
@@ -962,6 +1022,7 @@
             "data_name": "Qcov18b_6_open",
             "mandatory": false,
             "type": "text",
+            "var": "visit.no.reason.fear.other.txt",
             "comment": "open field"
         },
         {
@@ -972,15 +1033,15 @@
             "active": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "yes",
                     "value": "1"
                 },
-                "option_2": {
+                "no": {
                     "text": "no",
                     "value": "0"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
@@ -995,15 +1056,15 @@
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "yes",
                     "value": "1"
                 },
-                "option_2": {
+                "no": {
                     "text": "no",
                     "value": "0"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
@@ -1019,15 +1080,15 @@
             "active": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "yes",
                     "value": "1"
                 },
-                "option_2": {
+                "not_found": {
                     "text": "No, I would have liked but could not find any",
                     "value": "2"
                 },
-                "option_3": {
+                "no": {
                     "text": "No",
                     "value": "0"
                 }
@@ -1042,35 +1103,44 @@
             "mandatory": false,
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+                "pcr": {
                     "text": "Yes, a PCR test (virus search, on a swab in nose or mouth, or a sputum or saliva sample)",
-                    "value": "1"
+                    "value": "1",
+                    "var": "analysis.sympt.covid.pcr"
                 },
-                "option_2": {
+                "sero": {
                     "text": "Yes, a serological analysis (screening for antibodies against this virus, from a drop of blood at fingertip or a blood sample) ",
-                    "value": "2"
+                    "value": "2",
+                    "var": "analysis.sympt.covid.sero"
                 },
-                "option_5": {
+                "antigenic": {
                     "text": "Yes, a rapid antigen detection test (on a swab in nose or mouth, with a result available in less than an hour)",
-                    "value": "5"
+                    "value": "5",
+                    "var":"analysis.sympt.covid.antigenic",
+                    "added_at":"2020-11-23",
+                    "platforms": ["FR"]
                 },
-                "option_3": {
+                "plan": {
                     "text": "Not yet, I plan to shortly undergo a test",
-                    "value": "3"
+                    "value": "3",
+                    "var":"analysis.sympt.covid.not.but.plan"
                 },
-                "option_4": {
+                "wontgo": {
                     "text": "No, I have a prescription but will not undergo a test",
-                    "value": "4"
+                    "value": "4",
+                    "var": "analysis.sympt.covid.not.plan"
                 },
-                "option_6": {
+                "no": {
                     "text": "No",
-                    "value": "0"
+                    "value": "0",
+                    "var": "analysis.sympt.covid.no"
                 }
             },
+            "added_at": "2020-04-28",
             "comment": "(the participant can select the first and second option together if he wants)",
             "rules": [
                 "Shown if symptoms",
-                "Options {1} and {2} are exclusive to the others"
+                "Options #pcr , #sero, and #antigenic are exclusive to #no, #plan, #wontgo"
             ]
         },
         {
@@ -1079,26 +1149,27 @@
             "data_name": "Qcov16b",
             "mandatory": false,
             "type": "single_choice",
+            "var": "analysis.sympt.result.pcr",
             "possible_responses": {
-                "option_1": {
+                "positive": {
                     "text": "Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)",
                     "value": "1"
                 },
-                "option_2": {
+                "negative": {
                     "text": "Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)",
                     "value": "2"
                 },
-                "option_3": {
+                "not_interpretable": {
                     "text": "Yes, the result is non interpretable",
                     "value": "3"
                 },
-                "option_4": {
+                "no": {
                     "text": "No, I do not have the result yet",
                     "value": "4"
                 }
             },
             "rules": [
-                "Shown If $Qcov16{1}"
+                "Shown If $Qcov16.#pcr"
             ]
         },
         {
@@ -1107,20 +1178,21 @@
             "data_name": "Qcov16c",
             "mandatory": false,
             "type": "single_choice",
+            "var": "analysis.sympt.result.sero",
             "possible_responses": {
-                "option_1": {
+                "positive": {
                     "text": "Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)",
                     "value": "1"
                 },
-                "option_2": {
+                "negative": {
                     "text": "Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)",
                     "value": "2"
                 },
-                "option_3": {
+                "not_interpretable": {
                     "text": "Yes, the result is non interpretable",
                     "value": "3"
                 },
-                "option_4": {
+                "no": {
                     "text": "No, I do not have the result yet",
                     "value": "4"
                 }
@@ -1135,38 +1207,39 @@
             "data_name": "Qcov16d",
             "mandatory": false,
             "type": "single_choice",
+            "var": "analysis.sympt.pcr.search.delay",
             "possible_responses": {
-                "option_1": {
+                "days_1": {
                     "text": "Symptoms appeared the day or the day before the search of a laboratory",
                     "value": "1"
                 },
-                "option_2": {
+                "days_2_4": {
                     "text": "Symptoms appeared 2, 3 or 4 days before the search of a laboratory",
                     "value": "2"
                 },
-                "option_3": {
+                "days_5_7": {
                     "text": "Symptoms appeared 5, 6 or 7 days before the search of a laboratory",
                     "value": "3"
                 },
-                "option_4": {
+                "days_8_14": {
                     "text": "Symptoms appeared between 8 and 14 days before the search of a laboratory",
                     "value": "4"
                 },
-                "option_5": {
+                "days_15_28": {
                     "text": "Symptoms appeared between 15 and 28 days before the search of a laboratory",
                     "value": "5"
                 },
-                "option_6": {
+                "over4weeks": {
                     "text": "Symptoms appeared more than four weeks before the search of a laboratory",
                     "value": "6"
                 },
-                "option_7": {
+                "dontknow": {
                     "text": "I don\u2019t know/don\u2019t want to answer",
                     "value": "99"
                 }
             },
             "rules": [
-                "Shown If Qcov16{1}"
+                "Shown If Qcov16.#pcr"
             ]
         },
         {
@@ -1175,32 +1248,33 @@
             "data_name": "Qcov16e",
             "mandatory": false,
             "type": "single_choice",
+            "var": "analysis.sympt.pcr.sample.delay",
             "possible_responses": {
-                "1_day": {
+                "days_1": {
                     "text": "Symptoms appeared the day or the day before the sampling",
                     "value": "1"
                 },
-                "2_4days": {
+                "days_2_4": {
                     "text": "Symptoms appeared 2, 3 or 4 days before the sampling",
                     "value": "2"
                 },
-                "5_7days": {
+                "days_5_7": {
                     "text": "Symptoms appeared 5, 6 or 7 days before the sampling",
                     "value": "3"
                 },
-                "8_14days": {
+                "days_8_14": {
                     "text": "Symptoms appeared between 8 and 14 days before the sampling",
                     "value": "4"
                 },
-                "15_28days": {
+                "days_15_28": {
                     "text": "Symptoms appeared between 15 and 28 days before the sampling",
                     "value": "5"
                 },
-                "over4w": {
+                "over4weeks": {
                     "text": "Symptoms appeared more than four weeks before the sampling",
                     "value": "6"
                 },
-                "dnk": {
+                "dontknow": {
                     "text": "I don’t know / don’t want to answer",
                     "value": "99"
                 }
@@ -1216,21 +1290,22 @@
             "title": "Do you know the result of this rapid antigen detection test?",
             "data_name": "Qcov16f",
             "mandatory": false,
+            "var": "analysis.sympt.result.antigenic",
             "type": "single_choice",
             "possible_responses": {
-              "option_1": {
+                "positive": {
                     "text": "Yes, Positive for the SARS-CoV-2 (COVID-19)",
                     "value": "1"
                 },
-                "option_2": {
+                "negative": {
                     "text": "Yes, Negative for the SARS-CoV-2 (COVID-19)",
                     "value": "2"
                 },
-                "option_3": {
+                "not_interpretable": {
                     "text": "Yes, the result is non interpretable",
                     "value": "3"
                 },
-                "option_4": {
+                "no": {
                     "text": "No, I don’t know or don’t remember",
                     "value": "99"
                 }
@@ -1239,39 +1314,40 @@
             "comment": "In proposal from 2020,November",
             "platforms": ["FR"],
             "rules": [
-                "Shown If $Qcov16{5}"
+                "Shown If $Qcov16.#antigenic"
             ]
         },
         {
             "short_title": "Weekly Qcov16g",
             "title": "Who performed this rapid antigen test?",
             "data_name": "Qcov16g",
+            "var": "analysis.sympt.antigenic.performer",
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-              "option_1": {
+                "gp": {
                     "text": "A general practitioner",
                     "value": "1"
                 },
-                "option_2": {
+                "spec": {
                     "text": "A specialized physician, a dental surgeon or a mid-wife",
                     "value": "2"
                 },
-                "option_3": {
+                "pharmacist": {
                     "text": "A pharmacist or a pharmacy technician",
                     "value": "3"
                 },
-                "option_4": {
+                "other_health": {
                     "text": "Another health professional  (specify)",
                     "comment": "(give the list of all health professional authorized to realize this test in your country)",
                     "value": "4"
                 },
-                "option_5": {
+                "other": {
                     "text": "Another professional (specify)",
                     "comment": "(give the list of all other professionals authorized to realize this test)",
                     "value": "5"
                 },
-                "option_6": {
+                "dontknow": {
                     "text": "I don’t know or don’t remember",
                     "value": "99"
                 }
@@ -1282,7 +1358,6 @@
                 "Shown If $Qcov16{5}"
             ]
         },
-        
 
         {
             "short_title": "Weekly Qcov19",
@@ -1290,20 +1365,24 @@
             "data_name": "Qcov19",
             "mandatory": false,
             "type": "single_choice",
+            "var": "analysis.sympt.flu",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "Yes, a PCR test (virus search, on a nasal swab)",
-                    "value": "1"
+                    "value": "1",
+                    "var":"pcr"
                 },
-                "option_2": {
+                "plan": {
                     "text": "Not yet, I have a prescription and plan to shortly undergo a test",
-                    "value": "3"
+                    "value": "3",
+                    "var":"not.yet"
                 },
-                "option_3": {
+                "wontgo": {
                     "text": "No, I have a prescription but will not undergo the test",
-                    "value": "4"
+                    "value": "4",
+                    "var": "not.planned"
                 },
-                "option_4": {
+                "no": {
                     "text": "No",
                     "value": "0"
                 }
@@ -1319,25 +1398,29 @@
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "positive": {
                     "text": "Yes, Positive for influenza",
-                    "value": "1"
+                    "value": "1",
+                    "var":"positive"
                 },
-                "option_2": {
+                "negative": {
                     "text": "Yes, Negative for influenza",
-                    "value": "2"
+                    "value": "2",
+                    "var":"negative"
                 },
-                "option_3": {
+                "not_interpretable": {
                     "text": "Yes, the result is non interpretable",
-                    "value": "3"
+                    "value": "3",
+                    "var": "not.interpretable"
                 },
-                "option_4": {
+                "no": {
                     "text": "No, I do not have the result yet",
-                    "value": "4"
+                    "value": "4",
+                    "var":"not.yet"
                 }
             },
             "rules": [
-                "Shown if to $Qcov19{1}"
+                "Shown if to $Qcov19.#yes"
             ]
         },
         {
@@ -1347,45 +1430,61 @@
             "mandatory": false,
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+
+                "no": {
                     "text": "No medication",
-                    "value": "0"
+                    "value": "0",
+                    "var": "medic.no"
                 },
-                "option_2": {
+                "pain": {
                     "text": "Pain killers (e.g. paracetamol, lemsip, ibuprofen, aspirin, calpol, etc)",
-                    "value": "1"
+                    "value": "1",
+                    "var":"medic.pain"
                 },
-                "option_3": {
+                "cough": {
                     "text": "Cough medication (e.g. expectorants)",
-                    "value": "2"
+                    "value": "2",
+                    "var": "medic.cough"
                 },
-                "option_4": {
+                "antiviral": {
                     "text": "Antivirals (Tamiflu, Relenza)",
-                    "value": "3"
+                    "value": "3",
+                    "var": "medic.antiviral"
                 },
-                "option_5": {
+                "antibio": {
                     "text": "Antibiotics",
-                    "value": "4"
+                    "value": "4",
+                    "var": "medic.antibio"
                 },
-                "option_6": {
+                "homeo": {
                     "text": "Homeopathy",
                     "platforms": ["FR"],
                     "comment": "French specific item, optional",
-                    "value": "7"
+                    "value": "7",
+                    "var": "medic.homeo",
+                    "added_at":[
+                        {"platforms": ["FR"], "date":"2013-11-25"}
+                     ]
                 },
-                "option_7": {
+                "alternative": {
                     "text": "Alternative medicine (essential oil, phytotherapy, etc.)",
                     "value": "8",
                     "comment": "French specific item, optional",
-                    "platforms": ["FR"]
+                    "platforms": ["FR"],
+                    "var": "medic.alt",
+                    "added_at":[
+                        {"platforms": ["FR"], "date":"2014-11-25"}
+                     ]
                 },
-                "option_8": {
+                "other": {
                     "text": "Other",
-                    "value": "5"
+                    "value": "5",
+                    "var":"medic.other"
                 },
-                "option_9": {
+                "dontknow": {
                     "text": "Don't know/Can't remember",
-                    "value": "6"
+                    "value": "6",
+                    "var":"medic.dkn"
                 }
             },
             "comment": [
@@ -1405,41 +1504,41 @@
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "same": {
                     "text": "Same day",
                     "value": "0"
                 },
-                "option_2": {
+                "days_1": {
                     "text": "1 day",
                     "value": "1"
                 },
-                "option_3": {
+                "days_2": {
                     "text": "2 days",
                     "value": "2"
                 },
-                "option_4": {
+                "days_3": {
                     "text": "3 days",
                     "value": "3"
                 },
-                "option_5": {
+                "days_4": {
                     "text": "4 days",
                     "value": "4"
                 },
-                "option_6": {
+                "days_5-7": {
                     "text": "5-7 days",
                     "value": "5"
                 },
-                "option_7": {
+                "over7": {
                     "text": "More than 7 days",
                     "value": "6"
                 },
-                "option_8": {
+                "dontknow": {
                     "text": "I don\u2019t know/Can\u2019t remember",
                     "value": "7"
                 }
             },
             "rules": [
-                "Shown if $Q9[Antivirals]" 
+                "Shown if $Q9.#antiviral" 
             ],
             "description": [
                 "Why are we asking this?",
@@ -1453,18 +1552,20 @@
             "title": "Because of your symptoms, were you hospitalized? ",
             "data_name": "Q14",
             "mandatory": false,
+            "var": "hospitalization",
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "Yes",
                     "value": "1"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "0"
                 }
             },
             "platforms": ["FR"],
+            "target":"optional",
             "comment":"In proposal",
             "rules": [
                 "Shown if symptoms"
@@ -1474,20 +1575,25 @@
             "short_title": "Weekly Q10",
             "title": "Did you change your daily routine because of your illness? ",
             "data_name": "Q10",
+            "var": "change.routine",
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "no": {
                     "text": "No",
-                    "value": "0"
+                    "value": "0",
+                    "var":  "routine.no"
+            
                 },
-                "option_2": {
+                "yes": {
                     "text": "Yes, but I did not take time off school or work",
-                    "value": "1"
+                    "value": "1",
+                    "var": "routine.yes"
                 },
-                "option_3": {
+                "off": {
                     "text": "Yes, I took time off school or work",
-                    "value": "2"
+                    "value": "2",
+                    "var": "routine.off"
                 }
             },
             "description": [
@@ -1506,18 +1612,22 @@
             "data_name": "Q10b",
             "mandatory": false,
             "type": "single_choice",
+            "var":  "off.work",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "Yes",
-                    "value": "0"
+                    "value": "0",
+                    "var":"yes"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
-                    "value": "1"
+                    "value": "1",
+                    "var":"no"
                 },
-                "option_3": {
+                "other": {
                     "text": "Other (e.g. I wouldn\u2019t usually be at work/school today anyway",
-                    "value": "3"
+                    "value": "3",
+                    "var":"other"
                 }
             },
             "rules": [
@@ -1530,38 +1640,47 @@
             "data_name": "Q10c",
             "mandatory": false,
             "type": "single_choice",
+            "var": "off.workdelay",
             "possible_responses": {
-                "option_1": {
+                "days_1": {
                     "text": "1 day",
-                    "value": "0"
+                    "value": "0",
+                    "var": "1d"
                 },
-                "option_2": {
+                "days_2": {
                     "text": "2 days",
-                    "value": "1"
+                    "value": "1",
+                    "var": "2d"
                 },
-                "option_3": {
+                "days_3": {
                     "text": "3 days",
-                    "value": "2"
+                    "value": "2",
+                    "var": "3d"
                 },
-                "option_4": {
+                "days_4": {
                     "text": "4 days",
-                    "value": "3"
+                    "value": "3",
+                    "var": "4d"
                 },
-                "option_5": {
+                "days_5": {
                     "text": "5 days",
-                    "value": "4"
+                    "value": "4",
+                    "var": "5d"
                 },
-                "option_6": {
+                "days_6_10": {
                     "text": "6 to 10 days",
-                    "value": "5"
+                    "value": "5",
+                    "var": "6_10d"
                 },
-                "option_7": {
+                "days_11_15": {
                     "text": "11 to 15 days",
-                    "value": "6"
+                    "value": "6",
+                    "var": "11_15d"
                 },
-                "option_8": {
+                "over15": {
                     "text": "More than 15 days",
-                    "value": "7"
+                    "value": "7",
+                    "var": "over_15"
                 }
             },
             "rules": [
@@ -1581,74 +1700,90 @@
             "mandatory": false,
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+                "wash_hands": {
                     "text": "Regularly wash or disinfect hands",
-                    "value": "1"
+                    "value": "1",
+                    "var": "measure.wash.hands"
                 },
-                "option_2": {
+                "cough_elbow": {
                     "text": "Cough or sneeze into your elbow",
-                    "value": "2"
+                    "value": "2",
+                    "var":  "measure.cough.elbow"
                 },
-                "option_3": {
+                "use_tissue": {
                     "text": "Use a disposable tissue",
-                    "value": "3"
+                    "value": "3",
+                    "var": "measure.use.tissue"
                 },
-                "option_4": {
+                "wear_mask": {
                     "text": "Wear a disposable mask",
-                    "value": "4"
+                    "value": "4",
+                    "var": "measure.wear.mask"
                 },
-                "option_5": {
+                "avoid_shakehands": {
                     "text": "Avoid shaking hands",
-                    "value": "5"
+                    "value": "5",
+                    "var": "measure.avoid.shakehands"
                 },
-                "option_6": {
+                "stop_hug": {
                     "text": "Stop greeting by hugging and/or kissing on both cheeks",
-                    "value": "11"
+                    "value": "11",
+                    "var": "measure.stop.hug.kiss"
                 },
-                "option_7": {
+                "public_transport": {
                     "text": "Limit your use of public transport",
-                    "value": "6"
+                    "value": "6",
+                    "var": "measure.limit.transp"
                 },
                 "option_8": {
                     "text": "Avoid gatherings (going to the theater, cinema, stadium, supermarket, etc.)",
-                    "value": "7"
+                    "value": "7",
+                    "var": "measure.avoid.gatherings"
                 },
-                "option_9": {
+                "stay_home": {
                     "text": "Stay at home",
-                    "value": "8"
+                    "value": "8",
+                    "var":  "measure.stay.home"
                 },
-                "option_10": {
+                "telework": {
                     "text": "Telework or increase your number of telework days",
-                    "value": "9"
+                    "value": "9",
+                    "var": "measure.work.home"
                 },
-                "option_11": {
+                "avoid_travel": {
                     "text": "Avoid travel outside your own country or region",
-                    "value": "10"
+                    "value": "10",
+                    "var": "measure.avoid.travel"
                 },
-                "option_12": {
+                "food_delivered": {
                     "value": "13",
-                    "text": "Have your food/shopping delivered by a store or a friend/family member"
+                    "text": "Have your food/shopping delivered by a store or a friend/family member",
+                    "var": "measure.food.delivered"
                 },
-                "option_13": {
+                "avoid_friends": {
                     "text": "Avoid seeing friends and family",
-                    "value": "14"
+                    "value": "14",
+                    "var": "measure.avoid.friend.family"
                 },
-                "option_14": {
+                "avoid_at_risk": {
                     "text": "Avoid being in contact with people over 65 years old or with a chronic disease",
-                    "value": "15"
+                    "value": "15",
+                    "var" :"measure.avoid.elderly.risk"
                 },
-                "option_15": {
+                "avoid_children": {
                     "text": "Avoid being in contact with children",
-                    "value": "16"
+                    "value": "16",
+                    "var": "measure.avoid.children"
                 },
-                "option_16": {
+                "none": {
                     "text": "None of these measures",
-                    "value": "12"
+                    "value": "12",
+                    "var": "measure.avoid.none"
                 }
             },
             "added_at":"2020-03-12",
             "rules": [
-                "Option [None of these measures] is exclusive with other responses "
+                "Option #none is exclusive with other responses "
             ]
         },
         {
@@ -1663,75 +1798,103 @@
                 "code row12 is reserved to keep compatibility with Qcov7 (none of this measure)"
             ],
             "possible_responses": {
-                "yes":{"value": "1", "text":"Yes"},
-                "already":{"value": "2", "text":"No, because I was already taking this measure"},
-                "no":{"value": "3", "text":"No"},
-                "NA":{"value": "4", "text":"Not applicable"}
+                "yes": {
+                    "value": "1",
+                    "text": "Yes"
+                },
+                "already": {
+                    "value": "2",
+                    "text": "No, because I was already taking this measure"
+                },
+                "no": {
+                    "value": "3",
+                    "text": "No"
+                },
+                "not_applicable": {
+                    "value": "4",
+                    "text": "Not applicable"
+                }
             },
             "rows": {
                 "wash_hands": {
                     "text":"Regularly wash or disinfect hands",
-                    "value": "row1"
+                    "value": "row1",
+                    "var": "measure2.wash.hands"
                 },
                 "cough_elbow": {
                     "text": "Cough or sneeze into your elbow",
-                    "value": "row2"
+                    "value": "row2",
+                    "var": "measure2.cough.elbow"
                 },
-                "disposable_tissue": {
+                "use_tissue": {
                     "text": "Use a disposable tissue",
-                    "value": "row3"
+                    "value": "row3",
+                    "var": "measure2.use.tissue"
                 },
                 "wear_mask_outside": {
                     "text": "Wear a mask (cloth mask or disposable mask) outside my home",
-                    "value": "row4a"
+                    "value": "row4a",
+                    "var": "measure2.wear.mask.outside"
                 },
                 "wear_mask_inside": {
                     "text": "Wear a mask (cloth mask or disposable mask) inside my home",
-                    "value": "row4b"
+                    "value": "row4b",
+                    "var": "measure2.wear.mask.inside"
                 },
                 "avoid_shaking": {
                     "text": "Avoid shaking hands",
-                    "value":"row5"
+                    "value":"row5",
+                    "var": "measure2.avoid.shakehands"
                 },
-                "stop_greeting": {
+                "stop_hug": {
                     "text":"Stop greeting by hugging and/or kissing on both cheeks",
-                    "value": "row11"
+                    "value": "row11",
+                    "var": "measure2.stop.hug.kiss"
                 },
                 "public_transport": {
                     "text":"Limit your use of public transport",
-                    "value": "row6"
+                    "value": "row6",
+                    "var": "measure2.limit.transp"
                 },
                 "gatherings": {
                     "text":"Avoid gatherings (going to the theater, cinema, stadium, supermarket, etc.)",
-                    "value": "row7"
+                    "value": "row7",
+                    "var": "measure2.avoid.gatherings"
                 },
                 "stay_home": {
                     "text":"Stay at home",
-                    "value": "row8"
+                    "value": "row8",
+                    "var": "measure2.stay.home"
                 },
                 "telework": {
                     "text":"Telework or increase your number of telework days",
-                    "value": "row9"
+                    "value": "row9",
+                    "var": "measure2.work.home"
                 },
                 "travel": {
                     "text":"Avoid travel outside your own country or region",
-                    "value": "row10"
+                    "value": "row10",
+                    "var": "measure2.avoid.travel"
                 },
-                "food-delivery": {
+                "food_delivered": {
                     "text":"Have your food-shopping delivered by a store or a friend/family member",
-                    "value": "row13"
+                    "value": "row13",
+                    "var": "measure2.food.delivered"
                 },
-                "seeing_friends": {
+                "avoid_friends": {
                     "text":"Avoid seeing friends and family",
-                    "value":"row14"
+                    "value":"row14",
+                    "var": "measure2.avoid.friend.family"
                 },
-                "contact_over65": {
+                "avoid_at_risk": {
                     "text":"Avoid being in contact with people over 65 years or with a chronic disease",
-                    "value": "row15"
+                    "value": "row15",
+                    "var": "measure2.avoid.elderly.risk"
                 },
-                "contact_children": {
+                "avoid_children": {
                     "text": "Avoid being in contact with children",
-                    "value": "row16"
+                    "value": "row16",
+                    "var": "measure2.avoid.children"
                 }
             },
             "columns": {
@@ -1749,40 +1912,63 @@
             "title": "What do you think is causing your symptoms? ",
             "data_name": "Q11",
             "mandatory": false,
+            "var": "sympt.cause",
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "ili": {
                     "text": "Flu or flu-like illness",
-                    "value": "0"
+                    "value": "0",
+                    "var": "cause.ili"
                 },
-                "option_2": {
+                "cold": {
                     "text": "Common cold",
-                    "value": "1"
+                    "value": "1",
+                    "var": "cause.cold"
                 },
-                "option_3": {
+                "allergy": {
                     "text": "Allergy",
-                    "value": "2"
+                    "value": "2",
+                    "var":  "cause.allergy"
                 },
-                "option_4": {
+                "asthma": {
                     "text": "Ashtma",
-                    "value": "6"
+                    "value": "6",
+                    "var":  "cause.asthma" 
                 },
-                "option_5": {
+                "gastro": {
                     "text": "Gastroenteritis/gastric flu",
-                    "value": "3"
+                    "value": "3",
+                    "var":  "cause.gastro"
                 },
-                "option_6": {
+                "covid": {
                     "text": "New coronavirus (COVID-19)",
                     "value": "9",
-                    "added_at": "2020-03-12"
+                    "added_at": "2020-03-12",
+                    "var": "cause.covid"
                 },
-                "option_7": {
+                "other": {
                     "text": "Other",
-                    "value": "4"
+                    "value": "4",
+                    "var": "cause.other"
                 },
-                "option_8": {
+                "dontknow": {
                     "text": "I don\u2019t know",
-                    "value": "5"
+                    "value": "5",
+                    "var": "cause.dkn"
+                },
+                "ili.doctor":{
+                    "text": "Doctor said it's ILI",
+                    "value": "7",
+                    "var":"cause.ili.doctor",
+                    "target":"specific",
+                    "platforms": ["FR"]
+                },
+                "other.doctor": {
+                    "text": "Doctor said it's other diagnosis",
+                    "value": "8",
+                    "var":"cause.other.doctor",
+                    "target":"specific",
+                    "platforms": ["FR"]
                 }
             },
             "description": [
@@ -1802,37 +1988,44 @@
             "mandatory": false,
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+                "doctor": {
                     "text": "My doctor told me I have this disease",
-                    "value": "1"
+                    "value": "1",
+                    "var": "reason.covid.doctor"
                 },
-                "option_2": {
+                "lab_confirm": {
                     "text": "I had a laboratory confirmation that I have this disease",
-                    "value": "2"
+                    "value": "2",
+                    "var": "reason.covid.confirm"
                 },
-                "option_3": {
+                "contact_confirm": {
                     "text": "I had direct contact with a laboratory confirmed case",
-                    "value": "3"
+                    "value": "3",
+                    "var": "reason.covid.contact.confirm"
                 },
-                "option_4": {
+                "contact_diag": {
                     "text": "I had close contact with someone for whom a doctor diagnosed this disease",
-                    "value": "4"
+                    "value": "4",
+                    "var": "reason.covid.contact.diagnos"
                 },
-                "option_5": {
+                "contact_sympt": {
                     "text": "I was in close contact with someone presenting symptoms of this disease",
-                    "value": "5"
+                    "value": "5",
+                    "var": "reason.covid.contact.sympt"
                 },
-                "option_6": {
+                "event_confirm": {
                     "text": "I was at an event/location with a confirmed case",
-                    "value": "6"
+                    "value": "6",
+                    "var": "reason.covid.event.confirm"
                 },
-                "option_7": {
+                "think": {
                     "text": "I think I have this disease",
-                    "value": "7"
+                    "value": "7",
+                    "var": "reason.covid.think"
                 }
             },
             "rules": [
-                "If $Q11[New coronavirus (COVID-19)] "
+                "If $Q11.#covid"
             ]
         },
         {
@@ -1841,22 +2034,23 @@
             "data_name": "Qcov9b",
             "mandatory": false,
             "type": "single_choice",
+            "var": "inform.contact.covid",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "yes",
                     "value": "1"
                 },
-                "option_2": {
+                "some": {
                     "text": "Some of them",
                     "value": "2"
                 },
-                "option_3": {
+                "no": {
                     "text": "No",
                     "value": "0"
                 }
             },
             "rules": [
-                    "If $Q11[New coronavirus (COVID-19)] "
+                    "If $Q11.#covid"
             ]
         },
         {
@@ -1864,28 +2058,33 @@
             "title": "Since the beginning of COVID-19 lockdown measures, do you carry out a professional activity? (Select all the relevant answers)?",
             "data_name": "Qcov10",
             "mandatory": false,
-            "platforms": ["IT"],
+            "platforms": ["IT","FR"],
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+                "work_home": {
                     "text": "yes, I work from home",
-                    "value": "1"
+                    "value": "1",
+                    "var": "confin.work.home"
                 },
-                "option_2": {
+                "work_outside": {
                     "text": "yes, I work outside home",
-                    "value": "2"
+                    "value": "2",
+                    "var": "confin.work.outside"
                 },
-                "option_3": {
+                "absence_child": {
                     "text": "no, I have a leave of absence to take care of my kid(s)",
-                    "value": "3"
+                    "value": "3",
+                    "var": "confin.work.absence.child"
                 },
-                "option_4": {
+                "absence_sick": {
                     "text": "no, I have a sick leave (because of COVID-19)",
-                    "value": "4"
+                    "value": "4",
+                    "var": "confin.work.absence.sick"
                 },
-                "option_5": {
+                "other": {
                     "text": "No, I have another situation (retired, job-seeker, student, house-wife/husband, other sick-leave, partial unemployment, forced leave\u2026)",
-                    "value": "5"
+                    "value": "5",
+                    "var": "confin.work.other"
                 }
             }
         },
@@ -2191,7 +2390,6 @@
                 }
             },
             "removed_at": "2020-09-21"
-        }
-        
+        }   
     ]
 }
