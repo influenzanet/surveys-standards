@@ -82,15 +82,13 @@
                         },
                         "added_at": {
                             "$id": "#/definitions/question/properties/added_at",
-                            "type": "string",
-                            "title": "Date when question has been introduced",
-                            "format": "date"
+                            "$ref": "#/definitions/change_date",
+                            "title": "Date when question has been introduced"
                         },
                         "removed_at": {
                             "$id": "#/definitions/question/properties/removed_at",
-                            "type": "string",
-                            "title": "Date when question has been removed from survey",
-                            "format": "date"
+                            "$ref": "#/definitions/change_date",
+                            "title": "Date when question has been removed from survey"
                         },
                         "description": {
                          "$ref": "#/definitions/description",
@@ -103,11 +101,14 @@
                             "$ref": "#/definitions/rules"
                         },
                         "target": {
-                            "type": "string",
-                            "enum": ["all","optional"]
+                            "$ref": "#/definitions/target"
                         },
                         "platforms": {
                             "$ref": "#/definitions/platforms"
+                        },
+                        "var": {
+                            "type": "string",
+                            "description": "Name of the variable in data analysis (R based). Mostly for single response question (otherwise variables can be at the responses level)"
                         }
                     }
                 },
@@ -216,25 +217,22 @@
                     "$ref": "#/definitions/comment"
                 },
                 "added_at": {
-                    "type": "string",
                     "title": "Date when question has been introduced",
-                    "format": "date"
+                    "$ref": "#/definitions/change_date"
                 },
                 "removed_at": {
-                    "type": "string",
                     "title": "Date when question has been removed from survey",
-                    "format": "date"
+                    "$ref": "#/definitions/change_date"
                 },
                 "target": {
-                    "type": "string",
-                    "enum": ["all","optional"]
+                    "$ref": "#/definitions/target"
                 },
                 "platforms": {
                     "$ref": "#/definitions/platforms"
                 },
                 "var": {
                     "type":"string",
-                    "description": "Name of the variable in the analysis package (R based)"
+                    "description": "Name of the data item in the analysis package (R based), depending on the variable type it can be the variable name or the label for categorical values after recoding"
                 }
             }
         },
@@ -256,14 +254,12 @@
                     "$ref": "#/definitions/comment"
                 },
                 "added_at": {
-                    "type": "string",
-                    "title": "Date when question has been introduced",
-                    "format": "date"
+                    "$ref": "#/definitions/change_date",
+                    "title": "Date when question has been introduced"
                 },
                 "removed_at": {
-                    "type": "string",
-                    "title": "Date when question has been removed from survey",
-                    "format": "date"
+                    "$ref": "#/definitions/change_date",
+                    "title": "Date when question has been removed from survey"
                 },
                 "platforms": {
                     "$ref": "#/definitions/platforms"
@@ -280,10 +276,34 @@
                 {"type": "array", "items": { "type":"string"}}
             ]
         },
+        "target": {
+            "type": "string",
+            "enum": ["all","optional","specific"]
+        },
         "description": {
             "anyOf": [
                 {"type": "string"},
                 {"type": "array", "items": { "type":"string"}}
+            ]
+        },
+        "change_date": {
+            "anyOf": [
+                {"type":"string", "format": "date"},
+                {
+                    "type": "array",
+                    "items": {
+                        "type":"object",
+                        "properties": {
+                            "platforms": {
+                                "$ref": "#/definitions/platforms"
+                            },
+                            "date": {
+                                "type":"string",
+                                "format": "date"
+                            }
+                        }
+                    }
+                }
             ]
         },
         "rules": {
