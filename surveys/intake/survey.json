@@ -9,15 +9,15 @@
             "type": "single_choice",
             "target": "all",
             "possible_responses": {
-                "option_1": {
+                "member": {
                     "text": "A member of my household",
                     "value": "1"
                 },
-                "option_2": {
+                "myself": {
                     "text": "Myself",
                     "value": "0"
                 },
-                "option_3": {
+                "other": {
                     "text": "Someone else",
                     "value": "2"
                 }
@@ -40,13 +40,22 @@
             "type": "single_choice",
             "target": "all",
             "possible_responses": {
-                "option_1": {
+                "male": {
                     "text": "Male",
-                    "value": "0"
+                    "value": "0",
+                    "var": "male"
                 },
-                "option_2": {
+                "female": {
                     "text": "Female",
-                    "value": "1"
+                    "value": "1",
+                    "var": "female"
+                },
+                "other": {
+                    "text":"Other",
+                    "value": "2",
+                    "var": "other",
+                    "target":"optional",
+                    "platforms": ["IT"]
                 }
             },
             "description": [
@@ -84,50 +93,58 @@
             "mandatory": true,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "fulltime": {
                     "text": "Paid employment",
-                    "value": "0"
+                    "value": "0",
+                    "var": "activity.fulltime"
                 },
-                "option_2": {
+                "partial": {
                     "text": "Paid employment, part time",
-                    "value": "1"
+                    "value": "1",
+                    "var": "activity.partial"
                 },
-                "option_3": {
+                "self": {
                     "text": "Self-employed (businessman, farmer, tradesman, etc.)",
-                    "value": "2"
+                    "value": "2",
+                    "var": "activity.self"
                 },
-                "option_4": {
+                "student": {
                     "text": "Attending daycare/school/college/university",
-                    "value": "3"
+                    "value": "3",
+                    "var": "activity.student"
                 },
-                "option_5": {
+                "home": {
                     "text": "Home-maker (e.g. housewife)",
-                    "value": "4"
+                    "value": "4",
+                    "var": "activity.home"
                 },
-                "option_6": {
+                "unemployed": {
                     "text": "Unemployed",
-                    "value": "5"
+                    "value": "5",
+                    "var": "activity.unemployed"
                 },
-                "option_7": {
+                "sick": {
                     "text": "Long-term sick-leave or parental leave",
-                    "value": "6"
+                    "value": "6",
+                    "var": "activity.sick"
                 },
-                "option_8": {
+                "retired": {
                     "text": "Retired",
-                    "value": "7"
+                    "value": "7",
+                    "var": "activity.retired"
                 },
-                "option_9": {
+                "other": {
                     "text": "Other",
-                    "value": "8"
+                    "value": "8",
+                    "var": "activity.other"
                 }
             },
-            "description":[
-            "Why are we asking this?",
-            "To check how representative our sample is compared to the population as a whole, and to find out whether the chance of getting COVID-19 or flu are different for people in different types of occupation.",
-            
-            "How should I answer it?",
-            "Please tick the box that most closely resembles your main occupation. For pre-school children who don’t go to daycare tick the “other” box."
-            ] 
+            "description": [
+                "Why are we asking this?",
+                "To check how representative our sample is compared to the population as a whole, and to find out whether the chance of getting COVID-19 or flu are different for people in different types of occupation.",
+                "How should I answer it?",
+                "Please tick the box that most closely resembles your main occupation. For pre-school children who don’t go to daycare tick the “other” box."
+            ]
         },
         {
             "short_title": "Intake Q4b",
@@ -136,14 +153,15 @@
             "target": "all",
             "mandatory": false,
             "type": "single_choice",
+            "var": "occup.place",
             "possible_responses": {
-                "option_1": {
+                "code": {
                     "text": "",
                     "value": "0",
                     "comment": "OPEN FIELD",
                     "extra": "Q4b_0_open"
                 },
-                "option_2": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "1"
                 }
@@ -163,10 +181,13 @@
             "short_title": "Intake Q4b open question",
             "title": "",
             "data_name": "Q4b_0_open",
+            "var": "occup.place.location",
             "mandatory": false,
             "type": "text",
             "comment": "extra field not shown",
-            "rules": ["Shown when $Q4b.0 is selected"]
+            "rules": [
+                "Shown when $Q4b.0 is selected"
+            ]
         },
         {
             "short_title": "Intake Q4c",
@@ -176,42 +197,46 @@
             "target": "all",
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "prof": {
                     "text": "Professional (e.g. manager, doctor, teacher, nurse, engineer)",
-                    "value": "0"
+                    "value": "0",
+                    "var": "occupation.prof"
                 },
-                "option_2": {
+                "office": {
                     "text": "Office work (e.g. admin, finance assistant, receptionist etc)",
-                    "value": "1"
+                    "value": "1",
+                    "var": "occupation.office"
                 },
-                "option_3": {
+                "shop": {
                     "text": "Retail, sales, catering and hospitality and leisure (e.g. shop assistant, waiter, bar-staff, gym instructor etc)",
-                    "value": "2"
+                    "value": "2",
+                    "var": "occupation.shop"
                 },
-                "option_4": {
+                "worker": {
                     "text": "Skilled manual worker (e.g. mechanic, electrician, technician)",
-                    "value": "3"
+                    "value": "3",
+                    "var": "occupation.worker"
                 },
-                "option_5": {
+                "other_manual": {
                     "text": "Other manual work",
-                    "value": "4"
+                    "value": "4",
+                    "var": "occupation.omanual"
                 },
-                "option_6": {
+                "other": {
                     "text": "Other",
-                    "value": "5"
+                    "value": "5",
+                    "var": "occupation.other"
                 }
             },
             "rules": [
-                "If [Yes, Paid employment full time], or [Yes, paid employment part time] to $Q4",
-                "Trigger free text if [other] checked, allow the users to write in their occupation"
+                "If #fulltime, or #partial to $Q4",
+                "Trigger free text if #other checked, allow the users to write in their occupation"
             ],
-            "description":[
+            "description": [
                 "Why are we asking this?",
-"To check how representative our sample is compared to the population as a whole and to find out whether the chance of getting COVID-19 or flu are different for people in different types of occupation.",
-
-"How should I answer it?", 
-"Please tick the box that most closely resembles your main occupation."
-
+                "To check how representative our sample is compared to the population as a whole and to find out whether the chance of getting COVID-19 or flu are different for people in different types of occupation.",
+                "How should I answer it?",
+                "Please tick the box that most closely resembles your main occupation."
             ]
         },
         {
@@ -222,29 +247,35 @@
             "target": "all",
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+                "noqualif": {
                     "text": "I have no formal qualification",
-                    "value": "0"
+                    "value": "0",
+                    "var": "education.noqualif"
                 },
-                "option_2": {
+                "gcse": {
                     "text": "GCSEs, levels, CSEs or equivalent",
-                    "value": "1"
+                    "value": "1",
+                    "var": "education.gcse"
                 },
-                "option_3": {
+                "alevel": {
                     "text": "A-levels or equivalent (e.g. Higher, NVQ Level3, BTEC)",
-                    "value": "2"
+                    "value": "2",
+                    "var": "education.alevel"
                 },
-                "option_4": {
+                "bachelor": {
                     "text": "Bachelor Degree (BA, BSc) or equivalent",
-                    "value": "3"
+                    "value": "3",
+                    "var": "education.bachelor"
                 },
-                "option_5": {
+                "higher": {
                     "text": "Higher Degree or equivalent (e.g. Masters Degree, PGCE, PhD, Medical Doctorate, Advanced Professional Award)",
-                    "value": "4"
+                    "value": "4",
+                    "var": "education.higher"
                 },
-                "option_6": {
+                "student": {
                     "text": "I am still in education",
-                    "value": "5"
+                    "value": "5",
+                    "var": "education.student"
                 }
             },
             "comment": [
@@ -255,17 +286,15 @@
                 "shown if age 16 and over"
             ],
             "description": [
-               "Why are we asking this?",
-"To check how representative our sample is compared to the population of the UK (Italy, Belgium, etc…. ) as a whole. ",
-
-"How should I answer it?",  
-"- Please choose the box that represents your HIGHEST level of educational achievement. The different options roughly equate to: No qualifications ",
-"- school-leaving exams at around 16 years of age",
-"- school-leaving exams at around 18 years of age",
-"- University degree, or equivalent professional qualification",
-"- Higher degree or advanced professional qualification",
-"If you are an adult who is currently undergoing part-time training (e.g. night-school)  then tick the box that represents your current highest level of education."
-
+                "Why are we asking this?",
+                "To check how representative our sample is compared to the population of the UK (Italy, Belgium, etc…. ) as a whole. ",
+                "How should I answer it?",
+                "- Please choose the box that represents your HIGHEST level of educational achievement. The different options roughly equate to: No qualifications ",
+                "- school-leaving exams at around 16 years of age",
+                "- school-leaving exams at around 18 years of age",
+                "- University degree, or equivalent professional qualification",
+                "- Higher degree or advanced professional qualification",
+                "If you are an adult who is currently undergoing part-time training (e.g. night-school)  then tick the box that represents your current highest level of education."
             ]
         },
         {
@@ -276,29 +305,34 @@
             "target": "all",
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+                "children": {
                     "text": "More than 10 children or teenagers over the course of the day",
-                    "value": "0"
+                    "value": "0",
+                    "var": "contact.children"
                 },
-                "option_2": {
+                "elder": {
                     "text": "More than 10 people aged over 65 over the course of day",
-                    "value": "1"
+                    "value": "1",
+                    "var": "contact.elder"
                 },
-                "option_3": {
+                "patient": {
                     "text": "Patients",
-                    "value": "2"
+                    "value": "2",
+                    "var": "contact.patient"
                 },
-                "option_4": {
+                "crowd": {
                     "text": "Groups of people (more than 10 individuals at any one time)",
-                    "value": "3"
+                    "value": "3",
+                    "var": "contact.crowd"
                 },
-                "option_5": {
+                "none": {
                     "text": "None of the above",
-                    "value": "4"
+                    "value": "4",
+                    "var": "contact.none"
                 }
             },
             "rules": [
-                "#option_5 is exclusive with others"
+                "#none is exclusive with others"
             ]
         },
         {
@@ -309,35 +343,40 @@
             "type": "multiple_choice",
             "target": "all",
             "possible_responses": {
-                "option_1": {
+                "house_0_5": {
                     "text": "0-4 years",
                     "value": "0",
-                    "comment": "matrix-like option, with drop down menu"
+                    "comment": "matrix-like option, with drop down menu",
+                    "var": "house.0"
                 },
-                "option_2": {
+                "house_5_18": {
                     "text": "5-18 years",
                     "value": "1",
-                    "comment": "matrix-like option, with drop down menu"
+                    "comment": "matrix-like option, with drop down menu",
+                    "var": "house.5"
                 },
-                "option_3": {
+                "house_19_44": {
                     "text": "19-44 years",
                     "value": "2",
-                    "comment": "matrix-like option, with drop down menu"
+                    "comment": "matrix-like option, with drop down menu",
+                    "var": "house.19"
                 },
-                "option_4": {
+                "house_45_64": {
                     "text": "45-64 years",
                     "value": "3",
-                    "comment": "matrix-like option, with drop down menu"
+                    "comment": "matrix-like option, with drop down menu",
+                    "var": "house.45"
                 },
-                "option_5": {
+                "house_65": {
                     "text": "65+",
                     "value": "4",
-                    "comment": "matrix-like option, with drop down menu"
+                    "comment": "matrix-like option, with drop down menu",
+                    "var": "house.65"
                 }
             },
             "comment": [
                 "This should be a table with the 1st column being the age groups (as above), and the 2nd column being numbers, 0,1,2,3,4,5+. It should be PRE-FILLED with zeros. ",
-"Preferably to be pre-filled for multiple users of a single account, if they’re in the same household?"
+                "Preferably to be pre-filled for multiple users of a single account, if they’re in the same household?"
             ],
             "description": [
                 "Why are we asking this?",
@@ -354,31 +393,31 @@
             "type": "single_choice",
             "target": "all",
             "possible_responses": {
-                "option_1": {
+                "none": {
                     "text": "None",
                     "value": "0"
                 },
-                "option_2": {
+                "n_1": {
                     "text": "1",
                     "value": "1"
                 },
-                "option_3": {
+                "n_2": {
                     "text": "2",
                     "value": "2"
                 },
-                "option_4": {
+                "n_3": {
                     "text": "3",
                     "value": "3"
                 },
-                "option_5": {
+                "n_4": {
                     "text": "4",
                     "value": "4"
                 },
-                "option_6": {
+                "n_5": {
                     "text": "5",
                     "value": "5"
                 },
-                "option_7": {
+                "more_5": {
                     "text": "More than 5",
                     "value": "99"
                 }
@@ -402,35 +441,41 @@
             "target": "all",
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "walk": {
                     "text": "Walking",
-                    "value": "0"
+                    "value": "0",
+                    "var": "transport.walk"
                 },
-                "option_2": {
+                "bike": {
                     "text": "Bike",
-                    "value": "1"
+                    "value": "1",
+                    "var": "transport.bike"
                 },
-                "option_3": {
+                "scooter": {
                     "text": "Motorbike/scooter",
-                    "value": "2"
+                    "value": "2",
+                    "var": "transport.scooter"
                 },
-                "option_4": {
+                "car": {
                     "text": "Car",
-                    "value": "3"
+                    "value": "3",
+                    "var": "transport.car"
                 },
-                "option_5": {
+                "public": {
                     "text": "Public transportation (bus, train, tube, etc)",
-                    "value": "4"
+                    "value": "4",
+                    "var": "transport.public"
                 },
-                "option_6": {
+                "other": {
                     "text": "Other",
-                    "value": "5"
+                    "value": "5",
+                    "var": "transport.other"
                 }
             },
-            "description":[
+            "description": [
                 "Why are we asking this?",
                 "It has been suggested that using public transport may be a risk for COVID-19 or flu. We would like to check this.",
-                "How should I answer it?",   
+                "How should I answer it?",
                 "Tick the option that best represents your most normal mode of transport."
             ]
         },
@@ -442,33 +487,37 @@
             "target": "all",
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "no": {
                     "text": "No time at all",
-                    "value": "0"
+                    "value": "0",
+                    "var": "transtime.no"
                 },
-                "option_2": {
+                "half": {
                     "text": "0-30 minutes",
-                    "value": "1"
+                    "value": "1",
+                    "var": "transtime.half"
                 },
-                "option_3": {
+                "hour": {
                     "text": "30 minutes - 1.5 hours",
-                    "value": "2"
+                    "value": "2",
+                    "var": "transtime.hour"
                 },
-                "option_4": {
+                "less4h": {
                     "text": "1.5 hours - 4 hours",
-                    "value": "3"
+                    "value": "3",
+                    "var": "transtime.less4h"
                 },
-                "option_5": {
+                "more4h": {
                     "text": "Over 4 hours",
-                    "value": "4"
+                    "value": "4",
+                    "var": "transtime.more4h"
                 }
             },
             "description": [
-            "Why are we asking this?",
-"It has been suggested that using public transport may be a risk for getting COVID-19 or flu. We would like to check this.",
-"How should I answer it?",   
-"Think of a typical day. If you use several different forms of public transport each day, remember to include all journeys. Don’t include taxis or other forms of private transport."
-
+                "Why are we asking this?",
+                "It has been suggested that using public transport may be a risk for getting COVID-19 or flu. We would like to check this.",
+                "How should I answer it?",
+                "Think of a typical day. If you use several different forms of public transport each day, remember to include all journeys. Don’t include taxis or other forms of private transport."
             ]
         },
         {
@@ -478,29 +527,35 @@
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "never": {
                     "text": "Never",
-                    "value": "0"
+                    "value": "0",
+                    "var": "often.never"
                 },
-                "option_2": {
+                "once": {
                     "text": "Once or twice a year",
-                    "value": "1"
+                    "value": "1",
+                    "var": "often.once"
                 },
-                "option_3": {
+                "times_3": {
                     "text": "Between 3 and 5 times a year",
-                    "value": "2"
+                    "value": "2",
+                    "var": "often.3"
                 },
-                "option_4": {
+                "times_6": {
                     "text": "Between 6 and 10 times a year",
-                    "value": "3"
+                    "value": "3",
+                    "var": "often.6"
                 },
-                "option_5": {
+                "times_10": {
                     "text": "More than 10 times a year",
-                    "value": "4"
+                    "value": "4",
+                    "var": "often.10"
                 },
-                "option_6": {
+                "dontknow": {
                     "text": "I don\u2019t know",
-                    "value": "5"
+                    "value": "5",
+                    "var": "often.dkn"
                 }
             },
             "target": "optional",
@@ -514,15 +569,15 @@
             "mandatory": true,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "Yes",
                     "value": "0"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "1"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
@@ -531,7 +586,7 @@
             "description": [
                 "Why are we asking this?",
                 "We would like to be able to work out how much protection the vaccine gives.",
-                "How should I answer it?",   
+                "How should I answer it?",
                 "Report yes, if you received the vaccine this season, usually in the autumn. If you get vaccinated after filling in this questionnaire, please return to this and update your answer."
             ]
         },
@@ -543,15 +598,15 @@
             "mandatory": true,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "Yes",
                     "value": "0"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "1"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
@@ -561,13 +616,13 @@
             ],
             "description": [
                 "Why are we asking this?",
-                "We would like to be able to work out how much protection the vaccine gives. We would also like to find out  if there is some protection from vaccines received in previous years.", 
+                "We would like to be able to work out how much protection the vaccine gives. We would also like to find out  if there is some protection from vaccines received in previous years.",
                 "How should I answer it?",
                 "Answer yes if you received the vaccine last year (during the autumn/winter of 2010-2011)."
             ],
             "rules": [
-                "If [Yes] show Q10b and Q10c",
-                "If [No] show Q10d"
+                "If #yes show $Q10b and $Q10c",
+                "If #no show $Q10d"
             ]
         },
         {
@@ -578,18 +633,18 @@
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "date": {
                     "text": "Choose date",
                     "value": "1",
                     "comment": "DATE FIELD"
                 },
-                "option_2": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "0"
                 }
             },
             "rules": [
-                "Shown if $Q10 is [Yes]"
+                "Shown if $Q10 is #yes"
             ]
         },
         {
@@ -600,54 +655,66 @@
             "mandatory": false,
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+                "riskgroup": {
                     "text": "I belong to a risk group (e.g, pregnant, over 65, underlying health condition, etc)",
-                    "value": "0"
+                    "value": "0",
+                    "var": "vacc.reason.risk"
                 },
-                "option_12": {
+                "covid19": {
                     "text": "The COVID-19 context encouraged me to get influenza vaccination this year 12",
                     "value": "12",
-                    "platforms": ["FR"]
+                    "platforms": [
+                        "FR"
+                    ]
                 },
-                "option_2": {
+                "myrisk": {
                     "text": "Vaccination decreases my risk of getting the flu",
-                    "value": "1"
+                    "value": "1",
+                    "var": "vacc.reason.myrisk"
                 },
-                "option_3": {
+                "spread": {
                     "text": "Vaccination decreases the risk of spreading the flu to others",
-                    "value": "2"
+                    "value": "2",
+                    "var": "vacc.reason.spread"
                 },
-                "option_4": {
+                "doctor": {
                     "text": "My doctor recommended it",
-                    "value": "3"
+                    "value": "3",
+                    "var": "vacc.reason.doctor"
                 },
-                "option_5": {
+                "work": {
                     "text": "It was recommended in my workplace/school",
-                    "value": "4"
+                    "value": "4",
+                    "var": "vacc.reason.work"
                 },
-                "option_6": {
+                "available": {
                     "text": "The vaccine was readily available and vaccine administration was convenient",
-                    "value": "5"
+                    "value": "5",
+                    "var": "vacc.reason.available"
                 },
-                "option_7": {
+                "free": {
                     "text": "The vaccine was free",
-                    "value": "6"
+                    "value": "6",
+                    "var": "vacc.reason.free"
                 },
-                "option_8": {
+                "miss": {
                     "text": "I don\u2019t want to miss work/school",
-                    "value": "7"
+                    "value": "7",
+                    "var": "vacc.reason.miss"
                 },
-                "option_9": {
+                "always": {
                     "text": "I always get the vaccine",
-                    "value": "8"
+                    "value": "8",
+                    "var": "vacc.reason.always"
                 },
-                "option_10": {
+                "other": {
                     "text": "Other reasons",
-                    "value": "9"
+                    "value": "9",
+                    "var": "vacc.reason.other"
                 }
             },
             "rules": [
-                "Shown if Q10 is [Yes]"
+                "Shown if Q10 is #yes"
             ]
         },
         {
@@ -658,100 +725,136 @@
             "mandatory": false,
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+                "plan": {
                     "text": "I am planning to be vaccinated but haven\u2019t been yet",
-                    "value": "0"
+                    "value": "0",
+                    "var": "notvac.reason.plan"
                 },
-                "option_2": {
+                "offer": {
                     "text": "I haven\u2019t been offered the vaccine",
-                    "value": "1"
+                    "value": "1",
+                    "var": "notvac.reason.offer"
                 },
-                "option_3": {
+                "risk_group": {
                     "text": "I don\u2019t belong to a risk group",
-                    "value": "2"
+                    "value": "2",
+                    "var": "notvac.reason.risk"
                 },
-                "option_4": {
+                "own_immunity": {
                     "text": "It is better to build your own natural immunity against influenza",
-                    "value": "3"
+                    "value": "3",
+                    "var": "notvac.reason.own"
                 },
-                "option_5": {
+                "doubt": {
                     "text": "I doubt that the influenza vaccine is effective",
-                    "value": "4"
+                    "value": "4",
+                    "var": "notvac.reason.doubt"
                 },
-                "option_6": {
+                "minor_illness": {
                     "text": "Influenza is a minor illness",
-                    "value": "5"
+                    "value": "5",
+                    "var": "notvac.reason.minor"
                 },
-                "option_16": {
+                "avoid_healthseek": {
                     "text": "Because of COVID-19 pandemic, I avoid seing doctors or going to the pharmacy",
                     "value": "17",
-                    "platforms": ["FR"]
+                    "platforms": [
+                        "FR"
+                    ],
+                    "var": "notvac.reason.avoid.healthseek"
                 },
-                "option_17": {
+                "risk_covid": {
                     "text": "I am afraid that influenza vaccine would increase my risk of getting COVID-19",
                     "value": "18",
-                    "platforms": ["FR"]
+                    "platforms": [
+                        "FR"
+                    ],
+                    "var": "notvac.reason.risk.covid"
                 },
-                "option_18": {
+                "covid_other": {
                     "text": "Other reason linked with COVID-19 (open field)",
                     "value": "19",
-                    "platforms": ["FR"],
+                    "platforms": [
+                        "FR"
+                    ],
                     "comment": "Open field with textual response",
-                    "extra": "Q10d_19_open"
+                    "extra": "Q10d_19_open",
+                    "var": "notvac.reason.covid.other"
                 },
-                "option_7": {
+                "likely": {
                     "text": "I don\u2019t think I am likely to get the flu",
-                    "value": "6"
+                    "value": "6",
+                    "var": "notvac.reason.likely"
                 },
-                "option_8": {
+                "cause_flu": {
                     "text": "I believe that influenza vaccine can cause influenza",
-                    "value": "7"
+                    "value": "7",
+                    "var": "notvac.reason.cause"
                 },
-                "option_9": {
+                "safety": {
                     "text": "I am worried that the vaccine is not safe or will cause illness or other adverse events",
-                    "value": "8"
+                    "value": "8",
+                    "var": "notvac.reason.safety"
                 },
-                "option_10": {
+                "vaccin": {
                     "text": "I don\u2019t like having vaccinations",
-                    "value": "9"
+                    "value": "9",
+                    "var": "notvac.reason.vaccin"
                 },
-                "option_11": {
+                "not_available": {
                     "text": "The vaccine is not readily available for me",
-                    "value": "10"
+                    "value": "10",
+                    "var": "notvac.reason.available"
                 },
-                "option_12": {
+                "free": {
                     "text": "The vaccine is not free of charge",
-                    "value": "11"
+                    "value": "11",
+                    "var": "notvac.reason.free"
                 },
-                "option_13": {
+                "no_reason": {
                     "text": "No particular reason",
-                    "value": "12"
+                    "value": "12",
+                    "var": "notvac.reason.no"
                 },
-                "option_14": {
+                "doctor": {
                     "text": "Although my doctor recommended a vaccine, I did not get one",
-                    "value": "13"
+                    "value": "13",
+                    "var": "notvac.reason.doctor"
                 },
-                "option_15": {
+                "other": {
                     "text": "Other reason(s)",
-                    "value": "14"
+                    "value": "14",
+                    "var": "notvac.reason.other"
                 }
             }
+        },
+        {
+            "type": "text",
+            "target": "optional",
+            "title": "Virtual question holding data from extra field of $Q10d.19",
+            "mandatory": false,
+            "data_name": "Q10d_19_open",
+            "var": "notvac.reason.covid.other.txt",
+            "rules": [
+                "shown if $Q10d.19"
+            ]
         },
         {
             "short_title": "Covid vaccine",
             "title": "Have you received a COVID-19 vaccine (since December 2020)?",
             "data_name": "Q35",
+            "var": "covid.vaccine",
             "mandatory": false,
             "type": "single_choice",
-            "target":"all",
-            "description":[
+            "target": "all",
+            "description": [
                 "Why are we asking this?",
                 "We would like to be able to work out how much protection the vaccine gives.",
                 "How should I answer it?",
                 "Report yes, if you received a COVID-19 vaccine this season (since December 2020). If you get vaccinated after filling in this questionnaire, please return to this and update your answer."
             ],
             "possible_responses": {
-               "yes": {
+                "yes": {
                     "text": "Yes",
                     "value": "1"
                 },
@@ -759,7 +862,7 @@
                     "text": "No",
                     "value": "0"
                 },
-                "i_dont_know": {
+                "dontknow": {
                     "text": "I don’t know",
                     "value": "2"
                 }
@@ -769,17 +872,33 @@
             ]
         },
         {
-            "data_name":"Q35b",
-            "short_title":"Covid vaccine type",
-            "title":"Which COVID-19 vaccine did you receive?",
-            "type":"single_choice",
+            "data_name": "Q35b",
+            "short_title": "Covid vaccine type",
+            "title": "Which COVID-19 vaccine did you receive?",
+            "type": "single_choice",
             "mandatory": false,
-            "possible_responses":{
-               "comirnaty": {"value":"1", "text":"Comirnaty™ vaccine, from Pfizer/BioNTech laboratories"},
-               "moderna": {"value":"2", "text":"COVID-19 Vaccine Moderna™, from Moderna laboratory"},
-               "vaxzevria": {"value":"3", "text":"AstraZeneca COVID-19 vaccine"},
-               "janssen": {"value":"4", "text":"Jonhson & Jonhson vaccine"},
-               "i_dont_know":{"value":"99", "text":"I don’t know/can’t remember "}
+            "var": "covid.vaccine.which",
+            "possible_responses": {
+                "comirnaty": {
+                    "value": "1",
+                    "text": "Comirnaty™ vaccine, from Pfizer/BioNTech laboratories"
+                },
+                "moderna": {
+                    "value": "2",
+                    "text": "COVID-19 Vaccine Moderna™, from Moderna laboratory"
+                },
+                "vaxzevria": {
+                    "value": "3",
+                    "text": "AstraZeneca COVID-19 vaccine"
+                },
+                "janssen": {
+                    "value": "4",
+                    "text": "Jonhson & Jonhson vaccine"
+                },
+                "dontknow": {
+                    "value": "99",
+                    "text": "I don’t know/can’t remember "
+                }
             },
             "rules": [
                 "Shown if $Q35 is #yes",
@@ -787,151 +906,34 @@
             ]
         },
         {
-            "data_name":"Q35c",
-            "short_title":"Covid vaccine doses",
-            "title":"How many doses of this vaccine did you receive?",
-            "type":"single_choice",
+            "data_name": "Q35c",
+            "var": "covid.vaccine.doses",
+            "short_title": "Covid vaccine doses",
+            "title": "How many doses of this vaccine did you receive?",
+            "type": "single_choice",
             "mandatory": false,
-            "description":[
+            "description": [
                 "Why are we asking this?",
                 "We would like to be able to work out how much protection a complete vaccination scheme gives.",
                 "How should I answer it?",
                 "Report the number of doses you received (which corresponds to the number of time you were vaccinated against COVID-19 this season). If you get another dose after filling in this questionnaire, please return to this and update your answer."
             ],
-            "possible_responses":{
-                "one":{"value":"1", "text":"One"},
-                "two":{"value":"2", "text":"Two"},
-                "three_more":{"value":"3", "text":"More than two"},
-                "i_dont_know":{"value":"99", "text":"I don’t know/can’t remember "}
-            },
-            "rules": [
-                "prefill with previous response",
-                "Shown if $Q35 is #yes"
-            ]
-        },
-        {
-            "data_name":"Q35d",
-            "short_title":"1st injection date",
-            "title":"When did you receive your first injection of a vaccine against COVID-19 (since December 2020)?",
-            "type":"single_choice",
-            "mandatory": false,
-            "description": [
-                "Why are we asking this?",
-                "Knowing when people are vaccinated tells us how well the vaccination program is being carried out.",
-                "How should I answer it?",
-                "Please try and answer as accurately as possible. If you do not know the precise date, please give your best estimate. For instance, you might remember the month, then try and remember if it was at the beginning or the end of the month. Were there any significant events (e.g. a holiday or a birthday) that might help jog your memory?"
-            ],
-            "possible_responses":{
-                "date": {"value":"1", "text":"Choose date:"},
-                "i_dont_know": {"value":"0", "text":"I don’t know/can’t remember "}
-            },
-            "rules": [
-                "prefill with previous response",
-                "shown if $Q35 is #yes"
-            ]
-        },
-        {
-            "data_name":"Q35d_1_open",
-            "title":"First injection date",
-            "short_title":"First injection date",
-            "type":"date",
-            "mandatory": false,
-            "comment": "extra field not shown",
-            "rules": [
-                "Show if $Q35d is {1}"
-            ]
-        },
-        {
-            "data_name":"Q35e",
-            "short_title":"First injection date",
-            "title":"When did you receive your second injection of a vaccine against COVID-19 (since December 2020)?",
-            "type":"single_choice",
-            "mandatory": false,
-            "description":[
-                "Why are we asking this?",
-                "Knowing when people are vaccinated tells us how well the vaccination program is being carried out.",
-                "How should I answer it?",
-                "Please try and answer as accurately as possible. If you do not know the precise date, please give your best estimate. For instance, you might remember the month, then try and remember if it was at the beginning or the end of the month. Were there any significant events (e.g. a holiday or a birthday) that might help jog your memory?"
-            ],
-            "possible_responses":{
-                "date":{"value":"1", "text":"Choose date:"},
-                "i_dont_know":{"value":"0", "text":"I don’t know/can’t remember "}
-            },
-            "rules": [
-                "prefill with previous response",
-                "Shown if $Q35c is #two or #three_more"
-            ]
-        },
-        {
-            "data_name":"Q35e_1_open",
-            "short_title":"Second injection date",
-            "title":"Second injection date",
-            "type":"date",
-            "mandatory": false,
-            "comment": "extra field not shown",
-            "rules": [
-                "Show if $Q35e is {1}"
-            ]
-        },
-        {
-            "data_name":"Q35f",
-            "short_title":"Covid vaccination reasons",
-            "title":"What were your reasons for getting a COVID-19 vaccination? (Select all options that apply)",
-            "type":"multiple_choice",
-            "mandatory": false,
-            "description": [
-                "Why are we asking this?",
-                "We would like to know why some people get the vaccine, and other don’t get it.",
-                "How should I answer it?","Please select all the answers who mattered to take your decision."
-            ],
             "possible_responses": {
-                "recommended_by_pha": {
-                    "value": "21",
-                    "text": "The vaccination is recommended by public health authorities"
-                },
-                "belong_atrisk": {
-                    "value": "0",
-                    "text": "I belong to a group who is at risk of complications in case of COVID-19 (over 65, underlying health condition, obesity, etc.)"
-                },
-                "work_contact_atrisk": {
-                    "value": "20",
-                    "text": "I work in close contact with people at risk of complications in case of COVID-19 (working in a nursing home, health staff…)"
-                },
-                "decrease_my_risk": {
+                "one": {
                     "value": "1",
-                    "text": "Vaccination decreases my risk of getting COVID-19"
+                    "text": "One"
                 },
-                "decrease_spread": {
+                "two": {
                     "value": "2",
-                    "text": "Vaccination decreases the risk of spreading COVID-19 to others"
+                    "text": "Two"
                 },
-                "recommended_doctor": {
+                "three_more": {
                     "value": "3",
-                    "text": "My doctor recommended it"
+                    "text": "More than two"
                 },
-                "recommended_work": {
-                    "value": "4",
-                    "text": "It was recommended in my workplace/school"
-                },
-                "availability": {
-                    "value": "5",
-                    "text": "The vaccine was readily available and vaccine administration was convenient"
-                },
-                "free": {
-                    "value": "6",
-                    "text": "The vaccine was free (no cost)"
-                },
-                "miss_work": {
-                    "value": "7",
-                    "text": "I don’t want to miss work/school"
-                },
-                "always": {
-                    "value": "8",
-                    "text": "I always get the vaccine"
-                },
-                "other": {
-                    "value": "9",
-                    "text": "Other reason(s)"
+                "dontknow": {
+                    "value": "99",
+                    "text": "I don’t know/can’t remember "
                 }
             },
             "rules": [
@@ -940,10 +942,204 @@
             ]
         },
         {
-            "data_name":"Q35f_9_open",
-            "title":"Covid vaccination reasons other",
-            "short_title":"Covid vaccination reasons other",
-            "type":"text",
+            "data_name": "Q35d",
+            "short_title": "1st injection date",
+            "var": "covid.vaccine.when1",
+            "title": "When did you receive your first injection of a vaccine against COVID-19 (since December 2020)?",
+            "type": "single_choice",
+            "mandatory": false,
+            "description": [
+                "Why are we asking this?",
+                "Knowing when people are vaccinated tells us how well the vaccination program is being carried out.",
+                "How should I answer it?",
+                "Please try and answer as accurately as possible. If you do not know the precise date, please give your best estimate. For instance, you might remember the month, then try and remember if it was at the beginning or the end of the month. Were there any significant events (e.g. a holiday or a birthday) that might help jog your memory?"
+            ],
+            "possible_responses": {
+                "choose_date": {
+                    "value": "1",
+                    "text": "Choose date:"
+                },
+                "dontknow": {
+                    "value": "0",
+                    "text": "I don’t know/can’t remember "
+                }
+            },
+            "rules": [
+                "prefill with previous response",
+                "shown if $Q35 is #yes"
+            ]
+        },
+        {
+            "data_name": "Q35d_1_open",
+            "var":"covid.vaccine.when1.date",
+            "title": "First injection date",
+            "short_title": "First injection date",
+            "type": "date",
+            "mandatory": false,
+            "comment": "extra field not shown",
+            "rules": [
+                "Show if $Q35d is #choose_date"
+            ]
+        },
+        {
+            "data_name": "Q35e",
+            "short_title": "Second injection date",
+            "var":"covid.vaccine.when2",
+            "title": "When did you receive your second injection of a vaccine against COVID-19 (since December 2020)?",
+            "type": "single_choice",
+            "mandatory": false,
+            "description": [
+                "Why are we asking this?",
+                "Knowing when people are vaccinated tells us how well the vaccination program is being carried out.",
+                "How should I answer it?",
+                "Please try and answer as accurately as possible. If you do not know the precise date, please give your best estimate. For instance, you might remember the month, then try and remember if it was at the beginning or the end of the month. Were there any significant events (e.g. a holiday or a birthday) that might help jog your memory?"
+            ],
+            "possible_responses": {
+                "choose_date": {
+                    "value": "1",
+                    "text": "Choose date:"
+                },
+                "dontknow": {
+                    "value": "0",
+                    "text": "I don’t know/can’t remember "
+                }
+            },
+            "rules": [
+                "prefill with previous response",
+                "Shown if $Q35c is #two or #three_more"
+            ]
+        },
+        {
+            "data_name": "Q35e_1_open",
+            "short_title": "Second injection date",
+            "var":"covid.vaccine.when2.date",
+            "title": "Second injection date",
+            "type": "date",
+            "mandatory": false,
+            "comment": "extra field not shown",
+            "rules": [
+                "Show if $Q35e is #choose_date"
+            ]
+        },
+        {
+            "data_name": "Q35g",
+            "short_title": "Covid vaccine type",
+            "title": "Which COVID-19 vaccine did you receive for your second dose?",
+            "type": "single_choice",
+            "mandatory": false,
+            "var": "covid.vaccine.which2",
+            "possible_responses": {
+                "comirnaty": {
+                    "value": "1",
+                    "text": "Comirnaty™ vaccine, from Pfizer/BioNTech laboratories"
+                },
+                "moderna": {
+                    "value": "2",
+                    "text": "COVID-19 Vaccine Moderna™, from Moderna laboratory"
+                },
+                "vaxzevria": {
+                    "value": "3",
+                    "text": "AstraZeneca COVID-19 vaccine"
+                },
+                "janssen": {
+                    "value": "4",
+                    "text": "Jonhson & Jonhson vaccine"
+                },
+                "dontknow": {
+                    "value": "99",
+                    "text": "I don’t know/can’t remember "
+                }
+            },
+            "rules": [
+                "Shown if $Q35c is #two or #three_more",
+                "prefill with previous response"
+            ]
+        },
+        {
+            "data_name": "Q35f",
+            "short_title": "Covid vaccination reasons",
+            "title": "What were your reasons for getting a COVID-19 vaccination? (Select all options that apply)",
+            "type": "multiple_choice",
+            "mandatory": false,
+            "description": [
+                "Why are we asking this?",
+                "We would like to know why some people get the vaccine, and other don’t get it.",
+                "How should I answer it?",
+                "Please select all the answers who mattered to take your decision."
+            ],
+            "possible_responses": {
+                "recommended_by_pha": {
+                    "value": "21",
+                    "text": "The vaccination is recommended by public health authorities",
+                    "var":"covid.vacc.reason.pha"
+                },
+                "belong_atrisk": {
+                    "value": "0",
+                    "text": "I belong to a group who is at risk of complications in case of COVID-19 (over 65, underlying health condition, obesity, etc.)",
+                    "var": "covid.vacc.reason.risk"
+                },
+                "work_contact_atrisk": {
+                    "value": "20",
+                    "text": "I work in close contact with people at risk of complications in case of COVID-19 (working in a nursing home, health staff…)",
+                    "var":"covid.vacc.reason.close"
+                },
+                "decrease_my_risk": {
+                    "value": "1",
+                    "text": "Vaccination decreases my risk of getting COVID-19",
+                    "var":"covid.vacc.reason.get"
+                },
+                "decrease_spread": {
+                    "value": "2",
+                    "text": "Vaccination decreases the risk of spreading COVID-19 to others",
+                    "var":"covid.vacc.reason.transm"
+                },
+                "recommended_doctor": {
+                    "value": "3",
+                    "text": "My doctor recommended it",
+                    "var": "covid.vacc.reason.doctor"
+                },
+                "recommended_work": {
+                    "value": "4",
+                    "text": "It was recommended in my workplace/school",
+                    "var": "covid.vacc.reason.work"
+                },
+                "availability": {
+                    "value": "5",
+                    "text": "The vaccine was readily available and vaccine administration was convenient",
+                    "var": "covid.vacc.reason.avail"
+                },
+                "free": {
+                    "value": "6",
+                    "text": "The vaccine was free (no cost)",
+                    "var": "covid.vacc.reason.free"
+                },
+                "miss_work": {
+                    "value": "7",
+                    "text": "I don’t want to miss work/school",
+                    "var":"covid.vacc.reason.miss"
+                },
+                "always": {
+                    "value": "8",
+                    "text": "I always get the vaccine",
+                    "var":"covid.vacc.reason.always"
+                },
+                "other": {
+                    "value": "9",
+                    "text": "Other reason(s)",
+                    "var": "covid.vacc.reason.other"
+                }
+            },
+            "rules": [
+                "prefill with previous response",
+                "Shown if $Q35 is #yes"
+            ]
+        },
+        {
+            "data_name": "Q35f_9_open",
+            "title": "Covid vaccination reasons other",
+            "short_title": "Covid vaccination reasons other",
+            "var": "covid.vacc.reason.other.txt",
+            "type": "text",
             "mandatory": false,
             "comment": "extra field not shown",
             "rules": [
@@ -958,39 +1154,48 @@
             "type": "multiple_choice",
             "target": "all",
             "possible_responses": {
-                "option_1": {
+                "none": {
                     "text": "No",
-                    "value": "0"
+                    "value": "0",
+                    "var": "condition.none"
                 },
-                "option_2": {
+                "asthma": {
                     "text": "Asthma",
-                    "value": "1"
+                    "value": "1",
+                    "var": "condition.asthma"
                 },
-                "option_3": {
+                "diabetes": {
                     "text": "Diabetes",
-                    "value": "2"
+                    "value": "2",
+                    "var":"condition.diabetes"
                 },
-                "option_4": {
+                "lung": {
                     "text": "Chronic lung disorder besides asthma e.g. COPD, emphysema, or other disorders that affect your breathing",
-                    "value": "3"
+                    "value": "3",
+                    "var":"condition.lung"
                 },
-                "option_5": {
+                "heart": {
                     "text": "Heart disorder",
-                    "value": "4"
+                    "value": "4",
+                    "var": "condition.heart"
                 },
-                "option_6": {
+                "kidney": {
                     "text": "Kidney disorder",
-                    "value": "5"
+                    "value": "5",
+                    "var":"condition.kidney"
                 },
-                "option_7": {
+                "immuno": {
                     "text": "An immunocompromising condition (e.g. splenectomy, organ transplant, acquired immune deficiency, cancer treatment)",
-                    "value": "6"
+                    "value": "6",
+                    "var": "condition.immune"
                 },
-                "option_8": {
-                    "text":"I would rather not answer",
+                "noanswer": {
+                    "text": "I would rather not answer",
                     "value": "7",
                     "target": "optional",
-                    "platform": ["IT"]
+                    "platform": [
+                        "IT"
+                    ]
                 }
             },
             "description": [
@@ -1007,16 +1212,17 @@
             "mandatory": false,
             "target": "all",
             "type": "single_choice",
+            "var": "pregnant",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "Yes",
                     "value": "0"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "1"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know/I would rather not answer",
                     "value": "2"
                 }
@@ -1028,7 +1234,7 @@
             "description": [
                 "Why are we asking this?",
                 "Pregnancy can result in more severe illness if you are infected with COVID-19 or flu.",
-                "How should I answer it?",   
+                "How should I answer it?",
                 "Answer yes if you are pregnant today."
             ]
         },
@@ -1038,20 +1244,21 @@
             "data_name": "Q12b",
             "mandatory": false,
             "type": "single_choice",
+            "var": "pregnant.trim",
             "possible_responses": {
-                "option_1": {
+                "first": {
                     "text": "First trimester (week 1-12)",
                     "value": "0"
                 },
-                "option_2": {
+                "second": {
                     "text": "Second trimester (week 13-28)",
                     "value": "1"
                 },
-                "option_3": {
+                "third": {
                     "text": "Third trimester (week 29-delivery)",
                     "value": "2"
                 },
-                "option_4": {
+                "dontknow": {
                     "text": "Don\u2019t know/would rather not answer",
                     "value": "3"
                 }
@@ -1062,7 +1269,7 @@
             "description": [
                 "Why are we asking this?",
                 "The stage of pregnancy might alter your risk of severe COVID-19 or flu if you are infected, although this is not very clear.",
-                "How should I answer it?",   
+                "How should I answer it?",
                 "Which trimester are you in today?"
             ]
         },
@@ -1072,24 +1279,25 @@
             "data_name": "Q13",
             "mandatory": true,
             "type": "single_choice",
+            "var":"smoker",
             "possible_responses": {
-                "option_1": {
+                "no": {
                     "text": "No",
                     "value": "0"
                 },
-                "option_2": {
+                "occas": {
                     "text": "Yes, occasionally",
                     "value": "1"
                 },
-                "option_3": {
+                "daily_few": {
                     "text": "Yes, daily, fewer than 10 times a day",
                     "value": "2"
                 },
-                "option_4": {
+                "daily_more": {
                     "text": "Yes, daily, 10 or more times a day",
                     "value": "3"
                 },
-                "option_5": {
+                "dontknow": {
                     "text": "Don\u2019t know/would rather not answer",
                     "value": "4"
                 }
@@ -1097,7 +1305,7 @@
             "description": [
                 "Why are we asking this?",
                 "Smoking might make you more likely to get a more severe dose of COVID-19 or flu. We would like to test this.",
-                "How should I answer it?",   
+                "How should I answer it?",
                 "Please answer as accurately as possible. If you smoke other products (e.g. a pipe or cigars), then indicate roughly how many times a day."
             ]
         },
@@ -1109,25 +1317,30 @@
             "mandatory": true,
             "type": "multiple_choice",
             "possible_responses": {
-                "option_1": {
+                "hay": {
                     "text": "Hay fever",
-                    "value": "1"
+                    "value": "1",
+                    "var": "allergy.hay"
                 },
-                "option_2": {
+                "dust": {
                     "text": "Allergy against house dust mite",
-                    "value": "2"
+                    "value": "2",
+                    "var": "allergy.dust"
                 },
-                "option_3": {
+                "pets": {
                     "text": "Allergy against domestic animals or pets",
-                    "value": "3"
+                    "value": "3",
+                    "var": "allergy.pets"
                 },
-                "option_4": {
+                "other": {
                     "text": "Other allergies that cause respiratory symptoms (e.g. sneezing, runny eyes)",
-                    "value": "4"
+                    "value": "4",
+                    "var": "allergy.other"
                 },
-                "option_5": {
+                "none": {
                     "text": "I do not have an allergy that causes respiratory symptoms",
-                    "value": "5"
+                    "value": "5",
+                    "var": "allergy.none"
                 }
             },
             "description": [
@@ -1148,25 +1361,30 @@
             "type": "multiple_choice",
             "target": "optional",
             "possible_responses": {
-                "option_1": {
+                "standard": {
                     "text": "No special diet",
-                    "value": "0"
+                    "value": "0",
+                    "var": "diet.normal"
                 },
-                "option_2": {
+                "vegetarian": {
                     "text": "Vegetarian",
-                    "value": "1"
+                    "value": "1",
+                    "var":"diet.vegetarian"
                 },
-                "option_3": {
+                "vegan": {
                     "text": "Vegan",
-                    "value": "2"
+                    "value": "2",
+                    "var": "diet.vegan"
                 },
-                "option_4": {
+                "lowcal": {
                     "text": "Low calorie",
-                    "value": "3"
+                    "value": "3",
+                    "var": "diet.lowcal"
                 },
-                "option_5": {
+                "other": {
                     "text": "Other",
-                    "value": "4"
+                    "value": "4",
+                    "var": "diet.other"
                 }
             },
             "rules": [
@@ -1179,31 +1397,36 @@
             "data_name": "Q16",
             "mandatory": false,
             "type": "multiple_choice",
-            "target":"optional",
+            "target": "optional",
             "possible_responses": {
-                "option_1": {
+                "none": {
                     "text": "No",
-                    "value": "0"
+                    "value": "0",
+                    "var": "pets.none"
                 },
-                "option_2": {
+                "dog": {
                     "text": "Yes, one or more dogs",
-                    "value": "1"
+                    "value": "1",
+                    "var": "pets.dog"
                 },
-                "option_3": {
+                "cat": {
                     "text": "Yes, one or more cats",
-                    "value": "2"
+                    "value": "2",
+                    "var": "pets.cat"
                 },
-                "option_4": {
+                "bird": {
                     "text": "Yes, one or more birds",
-                    "value": "3"
+                    "value": "3",
+                    "var": "pets.bird"
                 },
-                "option_5": {
+                "other": {
                     "text": "Yes, one or more other animals",
-                    "value": "4"
+                    "value": "4",
+                    "var": "pets.other"
                 }
             },
             "rules": [
-                "#option_1 is exclusive with other responses"
+                "#none is exclusive with other responses"
             ]
         },
         {
@@ -1214,29 +1437,84 @@
             "type": "multiple_choice",
             "target": "optional",
             "possible_responses": {
-                "option_1": {
+                "radio": {
                     "text": "On radio or television",
-                    "value": "0"
+                    "value": "0",
+                    "var":"hear.radio"
                 },
-                "option_2": {
+                "newspaper": {
                     "text": "In the newspaper or in a magazine",
-                    "value": "1"
+                    "value": "1",
+                    "var": "hear.newspaper"
                 },
-                "option_3": {
+                "internet": {
                     "text": "Via an internet site (search engine or link)",
-                    "value": "2"
+                    "value": "2",
+                    "var": "hear.internet"
                 },
-                "option_4": {
+                "poster": {
                     "text": "By poster",
-                    "value": "3"
+                    "value": "3",
+                    "var":  "hear.poster"
                 },
-                "option_5": {
+                "family": {
                     "text": "Via family or friends",
-                    "value": "4"
+                    "value": "4",
+                    "var":  "hear.family"
                 },
-                "option_6": {
+                "work": {
                     "text": "Via school or work",
-                    "value": "5"
+                    "value": "5",
+                    "var":"hear.work"
+                },
+                "healthworker": {
+                    "text": "Via Health worker",
+                    "value": "5",
+                    "var":"hear.hworker",
+                    "target": "optional",
+                    "platform": ["FR"]
+                },
+                "project": {
+                    "text": "Via someone working on the project",
+                    "value": "7",
+                    "var":"hear.project",
+                    "target": "optional",
+                    "platform": ["FR"]
+                },
+                "webinstit": {
+                    "text": "Via Institutional website",
+                    "value": "8",
+                    "var":"hear.webinstit",
+                    "target": "optional",
+                    "platform": ["FR"]
+                },
+                "webinfo": {
+                    "text": "Information website",
+                    "value": "9",
+                    "var":"hear.webinfo",
+                    "target": "optional",
+                    "platform": ["FR"]
+                },
+                "websante":{
+                    "text": "Health Information website",
+                    "value": "10",
+                    "var":"hear.webinfo",
+                    "target": "optional",
+                    "platform": ["FR"]
+                },
+                "social":{
+                    "text": "Social network",
+                    "value": "12",
+                    "var":"hear.social",
+                    "target": "optional",
+                    "platform": ["FR"]
+                },
+                "other":{
+                    "text": "Other",
+                    "value": "13",
+                    "var":"hear.other",
+                    "target": "optional",
+                    "platform": ["FR"]
                 }
             }
         },
@@ -1245,28 +1523,30 @@
             "title": "Are you taking or do you plan to take this winter homeopathic medicine in order to prevent COVID-19?",
             "data_name": "Q26",
             "mandatory": false,
+            "var":"prev.homeopathy.covid",
             "type": "single_choice",
-            "target":"optional",
-            "platforms": ["FR"],
+            "target": "optional",
+            "platforms": [
+                "FR"
+            ],
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "Yes",
                     "value": "1"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "0"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don’t know",
                     "value": "2"
                 },
-                "option_4": {
+                "noanswer": {
                     "text": "I don’t want to answer",
                     "value": "3"
                 }
             }
         }
-        
     ]
 }
