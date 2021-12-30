@@ -2,3 +2,5 @@
 venv
 xml
 /local
+.vscode
+todo
