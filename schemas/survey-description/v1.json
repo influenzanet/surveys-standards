@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://standards.influenzanet.info/schemas/survey-description/1.0",
+    "$id": "https://influenzanet.github.io/surveys-standards/schemas/survey-description/v1.json",
     "type": "object",
     "title": "Survey description schema",
     "description": "This schema describes json format to describe influenzanet survey",
@@ -43,9 +43,9 @@
             "description": "A question is a unit element of the survey",
             "required": [
                 "title",
+                "type",
                 "data_name",
-                "mandatory",
-                "type"
+                "mandatory"
             ],
             "allOf": [
                 {
@@ -78,7 +78,7 @@
                             "$id": "#/definitions/question/properties/active",
                             "type": "boolean",
                             "title": "Flag to set the active status of the question. Inactive question are not in the survey any more but can be provided in the past data",
-                            "default": false
+                            "default": true
                         },
                         "added_at": {
                             "$id": "#/definitions/question/properties/added_at",
@@ -118,6 +118,23 @@
                             "properties": {
                                 "type": {
                                     "type": "string",
+                                    "enum": ["single_choice", "multiple_choice"]
+                                },
+                                "possible_responses": {
+                                    "type": "object",
+                                    "title": "Possible responses of a data element of a question",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "additionalProperties": {
+                                        "$ref": "#/definitions/response"
+                                    }                
+                                }
+                            },
+                            "required": ["type", "possible_responses", "data_name", "mandatory"]
+                        },
+                        {
+                            "properties": {
+                                "type": {
+                                    "type": "string",
                                     "enum": ["matrix"]
                                 },
                                 "data_type": {
@@ -147,24 +164,7 @@
                                     }
                                 }
                             },
-                            "required": ["type","data_type", "rows","columns"]
-                        },
-                        {
-                            "properties": {
-                                "type": {
-                                    "type": "string",
-                                    "enum": ["single_choice", "multiple_choice"]
-                                },
-                                "possible_responses": {
-                                    "type": "object",
-                                    "title": "Possible responses of a data element of a question",
-                                    "description": "An explanation about the purpose of this instance.",
-                                    "additionalProperties": {
-                                        "$ref": "#/definitions/response"
-                                    }                
-                                }
-                            },
-                            "required": ["type","possible_responses"]
+                            "required": ["type", "data_type", "rows","columns", "data_name", "mandatory" ]
                         },
                         {
                             "properties": {
@@ -172,7 +172,8 @@
                                     "type": "string",
                                     "enum": ["text"]
                                 }
-                            }
+                            },
+                            "required": ["data_name", "mandatory"]
                         },
                         {
                             "properties": {
@@ -184,10 +185,28 @@
                                     "type": "string",
                                     "enum": ["date","month-year"]
                                 }
-                            }
+                            },
+                            "required": ["data_name", "mandatory"]
+                        },
+                        {
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": ["text"]
+                                }
+                            },
+                            "required": ["type", "data_name", "mandatory"]
+                        },
+                        {
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": ["note"]
+                                }
+                            },
+                            "required": ["type", "data_name", "mandatory"]
                         }
                         
-
                     ]
                 }
             ]
@@ -300,6 +319,9 @@
                             "date": {
                                 "type":"string",
                                 "format": "date"
+                            },
+                            "comment": {
+                                "type": "string"
                             }
                         }
                     }
@@ -315,7 +337,7 @@
             "description": "List platform where item is actually implemented, 'all' indicated this is core item and is expected everywhere",
             "items": {
                 "type": "string",
-                "enum": ["all","IE", "UK", "ES", "DK", "BE", "IT", "FR", "PT", "NL", "SE", "CH"]
+                "enum": ["all", "IE", "UK", "ES", "DK", "BE", "IT", "FR", "PT", "NL", "SE", "CH"]
             }
         }
     }

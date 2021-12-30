@@ -1,3 +1,4 @@
+from typing import Deque
 from cliff.command import Command
 
 from . import register
@@ -8,6 +9,12 @@ import os
 from ..models import json_parser_survey, xml_parser_survey, compare_legacy_to_html, survey_to_html
 
 import xml.etree.ElementTree as ET
+
+def to_path(path: Deque):
+    v = []
+    for p in path:
+        v.append(str(p))
+    return "/".join(v)
 
 class Validate(Command):
     """
@@ -26,12 +33,25 @@ class Validate(Command):
 
         p = self.app.get_schemas_path()
         
-        print(p)
-
-        schema = read_json(p + '/survey-description.json')
+        schema = read_json(p + '/survey-description/v1.json')
        
-        jsonschema.validate(json, schema)
-        print("Json schema is valid")
+        try:
+            jsonschema.validate(json, schema)
+            print("Json schema %s is valid" % (args.file))
+        except jsonschema.ValidationError as e:
+            path = e.absolute_path
+            print("Error during validation at", to_path(path))
+            print(e.message)
+            print("Schema path ", to_path(e.schema_path))
+            if(path[0] == "questions"):
+                quid = path[1]
+                q = json['questions'][quid]
+                print("Question : %s %s" % (str(quid), q['data_name']))
+                if len(path) > 3 and path[2] == "possible_responses":
+                    rid = path[3]
+                    r = q['possible_responses'][rid]
+                    print("  Response #%s [%s]" % (str(rid), r['value']) )
+
 
 class Show(Command):
     """
