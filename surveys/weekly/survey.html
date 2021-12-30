@@ -111,7 +111,7 @@
    <div class="survey container-fluid">
    
 <H1>Survey weekly</h1>
-<div> <a href="https://influenzanet.github.io/surveys-standards/surveys/weekly/survey.json">JSON</a> Version 4cf7ced6ead3d5569f56bb7c43637bde7a431ce9, built on 2021-10-22 13:17:56.594587</div>
+<div> <a href="https://influenzanet.github.io/surveys-standards/surveys/weekly/survey.json">JSON</a> Version 1bd837303ee4773f0c530d4d95e9645c2009ae3f, built on 2021-12-30 17:40:13.430317</div>
 
 <p class="comment">This file describes the survey design at a high level defining elements to enable data sharing and common elements. Legends are presented at the bottom of this file. <a href="https://influenzanet.github.io/surveys-standards/docs/survey_description">Documentation is also available</a> </p>
 
@@ -157,7 +157,7 @@ all</span>
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
- <span class="user-label">Have you had any of the following symptoms since your last visit (or in the past week, if this is your first visit)?</span>
+ <span class="user-label">Have you had any of the following symptoms since your last questionnaire (or in the past week, if this is your first visit)? For people with chronic (long-term) illnesses, only tick changes in symptoms.</span>
 </div>
     
     
@@ -189,6 +189,21 @@ all</span>
             numeric
         </div>
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Precision about chronic symptoms added on 2021-11 version</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -1063,6 +1078,41 @@ all</span>
 <div class="question card">
     
     <div class="card-header bg-info question-head text-white"> 
+        <h4>note1</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ note</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 2
+        
+        
+        
+         Added at 2021-11-01
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Priority questions: if you have only little time, we propose you to fill only the few following questions, crucial for the surveillance of acute respiratory infections. </span>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
         <h4>Q2</h4> 
         
  <span class="badge badge-warning" >
@@ -1071,7 +1121,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 2
+ 3
         
  <i class="fas fa-mandatory danger"></i>
  
@@ -1306,7 +1356,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 3
+ 4
         
         
         
@@ -1461,7 +1511,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 4
+ 5
         
         
         
@@ -1652,7 +1702,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 5
+ 6
         
         
         
@@ -1802,7 +1852,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 6
+ 7
         
         
         
@@ -1993,7 +2043,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 7
+ 8
         
         
         
@@ -2002,7 +2052,7 @@ all</span>
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
- <span class="user-label">In the 14 days before your symptoms started, have you been in close contact with someone for whom a PCR test (nasal swab) has confirmed that they have Covid-19?</span>
+ <span class="user-label">In the 14 days before your symptoms started, have you been in close contact with someone for whom an antigenic test or a PCR test (nasal swab) has confirmed that they have COVID-19?</span>
 </div>
     
     
@@ -2040,7 +2090,7 @@ all</span>
 </td>
         <td>
  
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_1</span>
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#yes</span>
  
 </td>
         <td></td>
@@ -2074,7 +2124,7 @@ all</span>
 </td>
         <td>
  
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_2</span>
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
  
 </td>
         <td></td>
@@ -2108,7 +2158,7 @@ all</span>
 </td>
         <td>
  
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#option_3</span>
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#dontknow</span>
  
 </td>
         <td></td>
@@ -2131,7 +2181,7 @@ all</span>
         
 <ul class="list-group list-group-flush ">
 
-    <li class="list-group-item">Shown (if symptoms ($Q1 != {0&#39;) AND (if answers to Q2 weekly other than « Yes »)</li>
+    <li class="list-group-item">Shown (if symptoms ($Q1 != {0}) AND (if answers to Q2 weekly other than « Yes »)</li>
 
 </ul>
 
@@ -2152,7 +2202,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 8
+ 9
         
         
         
@@ -2302,7 +2352,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Qcov8</h4> 
         
  <span class="badge badge-warning" >
@@ -2311,12 +2361,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 9
+ 10
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
          Added at 2020-03-26
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -2485,7 +2539,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 10
+ 11
         
         
         
@@ -2644,7 +2698,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 11
+ 12
         
         
         
@@ -2798,7 +2852,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 12
+ 13
         
         
         
@@ -2848,7 +2902,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 13
+ 14
         
         
         
@@ -2994,7 +3048,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 14
+ 15
         
         
         
@@ -3044,7 +3098,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 15
+ 16
         
         
         
@@ -3224,7 +3278,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 16
+ 17
         
         
         
@@ -3378,7 +3432,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 17
+ 18
         
         
         
@@ -3428,7 +3482,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 18
+ 19
         
         
         
@@ -3608,7 +3662,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 19
+ 20
         
         
         
@@ -3788,7 +3842,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 20
+ 21
         
         
         
@@ -4096,7 +4150,312 @@ all</span>
 <div class="question card">
     
     <div class="card-header bg-info question-head text-white"> 
-        <h4>Q7</h4> 
+        <h4>Q36</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 22
+        
+        
+        
+         Added at 2021-11-10
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Thank you for all these information. They will help us to estimate the frequency of symptoms among general population. You can stop here. If you have a little more time, we propose you to answer further questions about your symptoms and care. Do you accept to answer to these additional questions?</span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#yes</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 0</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
+        <h4>Qcov16h</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 23
+        
+        
+        
+         Added at 2021-11-10
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Because of your symptoms, did you undergo analyses to know if you have COVID-19?</span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#yes</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Not yet, I plan to shortly undergo a test </span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#not_yet</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No, I have a prescription but will not undergo a test</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no_wont</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 0</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms($Q1) and $Q36 = #yes</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
+        <h4>Qcov16i</h4> 
         
  <span class="badge badge-warning" >
  <i class="fas fa-cubes "></i>
@@ -4104,7 +4463,490 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 21
+ 24
+        
+        
+        
+         Added at 2021-11-10
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Which analyse(s) was it? </span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">A PCR test (virus search, on a swab in nose or mouth, or a sputum or saliva sample)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#pcr</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">A serological analysis (screening for antibodies against this virus, from a drop of blood at fingertip or a blood sample)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#sero</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">A rapid antigen detection test on a sample realized in the back of the nose (nasopharyngeal sampling, done by a health professional or a trained person, with a swab inserted to 15 cm into the nose, result obtained in less than one hour)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#antigenic</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">A rapid antigen detection test or autotest done on a nose sample (a swab inserted to 1 - 4 cm into the nostril, sampling that can be done by oneself, result obtained in a few minutes)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#antigenic_nasal</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if $Q16h=#yes</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-gray question-head text-white"> 
+        <h4>Qcov16</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ multiple_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 25
+        
+        
+        
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
+         Added at 2020-04-28
+         Removed at [OrderedDict([(&#39;date&#39;, &#39;2021-11-30&#39;), (&#39;comment&#39;, &#39;Replaced by Qcov16h/Qcov18i&#39;)])]
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Because of your symptoms, did you undergo analyses to know if you have COVID-19 (infection due to SRAS-CoV-2)? </span>
+</div>
+    
+    
+    
+    
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">(the participant can select the first and second option together if he wants)</li>
+
+</ul>
+
+
+
+        </div>
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, a PCR test (virus search, on a swab in nose or mouth, or a sputum or saliva sample)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#pcr</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, a serological analysis (screening for antibodies against this virus, from a drop of blood at fingertip or a blood sample) </span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#sero</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, a rapid antigen detection test (on a swab in nose or mouth, with a result available in less than an hour)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#antigenic</span>
+ 
+</td>
+        <td> 
+<ul class="list-unstyled d-inline">
+
+    <li> 
+ <span class="badge badge-primary" >FR</span>
+</li>
+
+</ul>
+</td>
+          Added at 2020-11-23
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Not yet, I plan to shortly undergo a test</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#plan</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No, I have a prescription but will not undergo a test</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#wontgo</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 0</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 6</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms</li>
+
+    <li class="list-group-item">Options #pcr , #sero, and #antigenic are exclusive to #no, #plan, #wontgo</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
+        <h4>Qcov16b</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 26
         
         
         
@@ -4113,7 +4955,2089 @@ all</span>
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
- <span class="user-label">Because of your symptoms, did you VISIT (see face to face) any of medical services?</span>
+ <span class="user-label">Do you already get the result of this PCR test?</span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#positive</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#negative</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, the result is non interpretable</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#not_interpretable</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No, I do not have the result yet</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If $Qcov16h.#pcr</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
+        <h4>Qcov16f</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 27
+        
+        
+        
+         Added at 2021-11-10
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Do you know the result of this rapid antigen detection test on nasopharyngeal sample? (if several were performed and at least one was positive, chose the “Positive” answer)?</span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#positive</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#negative</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, the result is non interpretable</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#not_interpretable</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No, I do not have the result yet</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If $Qcov16h.#antigenic</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
+        <h4>Qcov16k</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 28
+        
+        
+        
+         Added at 2021-11-10
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Do you know the result of this antigenic test or self-test on nasal sample? (if several were performed and at least one was positive, chose the “Positive” answer)?</span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#positive</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#negative</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, the result is non interpretable</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#not_interpretable</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No, I do not have the result yet</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If $Qcov16h.#antigenic_nasal</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
+        <h4>Qcov16c</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 29
+        
+        
+        
+        
+         Removed at 2020-11-10
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Do you already get the result of this serological analysis?</span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#positive</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#negative</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, the result is non interpretable</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#not_interpretable</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No, I do not have the result yet</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If $Qcov16{2}</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-gray question-head text-white"> 
+        <h4>Qcov16d</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 30
+        
+        
+        
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
+        
+         Removed at 2020-11-10
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">How much time passed between the beginning of your symptoms and your search of a laboratory which could undergo this analysis? </span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared the day or the day before the search of a laboratory</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_1</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared 2, 3 or 4 days before the search of a laboratory</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_2_4</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared 5, 6 or 7 days before the search of a laboratory</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_5_7</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared between 8 and 14 days before the search of a laboratory</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_8_14</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared between 15 and 28 days before the search of a laboratory</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_15_28</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 6</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared more than four weeks before the search of a laboratory</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 6</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#over4weeks</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 99</span>
+ 
+</td>
+        <td>
+ <span class="user-label">I don’t know/don’t want to answer</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 7</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#dontknow</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If Qcov16.#pcr</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
+        <h4>Qcov16e</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 31
+        
+        
+        
+         Added at 2020-09-21
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">How much time passed between the beginning of your symptoms and the sampling? </span>
+</div>
+    
+    
+    
+    
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">In proposal from 2020,September</li>
+
+</ul>
+
+
+
+        </div>
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared the day or the day before the sampling</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_1</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared 2, 3 or 4 days before the sampling</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_2_4</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared 5, 6 or 7 days before the sampling</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_5_7</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared between 8 and 14 days before the sampling</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_8_14</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared between 15 and 28 days before the sampling</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_15_28</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 6</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Symptoms appeared more than four weeks before the sampling</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 6</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#over4weeks</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 99</span>
+ 
+</td>
+        <td>
+ <span class="user-label">I don’t know / don’t want to answer</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 7</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#dontknow</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If $Qcov16{1}</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-gray question-head text-white"> 
+        <h4>Qcov16g</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 32
+        
+        
+        
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
+        
+         Removed at 2021-11-10
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Who performed this rapid antigen test?</span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">A general practitioner</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#gp</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">A specialized physician, a dental surgeon or a mid-wife</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#spec</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">A pharmacist or a pharmacy technician</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#pharmacist</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Another health professional  (specify)</span>
+</td>
+        <td>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">(give the list of all health professional authorized to realize this test in your country)</li>
+
+</ul>
+
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#other_health</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Another professional (specify)</span>
+</td>
+        <td>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">(give the list of all other professionals authorized to realize this test)</li>
+
+</ul>
+
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#other</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 99</span>
+ 
+</td>
+        <td>
+ <span class="user-label">I don’t know or don’t remember</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 6</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#dontknow</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown If $Qcov16{5}</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
+        <h4>Qcov19</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 33
+        
+        
+        
+        
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Because of your symptoms, did you undergo analyses to know if you have flu? </span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, a PCR test (virus search, on a nasal swab in the back of the nose)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#yes</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, a rapid detection test (result available in less than an hour)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#yes_antigenic</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Not yet, I have a prescription and plan to shortly undergo a test</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#plan</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No, I have a prescription but will not undergo the test</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#wontgo</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 0</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if symptoms($Q1) and Q36=#yes</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
+        <h4>Qcov19b</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 34
+        
+        
+        
+        
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Do you already get the result of this test?</span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, Positive for influenza</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#positive</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, Negative for influenza</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#negative</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes, the result is non interpretable</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#not_interpretable</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No, I do not have the result yet</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">Shown if to $Qcov19.#yes or $Qcov19.#antigenic</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
+        <h4>Q7</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ multiple_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 35
+        
+        
+        
+        
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Because of your symptoms, did you VISIT (see face to face or teleconsultation, at home or at physician’s office) any of medical services?</span>
 </div>
     
     
@@ -4380,7 +7304,7 @@ all</span>
         
 <ul class="list-group list-group-flush ">
 
-    <li class="list-group-item">Shown if symptoms</li>
+    <li class="list-group-item">Shown if symptoms and and $Q36 = #yes</li>
 
     <li class="list-group-item">#plan is exclusive with others</li>
 
@@ -4403,7 +7327,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 22
+ 36
         
         
         
@@ -4930,7 +7854,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q8</h4> 
         
  <span class="badge badge-warning" >
@@ -4939,12 +7863,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 23
+ 37
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -5229,7 +8157,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q8b</h4> 
         
  <span class="badge badge-warning" >
@@ -5238,12 +8166,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 24
+ 38
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -5569,7 +8501,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 25
+ 39
         
         
         
@@ -5578,7 +8510,7 @@ all</span>
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
- <span class="user-label">What is the main reason for which you did not contact any health professional for the symptoms you declared today?</span>
+ <span class="user-label">What is the main reason for which you did not consult any health professional for the symptoms you declared today?</span>
 </div>
     
     
@@ -5902,6 +8834,40 @@ all</span>
  
  <span class="badge badge-danger" >
  <i class="fas fa-key "></i>
+ 11</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Because I am vaccinated against COVID-19</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 10</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#vaccinated_covid19</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
  10</span>
  
 </td>
@@ -5925,7 +8891,7 @@ all</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 10</span>
+ 11</span>
  
 </td>
         <td>
@@ -5959,7 +8925,7 @@ all</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 11</span>
+ 12</span>
  
 </td>
         <td>
@@ -6008,7 +8974,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 26
+ 40
         
         
         
@@ -6049,7 +9015,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Qcov18b</h4> 
         
  <span class="badge badge-warning" >
@@ -6058,12 +9024,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 27
+ 41
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2020-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -6318,7 +9288,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Qcov18b_6_open</h4> 
         
  <span class="badge badge-warning" >
@@ -6327,12 +9297,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 28
+ 42
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2020-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -6377,7 +9351,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 29
+ 43
         
         
         
@@ -6527,7 +9501,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 30
+ 44
         
         
         
@@ -6673,7 +9647,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 31
+ 45
         
         
         
@@ -6815,2182 +9789,6 @@ all</span>
 <div class="question card">
     
     <div class="card-header bg-info question-head text-white"> 
-        <h4>Qcov16</h4> 
-        
- <span class="badge badge-warning" >
- <i class="fas fa-cubes "></i>
- multiple_choice</span>
-
-        
- <i class="fas fa-sort "></i>
- 32
-        
-        
-        
-         Added at 2020-04-28
-        
-    </div>
-    <div class="card-body p-1 container-fluid">
-    <div class="question-label">
- <span class="user-label">Because of your symptoms, did you undergo analyses to know if you have COVID-19 (infection due to SRAS-CoV-2)? </span>
-</div>
-    
-    
-    
-    
-    
-        <div class="card comment question-block w-75">
-        <h6>Comment</h6>
-            
-
- 
-<ul class="list-group list-group-flush comment">
-
-    <li class="list-group-item">(the participant can select the first and second option together if he wants)</li>
-
-</ul>
-
-
-
-        </div>
-    
-    
-        <div class="card responses question-block w-75">
-        <h6>Responses</h6>
-        
-     <table class="table table-compact table-sm">
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 1</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, a PCR test (virus search, on a swab in nose or mouth, or a sputum or saliva sample)</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 1</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#pcr</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 2</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, a serological analysis (screening for antibodies against this virus, from a drop of blood at fingertip or a blood sample) </span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 2</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#sero</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 5</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, a rapid antigen detection test (on a swab in nose or mouth, with a result available in less than an hour)</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 3</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#antigenic</span>
- 
-</td>
-        <td> 
-<ul class="list-unstyled d-inline">
-
-    <li> 
- <span class="badge badge-primary" >FR</span>
-</li>
-
-</ul>
-</td>
-          Added at 2020-11-23
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 3</span>
- 
-</td>
-        <td>
- <span class="user-label">Not yet, I plan to shortly undergo a test</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 4</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#plan</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 4</span>
- 
-</td>
-        <td>
- <span class="user-label">No, I have a prescription but will not undergo a test</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 5</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#wontgo</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 0</span>
- 
-</td>
-        <td>
- <span class="user-label">No</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 6</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-    </table>
-
-        </div>
-    
-    
-    
-    
-        <div class="card rules question-block">
-        <h6>
- <i class="fas fa-cogs "></i>
- Rules</h6>
-        
-<ul class="list-group list-group-flush ">
-
-    <li class="list-group-item">Shown if symptoms</li>
-
-    <li class="list-group-item">Options #pcr , #sero, and #antigenic are exclusive to #no, #plan, #wontgo</li>
-
-</ul>
-
-        </div>
-    
-    
-   </div> 
-</div> 
-
-<div class="question card">
-    
-    <div class="card-header bg-info question-head text-white"> 
-        <h4>Qcov16b</h4> 
-        
- <span class="badge badge-warning" >
- <i class="fas fa-cubes "></i>
- single_choice</span>
-
-        
- <i class="fas fa-sort "></i>
- 33
-        
-        
-        
-        
-        
-    </div>
-    <div class="card-body p-1 container-fluid">
-    <div class="question-label">
- <span class="user-label">Do you already get the result of this PCR test?</span>
-</div>
-    
-    
-    
-    
-    
-    
-        <div class="card responses question-block w-75">
-        <h6>Responses</h6>
-        
-     <table class="table table-compact table-sm">
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 1</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 1</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#positive</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 2</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 2</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#negative</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 3</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, the result is non interpretable</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 3</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#not_interpretable</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 4</span>
- 
-</td>
-        <td>
- <span class="user-label">No, I do not have the result yet</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 4</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-    </table>
-
-        </div>
-    
-    
-    
-    
-        <div class="card rules question-block">
-        <h6>
- <i class="fas fa-cogs "></i>
- Rules</h6>
-        
-<ul class="list-group list-group-flush ">
-
-    <li class="list-group-item">Shown If $Qcov16.#pcr</li>
-
-</ul>
-
-        </div>
-    
-    
-   </div> 
-</div> 
-
-<div class="question card">
-    
-    <div class="card-header bg-info question-head text-white"> 
-        <h4>Qcov16c</h4> 
-        
- <span class="badge badge-warning" >
- <i class="fas fa-cubes "></i>
- single_choice</span>
-
-        
- <i class="fas fa-sort "></i>
- 34
-        
-        
-        
-        
-        
-    </div>
-    <div class="card-body p-1 container-fluid">
-    <div class="question-label">
- <span class="user-label">Do you already get the result of this serological analysis?</span>
-</div>
-    
-    
-    
-    
-    
-    
-        <div class="card responses question-block w-75">
-        <h6>Responses</h6>
-        
-     <table class="table table-compact table-sm">
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 1</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 1</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#positive</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 2</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 2</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#negative</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 3</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, the result is non interpretable</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 3</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#not_interpretable</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 4</span>
- 
-</td>
-        <td>
- <span class="user-label">No, I do not have the result yet</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 4</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-    </table>
-
-        </div>
-    
-    
-    
-    
-        <div class="card rules question-block">
-        <h6>
- <i class="fas fa-cogs "></i>
- Rules</h6>
-        
-<ul class="list-group list-group-flush ">
-
-    <li class="list-group-item">Shown If $Qcov16{2}</li>
-
-</ul>
-
-        </div>
-    
-    
-   </div> 
-</div> 
-
-<div class="question card">
-    
-    <div class="card-header bg-info question-head text-white"> 
-        <h4>Qcov16d</h4> 
-        
- <span class="badge badge-warning" >
- <i class="fas fa-cubes "></i>
- single_choice</span>
-
-        
- <i class="fas fa-sort "></i>
- 35
-        
-        
-        
-        
-        
-    </div>
-    <div class="card-body p-1 container-fluid">
-    <div class="question-label">
- <span class="user-label">How much time passed between the beginning of your symptoms and your search of a laboratory which could undergo this analysis? </span>
-</div>
-    
-    
-    
-    
-    
-    
-        <div class="card responses question-block w-75">
-        <h6>Responses</h6>
-        
-     <table class="table table-compact table-sm">
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 1</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared the day or the day before the search of a laboratory</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 1</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_1</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 2</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared 2, 3 or 4 days before the search of a laboratory</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 2</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_2_4</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 3</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared 5, 6 or 7 days before the search of a laboratory</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 3</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_5_7</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 4</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared between 8 and 14 days before the search of a laboratory</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 4</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_8_14</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 5</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared between 15 and 28 days before the search of a laboratory</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 5</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_15_28</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 6</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared more than four weeks before the search of a laboratory</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 6</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#over4weeks</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 99</span>
- 
-</td>
-        <td>
- <span class="user-label">I don’t know/don’t want to answer</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 7</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#dontknow</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-    </table>
-
-        </div>
-    
-    
-    
-    
-        <div class="card rules question-block">
-        <h6>
- <i class="fas fa-cogs "></i>
- Rules</h6>
-        
-<ul class="list-group list-group-flush ">
-
-    <li class="list-group-item">Shown If Qcov16.#pcr</li>
-
-</ul>
-
-        </div>
-    
-    
-   </div> 
-</div> 
-
-<div class="question card">
-    
-    <div class="card-header bg-info question-head text-white"> 
-        <h4>Qcov16e</h4> 
-        
- <span class="badge badge-warning" >
- <i class="fas fa-cubes "></i>
- single_choice</span>
-
-        
- <i class="fas fa-sort "></i>
- 36
-        
-        
-        
-         Added at 2020-09-21
-        
-    </div>
-    <div class="card-body p-1 container-fluid">
-    <div class="question-label">
- <span class="user-label">How much time passed between the beginning of your symptoms and the sampling? </span>
-</div>
-    
-    
-    
-    
-    
-        <div class="card comment question-block w-75">
-        <h6>Comment</h6>
-            
-
- 
-<ul class="list-group list-group-flush comment">
-
-    <li class="list-group-item">In proposal from 2020,September</li>
-
-</ul>
-
-
-
-        </div>
-    
-    
-        <div class="card responses question-block w-75">
-        <h6>Responses</h6>
-        
-     <table class="table table-compact table-sm">
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 1</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared the day or the day before the sampling</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 1</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_1</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 2</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared 2, 3 or 4 days before the sampling</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 2</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_2_4</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 3</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared 5, 6 or 7 days before the sampling</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 3</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_5_7</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 4</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared between 8 and 14 days before the sampling</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 4</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_8_14</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 5</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared between 15 and 28 days before the sampling</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 5</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#days_15_28</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 6</span>
- 
-</td>
-        <td>
- <span class="user-label">Symptoms appeared more than four weeks before the sampling</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 6</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#over4weeks</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 99</span>
- 
-</td>
-        <td>
- <span class="user-label">I don’t know / don’t want to answer</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 7</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#dontknow</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-    </table>
-
-        </div>
-    
-    
-    
-    
-        <div class="card rules question-block">
-        <h6>
- <i class="fas fa-cogs "></i>
- Rules</h6>
-        
-<ul class="list-group list-group-flush ">
-
-    <li class="list-group-item">Shown If $Qcov16{1}</li>
-
-</ul>
-
-        </div>
-    
-    
-   </div> 
-</div> 
-
-<div class="question card">
-    
-    <div class="card-header bg-info question-head text-white"> 
-        <h4>Qcov16f</h4> 
-        
- <span class="badge badge-warning" >
- <i class="fas fa-cubes "></i>
- single_choice</span>
-
-        
- <i class="fas fa-sort "></i>
- 37
-        
-        
-        
-         Added at 2020-11-23
-        
-    </div>
-    <div class="card-body p-1 container-fluid">
-    <div class="question-label">
- <span class="user-label">Do you know the result of this rapid antigen detection test?</span>
-</div>
-    
-    
-    
-    
-    
-        <div class="card comment question-block w-75">
-        <h6>Comment</h6>
-            
-
- 
-<ul class="list-group list-group-flush comment">
-
-    <li class="list-group-item">In proposal from 2020,November</li>
-
-</ul>
-
-
-
-        </div>
-    
-    
-        <div class="card responses question-block w-75">
-        <h6>Responses</h6>
-        
-     <table class="table table-compact table-sm">
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 1</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, Positive for the SARS-CoV-2 (COVID-19)</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 1</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#positive</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 2</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, Negative for the SARS-CoV-2 (COVID-19)</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 2</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#negative</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 3</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, the result is non interpretable</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 3</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#not_interpretable</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 99</span>
- 
-</td>
-        <td>
- <span class="user-label">No, I don’t know or don’t remember</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 4</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-    </table>
-
-        </div>
-    
-    
-    
-    
-        <div class="card rules question-block">
-        <h6>
- <i class="fas fa-cogs "></i>
- Rules</h6>
-        
-<ul class="list-group list-group-flush ">
-
-    <li class="list-group-item">Shown If $Qcov16.#antigenic</li>
-
-</ul>
-
-        </div>
-    
-    
-        <div class="card platforms question-block w-75">
-        <h6>Platforms implementing this question</h6>
-            
-<ul class="list-unstyled d-inline">
-
-    <li> 
- <span class="badge badge-primary" >FR</span>
-</li>
-
-</ul>
-
-        </div>
-    
-   </div> 
-</div> 
-
-<div class="question card">
-    
-    <div class="card-header bg-info question-head text-white"> 
-        <h4>Qcov16g</h4> 
-        
- <span class="badge badge-warning" >
- <i class="fas fa-cubes "></i>
- single_choice</span>
-
-        
- <i class="fas fa-sort "></i>
- 38
-        
-        
-        
-        
-        
-    </div>
-    <div class="card-body p-1 container-fluid">
-    <div class="question-label">
- <span class="user-label">Who performed this rapid antigen test?</span>
-</div>
-    
-    
-    
-    
-    
-        <div class="card comment question-block w-75">
-        <h6>Comment</h6>
-            
-
- 
-<ul class="list-group list-group-flush comment">
-
-    <li class="list-group-item">In proposal</li>
-
-</ul>
-
-
-
-        </div>
-    
-    
-        <div class="card responses question-block w-75">
-        <h6>Responses</h6>
-        
-     <table class="table table-compact table-sm">
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 1</span>
- 
-</td>
-        <td>
- <span class="user-label">A general practitioner</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 1</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#gp</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 2</span>
- 
-</td>
-        <td>
- <span class="user-label">A specialized physician, a dental surgeon or a mid-wife</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 2</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#spec</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 3</span>
- 
-</td>
-        <td>
- <span class="user-label">A pharmacist or a pharmacy technician</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 3</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#pharmacist</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 4</span>
- 
-</td>
-        <td>
- <span class="user-label">Another health professional  (specify)</span>
-</td>
-        <td>
-            
-
- 
-<ul class="list-group list-group-flush comment">
-
-    <li class="list-group-item">(give the list of all health professional authorized to realize this test in your country)</li>
-
-</ul>
-
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 4</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#other_health</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 5</span>
- 
-</td>
-        <td>
- <span class="user-label">Another professional (specify)</span>
-</td>
-        <td>
-            
-
- 
-<ul class="list-group list-group-flush comment">
-
-    <li class="list-group-item">(give the list of all other professionals authorized to realize this test)</li>
-
-</ul>
-
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 5</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#other</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 99</span>
- 
-</td>
-        <td>
- <span class="user-label">I don’t know or don’t remember</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 6</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#dontknow</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-    </table>
-
-        </div>
-    
-    
-    
-    
-        <div class="card rules question-block">
-        <h6>
- <i class="fas fa-cogs "></i>
- Rules</h6>
-        
-<ul class="list-group list-group-flush ">
-
-    <li class="list-group-item">Shown If $Qcov16{5}</li>
-
-</ul>
-
-        </div>
-    
-    
-   </div> 
-</div> 
-
-<div class="question card">
-    
-    <div class="card-header bg-info question-head text-white"> 
-        <h4>Qcov19</h4> 
-        
- <span class="badge badge-warning" >
- <i class="fas fa-cubes "></i>
- single_choice</span>
-
-        
- <i class="fas fa-sort "></i>
- 39
-        
-        
-        
-        
-        
-    </div>
-    <div class="card-body p-1 container-fluid">
-    <div class="question-label">
- <span class="user-label">Because of your symptoms, did you undergo analyses to know if you have flu? </span>
-</div>
-    
-    
-    
-    
-    
-    
-        <div class="card responses question-block w-75">
-        <h6>Responses</h6>
-        
-     <table class="table table-compact table-sm">
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 1</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, a PCR test (virus search, on a nasal swab)</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 1</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#yes</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 3</span>
- 
-</td>
-        <td>
- <span class="user-label">Not yet, I have a prescription and plan to shortly undergo a test</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 2</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#plan</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 4</span>
- 
-</td>
-        <td>
- <span class="user-label">No, I have a prescription but will not undergo the test</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 3</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#wontgo</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 0</span>
- 
-</td>
-        <td>
- <span class="user-label">No</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 4</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-    </table>
-
-        </div>
-    
-    
-    
-    
-        <div class="card rules question-block">
-        <h6>
- <i class="fas fa-cogs "></i>
- Rules</h6>
-        
-<ul class="list-group list-group-flush ">
-
-    <li class="list-group-item">Shown if symptoms</li>
-
-</ul>
-
-        </div>
-    
-    
-   </div> 
-</div> 
-
-<div class="question card">
-    
-    <div class="card-header bg-info question-head text-white"> 
-        <h4>Qcov19b</h4> 
-        
- <span class="badge badge-warning" >
- <i class="fas fa-cubes "></i>
- single_choice</span>
-
-        
- <i class="fas fa-sort "></i>
- 40
-        
-        
-        
-        
-        
-    </div>
-    <div class="card-body p-1 container-fluid">
-    <div class="question-label">
- <span class="user-label">Do you already get the result of this PCR test?</span>
-</div>
-    
-    
-    
-    
-    
-    
-        <div class="card responses question-block w-75">
-        <h6>Responses</h6>
-        
-     <table class="table table-compact table-sm">
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 1</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, Positive for influenza</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 1</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#positive</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 2</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, Negative for influenza</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 2</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#negative</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 3</span>
- 
-</td>
-        <td>
- <span class="user-label">Yes, the result is non interpretable</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 3</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#not_interpretable</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 4</span>
- 
-</td>
-        <td>
- <span class="user-label">No, I do not have the result yet</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 4</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
- 
-</td>
-        <td></td>
-         
-         
-        </td>
-       </tr>  
-      
-    </table>
-
-        </div>
-    
-    
-    
-    
-        <div class="card rules question-block">
-        <h6>
- <i class="fas fa-cogs "></i>
- Rules</h6>
-        
-<ul class="list-group list-group-flush ">
-
-    <li class="list-group-item">Shown if to $Qcov19.#yes</li>
-
-</ul>
-
-        </div>
-    
-    
-   </div> 
-</div> 
-
-<div class="question card">
-    
-    <div class="card-header bg-info question-head text-white"> 
         <h4>Q9</h4> 
         
  <span class="badge badge-warning" >
@@ -8999,7 +9797,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 41
+ 46
         
         
         
@@ -9151,7 +9949,7 @@ all</span>
  
 </td>
         <td>
- <span class="user-label">Antivirals (Tamiflu, Relenza)</span>
+ <span class="user-label">Antivirals against Influenza (Tamiflu)</span>
 </td>
         <td>
             
@@ -9227,7 +10025,7 @@ all</span>
  
 <ul class="list-group list-group-flush comment">
 
-    <li class="list-group-item">French specific item, optional</li>
+    <li class="list-group-item">French item</li>
 
 </ul>
 
@@ -9277,7 +10075,7 @@ all</span>
  
 <ul class="list-group list-group-flush comment">
 
-    <li class="list-group-item">French specific item, optional</li>
+    <li class="list-group-item">French item</li>
 
 </ul>
 
@@ -9392,9 +10190,9 @@ all</span>
         
 <ul class="list-group list-group-flush ">
 
-    <li class="list-group-item">Shown if symptoms</li>
+    <li class="list-group-item">Shown if symptoms($Q1) and $Q36=#yes</li>
 
-    <li class="list-group-item">[No medication] and [Don’t know] are exclusives to others</li>
+    <li class="list-group-item">#no and #dontknow are exclusives to others</li>
 
 </ul>
 
@@ -9406,7 +10204,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q9b</h4> 
         
  <span class="badge badge-warning" >
@@ -9415,12 +10213,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 42
+ 47
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2020-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -9765,7 +10567,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 43
+ 48
         
         
  <span class="badge badge-primary" >
@@ -9888,7 +10690,7 @@ optional</span>
         
 <ul class="list-group list-group-flush ">
 
-    <li class="list-group-item">Shown if symptoms</li>
+    <li class="list-group-item">Shown if symptoms and $Q36=#yes</li>
 
 </ul>
 
@@ -9922,7 +10724,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 44
+ 49
         
         
         
@@ -10081,7 +10883,7 @@ optional</span>
         
 <ul class="list-group list-group-flush ">
 
-    <li class="list-group-item">Shown if symptoms</li>
+    <li class="list-group-item">Shown if symptoms and $Q36=#yes</li>
 
 </ul>
 
@@ -10102,7 +10904,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 45
+ 50
         
         
         
@@ -10240,7 +11042,7 @@ optional</span>
         
 <ul class="list-group list-group-flush ">
 
-    <li class="list-group-item">Shown if symptoms and $Q10[Yes, I took time off school or work]</li>
+    <li class="list-group-item">Shown if symptoms and $Q10#yes</li>
 
 </ul>
 
@@ -10261,7 +11063,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 46
+ 51
         
         
         
@@ -10611,7 +11413,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 47
+ 52
         
         
         
@@ -10620,7 +11422,7 @@ optional</span>
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
- <span class="user-label">Because of your symptoms, have you taken or strengthened one or more of the following measures? </span>
+ <span class="user-label">During this episode, which of the following measures did you use?</span>
 </div>
     
     
@@ -10642,7 +11444,7 @@ optional</span>
  
 </td>
         <td>
- <span class="user-label">Regularly wash or disinfect hands</span>
+ <span class="user-label">Increase the frequency of washing or disinfecting </span>
 </td>
         <td>
             
@@ -10744,7 +11546,7 @@ optional</span>
  
 </td>
         <td>
- <span class="user-label">Wear a disposable mask</span>
+ <span class="user-label">Wear a disposable mask outside home, in places where it is not mandatory</span>
 </td>
         <td>
             
@@ -10774,6 +11576,40 @@ optional</span>
  
  <span class="badge badge-danger" >
  <i class="fas fa-key "></i>
+ 17</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Wear a disposable mask at home</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#wear_mask_home</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
  5</span>
  
 </td>
@@ -10789,7 +11625,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 5</span>
+ 6</span>
  
 </td>
         <td>
@@ -10823,7 +11659,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 6</span>
+ 7</span>
  
 </td>
         <td>
@@ -10857,7 +11693,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 7</span>
+ 8</span>
  
 </td>
         <td>
@@ -10891,7 +11727,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 8</span>
+ 9</span>
  
 </td>
         <td>
@@ -10925,7 +11761,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 9</span>
+ 10</span>
  
 </td>
         <td>
@@ -10959,7 +11795,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 10</span>
+ 11</span>
  
 </td>
         <td>
@@ -10993,7 +11829,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 11</span>
+ 12</span>
  
 </td>
         <td>
@@ -11027,7 +11863,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 12</span>
+ 13</span>
  
 </td>
         <td>
@@ -11046,11 +11882,11 @@ optional</span>
  
  <span class="badge badge-danger" >
  <i class="fas fa-key "></i>
- 14</span>
+ 18</span>
  
 </td>
         <td>
- <span class="user-label">Avoid seeing friends and family</span>
+ <span class="user-label">Isolation from people you live with</span>
 </td>
         <td>
             
@@ -11061,7 +11897,41 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 13</span>
+ 14</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#isolate_home</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 14</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Avoid seeing friends and family (who do not live with you)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 15</span>
  
 </td>
         <td>
@@ -11095,7 +11965,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 14</span>
+ 16</span>
  
 </td>
         <td>
@@ -11129,7 +11999,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 15</span>
+ 17</span>
  
 </td>
         <td>
@@ -11163,7 +12033,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 16</span>
+ 18</span>
  
 </td>
         <td>
@@ -11191,7 +12061,9 @@ optional</span>
         
 <ul class="list-group list-group-flush ">
 
-    <li class="list-group-item">Option #none is exclusive with other responses </li>
+    <li class="list-group-item">Option #none is exclusive with other responses</li>
+
+    <li class="list-group-item">Shown if symptoms($Q1) and $Q36#yes</li>
 
 </ul>
 
@@ -11212,12 +12084,12 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 48
+ 53
         
         
         
          Added at 2020-03-12
-        
+         Removed at [OrderedDict([(&#39;date&#39;, &#39;2020-11-10&#39;), (&#39;comment&#39;, &#39;Replaced by previous version Qcov7&#39;)])]
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -11949,7 +12821,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 49
+ 54
         
         
         
@@ -12031,6 +12903,40 @@ optional</span>
  
  <span class="badge badge-danger" >
  <i class="fas fa-key "></i>
+ 9</span>
+ 
+</td>
+        <td>
+ <span class="user-label">New coronavirus (COVID-19)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#covid</span>
+ 
+</td>
+        <td></td>
+          Added at 2020-03-12
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
  1</span>
  
 </td>
@@ -12046,7 +12952,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 2</span>
+ 3</span>
  
 </td>
         <td>
@@ -12080,7 +12986,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 3</span>
+ 4</span>
  
 </td>
         <td>
@@ -12114,7 +13020,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 4</span>
+ 5</span>
  
 </td>
         <td>
@@ -12148,7 +13054,7 @@ optional</span>
  
  <span class="badge badge-default" >
  <i class="fas fa-sort "></i>
- 5</span>
+ 6</span>
  
 </td>
         <td>
@@ -12158,40 +13064,6 @@ optional</span>
 </td>
         <td></td>
          
-         
-        </td>
-       </tr>  
-      
-       <tr>
-        <td>
- 
- <span class="badge badge-danger" >
- <i class="fas fa-key "></i>
- 9</span>
- 
-</td>
-        <td>
- <span class="user-label">New coronavirus (COVID-19)</span>
-</td>
-        <td>
-            
-
- 
-        </td>
-        <td>
- 
- <span class="badge badge-default" >
- <i class="fas fa-sort "></i>
- 6</span>
- 
-</td>
-        <td>
- 
- <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#covid</span>
- 
-</td>
-        <td></td>
-          Added at 2020-03-12
          
         </td>
        </tr>  
@@ -12362,7 +13234,7 @@ optional</span>
         
 <ul class="list-group list-group-flush ">
 
-    <li class="list-group-item">Shown if symptoms</li>
+    <li class="list-group-item">Shown if symptoms($Q1) and $Q36=#yes</li>
 
 </ul>
 
@@ -12374,7 +13246,7 @@ optional</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Qcov9</h4> 
         
  <span class="badge badge-warning" >
@@ -12383,12 +13255,16 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 50
+ 55
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -12678,7 +13554,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 51
+ 56
         
         
         
@@ -12837,7 +13713,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 52
+ 57
         
         
         
@@ -13068,7 +13944,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 53
+ 58
         
         
         
@@ -13363,7 +14239,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 54
+ 59
         
         
         
@@ -13624,7 +14500,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 55
+ 60
         
         
         
@@ -13885,7 +14761,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 56
+ 61
         
         
         
@@ -14112,7 +14988,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 57
+ 62
         
         
         
@@ -14377,7 +15253,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 58
+ 63
         
         
         
@@ -14676,7 +15552,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 59
+ 64
         
         
         
@@ -14894,7 +15770,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 60
+ 65
         
  <i class="fas fa-mandatory danger"></i>
  
@@ -15012,7 +15888,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 61
+ 66
         
         
         

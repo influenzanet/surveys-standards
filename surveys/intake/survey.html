@@ -111,7 +111,7 @@
    <div class="survey container-fluid">
    
 <H1>Survey intake</h1>
-<div> <a href="https://influenzanet.github.io/surveys-standards/surveys/intake/survey.json">JSON</a> Version 8e1da69440800030d015bc25f791ce9a1a2695be, built on 2021-10-22 10:59:51.934991</div>
+<div> <a href="https://influenzanet.github.io/surveys-standards/surveys/intake/survey.json">JSON</a> Version 1bd837303ee4773f0c530d4d95e9645c2009ae3f, built on 2021-12-30 17:40:14.846986</div>
 
 <p class="comment">This file describes the survey design at a high level defining elements to enable data sharing and common elements. Legends are presented at the bottom of this file. <a href="https://influenzanet.github.io/surveys-standards/docs/survey_description">Documentation is also available</a> </p>
 
@@ -625,7 +625,7 @@ all</span>
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
- <span class="user-label">What is your main activity?</span>
+ <span class="user-label">What is your current professional status?</span>
 </div>
     
     
@@ -1201,7 +1201,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q4c</h4> 
         
  <span class="badge badge-warning" >
@@ -1218,8 +1218,12 @@ all</span>
 all</span>
  
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -1250,6 +1254,21 @@ all</span>
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">replaced by Q4h</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -1490,6 +1509,479 @@ all</span>
 <div class="question card">
     
     <div class="card-header bg-info question-head text-white"> 
+        <h4>Q4h</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 9
+        
+        
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
+         Added at 2021-11-10
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">Which of the following descriptions most closely matches with your main occupation?</span>
+</div>
+    
+    
+    <div class="card description question-block w-75">
+    <h6>Description</h6>
+    
+
+ 
+<ul class="list-group list-group-flush description user-label">
+
+    <li class="list-group-item">Why are we asking this?</li>
+
+    <li class="list-group-item">To check how representative our sample is compared to the population as a whole and to find out whether the chance of getting COVID-19 or flu are different for people in different types of occupation.</li>
+
+    <li class="list-group-item">How should I answer it?</li>
+
+    <li class="list-group-item">Please tick the box that most closely resembles your main occupation.</li>
+
+</ul>
+
+
+
+    </div>
+    
+    
+    
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Responses changed, to correspond to Eurostat categories: https://ec.europa.eu/esco/portal/occupation?resetLanguage=true&amp;newLanguage=en.</li>
+
+</ul>
+
+
+
+        </div>
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Services and sales workers (Personal Services Workers, Sales Workers, Personal Care Workers, Protective Services Workers)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#service</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Craft and related trades workers (Handicraft and printing workers, Food processing, wood working, garment and other craft and related trades workers,  Metal, machinery and related trades workers, Electrical and electronic trades workers, Building and related trades workers, excluding electricians)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#worker</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 6</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Armed forces occupations (Commissioned armed forces officers, Armed forces occupations other ranks, Non-commissioned armed forces officers)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#army</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 7</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Managers (Chief Executives, Senior Officials and Legislators, Administrative and Commercial Managers, Production and Specialized Services Managers, Hospitality, Retail and Other Services Managers)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 4</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#manager</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 8</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Professionals (Science and Engineering Professionals, Health Professionals,  Teaching Professionals, Business and Administration Professionals, Information and Communications Technology Professionals, Legal, Social and Cultural Professionals)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#professional</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 9</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Technicians and associate professionals (Science and Engineering Associate Professionals, Health Associate Professionals, Business and Administration Associate Professionals, Legal, Social, Cultural and Related Associate Professionals, Information and Communications Technicians)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 6</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#tech</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 10</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Clerical support workers (General and Keyboard Clerks, Customer Services Clerks,  Numerical and Material Recording Clerks, Other Clerical Support Workers)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 7</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#clerical</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 11</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Skilled agricultural, forestry and fishery workers</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 8</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#agriculture</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 12</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Plant and machine operators and assemblers (Stationary Plant and Machine Operators, Assemblers, Drivers and Mobile Plant Operators)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 9</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#operator</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 13</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Elementary occupations (Cleaners and Helpers, Agricultural, Forestry and Fishery Labourers, Labourers in Mining, Construction, Manufacturing and Transport, Food Preparation Assistants, Street and Related Sales and Services Workers, Refuse Workers and Other Elementary Workers)</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 10</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#elementary</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 5</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Other</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 11</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#other</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">If #fulltime, or #partial or #self to $Q4</li>
+
+    <li class="list-group-item">Trigger free text if #other checked, allow the users to write in their occupation</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
         <h4>Q4d</h4> 
         
  <span class="badge badge-warning" >
@@ -1498,7 +1990,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 9
+ 10
         
         
  <span class="badge badge-primary" >
@@ -1811,7 +2303,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 10
+ 11
         
  <i class="fas fa-mandatory danger"></i>
  
@@ -1826,7 +2318,7 @@ all</span>
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
- <span class="user-label">Except people you meet on public transports, do you have contact with any of the following during the course of a typical day? (Select all options that apply, if any)</span>
+ <span class="user-label">Except people you meet during your public transports or shopping, do you have contact with any of the following during the course of a typical day? (Select all options that apply, if any)</span>
 </div>
     
     
@@ -1848,7 +2340,7 @@ all</span>
  
 </td>
         <td>
- <span class="user-label">More than 10 children or teenagers over the course of the day</span>
+ <span class="user-label">More than 10 children or teenagers over the course of the day (without counting your own children)</span>
 </td>
         <td>
             
@@ -2044,7 +2536,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 11
+ 12
         
         
  <span class="badge badge-primary" >
@@ -2340,7 +2832,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 12
+ 13
         
         
  <span class="badge badge-primary" >
@@ -2656,6 +3148,173 @@ all</span>
 <div class="question card">
     
     <div class="card-header bg-info question-head text-white"> 
+        <h4>Q6c</h4> 
+        
+ <span class="badge badge-warning" >
+ <i class="fas fa-cubes "></i>
+ single_choice</span>
+
+        
+ <i class="fas fa-sort "></i>
+ 14
+        
+ <i class="fas fa-mandatory danger"></i>
+ 
+        
+ <span class="badge badge-primary" >
+ <i class="fas fa-bullseye "></i>
+all</span>
+ 
+        
+         Added at 2021-11-10
+        
+    </div>
+    <div class="card-body p-1 container-fluid">
+    <div class="question-label">
+ <span class="user-label">One or several of these people are they at risk of complications in case of flu or COVID-19 (e.g, pregnant, over 65, underlying health condition, obese, etc.)?</span>
+</div>
+    
+    
+    
+    
+    
+    
+        <div class="card responses question-block w-75">
+        <h6>Responses</h6>
+        
+     <table class="table table-compact table-sm">
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ <span class="user-label">Yes</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 1</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#yes</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 0</span>
+ 
+</td>
+        <td>
+ <span class="user-label">No</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#no</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+       <tr>
+        <td>
+ 
+ <span class="badge badge-danger" >
+ <i class="fas fa-key "></i>
+ 2</span>
+ 
+</td>
+        <td>
+ <span class="user-label">I don’t know/I would rather not answer</span>
+</td>
+        <td>
+            
+
+ 
+        </td>
+        <td>
+ 
+ <span class="badge badge-default" >
+ <i class="fas fa-sort "></i>
+ 3</span>
+ 
+</td>
+        <td>
+ 
+ <span class="badge badge-local-key"  title="Local key, this is a local identifier not to be used in the target survey implementation">#dontknow</span>
+ 
+</td>
+        <td></td>
+         
+         
+        </td>
+       </tr>  
+      
+    </table>
+
+        </div>
+    
+    
+    
+    
+        <div class="card rules question-block">
+        <h6>
+ <i class="fas fa-cogs "></i>
+ Rules</h6>
+        
+<ul class="list-group list-group-flush ">
+
+    <li class="list-group-item">shown if at least one people selected at Q6</li>
+
+    <li class="list-group-item">pre-filled #yes and masked if #house_65 selected in Q6</li>
+
+</ul>
+
+        </div>
+    
+    
+   </div> 
+</div> 
+
+<div class="question card">
+    
+    <div class="card-header bg-info question-head text-white"> 
         <h4>Q7</h4> 
         
  <span class="badge badge-warning" >
@@ -2664,7 +3323,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 13
+ 15
         
  <i class="fas fa-mandatory danger"></i>
  
@@ -2930,7 +3589,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q7b</h4> 
         
  <span class="badge badge-warning" >
@@ -2939,7 +3598,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 14
+ 16
         
  <i class="fas fa-mandatory danger"></i>
  
@@ -2949,8 +3608,12 @@ all</span>
 all</span>
  
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -3180,7 +3843,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 15
+ 17
         
         
  <span class="badge badge-primary" >
@@ -3438,7 +4101,7 @@ optional</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q9</h4> 
         
  <span class="badge badge-warning" >
@@ -3447,7 +4110,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 16
+ 18
         
  <i class="fas fa-mandatory danger"></i>
  
@@ -3457,8 +4120,12 @@ optional</span>
 all</span>
  
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -3496,6 +4163,8 @@ all</span>
 
  
 <ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
 
     <li class="list-group-item">Note that the years will need to be changed each year.</li>
 
@@ -3626,7 +4295,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q10</h4> 
         
  <span class="badge badge-warning" >
@@ -3635,7 +4304,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 17
+ 19
         
  <i class="fas fa-mandatory danger"></i>
  
@@ -3645,8 +4314,12 @@ all</span>
 all</span>
  
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -3684,6 +4357,8 @@ all</span>
 
  
 <ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
 
     <li class="list-group-item">Note that the years will need to be changed each year.</li>
 
@@ -3829,7 +4504,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q10b</h4> 
         
  <span class="badge badge-warning" >
@@ -3838,7 +4513,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 18
+ 20
         
         
  <span class="badge badge-primary" >
@@ -3846,8 +4521,12 @@ all</span>
 all</span>
  
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -3857,6 +4536,21 @@ all</span>
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -3966,7 +4660,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q10c</h4> 
         
  <span class="badge badge-warning" >
@@ -3975,7 +4669,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 19
+ 21
         
         
  <span class="badge badge-primary" >
@@ -3983,8 +4677,12 @@ all</span>
 all</span>
  
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -3994,6 +4692,21 @@ all</span>
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -4409,7 +5122,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q10d</h4> 
         
  <span class="badge badge-warning" >
@@ -4418,7 +5131,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 20
+ 22
         
         
  <span class="badge badge-primary" >
@@ -4426,8 +5139,12 @@ all</span>
 all</span>
  
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -4437,6 +5154,21 @@ all</span>
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -5101,7 +5833,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q10d_19_open</h4> 
         
  <span class="badge badge-warning" >
@@ -5110,7 +5842,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 21
+ 23
         
         
  <span class="badge badge-primary" >
@@ -5118,8 +5850,12 @@ all</span>
 optional</span>
  
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -5129,6 +5865,21 @@ optional</span>
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
+
+</ul>
+
+
+
+        </div>
     
     
     
@@ -5153,7 +5904,7 @@ optional</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q35</h4> 
         
  <span class="badge badge-warning" >
@@ -5162,7 +5913,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 22
+ 24
         
         
  <span class="badge badge-primary" >
@@ -5170,8 +5921,12 @@ optional</span>
 all</span>
  
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -5202,6 +5957,21 @@ all</span>
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -5337,7 +6107,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q35b</h4> 
         
  <span class="badge badge-warning" >
@@ -5346,12 +6116,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 23
+ 25
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -5361,6 +6135,21 @@ all</span>
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -5566,7 +6355,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q35c</h4> 
         
  <span class="badge badge-warning" >
@@ -5575,12 +6364,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 24
+ 26
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -5611,6 +6404,21 @@ all</span>
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -5782,7 +6590,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q35d</h4> 
         
  <span class="badge badge-warning" >
@@ -5791,12 +6599,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 25
+ 27
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -5827,6 +6639,21 @@ all</span>
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -5930,7 +6757,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q35d_1_open</h4> 
         
  <span class="badge badge-warning" >
@@ -5939,12 +6766,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 26
+ 28
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -5963,6 +6794,8 @@ all</span>
 <ul class="list-group list-group-flush comment">
 
     <li class="list-group-item">extra field not shown</li>
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
 
 </ul>
 
@@ -6002,7 +6835,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 27
+ 29
         
         
         
@@ -6150,7 +6983,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 28
+ 30
         
         
         
@@ -6204,7 +7037,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q35g</h4> 
         
  <span class="badge badge-warning" >
@@ -6213,12 +7046,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 29
+ 31
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -6228,6 +7065,21 @@ all</span>
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -6433,7 +7285,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q35f</h4> 
         
  <span class="badge badge-warning" >
@@ -6442,12 +7294,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 30
+ 32
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -6478,6 +7334,21 @@ all</span>
     
     
     
+    
+        <div class="card comment question-block w-75">
+        <h6>Comment</h6>
+            
+
+ 
+<ul class="list-group list-group-flush comment">
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
+
+</ul>
+
+
+
+        </div>
     
     
         <div class="card responses question-block w-75">
@@ -6921,7 +7792,7 @@ all</span>
 
 <div class="question card">
     
-    <div class="card-header bg-info question-head text-white"> 
+    <div class="card-header bg-gray question-head text-white"> 
         <h4>Q35f_9_open</h4> 
         
  <span class="badge badge-warning" >
@@ -6930,12 +7801,16 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 31
+ 33
         
         
         
+ <span class="badge badge-danger" >
+ <i class="fas fa-eye-slash "></i>
+ Inactive</span>
+
         
-        
+         Removed at 2021-11-10
     </div>
     <div class="card-body p-1 container-fluid">
     <div class="question-label">
@@ -6954,6 +7829,8 @@ all</span>
 <ul class="list-group list-group-flush comment">
 
     <li class="list-group-item">extra field not shown</li>
+
+    <li class="list-group-item">Transfered in vaccination survey from 2021-11 version</li>
 
 </ul>
 
@@ -6993,7 +7870,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 32
+ 34
         
  <i class="fas fa-mandatory danger"></i>
  
@@ -7336,7 +8213,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 33
+ 35
         
         
  <span class="badge badge-primary" >
@@ -7522,7 +8399,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 34
+ 36
         
         
         
@@ -7736,7 +8613,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 35
+ 37
         
  <i class="fas fa-mandatory danger"></i>
  
@@ -7973,7 +8850,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 36
+ 38
         
  <i class="fas fa-mandatory danger"></i>
  
@@ -8227,7 +9104,7 @@ all</span>
 
         
  <i class="fas fa-sort "></i>
- 37
+ 39
         
         
  <span class="badge badge-primary" >
@@ -8458,7 +9335,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 38
+ 40
         
         
  <span class="badge badge-primary" >
@@ -8689,7 +9566,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 39
+ 41
         
         
  <span class="badge badge-primary" >
@@ -9179,7 +10056,7 @@ optional</span>
 
         
  <i class="fas fa-sort "></i>
- 40
+ 42
         
         
  <span class="badge badge-primary" >
