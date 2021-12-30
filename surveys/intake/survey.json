@@ -87,7 +87,7 @@
         },
         {
             "short_title": "Intake Q4",
-            "title": "What is your main activity?",
+            "title": "What is your current professional status?",
             "data_name": "Q4",
             "target": "all",
             "mandatory": true,
@@ -196,6 +196,8 @@
             "mandatory": false,
             "target": "all",
             "type": "single_choice",
+            "active": false,
+            "removed_at": "2021-11-10",
             "possible_responses": {
                 "prof": {
                     "text": "Professional (e.g. manager, doctor, teacher, nurse, engineer)",
@@ -228,8 +230,90 @@
                     "var": "occupation.other"
                 }
             },
+            "comment": [
+                "replaced by Q4h"
+            ],
             "rules": [
                 "If #fulltime, or #partial to $Q4",
+                "Trigger free text if #other checked, allow the users to write in their occupation"
+            ],
+            "description": [
+                "Why are we asking this?",
+                "To check how representative our sample is compared to the population as a whole and to find out whether the chance of getting COVID-19 or flu are different for people in different types of occupation.",
+                "How should I answer it?",
+                "Please tick the box that most closely resembles your main occupation."
+            ]
+        },
+        {
+            "short_title": "Intake Q4h",
+            "title": "Which of the following descriptions most closely matches with your main occupation?",
+            "data_name": "Q4h",
+            "mandatory": false,
+            "target": "all",
+            "type": "single_choice",
+            "added_at": "2021-11-10",
+            "possible_responses": {
+                "service": {
+                    "text": "Services and sales workers (Personal Services Workers, Sales Workers, Personal Care Workers, Protective Services Workers)",
+                    "value": "2",
+                    "var": "occupation.service"
+                },
+                "worker": {
+                    "text": "Craft and related trades workers (Handicraft and printing workers, Food processing, wood working, garment and other craft and related trades workers,  Metal, machinery and related trades workers, Electrical and electronic trades workers, Building and related trades workers, excluding electricians)",
+                    "value": "3",
+                    "var": "occupation.worker"
+                },
+                "army": {
+                    "text": "Armed forces occupations (Commissioned armed forces officers, Armed forces occupations other ranks, Non-commissioned armed forces officers)",
+                    "value": "6",
+                    "var": "occupation.army"
+                },
+                "manager": {
+                    "text": "Managers (Chief Executives, Senior Officials and Legislators, Administrative and Commercial Managers, Production and Specialized Services Managers, Hospitality, Retail and Other Services Managers)",
+                    "value": "7",
+                    "var": "occupation.manager"
+                },
+                "professional": {
+                    "text": "Professionals (Science and Engineering Professionals, Health Professionals,  Teaching Professionals, Business and Administration Professionals, Information and Communications Technology Professionals, Legal, Social and Cultural Professionals)",
+                    "value": "8",
+                    "var": "occupation.professional"
+                },
+                "tech": {
+                    "text": "Technicians and associate professionals (Science and Engineering Associate Professionals, Health Associate Professionals, Business and Administration Associate Professionals, Legal, Social, Cultural and Related Associate Professionals, Information and Communications Technicians)",
+                    "value": "9",
+                    "var": "occupation.tech"
+                },
+                "clerical": {
+                    "text": "Clerical support workers (General and Keyboard Clerks, Customer Services Clerks,  Numerical and Material Recording Clerks, Other Clerical Support Workers)",
+                    "value": "10",
+                    "var": "occupation.clerical"
+                },
+                "agriculture": {
+                    "text": "Skilled agricultural, forestry and fishery workers",
+                    "value": "11",
+                    "var": "occupation.agri"
+                },
+                "operator": {
+                    "text": "Plant and machine operators and assemblers (Stationary Plant and Machine Operators, Assemblers, Drivers and Mobile Plant Operators)",
+                    "value": "12",
+                    "var": "occupation.operator"
+                },
+                "elementary": {
+                    "text": "Elementary occupations (Cleaners and Helpers, Agricultural, Forestry and Fishery Labourers, Labourers in Mining, Construction, Manufacturing and Transport, Food Preparation Assistants, Street and Related Sales and Services Workers, Refuse Workers and Other Elementary Workers)",
+                    "value": "13",
+                    "var": "occupation.elementary"
+                },
+                "other": {
+                    "text": "Other",
+                    "value": "5",
+                    "var": "occupation.other"
+                }
+            },
+            "comment": [
+                "Responses changed, to correspond to Eurostat categories: https://ec.europa.eu/esco/portal/occupation?resetLanguage=true&newLanguage=en."
+            ],
+            "rules": [
+                "If #fulltime, or #partial or #self to $Q4",
                 "Trigger free text if #other checked, allow the users to write in their occupation"
             ],
             "description": [
@@ -299,14 +383,14 @@
         },
         {
             "short_title": "Intake Q5",
-            "title": "Except people you meet on public transports, do you have contact with any of the following during the course of a typical day? (Select all options that apply, if any)",
+            "title": "Except people you meet during your public transports or shopping, do you have contact with any of the following during the course of a typical day? (Select all options that apply, if any)",
             "data_name": "Q5",
             "mandatory": true,
             "target": "all",
             "type": "multiple_choice",
             "possible_responses": {
                 "children": {
-                    "text": "More than 10 children or teenagers over the course of the day",
+                    "text": "More than 10 children or teenagers over the course of the day (without counting your own children)",
                     "value": "0",
                     "var": "contact.children"
                 },
@@ -434,6 +518,32 @@
             ]
         },
         {
+            "title":"One or several of these people are they at risk of complications in case of flu or COVID-19 (e.g, pregnant, over 65, underlying health condition, obese, etc.)?",
+            "data_name": "Q6c",
+            "added_at": "2021-11-10",
+            "mandatory": true,
+            "target": "all",
+            "type": "single_choice",
+            "possible_responses": {
+                "yes": {
+                    "text":"Yes",
+                    "value": "1"
+                },
+                "no": {
+                    "text":"No",
+                    "value": "0"
+                },
+                "dontknow": {
+                    "text": "I don’t know/I would rather not answer",
+                    "value": "2"
+                }
+            },
+            "rules": [
+                "shown if at least one people selected at Q6",
+                "pre-filled #yes and masked if #house_65 selected in Q6"
+            ]
+        }, 
+        {
             "short_title": "Intake Q7",
             "title": "What is your main mean of transport?",
             "data_name": "Q7",
@@ -486,6 +596,8 @@
             "mandatory": true,
             "target": "all",
             "type": "single_choice",
+            "active": false,
+            "removed_at":"2021-11-10",
             "possible_responses": {
                 "no": {
                     "text": "No time at all",
@@ -568,35 +680,8 @@
             "target": "all",
             "mandatory": true,
             "type": "single_choice",
-            "possible_responses": {
-                "yes": {
-                    "text": "Yes",
-                    "value": "0"
-                },
-                "no": {
-                    "text": "No",
-                    "value": "1"
-                },
-                "dontknow": {
-                    "text": "I don\u2019t know",
-                    "value": "2"
-                }
-            },
-            "comment": "Note that the years will need to be changed each year.",
-            "description": [
-                "Why are we asking this?",
-                "We would like to be able to work out how much protection the vaccine gives.",
-                "How should I answer it?",
-                "Report yes, if you received the vaccine this season, usually in the autumn. If you get vaccinated after filling in this questionnaire, please return to this and update your answer."
-            ]
-        },
-        {
-            "short_title": "Intake Q10",
-            "title": "Did you receive a flu vaccine this winter season?",
-            "data_name": "Q10",
-            "target": "all",
-            "mandatory": true,
-            "type": "single_choice",
+            "active": false,
+            "removed_at":"2021-11-10",
             "possible_responses": {
                 "yes": {
                     "text": "Yes",
@@ -612,6 +697,41 @@
                 }
             },
             "comment": [
+                "Transfered in vaccination survey from 2021-11 version",
+                "Note that the years will need to be changed each year."
+            ],
+            "description": [
+                "Why are we asking this?",
+                "We would like to be able to work out how much protection the vaccine gives.",
+                "How should I answer it?",
+                "Report yes, if you received the vaccine this season, usually in the autumn. If you get vaccinated after filling in this questionnaire, please return to this and update your answer."
+            ]
+        },
+        {
+            "short_title": "Intake Q10",
+            "title": "Did you receive a flu vaccine this winter season?",
+            "data_name": "Q10",
+            "target": "all",
+            "mandatory": true,
+            "type": "single_choice",
+            "active": false,
+            "removed_at":"2021-11-10",
+            "possible_responses": {
+                "yes": {
+                    "text": "Yes",
+                    "value": "0"
+                },
+                "no": {
+                    "text": "No",
+                    "value": "1"
+                },
+                "dontknow": {
+                    "text": "I don\u2019t know",
+                    "value": "2"
+                }
+            },
+            "comment": [
+                "Transfered in vaccination survey from 2021-11 version",
                 "Note that the years will need to be changed each year."
             ],
             "description": [
@@ -632,6 +752,11 @@
             "target": "all",
             "mandatory": false,
             "type": "single_choice",
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "possible_responses": {
                 "date": {
                     "text": "Choose date",
@@ -653,6 +778,11 @@
             "data_name": "Q10c",
             "target": "all",
             "mandatory": false,
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "type": "multiple_choice",
             "possible_responses": {
                 "riskgroup": {
@@ -723,6 +853,11 @@
             "data_name": "Q10d",
             "target": "all",
             "mandatory": false,
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "type": "multiple_choice",
             "possible_responses": {
                 "plan": {
@@ -833,6 +968,11 @@
             "target": "optional",
             "title": "Virtual question holding data from extra field of $Q10d.19",
             "mandatory": false,
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "data_name": "Q10d_19_open",
             "var": "notvac.reason.covid.other.txt",
             "rules": [
@@ -847,6 +987,11 @@
             "mandatory": false,
             "type": "single_choice",
             "target": "all",
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "description": [
                 "Why are we asking this?",
                 "We would like to be able to work out how much protection the vaccine gives.",
@@ -878,6 +1023,11 @@
             "type": "single_choice",
             "mandatory": false,
             "var": "covid.vaccine.which",
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "possible_responses": {
                 "comirnaty": {
                     "value": "1",
@@ -912,6 +1062,11 @@
             "title": "How many doses of this vaccine did you receive?",
             "type": "single_choice",
             "mandatory": false,
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "description": [
                 "Why are we asking this?",
                 "We would like to be able to work out how much protection a complete vaccination scheme gives.",
@@ -948,6 +1103,11 @@
             "title": "When did you receive your first injection of a vaccine against COVID-19 (since December 2020)?",
             "type": "single_choice",
             "mandatory": false,
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "description": [
                 "Why are we asking this?",
                 "Knowing when people are vaccinated tells us how well the vaccination program is being carried out.",
@@ -976,7 +1136,12 @@
             "short_title": "First injection date",
             "type": "date",
             "mandatory": false,
-            "comment": "extra field not shown",
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "extra field not shown",
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "rules": [
                 "Show if $Q35d is #choose_date"
             ]
@@ -1028,6 +1193,11 @@
             "type": "single_choice",
             "mandatory": false,
             "var": "covid.vaccine.which2",
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "possible_responses": {
                 "comirnaty": {
                     "value": "1",
@@ -1061,6 +1231,11 @@
             "title": "What were your reasons for getting a COVID-19 vaccination? (Select all options that apply)",
             "type": "multiple_choice",
             "mandatory": false,
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "description": [
                 "Why are we asking this?",
                 "We would like to know why some people get the vaccine, and other don’t get it.",
@@ -1141,7 +1316,12 @@
             "var": "covid.vacc.reason.other.txt",
             "type": "text",
             "mandatory": false,
-            "comment": "extra field not shown",
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "extra field not shown",
+                "Transfered in vaccination survey from 2021-11 version"
+            ],
             "rules": [
                 "Show if $Q35f is {9}"
             ]

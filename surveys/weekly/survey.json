@@ -7,7 +7,7 @@
     "questions": [
         {
             "short_title": "Weekly Q1",
-            "title": "Have you had any of the following symptoms since your last visit (or in the past week, if this is your first visit)?",
+            "title": "Have you had any of the following symptoms since your last questionnaire (or in the past week, if this is your first visit)? For people with chronic (long-term) illnesses, only tick changes in symptoms.",
             "data_name": "Q1",
             "mandatory": true,
             "target": "all",
@@ -152,7 +152,17 @@
                 "The key part of this survey is tracking people’s symptoms.",
                 "How should I answer it?",  
                 "For people with chronic (long-term)  illnesses, only tick changes in symptoms. So, if you have chronic shortness of breath (for instance)  then only tick this box if this has got worse recently."
+            ],
+            "comment": [
+                "Precision about chronic symptoms added on 2021-11 version"
             ]
+        },
+        {
+            "type": "note",
+            "data_name":"note1",
+            "mandatory": false,
+            "added_at":"2021-11-01",
+            "title": "Priority questions: if you have only little time, we propose you to fill only the few following questions, crucial for the surveillance of acute respiratory infections. "
         },
         {
             "short_title": "Weekly Q2",
@@ -319,31 +329,30 @@
             },
             "added_at":"2020-03-12",
             "removed_at":"2020-06-20"
-        
         },
         {
             "short_title": "Weekly Qcov3",
-            "title": "In the 14 days before your symptoms started, have you been in close contact with someone for whom a PCR test (nasal swab) has confirmed that they have Covid-19?",
+            "title": "In the 14 days before your symptoms started, have you been in close contact with someone for whom an antigenic test or a PCR test (nasal swab) has confirmed that they have COVID-19?",
             "data_name": "Qcov3",
             "mandatory": false,
             "type": "single_choice",
             "possible_responses": {
-                "option_1": {
+                "yes": {
                     "text": "Yes",
                     "value": "1"
                 },
-                "option_2": {
+                "no": {
                     "text": "No",
                     "value": "0"
                 },
-                "option_3": {
+                "dontknow": {
                     "text": "I don\u2019t know",
                     "value": "2"
                 }
             },
             "added_at": "2020-03-12",
             "rules": [
-                "Shown (if symptoms ($Q1 != {0') AND (if answers to Q2 weekly other than « Yes »)"
+                "Shown (if symptoms ($Q1 != {0}) AND (if answers to Q2 weekly other than « Yes »)"
             ]
         },
         {
@@ -378,6 +387,7 @@
             "var": "contactperson.covid.sympt",
             "mandatory": false,
             "type": "single_choice",
+            "active": false,
             "possible_responses": {
                 "yes": {
                     "text": "Yes",
@@ -393,6 +403,8 @@
                 }
             },
             "added_at": "2020-03-26",
+            "removed_at": "2021-11-10",
+
             "rules": [
                 "Shown if any symptoms"
             ],
@@ -678,8 +690,451 @@
             ]
         },
         {
+            "data_name":"Q36",
+            "title":"Thank you for all these information. They will help us to estimate the frequency of symptoms among general population. You can stop here. If you have a little more time, we propose you to answer further questions about your symptoms and care. Do you accept to answer to these additional questions?",
+            "type":"single_choice",
+            "mandatory": false,
+            "possible_responses": {
+                "yes": {
+                    "text":"Yes",
+                    "value": "1"
+                },
+                "no": {
+                    "text":"No",
+                    "value":"0"
+                }
+            },
+            "added_at": "2021-11-10"
+        },
+        {
+            "data_name":"Qcov16h",
+            "title":"Because of your symptoms, did you undergo analyses to know if you have COVID-19?",
+            "mandatory": false,
+            "type":"single_choice",
+            "added_at": "2021-11-10",
+            "possible_responses": {
+                "yes": {
+                    "text":"Yes",
+                    "value": "1"
+                },
+                "not_yet": {
+                    "text":"Not yet, I plan to shortly undergo a test ",
+                    "value":"2"
+                },
+                "no_wont": {
+                    "text":"No, I have a prescription but will not undergo a test",
+                    "value":"3"
+                },
+                "no": {
+                    "text":"No",
+                    "value":"0"
+                }
+            },
+            "rules": [
+                "Shown if symptoms($Q1) and $Q36 = #yes"
+            ]
+        },
+        {
+            "data_name":"Qcov16i",
+            "title":"Which analyse(s) was it? ",
+            "mandatory": false,
+            "type":"multiple_choice",
+            "added_at": "2021-11-10",
+            "possible_responses": {
+                "pcr": {
+                    "text":"A PCR test (virus search, on a swab in nose or mouth, or a sputum or saliva sample)",
+                    "value": "1"
+                },
+                "sero": {
+                    "text":"A serological analysis (screening for antibodies against this virus, from a drop of blood at fingertip or a blood sample)",
+                    "value":"2"
+                },
+                "antigenic": {
+                    "text":"A rapid antigen detection test on a sample realized in the back of the nose (nasopharyngeal sampling, done by a health professional or a trained person, with a swab inserted to 15 cm into the nose, result obtained in less than one hour)",
+                    "value":"3"
+                },
+                "antigenic_nasal": {
+                    "text":"A rapid antigen detection test or autotest done on a nose sample (a swab inserted to 1 - 4 cm into the nostril, sampling that can be done by oneself, result obtained in a few minutes)",
+                    "value":"4"
+                }
+            },
+            "rules": [
+                "Shown if $Q16h=#yes"
+            ]
+        },
+        {
+            "short_title": "Weekly Qcov16",
+            "title": "Because of your symptoms, did you undergo analyses to know if you have COVID-19 (infection due to SRAS-CoV-2)? ",
+            "data_name": "Qcov16",
+            "mandatory": false,
+            "type": "multiple_choice",
+            "active": false,
+            "removed_at": [
+                {"date": "2021-11-30", "comment":"Replaced by Qcov16h/Qcov18i"}
+            ],
+            "possible_responses": {
+                "pcr": {
+                    "text": "Yes, a PCR test (virus search, on a swab in nose or mouth, or a sputum or saliva sample)",
+                    "value": "1",
+                    "var": "analysis.sympt.covid.pcr"
+                },
+                "sero": {
+                    "text": "Yes, a serological analysis (screening for antibodies against this virus, from a drop of blood at fingertip or a blood sample) ",
+                    "value": "2",
+                    "var": "analysis.sympt.covid.sero"
+                },
+                "antigenic": {
+                    "text": "Yes, a rapid antigen detection test (on a swab in nose or mouth, with a result available in less than an hour)",
+                    "value": "5",
+                    "var":"analysis.sympt.covid.antigenic",
+                    "added_at":"2020-11-23",
+                    "platforms": ["FR"]
+                },
+                "plan": {
+                    "text": "Not yet, I plan to shortly undergo a test",
+                    "value": "3",
+                    "var":"analysis.sympt.covid.not.but.plan"
+                },
+                "wontgo": {
+                    "text": "No, I have a prescription but will not undergo a test",
+                    "value": "4",
+                    "var": "analysis.sympt.covid.not.plan"
+                },
+                "no": {
+                    "text": "No",
+                    "value": "0",
+                    "var": "analysis.sympt.covid.no"
+                }
+            },
+            "added_at": "2020-04-28",
+            "comment": "(the participant can select the first and second option together if he wants)",
+            "rules": [
+                "Shown if symptoms",
+                "Options #pcr , #sero, and #antigenic are exclusive to #no, #plan, #wontgo"
+            ]
+        },
+        {
+            "short_title": "Weekly Qcov16b",
+            "title": "Do you already get the result of this PCR test?",
+            "data_name": "Qcov16b",
+            "mandatory": false,
+            "type": "single_choice",
+            "var": "analysis.sympt.result.pcr",
+            "possible_responses": {
+                "positive": {
+                    "text": "Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)",
+                    "value": "1"
+                },
+                "negative": {
+                    "text": "Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)",
+                    "value": "2"
+                },
+                "not_interpretable": {
+                    "text": "Yes, the result is non interpretable",
+                    "value": "3"
+                },
+                "no": {
+                    "text": "No, I do not have the result yet",
+                    "value": "4"
+                }
+            },
+            "rules": [
+                "Shown If $Qcov16h.#pcr"
+            ]
+        },
+        {
+            "short_title": "Weekly Qcov16f",
+            "title": "Do you know the result of this rapid antigen detection test on nasopharyngeal sample? (if several were performed and at least one was positive, chose the “Positive” answer)?",
+            "data_name": "Qcov16f",
+            "mandatory": false,
+            "type": "single_choice",
+            "added_at": "2021-11-10",
+            "var": "analysis.sympt.result.antigenic",
+            "possible_responses": {
+                "positive": {
+                    "text": "Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)",
+                    "value": "1"
+                },
+                "negative": {
+                    "text": "Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)",
+                    "value": "2"
+                },
+                "not_interpretable": {
+                    "text": "Yes, the result is non interpretable",
+                    "value": "3"
+                },
+                "no": {
+                    "text": "No, I do not have the result yet",
+                    "value": "4"
+                }
+            },
+            "rules": [
+                "Shown If $Qcov16h.#antigenic"
+            ]
+        },
+        
+        {
+            "short_title": "Weekly Qcov16k",
+            "title": "Do you know the result of this antigenic test or self-test on nasal sample? (if several were performed and at least one was positive, chose the “Positive” answer)?",
+            "data_name": "Qcov16k",
+            "mandatory": false,
+            "type": "single_choice",
+            "added_at": "2021-11-10",
+            "var": "analysis.sympt.result.antigenic.nasal",
+            "possible_responses": {
+                "positive": {
+                    "text": "Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)",
+                    "value": "1"
+                },
+                "negative": {
+                    "text": "Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)",
+                    "value": "2"
+                },
+                "not_interpretable": {
+                    "text": "Yes, the result is non interpretable",
+                    "value": "3"
+                },
+                "no": {
+                    "text": "No, I do not have the result yet",
+                    "value": "4"
+                }
+            },
+            "rules": [
+                "Shown If $Qcov16h.#antigenic_nasal"
+            ]
+        },
+        {
+            "short_title": "Weekly Qcov16c",
+            "title": "Do you already get the result of this serological analysis?",
+            "data_name": "Qcov16c",
+            "mandatory": false,
+            "type": "single_choice",
+            "var": "analysis.sympt.result.sero",
+            "removed_at": "2020-11-10",
+            "possible_responses": {
+                "positive": {
+                    "text": "Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)",
+                    "value": "1"
+                },
+                "negative": {
+                    "text": "Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)",
+                    "value": "2"
+                },
+                "not_interpretable": {
+                    "text": "Yes, the result is non interpretable",
+                    "value": "3"
+                },
+                "no": {
+                    "text": "No, I do not have the result yet",
+                    "value": "4"
+                }
+            },
+            "rules": [
+                "Shown If $Qcov16{2}"
+            ]
+        },
+        {
+            "short_title": "Weekly Qcov16d",
+            "title": "How much time passed between the beginning of your symptoms and your search of a laboratory which could undergo this analysis? ",
+            "data_name": "Qcov16d",
+            "mandatory": false,
+            "type": "single_choice",
+            "var": "analysis.sympt.pcr.search.delay",
+            "active": false,
+            "removed_at": "2020-11-10",
+            "possible_responses": {
+                "days_1": {
+                    "text": "Symptoms appeared the day or the day before the search of a laboratory",
+                    "value": "1"
+                },
+                "days_2_4": {
+                    "text": "Symptoms appeared 2, 3 or 4 days before the search of a laboratory",
+                    "value": "2"
+                },
+                "days_5_7": {
+                    "text": "Symptoms appeared 5, 6 or 7 days before the search of a laboratory",
+                    "value": "3"
+                },
+                "days_8_14": {
+                    "text": "Symptoms appeared between 8 and 14 days before the search of a laboratory",
+                    "value": "4"
+                },
+                "days_15_28": {
+                    "text": "Symptoms appeared between 15 and 28 days before the search of a laboratory",
+                    "value": "5"
+                },
+                "over4weeks": {
+                    "text": "Symptoms appeared more than four weeks before the search of a laboratory",
+                    "value": "6"
+                },
+                "dontknow": {
+                    "text": "I don\u2019t know/don\u2019t want to answer",
+                    "value": "99"
+                }
+            },
+            "rules": [
+                "Shown If Qcov16.#pcr"
+            ]
+        },
+        {
+            "short_title": "Weekly Qcov16e",
+            "title": "How much time passed between the beginning of your symptoms and the sampling? ",
+            "data_name": "Qcov16e",
+            "mandatory": false,
+            "type": "single_choice",
+            "var": "analysis.sympt.pcr.sample.delay",
+            "possible_responses": {
+                "days_1": {
+                    "text": "Symptoms appeared the day or the day before the sampling",
+                    "value": "1"
+                },
+                "days_2_4": {
+                    "text": "Symptoms appeared 2, 3 or 4 days before the sampling",
+                    "value": "2"
+                },
+                "days_5_7": {
+                    "text": "Symptoms appeared 5, 6 or 7 days before the sampling",
+                    "value": "3"
+                },
+                "days_8_14": {
+                    "text": "Symptoms appeared between 8 and 14 days before the sampling",
+                    "value": "4"
+                },
+                "days_15_28": {
+                    "text": "Symptoms appeared between 15 and 28 days before the sampling",
+                    "value": "5"
+                },
+                "over4weeks": {
+                    "text": "Symptoms appeared more than four weeks before the sampling",
+                    "value": "6"
+                },
+                "dontknow": {
+                    "text": "I don’t know / don’t want to answer",
+                    "value": "99"
+                }
+            }, 
+            "added_at": "2020-09-21",
+            "comment": "In proposal from 2020,September",
+            "rules": [
+                "Shown If $Qcov16{1}"
+            ]
+        },
+        {
+            "short_title": "Weekly Qcov16g",
+            "title": "Who performed this rapid antigen test?",
+            "data_name": "Qcov16g",
+            "var": "analysis.sympt.antigenic.performer",
+            "mandatory": false,
+            "active": false,
+            "removed_at": "2021-11-10",
+            "type": "single_choice",
+            "possible_responses": {
+                "gp": {
+                    "text": "A general practitioner",
+                    "value": "1"
+                },
+                "spec": {
+                    "text": "A specialized physician, a dental surgeon or a mid-wife",
+                    "value": "2"
+                },
+                "pharmacist": {
+                    "text": "A pharmacist or a pharmacy technician",
+                    "value": "3"
+                },
+                "other_health": {
+                    "text": "Another health professional  (specify)",
+                    "comment": "(give the list of all health professional authorized to realize this test in your country)",
+                    "value": "4"
+                },
+                "other": {
+                    "text": "Another professional (specify)",
+                    "comment": "(give the list of all other professionals authorized to realize this test)",
+                    "value": "5"
+                },
+                "dontknow": {
+                    "text": "I don’t know or don’t remember",
+                    "value": "99"
+                }
+            },
+            "platform": ["FR"],
+            "rules": [
+                "Shown If $Qcov16{5}"
+            ]
+        },
+
+        {
+            "short_title": "Weekly Qcov19",
+            "title": "Because of your symptoms, did you undergo analyses to know if you have flu? ",
+            "data_name": "Qcov19",
+            "mandatory": false,
+            "type": "single_choice",
+            "var": "analysis.sympt.flu",
+            "possible_responses": {
+                "yes": {
+                    "text": "Yes, a PCR test (virus search, on a nasal swab in the back of the nose)",
+                    "value": "1",
+                    "var":"pcr"
+                },
+                "yes_antigenic": {
+                    "text": "Yes, a rapid detection test (result available in less than an hour)",
+                    "value": "5",
+                    "var":"antigenic"
+                },
+                
+                "plan": {
+                    "text": "Not yet, I have a prescription and plan to shortly undergo a test",
+                    "value": "3",
+                    "var":"not.yet"
+                },
+                "wontgo": {
+                    "text": "No, I have a prescription but will not undergo the test",
+                    "value": "4",
+                    "var": "not.planned"
+                },
+                "no": {
+                    "text": "No",
+                    "value": "0"
+                }
+            },
+            "rules":[
+                "Shown if symptoms($Q1) and Q36=#yes"
+            ]
+        },
+        {
+            "short_title": "Weekly Qcov19b",
+            "title": "Do you already get the result of this test?",
+            "data_name": "Qcov19b",
+            "mandatory": false,
+            "type": "single_choice",
+            "possible_responses": {
+                "positive": {
+                    "text": "Yes, Positive for influenza",
+                    "value": "1",
+                    "var":"positive"
+                },
+                "negative": {
+                    "text": "Yes, Negative for influenza",
+                    "value": "2",
+                    "var":"negative"
+                },
+                "not_interpretable": {
+                    "text": "Yes, the result is non interpretable",
+                    "value": "3",
+                    "var": "not.interpretable"
+                },
+                "no": {
+                    "text": "No, I do not have the result yet",
+                    "value": "4",
+                    "var":"not.yet"
+                }
+            },
+            "rules": [
+                "Shown if to $Qcov19.#yes or $Qcov19.#antigenic"
+            ]
+        },
+        {
             "short_title": "Weekly Q7",
-            "title": "Because of your symptoms, did you VISIT (see face to face) any of medical services?",
+            "title": "Because of your symptoms, did you VISIT (see face to face or teleconsultation, at home or at physician’s office) any of medical services?",
             "data_name": "Q7",
             "mandatory": false,
             "type": "multiple_choice",
@@ -719,7 +1174,7 @@
                 "Will need to be adjusted to suit different countries."
             ],
             "rules": [
-                "Shown if symptoms",
+                "Shown if symptoms and and $Q36 = #yes",
                 "#plan is exclusive with others"
             ],
             "description": [
@@ -820,6 +1275,8 @@
             "data_name": "Q8",
             "mandatory": false,
             "type": "multiple_choice",
+            "active": false,
+            "removed_at": "2021-11-10",
             "possible_responses": {
                 "no": {
                     "text": "No",
@@ -870,6 +1327,8 @@
             "data_name": "Q8b",
             "mandatory": false,
             "type": "single_choice",
+            "active": false,
+            "removed_at": "2021-11-10",
             "possible_responses": {
                 "same": {
                     "text": "Same day",
@@ -911,7 +1370,7 @@
         },
         {
             "short_title": "Weekly Qcov18",
-            "title": "What is the main reason for which you did not contact any health professional for the symptoms you declared today?",
+            "title": "What is the main reason for which you did not consult any health professional for the symptoms you declared today?",
             "data_name": "Qcov18",
             "var": "visit.no.reason",
             "mandatory": false,
@@ -953,6 +1412,10 @@
                     "text": "For fear of consequences if the doctor thinks I have COVID-19",
                     "value": "9"
                 },
+                "vaccinated_covid19": {
+                    "text": "Because I am vaccinated against COVID-19",
+                    "value": "11"
+                },
                 "other": {
                     "text": "For another reason (specify)",
                     "value": "10",
@@ -982,6 +1445,8 @@
             "title": "Can you specify which consequences you mainly fear?",
             "data_name": "Qcov18b",
             "mandatory": false,
+            "active": false,
+            "removed_at":"2020-11-10",
             "type": "single_choice",
             "var": "visit.no.reason.fear",
             "possible_responses": {
@@ -1021,7 +1486,9 @@
             "title": "",
             "data_name": "Qcov18b_6_open",
             "mandatory": false,
-            "type": "text",
+            "active": false,
+            "removed_at":"2020-11-10",
+             "type": "text",
             "var": "visit.no.reason.fear.other.txt",
             "comment": "open field"
         },
@@ -1097,333 +1564,6 @@
             "removed_at":"2020-06-20"
         },
         {
-            "short_title": "Weekly Qcov16",
-            "title": "Because of your symptoms, did you undergo analyses to know if you have COVID-19 (infection due to SRAS-CoV-2)? ",
-            "data_name": "Qcov16",
-            "mandatory": false,
-            "type": "multiple_choice",
-            "possible_responses": {
-                "pcr": {
-                    "text": "Yes, a PCR test (virus search, on a swab in nose or mouth, or a sputum or saliva sample)",
-                    "value": "1",
-                    "var": "analysis.sympt.covid.pcr"
-                },
-                "sero": {
-                    "text": "Yes, a serological analysis (screening for antibodies against this virus, from a drop of blood at fingertip or a blood sample) ",
-                    "value": "2",
-                    "var": "analysis.sympt.covid.sero"
-                },
-                "antigenic": {
-                    "text": "Yes, a rapid antigen detection test (on a swab in nose or mouth, with a result available in less than an hour)",
-                    "value": "5",
-                    "var":"analysis.sympt.covid.antigenic",
-                    "added_at":"2020-11-23",
-                    "platforms": ["FR"]
-                },
-                "plan": {
-                    "text": "Not yet, I plan to shortly undergo a test",
-                    "value": "3",
-                    "var":"analysis.sympt.covid.not.but.plan"
-                },
-                "wontgo": {
-                    "text": "No, I have a prescription but will not undergo a test",
-                    "value": "4",
-                    "var": "analysis.sympt.covid.not.plan"
-                },
-                "no": {
-                    "text": "No",
-                    "value": "0",
-                    "var": "analysis.sympt.covid.no"
-                }
-            },
-            "added_at": "2020-04-28",
-            "comment": "(the participant can select the first and second option together if he wants)",
-            "rules": [
-                "Shown if symptoms",
-                "Options #pcr , #sero, and #antigenic are exclusive to #no, #plan, #wontgo"
-            ]
-        },
-        {
-            "short_title": "Weekly Qcov16b",
-            "title": "Do you already get the result of this PCR test?",
-            "data_name": "Qcov16b",
-            "mandatory": false,
-            "type": "single_choice",
-            "var": "analysis.sympt.result.pcr",
-            "possible_responses": {
-                "positive": {
-                    "text": "Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)",
-                    "value": "1"
-                },
-                "negative": {
-                    "text": "Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)",
-                    "value": "2"
-                },
-                "not_interpretable": {
-                    "text": "Yes, the result is non interpretable",
-                    "value": "3"
-                },
-                "no": {
-                    "text": "No, I do not have the result yet",
-                    "value": "4"
-                }
-            },
-            "rules": [
-                "Shown If $Qcov16.#pcr"
-            ]
-        },
-        {
-            "short_title": "Weekly Qcov16c",
-            "title": "Do you already get the result of this serological analysis?",
-            "data_name": "Qcov16c",
-            "mandatory": false,
-            "type": "single_choice",
-            "var": "analysis.sympt.result.sero",
-            "possible_responses": {
-                "positive": {
-                    "text": "Yes, Positive for this new coronavirus (SARS-CoV-2, COVID-19)",
-                    "value": "1"
-                },
-                "negative": {
-                    "text": "Yes, Negative for this new coronavirus (SARS-CoV-2, COVID-19)",
-                    "value": "2"
-                },
-                "not_interpretable": {
-                    "text": "Yes, the result is non interpretable",
-                    "value": "3"
-                },
-                "no": {
-                    "text": "No, I do not have the result yet",
-                    "value": "4"
-                }
-            },
-            "rules": [
-                "Shown If $Qcov16{2}"
-            ]
-        },
-        {
-            "short_title": "Weekly Qcov16d",
-            "title": "How much time passed between the beginning of your symptoms and your search of a laboratory which could undergo this analysis? ",
-            "data_name": "Qcov16d",
-            "mandatory": false,
-            "type": "single_choice",
-            "var": "analysis.sympt.pcr.search.delay",
-            "possible_responses": {
-                "days_1": {
-                    "text": "Symptoms appeared the day or the day before the search of a laboratory",
-                    "value": "1"
-                },
-                "days_2_4": {
-                    "text": "Symptoms appeared 2, 3 or 4 days before the search of a laboratory",
-                    "value": "2"
-                },
-                "days_5_7": {
-                    "text": "Symptoms appeared 5, 6 or 7 days before the search of a laboratory",
-                    "value": "3"
-                },
-                "days_8_14": {
-                    "text": "Symptoms appeared between 8 and 14 days before the search of a laboratory",
-                    "value": "4"
-                },
-                "days_15_28": {
-                    "text": "Symptoms appeared between 15 and 28 days before the search of a laboratory",
-                    "value": "5"
-                },
-                "over4weeks": {
-                    "text": "Symptoms appeared more than four weeks before the search of a laboratory",
-                    "value": "6"
-                },
-                "dontknow": {
-                    "text": "I don\u2019t know/don\u2019t want to answer",
-                    "value": "99"
-                }
-            },
-            "rules": [
-                "Shown If Qcov16.#pcr"
-            ]
-        },
-        {
-            "short_title": "Weekly Qcov16e",
-            "title": "How much time passed between the beginning of your symptoms and the sampling? ",
-            "data_name": "Qcov16e",
-            "mandatory": false,
-            "type": "single_choice",
-            "var": "analysis.sympt.pcr.sample.delay",
-            "possible_responses": {
-                "days_1": {
-                    "text": "Symptoms appeared the day or the day before the sampling",
-                    "value": "1"
-                },
-                "days_2_4": {
-                    "text": "Symptoms appeared 2, 3 or 4 days before the sampling",
-                    "value": "2"
-                },
-                "days_5_7": {
-                    "text": "Symptoms appeared 5, 6 or 7 days before the sampling",
-                    "value": "3"
-                },
-                "days_8_14": {
-                    "text": "Symptoms appeared between 8 and 14 days before the sampling",
-                    "value": "4"
-                },
-                "days_15_28": {
-                    "text": "Symptoms appeared between 15 and 28 days before the sampling",
-                    "value": "5"
-                },
-                "over4weeks": {
-                    "text": "Symptoms appeared more than four weeks before the sampling",
-                    "value": "6"
-                },
-                "dontknow": {
-                    "text": "I don’t know / don’t want to answer",
-                    "value": "99"
-                }
-            }, 
-            "added_at": "2020-09-21",
-            "comment": "In proposal from 2020,September",
-            "rules": [
-                "Shown If $Qcov16{1}"
-            ]
-        },
-        {
-            "short_title": "Weekly Qcov16f",
-            "title": "Do you know the result of this rapid antigen detection test?",
-            "data_name": "Qcov16f",
-            "mandatory": false,
-            "var": "analysis.sympt.result.antigenic",
-            "type": "single_choice",
-            "possible_responses": {
-                "positive": {
-                    "text": "Yes, Positive for the SARS-CoV-2 (COVID-19)",
-                    "value": "1"
-                },
-                "negative": {
-                    "text": "Yes, Negative for the SARS-CoV-2 (COVID-19)",
-                    "value": "2"
-                },
-                "not_interpretable": {
-                    "text": "Yes, the result is non interpretable",
-                    "value": "3"
-                },
-                "no": {
-                    "text": "No, I don’t know or don’t remember",
-                    "value": "99"
-                }
-            },
-            "added_at": "2020-11-23",
-            "comment": "In proposal from 2020,November",
-            "platforms": ["FR"],
-            "rules": [
-                "Shown If $Qcov16.#antigenic"
-            ]
-        },
-        {
-            "short_title": "Weekly Qcov16g",
-            "title": "Who performed this rapid antigen test?",
-            "data_name": "Qcov16g",
-            "var": "analysis.sympt.antigenic.performer",
-            "mandatory": false,
-            "type": "single_choice",
-            "possible_responses": {
-                "gp": {
-                    "text": "A general practitioner",
-                    "value": "1"
-                },
-                "spec": {
-                    "text": "A specialized physician, a dental surgeon or a mid-wife",
-                    "value": "2"
-                },
-                "pharmacist": {
-                    "text": "A pharmacist or a pharmacy technician",
-                    "value": "3"
-                },
-                "other_health": {
-                    "text": "Another health professional  (specify)",
-                    "comment": "(give the list of all health professional authorized to realize this test in your country)",
-                    "value": "4"
-                },
-                "other": {
-                    "text": "Another professional (specify)",
-                    "comment": "(give the list of all other professionals authorized to realize this test)",
-                    "value": "5"
-                },
-                "dontknow": {
-                    "text": "I don’t know or don’t remember",
-                    "value": "99"
-                }
-            },
-            "comment": "In proposal",
-            "platform": ["FR"],
-            "rules": [
-                "Shown If $Qcov16{5}"
-            ]
-        },
-
-        {
-            "short_title": "Weekly Qcov19",
-            "title": "Because of your symptoms, did you undergo analyses to know if you have flu? ",
-            "data_name": "Qcov19",
-            "mandatory": false,
-            "type": "single_choice",
-            "var": "analysis.sympt.flu",
-            "possible_responses": {
-                "yes": {
-                    "text": "Yes, a PCR test (virus search, on a nasal swab)",
-                    "value": "1",
-                    "var":"pcr"
-                },
-                "plan": {
-                    "text": "Not yet, I have a prescription and plan to shortly undergo a test",
-                    "value": "3",
-                    "var":"not.yet"
-                },
-                "wontgo": {
-                    "text": "No, I have a prescription but will not undergo the test",
-                    "value": "4",
-                    "var": "not.planned"
-                },
-                "no": {
-                    "text": "No",
-                    "value": "0"
-                }
-            },
-            "rules":[
-                "Shown if symptoms"
-            ]
-        },
-        {
-            "short_title": "Weekly Qcov19b",
-            "title": "Do you already get the result of this PCR test?",
-            "data_name": "Qcov19b",
-            "mandatory": false,
-            "type": "single_choice",
-            "possible_responses": {
-                "positive": {
-                    "text": "Yes, Positive for influenza",
-                    "value": "1",
-                    "var":"positive"
-                },
-                "negative": {
-                    "text": "Yes, Negative for influenza",
-                    "value": "2",
-                    "var":"negative"
-                },
-                "not_interpretable": {
-                    "text": "Yes, the result is non interpretable",
-                    "value": "3",
-                    "var": "not.interpretable"
-                },
-                "no": {
-                    "text": "No, I do not have the result yet",
-                    "value": "4",
-                    "var":"not.yet"
-                }
-            },
-            "rules": [
-                "Shown if to $Qcov19.#yes"
-            ]
-        },
-        {
             "short_title": "Weekly Q9",
             "title": "Did you take medication for these symptoms? ",
             "data_name": "Q9",
@@ -1447,7 +1587,7 @@
                     "var": "medic.cough"
                 },
                 "antiviral": {
-                    "text": "Antivirals (Tamiflu, Relenza)",
+                    "text": "Antivirals against Influenza (Tamiflu)",
                     "value": "3",
                     "var": "medic.antiviral"
                 },
@@ -1458,8 +1598,9 @@
                 },
                 "homeo": {
                     "text": "Homeopathy",
+                    "target":"optional",
                     "platforms": ["FR"],
-                    "comment": "French specific item, optional",
+                    "comment": "French item",
                     "value": "7",
                     "var": "medic.homeo",
                     "added_at":[
@@ -1469,7 +1610,8 @@
                 "alternative": {
                     "text": "Alternative medicine (essential oil, phytotherapy, etc.)",
                     "value": "8",
-                    "comment": "French specific item, optional",
+                    "target":"optional",
+                    "comment": "French item",
                     "platforms": ["FR"],
                     "var": "medic.alt",
                     "added_at":[
@@ -1493,8 +1635,8 @@
                 "Extra country specific options – mapped to “other” in standardised database"
             ],
             "rules": [
-                "Shown if symptoms",
-                "[No medication] and [Don\u2019t know] are exclusives to others"
+                "Shown if symptoms($Q1) and $Q36=#yes",
+                "#no and #dontknow are exclusives to others"
             ]
         },
         {
@@ -1502,6 +1644,8 @@
             "title": "How much time passed between the beginning of your symptoms did you start taking this medication? ",
             "data_name": "Q9b",
             "mandatory": false,
+            "active": false,
+            "removed_at": "2020-11-10",
             "type": "single_choice",
             "possible_responses": {
                 "same": {
@@ -1568,7 +1712,7 @@
             "target":"optional",
             "comment":"In proposal",
             "rules": [
-                "Shown if symptoms"
+                "Shown if symptoms and $Q36=#yes"
             ]  
         },
         {
@@ -1603,7 +1747,7 @@
                 "We want to know if you were absent from work or school as a result of your illness, or if you changed your routine in other ways (e.g. stopped attending clubs)."
             ],
             "rules": [
-                "Shown if symptoms"
+                "Shown if symptoms and $Q36=#yes"
             ]
         },
         {
@@ -1631,7 +1775,7 @@
                 }
             },
             "rules": [
-                "Shown if symptoms and $Q10[Yes, I took time off school or work]"
+                "Shown if symptoms and $Q10#yes"
             ]  
         },
         {
@@ -1695,13 +1839,13 @@
         },
         {
             "short_title": "Weekly Qcov7",
-            "title": "Because of your symptoms, have you taken or strengthened one or more of the following measures? ",
+            "title": "During this episode, which of the following measures did you use?",
             "data_name": "Qcov7",
             "mandatory": false,
             "type": "multiple_choice",
             "possible_responses": {
                 "wash_hands": {
-                    "text": "Regularly wash or disinfect hands",
+                    "text": "Increase the frequency of washing or disinfecting ",
                     "value": "1",
                     "var": "measure.wash.hands"
                 },
@@ -1716,9 +1860,14 @@
                     "var": "measure.use.tissue"
                 },
                 "wear_mask": {
-                    "text": "Wear a disposable mask",
+                    "text": "Wear a disposable mask outside home, in places where it is not mandatory",
                     "value": "4",
                     "var": "measure.wear.mask"
+                },
+                "wear_mask_home": {
+                    "text": "Wear a disposable mask at home",
+                    "value": "17",
+                    "var": "measure.wear.mask.inside"
                 },
                 "avoid_shakehands": {
                     "text": "Avoid shaking hands",
@@ -1760,8 +1909,13 @@
                     "text": "Have your food/shopping delivered by a store or a friend/family member",
                     "var": "measure.food.delivered"
                 },
+                "isolate_home": {
+                    "value": "18",
+                    "text": "Isolation from people you live with",
+                    "var": "measure.isolate.home"
+                },
                 "avoid_friends": {
-                    "text": "Avoid seeing friends and family",
+                    "text": "Avoid seeing friends and family (who do not live with you)",
                     "value": "14",
                     "var": "measure.avoid.friend.family"
                 },
@@ -1783,7 +1937,8 @@
             },
             "added_at":"2020-03-12",
             "rules": [
-                "Option #none is exclusive with other responses "
+                "Option #none is exclusive with other responses",
+                "Shown if symptoms($Q1) and $Q36#yes"
             ]
         },
         {
@@ -1794,6 +1949,9 @@
             "type": "matrix",
             "data_type": "numeric",
             "added_at":"2020-03-12",
+            "removed_at":[
+                {"date":"2020-11-10", "comment":"Replaced by previous version Qcov7"}
+            ],
             "comment": [
                 "code row12 is reserved to keep compatibility with Qcov7 (none of this measure)"
             ],
@@ -1920,6 +2078,12 @@
                     "value": "0",
                     "var": "cause.ili"
                 },
+                "covid": {
+                    "text": "New coronavirus (COVID-19)",
+                    "value": "9",
+                    "added_at": "2020-03-12",
+                    "var": "cause.covid"
+                },
                 "cold": {
                     "text": "Common cold",
                     "value": "1",
@@ -1939,12 +2103,6 @@
                     "text": "Gastroenteritis/gastric flu",
                     "value": "3",
                     "var":  "cause.gastro"
-                },
-                "covid": {
-                    "text": "New coronavirus (COVID-19)",
-                    "value": "9",
-                    "added_at": "2020-03-12",
-                    "var": "cause.covid"
                 },
                 "other": {
                     "text": "Other",
@@ -1978,7 +2136,7 @@
                 "If you are reasonably sure about what is causing your symptoms, please tick the appropriate box. Otherwise, please tick “I don’t know”."
             ],
             "rules": [
-                "Shown if symptoms"
+                "Shown if symptoms($Q1) and $Q36=#yes"
             ]
         },
         {
@@ -1987,6 +2145,8 @@
             "data_name": "Qcov9",
             "mandatory": false,
             "type": "multiple_choice",
+            "active": false,
+            "removed_at": "2021-11-10",
             "possible_responses": {
                 "doctor": {
                     "text": "My doctor told me I have this disease",

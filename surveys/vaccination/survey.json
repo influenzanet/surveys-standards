@@ -158,6 +158,13 @@
             ]
         },
         {
+            "title":"Q10c other details",
+            "data_name": "Q10c_9_open",
+            "type": "text",
+            "mandatory": false,
+            "comment": "Virtual question to represent the extra field for Q10c[9] option"
+        },
+        {
             "short_title": "Intake Q10d",
             "title": "What were your reasons for NOT getting a seasonal influenza vaccination this year?",
             "data_name": "Q10d",
@@ -271,6 +278,17 @@
         {
             "type": "text",
             "target": "optional",
+            "title": "Virtual question holding data from extra field of $Q10d.14",
+            "mandatory": false,
+            "data_name": "Q10d_14_open",
+            "var": "notvac.reason.other.txt",
+            "rules": [
+                "shown if $Q10d.14"
+            ]
+        },
+        {
+            "type": "text",
+            "target": "optional",
             "title": "Virtual question holding data from extra field of $Q10d.19",
             "mandatory": false,
             "data_name": "Q10d_19_open",
@@ -318,6 +336,9 @@
             "type": "single_choice",
             "mandatory": false,
             "var": "covid.vaccine.which",
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": "Removed on 2021-11, replaced by Q35i",
             "possible_responses": {
                 "comirnaty": {
                     "value": "1",
@@ -338,6 +359,44 @@
                 "dontknow": {
                     "value": "99",
                     "text": "I don’t know/can’t remember "
+                }
+            },
+            "rules": [
+                "Shown if $Q35 is #yes",
+                "prefill with previous response"
+            ]
+        },
+        {
+            "data_name": "Q35i",
+            "short_title": "Covid vaccine type",
+            "title": "Which COVID-19 vaccine did you receive?",
+            "type": "multiple_choice",
+            "mandatory": false,
+            "possible_responses": {
+                "comirnaty": {
+                    "value": "1",
+                    "text": "Comirnaty™ vaccine, from Pfizer/BioNTech laboratories",
+                    "var": "covid.vaccine.which.pfizer"
+                },
+                "moderna": {
+                    "value": "2",
+                    "text": "COVID-19 Vaccine Moderna™, from Moderna laboratory",
+                    "var": "covid.vaccine.which.moderna"
+                },
+                "vaxzevria": {
+                    "value": "3",
+                    "text": "AstraZeneca COVID-19 vaccine",
+                    "var":"covid.vaccine.which.astra"
+                },
+                "janssen": {
+                    "value": "4",
+                    "text": "Jonhson & Jonhson vaccine",
+                    "var": "covid.vaccine.which.jonhson"
+                },
+                "dontknow": {
+                    "value": "99",
+                    "text": "I don’t know/can’t remember",
+                    "var": "covid.vaccine.which.dnk"
                 }
             },
             "rules": [
@@ -367,9 +426,17 @@
                     "value": "2",
                     "text": "Two"
                 },
-                "three_more": {
+                "more_2": {
                     "value": "3",
                     "text": "More than two"
+                },
+                "three": {
+                    "value": "4",
+                    "text": "Three"
+                },
+                "more_3": {
+                    "value": "5",
+                    "text": "More than three"
                 },
                 "dontknow": {
                     "value": "99",
@@ -382,12 +449,51 @@
             ]
         },
         {
+            "title":"When did you receive your last injection of a vaccine against COVID-19?",
+            "data_name":"Q35j",
+            "type": "single_choice",
+            "added_at":"2021-11-10",
+            "var":"covid.vaccine.last.when",
+            "mandatory": false,
+            "description": [
+                "Why are we asking this?",
+                "Knowing when people are vaccinated tells us how well the vaccination program is being carried out.",
+                "How should I answer it?",
+                "Please try and answer as accurately as possible. If you do not know the precise date, please give your best estimate. For instance, you might remember the month, then try and remember if it was at the beginning or the end of the month. Were there any significant events (e.g. a holiday or a birthday) that might help jog your memory?"
+            ],
+            "possible_responses": {
+                "date": {
+                    "value": "1",
+                    "text": "Choose date:"
+                },
+                "dontknow": {
+                    "value": "0",
+                    "text": "I don’t know/can’t remember "
+                }
+            }
+        },
+        {
+            "data_name": "Q35i_1_open",
+            "var":"covid.vaccine.last.date",
+            "title": "Last injection date",
+            "type": "date",
+            "format": "month-year",
+            "mandatory": false,
+            "comment": "extra field of question Q35i not shown as an individual question",
+            "rules": [
+                "Show if $Q35i#date is selected"
+            ]
+        },
+        {
             "data_name": "Q35d",
             "short_title": "1st injection date",
             "var": "covid.vaccine.when1",
             "title": "When did you receive your first injection of a vaccine against COVID-19 (since December 2020)?",
             "type": "single_choice",
             "mandatory": false,
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": "Replaced by Q35i from 2021-11",
             "description": [
                 "Why are we asking this?",
                 "Knowing when people are vaccinated tells us how well the vaccination program is being carried out.",
@@ -416,9 +522,93 @@
             "short_title": "First injection date",
             "type": "date",
             "mandatory": false,
-            "comment": "extra field not shown",
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Replaced by Q35i from 2021-11",
+                "extra field not shown"
+            ],
             "rules": [
                 "Show if $Q35d is #choose_date"
+            ]
+        },
+        {
+            "title":"Do you plan to receive a second injection in the upcoming weeks?",
+            "data_name":"Q35k",
+            "type": "single_choice",
+            "added_at":"2021-11-10",
+            "var": "covid.vaccine.second.plan",
+            "mandatory": false,
+            "possible_responses": {
+                "yes": {
+                    "text": "Yes",
+                    "value": "1"
+                },
+                "no": {
+                    "text": "No",
+                    "value": "0"
+                },
+                "dontknow": {
+                    "text": "I don’t know",
+                    "value": "2"
+                }
+            },
+            "rules": [
+                "Shown if Q35c is #one"
+            ]
+        },
+        {
+            "data_name": "Q35l",
+            "title": "Why receiving a single injection?",
+            "type": "single_choice",
+            "mandatory": false,
+            "var": "covid.vacc.one.reason",
+            "possible_responses": {
+                "covidbefore":{
+                    "value":"1",
+                    "text": "I had COVID-19 before my first injection"
+                },
+                "covidafter":{
+                    "value":"2",
+                    "text": "I had COVID-19 shortly after my first injection, and have to wait several months to receive the second injection"
+                },
+                "janssen": {
+                    "text":"I received Janssen vaccine, which requires only one injection",
+                    "value":"3"
+                },
+                "contraindication": {
+                    "text":"A second injection was contraindicated for me by a doctor (I had a severe allergic reaction, or a severe adverse effect after the first injection, or I have a temporary contraindication due to a treatment or a disease)",
+                    "value": "4"
+                },
+                "changedmind": {
+                    "text":"I changed my mind and don’t want to be vaccinated anymore",
+                    "value":"5"
+                },
+                "other": {
+                    "text":"Other reason",
+                    "value":"6"
+                },
+                "dontknow": {
+                    "text":"I don’t know",
+                    "value":"0"
+                }
+            },
+            "rules": [
+                "Shown if $Q35k is #no or #dontknow"
+            ]
+        },
+        {
+            "data_name": "Q35l_6_open",
+            "var":"covid.vacc.one.reason.other",
+            "title": "Open field for Q35l#other",
+            "type": "text",
+            "mandatory": false,
+            "added_at":"2021-11-10",
+            "comment": [
+                "extra field not shown"
+            ],
+            "rules": [
+                "Show if $Q35l is #other"
             ]
         },
         {
@@ -428,6 +618,11 @@
             "title": "When did you receive your second injection of a vaccine against COVID-19 (since December 2020)?",
             "type": "single_choice",
             "mandatory": false,
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Replaced by Q35i from 2021-11"
+            ],
             "description": [
                 "Why are we asking this?",
                 "Knowing when people are vaccinated tells us how well the vaccination program is being carried out.",
@@ -456,7 +651,12 @@
             "title": "Second injection date",
             "type": "date",
             "mandatory": false,
-            "comment": "extra field not shown",
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [ 
+                "extra field not shown",
+                "Replaced by Q35i from 2021-11"
+            ],
             "rules": [
                 "Show if $Q35e is #choose_date"
             ]
@@ -467,6 +667,11 @@
             "title": "Which COVID-19 vaccine did you receive for your second dose?",
             "type": "single_choice",
             "mandatory": false,
+            "active": false,
+            "removed_at":"2021-11-10",
+            "comment": [
+                "Replaced by Q35i from 2021-11"
+            ],
             "var": "covid.vaccine.which2",
             "possible_responses": {
                 "comirnaty": {
@@ -560,8 +765,18 @@
                 },
                 "always": {
                     "value": "8",
-                    "text": "I always get the vaccine",
+                    "text": "I always get the vaccine when available",
                     "var":"covid.vacc.reason.always"
+                },
+                "mandatory_work": {
+                    "value": "21",
+                    "text": "I have to be vaccinated to work",
+                    "var":"covid.vacc.reason.mandatory"
+                },
+                "passport": {
+                    "value": "22",
+                    "text": "To obtain a valid vaccination passport",
+                    "var":"covid.vacc.reason.pass"
                 },
                 "other": {
                     "value": "9",
@@ -584,6 +799,139 @@
             "comment": "extra field not shown",
             "rules": [
                 "Show if $Q35f is #other"
+            ]
+        },
+        {
+            "data_name": "Q35m",
+            "short_title": "Covid non vaccination reasons",
+            "title": "What were your reasons for NOT getting a COVID-19 vaccination? ",
+            "type": "multiple_choice",
+            "added_at":"2021-11-10",
+            "mandatory": false,
+            "description": [
+                "Why are we asking this?",
+                "We would like to know why some people get the vaccine, and other don’t get it.",
+                "How should I answer it?",
+                "Please select all the answers who mattered to take your decision."
+            ],
+            "possible_responses": {
+                "plan": {
+                    "value": "0",
+                    "text": "I am planning to be vaccinated but haven’t been yet",
+                    "var": "covid.nvac.reason.plan"
+                },
+             	"notproposed": {
+                    "value": "1",
+                    "text": "I haven’t been offered the vaccine",
+                    "var": "covid.nvac.reason.notproposed"
+                     	 	
+                },
+                "pregnant_disc": {
+                    "value": "15",
+                    "text": "I have been discouraged from being vaccinated because I am pregnant",
+                    "var": "covid.nvac.reason.pregnant.disc",
+                    "target":"optional",
+                    "platforms": ["FR"]
+                },
+                "pregnant_fear": {
+                    "value": "16",
+                    "text": "I am pregnant and I fear the vaccine could be dangerous for my baby",
+                    "var": "covid.nvac.reason.pregnant.fear",
+                    "target":"optional",
+                    "platforms": ["FR"]
+                },
+                "notriskgroup": {
+                    "value": "2",
+                    "text": "I don’t belong to a risk group ",
+                    "var": "covid.nvac.reason.notriskgroup"
+                },
+                "natural_immunity": {
+                    "value": "3",
+                    "text": "It is better to build your own natural immunity against COVID-19",
+                    "var": "covid.nvac.reason.natural"
+                },
+                "doubt_efficacy": {
+                    "value": "4",
+                    "text": "I doubt that the COVID-19 vaccine is effective",
+                    "var": "covid.nvac.reason.efficacy"
+                },
+                "benign": {
+                    "value": "5",
+                    "text": "COVID-19 is a minor illness",
+                    "var": "covid.nvac.reason.benign"
+                },
+                "avoid_health_facilities": {
+                    "value": "17",
+                    "text": "Because of COVID-19 pandemic, I avoid seeing doctors or going to the pharmacy",
+                    "var": "covid.nvac.reason.avoid.hs",
+                    "target":"optional",
+                    "platforms": ["FR"]    
+                },
+                "unlikely": {
+                    "value": "6",
+                    "text": "I don’t think I am likely to get the COVID-19",
+                    "var": "covid.nvac.reason.unlikely"
+                    	
+                },
+                "cause_covid": {
+                    "value": "7",
+                    "text": "I believe that COVID-19 vaccine can cause COVID-19",
+                    "var": "covid.nvac.reason.cause.covid"
+                },
+                "adverse_event": {
+                    "value": "8",
+                    "text": "I am worried that the vaccine is not safe or will cause illness or other adverse events ",
+                    "var": "covid.nvac.reason.adverse"
+                },
+                "dontlike": {
+                    "value": "9",
+                    "text": "I don’t like having vaccinations",
+                    "var": "covid.nvac.reason.dontlike"
+                },
+                "accessible": {
+                    "value": "10",
+                    "text": "The vaccine is not readily available for me",
+                    "var": "covid.nvac.reason.accessible"
+                },
+                "disagree": {
+                    "value": "20",
+                    "text": "I disagree with the current vaccine policy",
+                    "var": "covid.nvac.reason.disagree",
+                    "target":"optional",
+                    "platforms": ["FR"]     				
+                },
+                "not_free": {
+                    "value": "11",
+                    "text": "The vaccine is not free of charge",
+                    "var": "covid.nvac.reason.notfree",
+                    "target":"optional",
+                    "comment": "Only for country where it's applicable" 	 	
+                },
+                "dontknow": {
+                    "value": "12",
+                    "text": "I don’t know",
+                    "var": "covid.nvac.reason.dnk"
+                },
+                "other": {
+                    "value": "14",
+                    "text": "Other reason(s)",
+                    "var": "covid.nvac.reason.other"
+                }
+            },
+            "rules": [
+            "prefill with previous response",
+            "Shown if $Q35 is #no"
+            ]
+        },
+        {
+            "data_name": "Q35m_14_open",
+            "title": "Covid non vaccination reasons other",
+            "var": "covid.nvac.reason.other.txt",
+            "type": "text",
+            "mandatory": false,
+            "comment": "extra field not shown",
+            "rules": [
+                "Show if $Q35m is #other"
             ]
         }
     ]
