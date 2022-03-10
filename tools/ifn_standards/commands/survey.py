@@ -10,6 +10,24 @@ from ..models import json_parser_survey, xml_parser_survey, compare_legacy_to_ht
 
 import xml.etree.ElementTree as ET
 
+class Output:
+
+    def __init__(self, file):
+        if file is not None:
+            need_close = True
+            self.out = open(file, 'w')
+        else:
+            need_close = False
+            self.out = sys.stdout
+        self.need_close = need_close
+
+    def write(self, contents):
+        self.out.write(contents)
+    
+    def close(self):
+        if self.need_close:
+            self.out.close()
+
 def to_path(path: Deque):
     v = []
     for p in path:
@@ -71,14 +89,9 @@ class Show(Command):
     def take_action(self, args):
         json = read_json(args.file)
 
-        need_close = True
-        if args.output:
-            need_close = True
-            out = open(args.output, 'w')
-        else:
-            need_close = False
-            out = sys.stdout
 
+        out = Output(args.output)
+        
         survey = json_parser_survey(json)
 
         opts = {}
@@ -87,9 +100,7 @@ class Show(Command):
 
         output = survey_to_html(survey, version=args.tag, opts=opts)
         out.write(output)
-
-        if need_close:
-            out.close()
+        out.close()
 
 class Legacy(Command):
     """
@@ -112,19 +123,12 @@ class Legacy(Command):
         tree = ET.parse(args.xml)
         legacy = xml_parser_survey(tree)
 
-        need_close = True
-        if args.output:
-            need_close = True
-            out = open(args.output, 'w')
-        else:
-            need_close = False
-            out = sys.stdout
-
+        out = Output(args.output)
+        
         output = compare_legacy_to_html(survey=survey, legacy=legacy, survey_name=os.path.basename(args.file), legacy_name=os.path.basename(args.xml) )
         out.write(output)
 
-        if need_close:
-            out.close()
+        out.close()
 
 class Transform(Command):
     """
@@ -155,7 +159,9 @@ class Transform(Command):
                     question['comment'] = question['description']
                 del question['description']
         print(to_json(json))
-        
+
+
+
 
 register(Validate)
 register(Show)
