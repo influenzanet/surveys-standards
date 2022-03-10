@@ -56,12 +56,14 @@ def create_empty_question():
     return q
 
 
+template_base_path = os.path.dirname(os.path.abspath(__file__)) +  '/../templates/'
+
+
 def compare_legacy_to_html(survey, legacy, survey_name, legacy_name):
     """
     Compare 2 surveys models
     """
-    path = os.path.dirname(os.path.abspath(__file__)) +  '/../templates/'
-
+    path = template_base_path
     env = Environment(
       loader=FileSystemLoader(path),
         autoescape='html',
@@ -90,7 +92,7 @@ def survey_to_html(survey, version, opts={}):
     """
     Create survey document
     """
-    path = os.path.dirname(os.path.abspath(__file__)) +  '/../templates/'
+    path =template_base_path
 
     env = Environment(
       loader=FileSystemLoader(path),
@@ -116,5 +118,23 @@ def survey_to_html(survey, version, opts={}):
         'version': version,
         'survey': survey,
         'theme_css': theme
+    }
+    return template.render(ctx)
+
+def survey_to_tsdict(survey, name, opts={}):
+    path =template_base_path
+
+    env = Environment(
+      loader=FileSystemLoader(path),
+        autoescape='html',
+    )
+
+    tpl_file = 'survey_dict.ts'    
+
+    template = env.get_template(tpl_file)
+    
+    ctx = {
+        'name': name,
+        'survey': survey,
     }
     return template.render(ctx)

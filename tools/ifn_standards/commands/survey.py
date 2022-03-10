@@ -6,7 +6,7 @@ import jsonschema
 from ..utils import read_json, to_json
 import sys
 import os
-from ..models import json_parser_survey, xml_parser_survey, compare_legacy_to_html, survey_to_html
+from ..models import json_parser_survey, xml_parser_survey, compare_legacy_to_html, survey_to_html, survey_to_tsdict
 
 import xml.etree.ElementTree as ET
 
@@ -89,7 +89,6 @@ class Show(Command):
     def take_action(self, args):
         json = read_json(args.file)
 
-
         out = Output(args.output)
         
         survey = json_parser_survey(json)
@@ -161,9 +160,39 @@ class Transform(Command):
         print(to_json(json))
 
 
+class Dictionary(Command):
+    """
+        Validate survey description file agaisnt json schema 
+    """
 
+    name = 'survey:dictionary'
+
+    def get_parser(self, prog_name):
+        parser = super(Dictionary, self).get_parser(prog_name)
+        parser.add_argument("file", help="Survey file", action="store")
+        parser.add_argument("name", help="Survey name", action="store")
+        parser.add_argument("--output", help="path of file to output results", required=False)
+        return parser
+
+    def take_action(self, args):
+        json = read_json(args.file)
+
+        name = args.name
+        out = Output(args.output)
+
+        survey = json_parser_survey(json)
+        
+        output = survey_to_tsdict(survey, name=name)
+
+        out.write(output)
+
+        out.close()
+
+
+        
 
 register(Validate)
 register(Show)
 register(Legacy)
 register(Transform)
+register(Dictionary)
