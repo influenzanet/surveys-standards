@@ -1,3 +1,12 @@
 #!/bin/sh
-. venv/bin/activate
+
+if [ -f venv/bin/activate ]; then
+    bootstrap=venv/bin/activate
+fi
+
+if [ -f venv/Scripts/activate ]; then
+    bootstrap=venv/Scripts/activate
+fi
+
+. $bootstrap
 python ./tools/cli.py $*
