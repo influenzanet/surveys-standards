@@ -865,7 +865,7 @@
                 },
                 "no": {
                     "text": "No, I do not have the result yet",
-                    "value": "4"
+                    "value": "99"
                 }
             },
             "rules": [
@@ -896,7 +896,7 @@
                 },
                 "no": {
                     "text": "No, I do not have the result yet",
-                    "value": "4"
+                    "value": "99"
                 }
             },
             "rules": [
@@ -1521,6 +1521,7 @@
             "title": "Because of your symptoms, did you call [EMERGENCY NUMBER FOR YOUR COUNTRY]?",
             "data_name": "Qcov5",
             "mandatory": false,
+            "active": false,
             "type": "single_choice",
             "possible_responses": {
                 "yes": {
@@ -1536,8 +1537,8 @@
                     "value": "2"
                 }
             },
-            "added_at": "2020-03-13"
-           
+            "added_at": "2020-03-13",
+            "removed_at":"2021-11-10"
         },
         {
             "short_title": "Weekly Qcov6",
@@ -2195,6 +2196,7 @@
             "mandatory": false,
             "type": "single_choice",
             "var": "inform.contact.covid",
+            "active": false,
             "possible_responses": {
                 "yes": {
                     "text": "yes",
@@ -2211,7 +2213,8 @@
             },
             "rules": [
                     "If $Q11.#covid"
-            ]
+            ],
+            "removed_at": "2021-11-10"
         },
         {
             "short_title": "Weekly Qcov10",
