@@ -97,6 +97,10 @@
  <span class="badge badge-{{type}}" {% if title != ""%} title="{{ title }}"{%endif%}>{{ v }}</span>
 {% endmacro %}
 
+{% macro render_target(v) %}
+    {{ badge(icon('bullseye') ~ v, 'primary') }}
+{% endmacro %}
+
 {% macro icon(name, extra='') %}
  <i class="fas fa-{{name}} {{extra}}"></i>
 {% endmacro %}
@@ -147,7 +151,8 @@
 
 
 {% macro render_responses(responses) %}
-     <table class="table table-compact table-sm">
+    <table class="table table-compact table-sm">
+    <tbody>
       {% for r in responses.values() %}
        <tr>
         <td>{{ common_key_badge(r.value) }}</td>
@@ -157,12 +162,14 @@
         </td>
         <td>{{ order_badge(r.order) }}</td>
         <td>{{ local_key_badge(r.key)}}</td>
-        <td>{% if r.platforms%} {{ render_platforms(r.platforms) }}{%endif%}</td>
+        <td>{% if r.target %}{{ render_target(r.target) }}{% endif %}</td>
+        <td>{% if r.platforms %} {{ render_platforms(r.platforms) }}{%endif%}</td>
          {% if r.added_at%} Added at {{ r.added_at }}{% endif %}
          {% if r.removed_at%} Removed at {{ r.removed_at }}{% endif %}
         </td>
        </tr>  
       {% endfor %}
+    </tbody>
     </table>
 {% endmacro %}
 

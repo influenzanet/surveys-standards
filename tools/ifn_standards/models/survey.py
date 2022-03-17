@@ -31,6 +31,9 @@ class Question:
         self.active = True
         self.plateforms = []
         self.target = None
+
+    def has_response(self):
+        return len(self.responses) > 0
     
     def add_response(self, response):
         self.responses[response.key] = response
@@ -55,7 +58,11 @@ class Response:
         key: local key in the spec
         text: label of the response
         order: order in the spec
-        value: 
+        value: Encoding value
+        comment: str|List[str] list of comments
+        active: current status of the response
+        added_at: addition date
+        
       """
       
       def __init__(self, key, text, order):
@@ -68,6 +75,8 @@ class Response:
           self.extra = None
           self.added_at = None
           self.removed_at = None
+          self.target = None
+          self.var = None
           self.plateforms = []
 
 
@@ -173,7 +182,7 @@ def json_parser_response(key, json, index):
     
     r = Response(key, json['text'], index)
     
-    import_attr(r, json, ['added_at', 'removed_at', 'platforms'])
+    import_attr(r, json, ['added_at', 'removed_at', 'platforms', 'target', 'var'])
 
     if 'value' in json:
         r.value = json['value']
