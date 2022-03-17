@@ -1056,7 +1056,7 @@
                     "value": "99"
                 }
             },
-            "platform": ["FR"],
+            "platforms": ["FR"],
             "rules": [
                 "Shown If $Qcov16{5}"
             ]

@@ -1373,7 +1373,7 @@
                     "text": "I would rather not answer",
                     "value": "7",
                     "target": "optional",
-                    "platform": [
+                    "platforms": [
                         "IT"
                     ]
                 }
@@ -1649,52 +1649,52 @@
                 },
                 "healthworker": {
                     "text": "Via Health worker",
-                    "value": "5",
+                    "value": "6",
                     "var":"hear.hworker",
                     "target": "optional",
-                    "platform": ["FR"]
+                    "platforms": ["FR"]
                 },
                 "project": {
                     "text": "Via someone working on the project",
                     "value": "7",
                     "var":"hear.project",
                     "target": "optional",
-                    "platform": ["FR"]
+                    "platforms": ["FR"]
                 },
                 "webinstit": {
                     "text": "Via Institutional website",
                     "value": "8",
                     "var":"hear.webinstit",
                     "target": "optional",
-                    "platform": ["FR"]
+                    "platforms": ["FR"]
                 },
                 "webinfo": {
                     "text": "Information website",
                     "value": "9",
                     "var":"hear.webinfo",
                     "target": "optional",
-                    "platform": ["FR"]
+                    "platforms": ["FR"]
                 },
                 "websante":{
                     "text": "Health Information website",
                     "value": "10",
                     "var":"hear.webinfo",
                     "target": "optional",
-                    "platform": ["FR"]
+                    "platforms": ["FR"]
                 },
                 "social":{
                     "text": "Social network",
                     "value": "12",
                     "var":"hear.social",
                     "target": "optional",
-                    "platform": ["FR"]
+                    "platforms": ["FR"]
                 },
                 "other":{
                     "text": "Other",
                     "value": "13",
                     "var":"hear.other",
                     "target": "optional",
-                    "platform": ["FR"]
+                    "platforms": ["FR"]
                 }
             }
         },
