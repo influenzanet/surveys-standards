@@ -6,7 +6,7 @@ from ..utils import read_json, to_json
 import sys
 import os
 from ..models import json_parser_survey, xml_parser_survey, compare_legacy_to_html, survey_to_html, survey_to_dict
-
+from ..models.checker import SurveyChecker
 import xml.etree.ElementTree as ET
 
 class Output:
@@ -193,8 +193,46 @@ class Dictionary(Command):
 
         out.close()
 
+class Checker(Command):
+    """
+        Check the survey consistency
+    """
+
+    name = 'survey:check'
+
+    def get_parser(self, prog_name):
+        parser = super(Checker, self).get_parser(prog_name)
+        parser.add_argument("--file", help="Survey file", action="store", required=False)
+        parser.add_argument("name", help="Survey name", action="store")
+        parser.add_argument("--output", help="path of file to output results", required=False)
+        return parser
+
+    def take_action(self, args):
+        
+        file = args.file
+        name = args.name
+        out = Output(args.output)
+
+        if file is None:
+            file="surveys/%s/survey.json" % (name, )
+            print("Using survey in '%s'" % file)
+            
+        json = read_json(file)
+
+        survey = json_parser_survey(json)
+        
+        checker = SurveyChecker()
+        checker.check(survey)
+
+        if args.output:
+            out.write(to_json(checker.problems, indent=2))
+            out.close()
+        else:
+            checker.show()
+
 register(Validate)
 register(Show)
 register(Legacy)
 register(Transform)
 register(Dictionary)
+register(Checker)
