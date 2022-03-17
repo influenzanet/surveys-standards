@@ -10,8 +10,8 @@ def read_json(path):
     data = json.load(open(path, 'r', encoding='UTF-8'), object_pairs_hook=OrderedDict)
     return data
 
-def to_json(object):
-    return json.dumps(object)
+def to_json(object, indent=None):
+    return json.dumps(object, indent=indent)
 
 def readable_yaml(object):
     return yaml.dump(object, default_flow_style=False, sort_keys=False, width=1000)

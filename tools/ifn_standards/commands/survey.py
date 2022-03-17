@@ -1,12 +1,11 @@
 from typing import Deque
 from cliff.command import Command
-
 from . import register
 import jsonschema
 from ..utils import read_json, to_json
 import sys
 import os
-from ..models import json_parser_survey, xml_parser_survey, compare_legacy_to_html, survey_to_html, survey_to_tsdict
+from ..models import json_parser_survey, xml_parser_survey, compare_legacy_to_html, survey_to_html, survey_to_dict
 
 import xml.etree.ElementTree as ET
 
@@ -169,27 +168,30 @@ class Dictionary(Command):
 
     def get_parser(self, prog_name):
         parser = super(Dictionary, self).get_parser(prog_name)
-        parser.add_argument("file", help="Survey file", action="store")
+        parser.add_argument("--file", help="Survey file", action="store", required=False)
         parser.add_argument("name", help="Survey name", action="store")
         parser.add_argument("--output", help="path of file to output results", required=False)
         return parser
 
     def take_action(self, args):
-        json = read_json(args.file)
-
+        
+        file = args.file
         name = args.name
         out = Output(args.output)
 
+        if file is None:
+            file="surveys/%s/survey.json" % (name, )
+            print("Using survey in '%s'" % file)
+            
+        json = read_json(file)
+
         survey = json_parser_survey(json)
         
-        output = survey_to_tsdict(survey, name=name)
+        output = to_json(survey_to_dict(survey, survey_name=name), indent=2)
 
         out.write(output)
 
         out.close()
-
-
-        
 
 register(Validate)
 register(Show)

@@ -120,21 +120,3 @@ def survey_to_html(survey, version, opts={}):
         'theme_css': theme
     }
     return template.render(ctx)
-
-def survey_to_tsdict(survey, name, opts={}):
-    path =template_base_path
-
-    env = Environment(
-      loader=FileSystemLoader(path),
-        autoescape='html',
-    )
-
-    tpl_file = 'survey_dict.ts'    
-
-    template = env.get_template(tpl_file)
-    
-    ctx = {
-        'name': name,
-        'survey': survey,
-    }
-    return template.render(ctx)
