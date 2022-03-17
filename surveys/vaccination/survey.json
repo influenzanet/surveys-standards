@@ -550,7 +550,7 @@
                 },
                 "dontknow": {
                     "text": "I don’t know",
-                    "value": "2"
+                    "value": "99"
                 }
             },
             "rules": [
@@ -769,12 +769,12 @@
                     "var":"covid.vacc.reason.always"
                 },
                 "mandatory_work": {
-                    "value": "21",
+                    "value": "22",
                     "text": "I have to be vaccinated to work",
                     "var":"covid.vacc.reason.mandatory"
                 },
                 "passport": {
-                    "value": "22",
+                    "value": "23",
                     "text": "To obtain a valid vaccination passport",
                     "var":"covid.vacc.reason.pass"
                 },
