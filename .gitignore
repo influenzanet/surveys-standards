@@ -4,3 +4,5 @@ xml
 /local
 .vscode
 todo
+.envrc
+env.bat
