@@ -1,0 +1,149 @@
+{
+  "_survey_": {
+    "name": "vaccination",
+    "time": "2022-03-17 19:21:08"
+  },
+  "Q9": {
+    "yes": "0",
+    "no": "1",
+    "dontknow": "2"
+  },
+  "Q10": {
+    "yes": "0",
+    "no": "1",
+    "dontknow": "2"
+  },
+  "Q10b": {
+    "date": "1",
+    "dontknow": "0"
+  },
+  "Q10c": {
+    "riskgroup": "0",
+    "covid19": "12",
+    "myrisk": "1",
+    "spread": "2",
+    "doctor": "3",
+    "work": "4",
+    "available": "5",
+    "free": "6",
+    "miss": "7",
+    "always": "8",
+    "other": "9"
+  },
+  "Q10d": {
+    "plan": "0",
+    "offer": "1",
+    "risk_group": "2",
+    "own_immunity": "3",
+    "doubt": "4",
+    "minor_illness": "5",
+    "avoid_healthseek": "17",
+    "risk_covid": "18",
+    "covid_other": "19",
+    "likely": "6",
+    "cause_flu": "7",
+    "safety": "8",
+    "vaccin": "9",
+    "not_available": "10",
+    "free": "11",
+    "no_reason": "12",
+    "doctor": "13",
+    "other": "14"
+  },
+  "Q35": {
+    "yes": "1",
+    "no": "0",
+    "dontknow": "2"
+  },
+  "Q35b": {
+    "comirnaty": "1",
+    "moderna": "2",
+    "vaxzevria": "3",
+    "janssen": "4",
+    "dontknow": "99"
+  },
+  "Q35i": {
+    "comirnaty": "1",
+    "moderna": "2",
+    "vaxzevria": "3",
+    "janssen": "4",
+    "dontknow": "99"
+  },
+  "Q35c": {
+    "one": "1",
+    "two": "2",
+    "more_2": "3",
+    "three": "4",
+    "more_3": "5",
+    "dontknow": "99"
+  },
+  "Q35j": {
+    "date": "1",
+    "dontknow": "0"
+  },
+  "Q35d": {
+    "choose_date": "1",
+    "dontknow": "0"
+  },
+  "Q35k": {
+    "yes": "1",
+    "no": "0",
+    "dontknow": "99"
+  },
+  "Q35l": {
+    "covidbefore": "1",
+    "covidafter": "2",
+    "janssen": "3",
+    "contraindication": "4",
+    "changedmind": "5",
+    "other": "6",
+    "dontknow": "0"
+  },
+  "Q35e": {
+    "choose_date": "1",
+    "dontknow": "0"
+  },
+  "Q35g": {
+    "comirnaty": "1",
+    "moderna": "2",
+    "vaxzevria": "3",
+    "janssen": "4",
+    "dontknow": "99"
+  },
+  "Q35f": {
+    "recommended_by_pha": "21",
+    "belong_atrisk": "0",
+    "work_contact_atrisk": "20",
+    "decrease_my_risk": "1",
+    "decrease_spread": "2",
+    "recommended_doctor": "3",
+    "recommended_work": "4",
+    "availability": "5",
+    "free": "6",
+    "miss_work": "7",
+    "always": "8",
+    "mandatory_work": "22",
+    "passport": "23",
+    "other": "9"
+  },
+  "Q35m": {
+    "plan": "0",
+    "notproposed": "1",
+    "pregnant_disc": "15",
+    "pregnant_fear": "16",
+    "notriskgroup": "2",
+    "natural_immunity": "3",
+    "doubt_efficacy": "4",
+    "benign": "5",
+    "avoid_health_facilities": "17",
+    "unlikely": "6",
+    "cause_covid": "7",
+    "adverse_event": "8",
+    "dontlike": "9",
+    "accessible": "10",
+    "disagree": "20",
+    "not_free": "11",
+    "dontknow": "12",
+    "other": "14"
+  }
+}

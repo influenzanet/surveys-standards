@@ -1,0 +1,438 @@
+{
+  "_survey_": {
+    "name": "weekly",
+    "time": "2022-03-17 19:21:08"
+  },
+  "Q1": {
+    "no_sympt": "0",
+    "fever": "1",
+    "chills": "2",
+    "rhino": "3",
+    "sneeze": "4",
+    "sorethroat": "5",
+    "cough": "6",
+    "dyspnea": "7",
+    "headache": "8",
+    "pain": "9",
+    "chestpain": "10",
+    "asthenia": "11",
+    "anorexia": "12",
+    "sputum": "13",
+    "wateryeye": "14",
+    "nausea": "15",
+    "vomiting": "16",
+    "diarrhea": "17",
+    "abdopain": "18",
+    "loss_smell": "23",
+    "loss_taste": "21",
+    "nose_bleed": "22",
+    "rash": "20",
+    "other": "19"
+  },
+  "Q2": {
+    "yes": "0",
+    "no": "1",
+    "dontknow": "2",
+    "not_applicable": "9"
+  },
+  "Qcov1": {
+    "option_1": "1",
+    "option_2": "0",
+    "option_3": "2"
+  },
+  "Qcov2": {
+    "option_1": "1",
+    "option_2": "0",
+    "option_3": "2"
+  },
+  "Qcov3": {
+    "yes": "1",
+    "no": "0",
+    "dontknow": "2"
+  },
+  "Qcov3b": {
+    "option_1": "1",
+    "option_2": "0",
+    "option_3": "2"
+  },
+  "Qcov8": {
+    "yes": "1",
+    "no": "0",
+    "dontknow": "2"
+  },
+  "Qcov8b": {
+    "yes": "1",
+    "no": "0",
+    "dontknow": "2"
+  },
+  "Q3": {
+    "choose_date": "0",
+    "dontknow": "1"
+  },
+  "Q4": {
+    "choose_date": "0",
+    "dontknow": "1"
+  },
+  "Q5": {
+    "yes": "0",
+    "no": "1",
+    "dontknow": "2"
+  },
+  "Q6": {
+    "choose_date": "1",
+    "dontknow": "2"
+  },
+  "Q6b": {
+    "yes": "0",
+    "no": "1",
+    "dontknow": "3"
+  },
+  "Q6c": {
+    "yes": "0",
+    "no": "1",
+    "dontknow": "2"
+  },
+  "Q6d": {
+    "below_37": "0",
+    "v_370_374": "1",
+    "v_375_379": "2",
+    "v_380_389": "3",
+    "v_390_399": "4",
+    "ge_40": "5",
+    "dontknow": "6"
+  },
+  "Q36": {
+    "yes": "1",
+    "no": "0"
+  },
+  "Qcov16h": {
+    "yes": "1",
+    "not_yet": "2",
+    "no_wont": "3",
+    "no": "0"
+  },
+  "Qcov16i": {
+    "pcr": "1",
+    "sero": "2",
+    "antigenic": "3",
+    "antigenic_nasal": "4"
+  },
+  "Qcov16": {
+    "pcr": "1",
+    "sero": "2",
+    "antigenic": "5",
+    "plan": "3",
+    "wontgo": "4",
+    "no": "0"
+  },
+  "Qcov16b": {
+    "positive": "1",
+    "negative": "2",
+    "not_interpretable": "3",
+    "no": "4"
+  },
+  "Qcov16f": {
+    "positive": "1",
+    "negative": "2",
+    "not_interpretable": "3",
+    "no": "99"
+  },
+  "Qcov16k": {
+    "positive": "1",
+    "negative": "2",
+    "not_interpretable": "3",
+    "no": "99"
+  },
+  "Qcov16c": {
+    "positive": "1",
+    "negative": "2",
+    "not_interpretable": "3",
+    "no": "4"
+  },
+  "Qcov16d": {
+    "days_1": "1",
+    "days_2_4": "2",
+    "days_5_7": "3",
+    "days_8_14": "4",
+    "days_15_28": "5",
+    "over4weeks": "6",
+    "dontknow": "99"
+  },
+  "Qcov16e": {
+    "days_1": "1",
+    "days_2_4": "2",
+    "days_5_7": "3",
+    "days_8_14": "4",
+    "days_15_28": "5",
+    "over4weeks": "6",
+    "dontknow": "99"
+  },
+  "Qcov16g": {
+    "gp": "1",
+    "spec": "2",
+    "pharmacist": "3",
+    "other_health": "4",
+    "other": "5",
+    "dontknow": "99"
+  },
+  "Qcov19": {
+    "yes": "1",
+    "yes_antigenic": "5",
+    "plan": "3",
+    "wontgo": "4",
+    "no": "0"
+  },
+  "Qcov19b": {
+    "positive": "1",
+    "negative": "2",
+    "not_interpretable": "3",
+    "no": "4"
+  },
+  "Q7": {
+    "no": "0",
+    "gp": "1",
+    "hospital": "2",
+    "emergency": "3",
+    "other": "4",
+    "plan": "5"
+  },
+  "Q7b": {
+    "same": "0",
+    "days1": "1",
+    "days2": "2",
+    "days3": "3",
+    "days4": "4",
+    "days5_7": "5",
+    "over7d": "6",
+    "dontknow": "7"
+  },
+  "Q8": {
+    "no": "0",
+    "reception": "1",
+    "doctor": "2",
+    "nhs": "3",
+    "npfs": "4",
+    "other": "5"
+  },
+  "Q8b": {
+    "same": "0",
+    "days_1": "1",
+    "days_2": "2",
+    "days_3": "3",
+    "days_4": "4",
+    "days_5_7": "5",
+    "over7d": "6",
+    "dontknow": "7"
+  },
+  "Qcov18": {
+    "recently": "1",
+    "mild": "2",
+    "often": "3",
+    "self_medic": "4",
+    "no_treatment": "5",
+    "too_hard": "6",
+    "have_no_time": "7",
+    "financial": "8",
+    "fear_covid19": "9",
+    "vaccinated_covid19": "11",
+    "other": "10",
+    "dontknow": "99"
+  },
+  "Qcov18b": {
+    "do_test": "1",
+    "isolated": "2",
+    "stop_working": "3",
+    "judged": "4",
+    "excluded": "5",
+    "other": "6"
+  },
+  "Qcov4": {
+    "yes": "1",
+    "no": "0",
+    "dontknow": "2"
+  },
+  "Qcov5": {
+    "yes": "1",
+    "no": "0",
+    "dontknow": "2"
+  },
+  "Qcov6": {
+    "yes": "1",
+    "not_found": "2",
+    "no": "0"
+  },
+  "Q9": {
+    "no": "0",
+    "pain": "1",
+    "cough": "2",
+    "antiviral": "3",
+    "antibio": "4",
+    "homeo": "7",
+    "alternative": "8",
+    "other": "5",
+    "dontknow": "6"
+  },
+  "Q9b": {
+    "same": "0",
+    "days_1": "1",
+    "days_2": "2",
+    "days_3": "3",
+    "days_4": "4",
+    "days_5-7": "5",
+    "over7": "6",
+    "dontknow": "7"
+  },
+  "Q14": {
+    "yes": "1",
+    "no": "0"
+  },
+  "Q10": {
+    "no": "0",
+    "yes": "1",
+    "off": "2"
+  },
+  "Q10b": {
+    "yes": "0",
+    "no": "1",
+    "other": "3"
+  },
+  "Q10c": {
+    "days_1": "0",
+    "days_2": "1",
+    "days_3": "2",
+    "days_4": "3",
+    "days_5": "4",
+    "days_6_10": "5",
+    "days_11_15": "6",
+    "over15": "7"
+  },
+  "Qcov7": {
+    "wash_hands": "1",
+    "cough_elbow": "2",
+    "use_tissue": "3",
+    "wear_mask": "4",
+    "wear_mask_home": "17",
+    "avoid_shakehands": "5",
+    "stop_hug": "11",
+    "public_transport": "6",
+    "option_8": "7",
+    "stay_home": "8",
+    "telework": "9",
+    "avoid_travel": "10",
+    "food_delivered": "13",
+    "isolate_home": "18",
+    "avoid_friends": "14",
+    "avoid_at_risk": "15",
+    "avoid_children": "16",
+    "none": "12"
+  },
+  "Qcov7bis": {
+    "yes": "1",
+    "already": "2",
+    "no": "3",
+    "not_applicable": "4"
+  },
+  "Q11": {
+    "ili": "0",
+    "covid": "9",
+    "cold": "1",
+    "allergy": "2",
+    "asthma": "6",
+    "gastro": "3",
+    "other": "4",
+    "dontknow": "5",
+    "ili.doctor": "7",
+    "other.doctor": "8"
+  },
+  "Qcov9": {
+    "doctor": "1",
+    "lab_confirm": "2",
+    "contact_confirm": "3",
+    "contact_diag": "4",
+    "contact_sympt": "5",
+    "event_confirm": "6",
+    "think": "7"
+  },
+  "Qcov9b": {
+    "yes": "1",
+    "some": "2",
+    "no": "0"
+  },
+  "Qcov10": {
+    "work_home": "1",
+    "work_outside": "2",
+    "absence_child": "3",
+    "absence_sick": "4",
+    "other": "5"
+  },
+  "Qcov10b": {
+    "option_1": "1",
+    "option_2": "2",
+    "option_3": "3",
+    "option_4": "4",
+    "option_5": "5",
+    "option_6": "6",
+    "option_7": "7"
+  },
+  "Qcov11": {
+    "option_1": "1",
+    "option_2": "2",
+    "option_3": "3",
+    "option_4": "4",
+    "option_5": "5",
+    "option_6": "6"
+  },
+  "Qcov12": {
+    "option_1": "1",
+    "option_2": "2",
+    "option_3": "3",
+    "option_4": "4",
+    "option_5": "5",
+    "option_6": "6"
+  },
+  "Qcov13": {
+    "option_1": "0",
+    "option_2": "1",
+    "option_3": "2",
+    "option_4": "3",
+    "option_5": "4"
+  },
+  "Qcov14": {
+    "option_1": "1",
+    "option_2": "2",
+    "option_3": "3",
+    "option_4": "4",
+    "option_5": "5",
+    "option_6": "6"
+  },
+  "Qcov14b": {
+    "option_1": "1",
+    "option_2": "2",
+    "option_3": "3",
+    "option_4": "4",
+    "option_5": "5",
+    "option_6": "6",
+    "option_7": "7"
+  },
+  "Qcov15": {
+    "option_1": "4",
+    "option_2": "3",
+    "option_3": "2",
+    "option_4": "1",
+    "option_5": "99"
+  },
+  "Qcov17": {
+    "option_1": "1",
+    "option_2": "0"
+  },
+  "Qcov17b": {
+    "option_1": "1",
+    "option_2": "2",
+    "option_3": "3",
+    "option_4": "4",
+    "option_5": "5",
+    "option_6": "6",
+    "option_7": "7",
+    "option_8": "8"
+  }
+}

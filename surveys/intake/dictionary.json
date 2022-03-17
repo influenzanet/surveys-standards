@@ -1,0 +1,275 @@
+{
+  "_survey_": {
+    "name": "intake",
+    "time": "2022-03-17 19:21:07"
+  },
+  "Q0": {
+    "member": "1",
+    "myself": "0",
+    "other": "2"
+  },
+  "Q1": {
+    "male": "0",
+    "female": "1",
+    "other": "2"
+  },
+  "Q4": {
+    "fulltime": "0",
+    "partial": "1",
+    "self": "2",
+    "student": "3",
+    "home": "4",
+    "unemployed": "5",
+    "sick": "6",
+    "retired": "7",
+    "other": "8"
+  },
+  "Q4b": {
+    "code": "0",
+    "dontknow": "1"
+  },
+  "Q4c": {
+    "prof": "0",
+    "office": "1",
+    "shop": "2",
+    "worker": "3",
+    "other_manual": "4",
+    "other": "5"
+  },
+  "Q4h": {
+    "service": "2",
+    "worker": "3",
+    "army": "6",
+    "manager": "7",
+    "professional": "8",
+    "tech": "9",
+    "clerical": "10",
+    "agriculture": "11",
+    "operator": "12",
+    "elementary": "13",
+    "other": "5"
+  },
+  "Q4d": {
+    "noqualif": "0",
+    "gcse": "1",
+    "alevel": "2",
+    "bachelor": "3",
+    "higher": "4",
+    "student": "5"
+  },
+  "Q5": {
+    "children": "0",
+    "elder": "1",
+    "patient": "2",
+    "crowd": "3",
+    "none": "4"
+  },
+  "Q6": {
+    "house_0_5": "0",
+    "house_5_18": "1",
+    "house_19_44": "2",
+    "house_45_64": "3",
+    "house_65": "4"
+  },
+  "Q6b": {
+    "none": "0",
+    "n_1": "1",
+    "n_2": "2",
+    "n_3": "3",
+    "n_4": "4",
+    "n_5": "5",
+    "more_5": "99"
+  },
+  "Q6c": {
+    "yes": "1",
+    "no": "0",
+    "dontknow": "2"
+  },
+  "Q7": {
+    "walk": "0",
+    "bike": "1",
+    "scooter": "2",
+    "car": "3",
+    "public": "4",
+    "other": "5"
+  },
+  "Q7b": {
+    "no": "0",
+    "half": "1",
+    "hour": "2",
+    "less4h": "3",
+    "more4h": "4"
+  },
+  "Q8": {
+    "never": "0",
+    "once": "1",
+    "times_3": "2",
+    "times_6": "3",
+    "times_10": "4",
+    "dontknow": "5"
+  },
+  "Q9": {
+    "yes": "0",
+    "no": "1",
+    "dontknow": "2"
+  },
+  "Q10": {
+    "yes": "0",
+    "no": "1",
+    "dontknow": "2"
+  },
+  "Q10b": {
+    "date": "1",
+    "dontknow": "0"
+  },
+  "Q10c": {
+    "riskgroup": "0",
+    "covid19": "12",
+    "myrisk": "1",
+    "spread": "2",
+    "doctor": "3",
+    "work": "4",
+    "available": "5",
+    "free": "6",
+    "miss": "7",
+    "always": "8",
+    "other": "9"
+  },
+  "Q10d": {
+    "plan": "0",
+    "offer": "1",
+    "risk_group": "2",
+    "own_immunity": "3",
+    "doubt": "4",
+    "minor_illness": "5",
+    "avoid_healthseek": "17",
+    "risk_covid": "18",
+    "covid_other": "19",
+    "likely": "6",
+    "cause_flu": "7",
+    "safety": "8",
+    "vaccin": "9",
+    "not_available": "10",
+    "free": "11",
+    "no_reason": "12",
+    "doctor": "13",
+    "other": "14"
+  },
+  "Q35": {
+    "yes": "1",
+    "no": "0",
+    "dontknow": "2"
+  },
+  "Q35b": {
+    "comirnaty": "1",
+    "moderna": "2",
+    "vaxzevria": "3",
+    "janssen": "4",
+    "dontknow": "99"
+  },
+  "Q35c": {
+    "one": "1",
+    "two": "2",
+    "three_more": "3",
+    "dontknow": "99"
+  },
+  "Q35d": {
+    "choose_date": "1",
+    "dontknow": "0"
+  },
+  "Q35e": {
+    "choose_date": "1",
+    "dontknow": "0"
+  },
+  "Q35g": {
+    "comirnaty": "1",
+    "moderna": "2",
+    "vaxzevria": "3",
+    "janssen": "4",
+    "dontknow": "99"
+  },
+  "Q35f": {
+    "recommended_by_pha": "21",
+    "belong_atrisk": "0",
+    "work_contact_atrisk": "20",
+    "decrease_my_risk": "1",
+    "decrease_spread": "2",
+    "recommended_doctor": "3",
+    "recommended_work": "4",
+    "availability": "5",
+    "free": "6",
+    "miss_work": "7",
+    "always": "8",
+    "other": "9"
+  },
+  "Q11": {
+    "none": "0",
+    "asthma": "1",
+    "diabetes": "2",
+    "lung": "3",
+    "heart": "4",
+    "kidney": "5",
+    "immuno": "6",
+    "noanswer": "7"
+  },
+  "Q12": {
+    "yes": "0",
+    "no": "1",
+    "dontknow": "2"
+  },
+  "Q12b": {
+    "first": "0",
+    "second": "1",
+    "third": "2",
+    "dontknow": "3"
+  },
+  "Q13": {
+    "no": "0",
+    "occas": "1",
+    "daily_few": "2",
+    "daily_more": "3",
+    "dontknow": "4"
+  },
+  "Q14": {
+    "hay": "1",
+    "dust": "2",
+    "pets": "3",
+    "other": "4",
+    "none": "5"
+  },
+  "Q15": {
+    "standard": "0",
+    "vegetarian": "1",
+    "vegan": "2",
+    "lowcal": "3",
+    "other": "4"
+  },
+  "Q16": {
+    "none": "0",
+    "dog": "1",
+    "cat": "2",
+    "bird": "3",
+    "other": "4"
+  },
+  "Q17": {
+    "radio": "0",
+    "newspaper": "1",
+    "internet": "2",
+    "poster": "3",
+    "family": "4",
+    "work": "5",
+    "healthworker": "6",
+    "project": "7",
+    "webinstit": "8",
+    "webinfo": "9",
+    "websante": "10",
+    "social": "12",
+    "other": "13"
+  },
+  "Q26": {
+    "yes": "1",
+    "no": "0",
+    "dontknow": "2",
+    "noanswer": "3"
+  }
+}
