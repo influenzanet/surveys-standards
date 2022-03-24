@@ -864,7 +864,7 @@
                     "value": "3"
                 },
                 "no": {
-                    "text": "No, I do not have the result yet",
+                    "text": "No, I don\u2019t know/don\u2019t want to answer",
                     "value": "99"
                 }
             },
@@ -895,7 +895,7 @@
                     "value": "3"
                 },
                 "no": {
-                    "text": "No, I do not have the result yet",
+                    "text": "No, I don\u2019t know/don\u2019t want to answer",
                     "value": "99"
                 }
             },
@@ -908,6 +908,7 @@
             "title": "Do you already get the result of this serological analysis?",
             "data_name": "Qcov16c",
             "mandatory": false,
+            "active": false,
             "type": "single_choice",
             "var": "analysis.sympt.result.sero",
             "removed_at": "2020-11-10",
@@ -983,6 +984,10 @@
             "mandatory": false,
             "type": "single_choice",
             "var": "analysis.sympt.pcr.sample.delay",
+            "active": false,
+            "added_at": "2020-09-21",
+            "comment": "In proposal from 2020,September",
+            "removed_at": "2021-11-10",
             "possible_responses": {
                 "days_1": {
                     "text": "Symptoms appeared the day or the day before the sampling",
@@ -1013,8 +1018,6 @@
                     "value": "99"
                 }
             }, 
-            "added_at": "2020-09-21",
-            "comment": "In proposal from 2020,September",
             "rules": [
                 "Shown If $Qcov16{1}"
             ]
