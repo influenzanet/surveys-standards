@@ -1,5 +1,5 @@
-from simplejson import OrderedDict
-from tools.ifn_standards.models.survey import Survey
+from collections import OrderedDict
+from .survey import Survey
 import datetime
 
 def survey_to_dict(survey: Survey, survey_name, opts={}):
