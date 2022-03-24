@@ -101,7 +101,7 @@
                     "var": "vacc.reason.risk"
                 },
                 "covid19": {
-                    "text": "The COVID-19 context encouraged me to get influenza vaccination this year 12",
+                    "text": "The COVID-19 context encouraged me to get influenza vaccination this year",
                     "value": "12",
                     "platforms": [
                         "FR"
