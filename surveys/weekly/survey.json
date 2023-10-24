@@ -1888,7 +1888,7 @@
                     "value": "6",
                     "var": "measure.limit.transp"
                 },
-                "option_8": {
+                "avoid_gathering": {
                     "text": "Avoid gatherings (going to the theater, cinema, stadium, supermarket, etc.)",
                     "value": "7",
                     "var": "measure.avoid.gatherings"
